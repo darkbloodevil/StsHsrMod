@@ -1,0 +1,11 @@
+{
+  "StsMod:SuperStrike": {
+    "NAME": "超级打击",
+    "DESCRIPTION": "造成 !D! 点伤害。",
+    "UPGRADE_DESCRIPTION": "造成 !D! 点伤害。"
+  },
+  "${modID}:ApplyDotCard": {
+    "NAME": "添加dot卡",
+    "DESCRIPTION": "测Dot!"
+  }
+}

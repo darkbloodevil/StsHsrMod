@@ -1,0 +1,21 @@
+[
+  {
+    "PROPER_NAME": "This is displayed in the tooltip.",
+    "NAMES": [
+      "these",
+      "are",
+      "detected",
+      "in",
+      "the",
+      "text"
+    ],
+    "DESCRIPTION": "This is displayed in the tooltip. Spaces should not be used be avoided in NAMES, with the exception of multi-word keywords (see next entry)."
+  },
+  {
+    "PROPER_NAME": "Toughness",
+    "NAMES": [
+      "toughness"
+    ],
+    "DESCRIPTION": "When toughness is down to zero, get stunned."
+  }
+]

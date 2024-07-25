@@ -1,0 +1,44 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:ToughnessPower": {
+    "NAME": "Toughness",
+    "DESCRIPTIONS": [
+      "When toughness is down to zero, get stunned."
+    ]
+  },
+  "${modID}:BreakPower": {
+    "NAME": "Weak break",
+    "DESCRIPTIONS": [
+      "Attack now!"
+    ]
+  },
+  "${modID}:ToughnessProtectPower": {
+    "NAME": "Toughness Protect",
+    "DESCRIPTIONS": [
+      "Toughness cannot be damaged"
+    ]
+  },
+  "${modID}:BackupDancerPower": {
+    "NAME": "Backup Dancer",
+    "DESCRIPTIONS": [
+      "When attack enemy targets that are in the Weakness Broken state, the Toughness Reduction of this attack will be converted into 1 instance of Super Break DMG."
+    ]
+  },
+  "${modID}:OvertonePower": {
+    "NAME": "Overtone",
+    "DESCRIPTIONS": [
+      "Weakness Break Efficiency increases by 50%."
+    ]
+  },
+  "${modID}:ThanatoplumRebloomPower": {
+    "NAME": "Thanatoplum Rebloom",
+    "DESCRIPTIONS": [
+      "Extend the duration of enemies' Weakness Break."
+    ]
+  }
+}

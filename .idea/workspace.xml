@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="加入残梅绽、弦外音和超击破" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaFXApplication" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubDefaultAccount">
+    <option name="defaultAccountId" value="b1a40caf-5fe5-4711-bc53-05cb149f7947" />
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="2" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2jHC0aIKCZeMFbmXuFR1F4CgB8q" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Maven.StsMod [clean].executor": "Run",
+    "Maven.StsMod [package].executor": "Run",
+    "Maven.StsMod [verify].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Javaprojects/StsMod/src/main/resources/StsMod/images/cards/attack",
+    "onboarding.tips.debug.path": "D:/Javaprojects/StsMod/src/main/java/org/example/Main.java",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Javaprojects\StsMod\src\main\resources\StsMod\images\cards\attack" />
+      <recent name="D:\Javaprojects\StsMod\src\main\java\StsMod\relics" />
+      <recent name="D:\Javaprojects\StsMod\src\main\java\StsMod\powers" />
+      <recent name="D:\Javaprojects\StsMod\src\main\java\StsMod\potions" />
+      <recent name="D:\Javaprojects\StsMod\src\main\java\StsMod\characters" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Javaprojects\StsMod\src\main\resources" />
+      <recent name="D:\Javaprojects\StsMod\src\main\resources\StsResources" />
+      <recent name="D:\Javaprojects\StsMod\src\main\java\StsMod\potions" />
+      <recent name="D:\Javaprojects\StsMod\src\main\resources\StsResources\images\character" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="" />
+      <created>1721034397374</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721034397374</updated>
+    </task>
+    <task id="LOCAL-00001" summary="推送">
+      <option name="closed" value="true" />
+      <created>1721620174108</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721620174108</updated>
+    </task>
+    <task id="LOCAL-00002" summary="mod">
+      <option name="closed" value="true" />
+      <created>1721628809654</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721628809654</updated>
+    </task>
+    <task id="LOCAL-00003" summary="加入韧性条和鲁伯特帝国机械齿轮">
+      <option name="closed" value="true" />
+      <created>1721698597435</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1721698597435</updated>
+    </task>
+    <task id="LOCAL-00004" summary="韧性条完善">
+      <option name="closed" value="true" />
+      <created>1721829028066</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1721829028066</updated>
+    </task>
+    <task id="LOCAL-00005" summary="加入残梅绽、弦外音和超击破">
+      <option name="closed" value="true" />
+      <created>1721926853819</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721926853820</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="User">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="*" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="user">
+                    <value>
+                      <list>
+                        <option value="*" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="推送" />
+    <MESSAGE value="mod" />
+    <MESSAGE value="加入韧性条和鲁伯特帝国机械齿轮" />
+    <MESSAGE value="韧性条完善" />
+    <MESSAGE value="加入残梅绽、弦外音和超击破" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入残梅绽、弦外音和超击破" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/StsMod/Main.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>

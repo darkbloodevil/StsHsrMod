@@ -1,0 +1,23 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "${modID}:RubertEmpireMechanicalCogwheel": {
+    "NAME": "Rubert Empire Mechanical Cogwheel",
+    "FLAVOR": "I followed a tutorial!",
+    "DESCRIPTIONS": [
+      "Whenever you enter a room, gain #y%d Gold. Whenever you have more than #r%d Gold, loss all gold"
+    ]
+  },
+  "${modID}:DepleteToughnessRelic": {
+    "NAME": "Deplete Toughness Relic",
+    "FLAVOR": "I followed a tutorial!",
+    "DESCRIPTIONS": [
+      "Give every monster %s bar"
+    ]
+  }
+}

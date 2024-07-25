@@ -1,0 +1,36 @@
+{
+  "${modID}:ExampleCard": {
+    "NAME": "Name",
+    "DESCRIPTION": "Description.",
+    "UPGRADE_DESCRIPTION": "This will automatically be used if the card is upgraded. Remove it if unneeded.",
+    "EXTENDED_DESCRIPTION": [
+      "You can put more text in here.",
+      "If you need to use it for stuff.",
+      "Blizzard is a good example for this."
+    ]
+  },
+  "${modID}:SuperStrike": {
+    "NAME": "SuperStrike",
+    "DESCRIPTION": "Deal !D! damage."
+  },
+  "${modID}:ApplyDotCard": {
+    "NAME": "ApplyDotCard",
+    "DESCRIPTION": "Test Dot!"
+  },
+  "${modID}:CaressingMoonlight": {
+    "NAME": "Caressing Moonlight",
+    "DESCRIPTION": "Deal !D! damage. Trigger all dots of the target"
+  },
+  "${modID}:AllOutFootlightParade": {
+    "NAME": "All-Out Footlight Parade",
+    "DESCRIPTION": "Gain BackupDancer power."
+  },
+  "${modID}:StringSingsSlowSwirls": {
+    "NAME": "String Sings Slow Swirls",
+    "DESCRIPTION": "Gain Overtone power."
+  },
+  "${modID}:PetalsToStreamReposeInDream": {
+    "NAME": "Petals To Stream, Repose In Dream",
+    "DESCRIPTION": "Gain ThanatoplumRebloom power."
+  }
+}
