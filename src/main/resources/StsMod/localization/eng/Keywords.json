@@ -17,5 +17,19 @@
       "toughness"
     ],
     "DESCRIPTION": "When toughness is down to zero, get stunned."
+  },
+  {
+    "PROPER_NAME": "Dot",
+    "NAMES": [
+      "Dot"
+    ],
+    "DESCRIPTION": "Deal damage at the start of the target's turn. Dot with same type and same amount will extend duration."
+  },
+  {
+    "PROPER_NAME": "FollowUpAttack",
+    "NAMES": [
+      "Follow-Up attack"
+    ],
+    "DESCRIPTION": "Deal damage at the start of the target's turn. Dot with same type and same amount will extend duration."
   }
 ]

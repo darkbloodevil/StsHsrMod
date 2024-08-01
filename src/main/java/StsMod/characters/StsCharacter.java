@@ -25,8 +25,8 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
 
-import static StsMod.StsMod.characterPath;
-import static StsMod.StsMod.makeID;
+import static StsMod.HsrMod.characterPath;
+import static StsMod.HsrMod.makeID;
 
 // 继承CustomPlayer类
 public class StsCharacter extends CustomPlayer {

@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 
-import static StsMod.StsMod.relicPath;
+import static StsMod.HsrMod.relicPath;
 
 
 public abstract class BaseRelic extends CustomRelic {

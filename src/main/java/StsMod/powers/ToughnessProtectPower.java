@@ -1,17 +1,13 @@
 package StsMod.powers;
 
-import StsMod.action.BreakAction;
 import StsMod.action.BreakTransformAction;
 import StsMod.util.ToughnessUtil;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import static StsMod.StsMod.makeID;
+import static StsMod.HsrMod.makeID;
 
 /**
  * @author darkbloodevil

@@ -19,7 +19,7 @@
   },
   "${modID}:CaressingMoonlight": {
     "NAME": "Caressing Moonlight",
-    "DESCRIPTION": "Deal !D! damage. Trigger all dots of the target"
+    "DESCRIPTION": "Deal !D! damage. Trigger all Dots of the target."
   },
   "${modID}:AllOutFootlightParade": {
     "NAME": "All-Out Footlight Parade",
@@ -27,10 +27,23 @@
   },
   "${modID}:StringSingsSlowSwirls": {
     "NAME": "String Sings Slow Swirls",
-    "DESCRIPTION": "Gain Overtone power."
+    "DESCRIPTION": "Gain Overtone power.",
+    "UPGRADE_DESCRIPTION": "Innate.NL Gain Overtone power."
   },
   "${modID}:PetalsToStreamReposeInDream": {
     "NAME": "Petals To Stream, Repose In Dream",
     "DESCRIPTION": "Gain ThanatoplumRebloom power."
+  },
+  "${modID}:PromiseNotCommand": {
+    "NAME": "Promise, Not Command",
+    "DESCRIPTION": "Svarog will retaliate enemies who attack Clara with a Counter"
+  },
+  "${modID}:VictoryRush": {
+    "NAME": "Victory Rush",
+    "DESCRIPTION": "When an enemy is inflicted with Weakness Break, deal 10 ${modID}:FollowUpAttack damage."
+  },
+  "${modID}:SlashedDreamCriesInRed": {
+    "NAME": "Slashed Dream Cries In Red",
+    "DESCRIPTION": "You can't play this card until you have 9 Slashed Dream. Deal 50 damage to all enemies."
   }
 }

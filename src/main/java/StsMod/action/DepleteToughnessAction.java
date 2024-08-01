@@ -22,7 +22,6 @@ public class DepleteToughnessAction extends AbstractGameAction {
     public void update() {
         if (amount > 0) {
             addToBot(new ApplyPowerAction(target, owner, new ToughnessPower(target, this.owner,-this.amount), -this.amount));
-
         }
         this.isDone = true;
     }

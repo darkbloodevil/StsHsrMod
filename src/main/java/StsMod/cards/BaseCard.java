@@ -1,6 +1,6 @@
 package StsMod.cards;
 
-import StsMod.StsMod;
+import StsMod.HsrMod;
 import basemod.BaseMod;
 import basemod.abstracts.CustomCard;
 import basemod.abstracts.DynamicVariable;
@@ -25,7 +25,7 @@ import static StsMod.util.TextureLoader.getCardTextureString;
 public abstract class BaseCard extends CustomCard {
     final private static Map<String, DynamicVariable> customVars = new HashMap<>();
 
-    protected static String makeID(String name) { return StsMod.makeID(name); }
+    protected static String makeID(String name) { return HsrMod.makeID(name); }
     protected CardStrings cardStrings;
 
     protected boolean upgradesDescription;
@@ -457,7 +457,7 @@ public abstract class BaseCard extends CustomCard {
             {
                 if (cardStrings.UPGRADE_DESCRIPTION == null)
                 {
-                    StsMod.logger.error("Card " + cardID + " upgrades description and has null upgrade description.");
+                    HsrMod.logger.error("Card " + cardID + " upgrades description and has null upgrade description.");
                 }
                 else
                 {

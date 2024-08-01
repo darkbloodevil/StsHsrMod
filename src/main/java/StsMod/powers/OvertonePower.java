@@ -3,7 +3,7 @@ package StsMod.powers;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import static StsMod.StsMod.makeID;
+import static StsMod.HsrMod.makeID;
 
 /**
  * @author darkbloodevil

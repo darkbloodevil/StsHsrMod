@@ -1,23 +1,13 @@
 package StsMod.powers;
 
-import StsMod.StsMod;
-import StsMod.action.BreakAction;
+import StsMod.HsrMod;
 import StsMod.action.DotLoseHpAction;
-import StsMod.util.ToughnessUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.unique.PoisonLoseHpAction;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
-
-import static StsMod.StsMod.makeID;
 
 /**
  * @author darkbloodevil
@@ -53,7 +43,7 @@ public class DotPower extends BasePower {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flashWithoutSound();
             this.addToBot(new DotLoseHpAction(this.owner, this.source, this.damage_amount, AbstractGameAction.AttackEffect.NONE));
-            StsMod.logger.info(String.format("==========%s is now triggered from=========", ID, from));
+            HsrMod.logger.info(String.format("==========%s is now triggered from=========", ID, from));
 
         }
     }

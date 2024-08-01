@@ -1,13 +1,13 @@
 package StsMod.powers;
 
 import StsMod.action.BreakAction;
-import StsMod.action.BreakTransformAction;
-import StsMod.util.ToughnessUtil;
+import StsMod.interfaces.AtWeaknessBreak;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import static StsMod.StsMod.makeID;
+import static StsMod.HsrMod.makeID;
 
 public class ToughnessPower extends BasePower {
     public static final String POWER_ID = makeID(ToughnessPower.class.getSimpleName());
@@ -31,15 +31,26 @@ public class ToughnessPower extends BasePower {
 
     @Override
     public void stackPower(int stackAmount) {
-        if (stackAmount>0){
+        if (stackAmount > 0) {
             super.stackPower(stackAmount);
             is_toughness_protect = false;
-        }else {
+        } else {
             if (!is_toughness_protect) {
                 super.stackPower(stackAmount);
                 if (this.amount <= 0) {
+                    this.amount = 0;
                     this.fontScale = 8.0F;
                     addToTop(new BreakAction((AbstractMonster) this.owner, this.source));
+                    // 弱点击破时生效
+                    for (AbstractPower power : AbstractDungeon.player.powers) {
+                        if (power instanceof AtWeaknessBreak) {
+                            AtWeaknessBreak dt_power = (AtWeaknessBreak) power;
+                            dt_power.at_weakness_break(owner);
+                            power.flash();
+                        }
+                    }
+
+
                     this.is_toughness_protect = true;
                 }
             }

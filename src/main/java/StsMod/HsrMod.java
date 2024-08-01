@@ -32,7 +32,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 @SpireInitializer
-public class StsMod  implements
+public class HsrMod implements
         EditRelicsSubscriber,
         EditCardsSubscriber,
         EditCharactersSubscriber,
@@ -53,11 +53,11 @@ public class StsMod  implements
 
     //This will be called by ModTheSpire because of the @SpireInitializer annotation at the top of the class.
     public static void initialize() {
-        new StsMod();
+        new HsrMod();
         StsCharacter.Meta.registerColor();
     }
 
-    public StsMod() {
+    public HsrMod() {
         BaseMod.subscribe(this); //This will make BaseMod trigger all the subscribers at their appropriate times.
         logger.info(modID + " subscribed to BaseMod.");
     }
@@ -197,7 +197,7 @@ public class StsMod  implements
      * Checks the expected resources path based on the package name.
      */
     private static String checkResourcesPath() {
-        String name = StsMod.class.getName(); //getPackage can be iffy with patching, so class name is used instead.
+        String name = HsrMod.class.getName(); //getPackage can be iffy with patching, so class name is used instead.
         int separator = name.indexOf('.');
         if (separator > 0)
             name = name.substring(0, separator);
@@ -210,7 +210,7 @@ public class StsMod  implements
         throw new RuntimeException("\n\tFailed to find resources folder; expected it to be named \"" + name + "\"." +
                 " Either make sure the folder under resources has the same name as your mod's package, or change the line\n" +
                 "\t\"private static final String resourcesFolder = checkResourcesPath();\"\n" +
-                "\tat the top of the " + StsMod.class.getSimpleName() + " java file.");
+                "\tat the top of the " + HsrMod.class.getSimpleName() + " java file.");
     }
 
     /**
@@ -222,7 +222,7 @@ public class StsMod  implements
             if (annotationDB == null)
                 return false;
             Set<String> initializers = annotationDB.getAnnotationIndex().getOrDefault(SpireInitializer.class.getName(), Collections.emptySet());
-            return initializers.contains(StsMod.class.getName());
+            return initializers.contains(HsrMod.class.getName());
         }).findFirst();
         if (infos.isPresent()) {
             info = infos.get();

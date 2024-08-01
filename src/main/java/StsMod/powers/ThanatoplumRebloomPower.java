@@ -1,10 +1,9 @@
 package StsMod.powers;
 
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
-import static StsMod.StsMod.makeID;
+import static StsMod.HsrMod.makeID;
 
 /**
  * @author darkbloodevil
@@ -17,8 +16,8 @@ public class ThanatoplumRebloomPower extends BasePower {
     private static final boolean TURN_BASED = false;
     public boolean is_triggered = false;
 
-    public ThanatoplumRebloomPower(AbstractCreature owner, AbstractCreature source, int amount) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, source, amount);
+    public ThanatoplumRebloomPower(AbstractCreature owner, AbstractCreature source) {
+        super(POWER_ID, TYPE, TURN_BASED, owner, source, 1);
     }
 
     @Override

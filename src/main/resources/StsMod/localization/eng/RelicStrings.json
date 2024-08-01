@@ -13,11 +13,11 @@
       "Whenever you enter a room, gain #b%d #yGold. Whenever you have more than #b%d #yGold, loss all gold"
     ]
   },
-  "${modID}:DepleteToughnessRelic": {
-    "NAME": "Deplete Toughness Relic",
-    "FLAVOR": "I followed a tutorial!",
+  "${modID}:HonkaiStarRailRelic": {
+    "NAME": "Honkai Star Rail",
+    "FLAVOR": "Honkai Star Rail",
     "DESCRIPTIONS": [
-      "Give every monster %s bar"
+      "Give every monster #y%s bar."
     ]
   }
 }

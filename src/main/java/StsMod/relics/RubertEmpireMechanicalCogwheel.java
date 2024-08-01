@@ -4,7 +4,7 @@ import StsMod.characters.StsCharacter;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
-import static StsMod.StsMod.makeID;
+import static StsMod.HsrMod.makeID;
 
 public class RubertEmpireMechanicalCogwheel extends BaseRelic {
     public static final String ID = makeID(RubertEmpireMechanicalCogwheel.class.getSimpleName()); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic

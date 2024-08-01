@@ -3,7 +3,7 @@
 
 
     <properties>
-        <modID>StsMod</modID>
+        <modID>hsrmod</modID>
         <author>darkbloodevil</author>
 
         <!-- These don't have to be up to date, it's just nice if they are. -->
@@ -28,8 +28,8 @@
     <artifactId>${modID}</artifactId>
     <packaging>jar</packaging>
 
-    <name>StsMod</name>
-    <version>0.0.0</version>
+    <name>HsrMod</name>
+    <version>0.0.2</version>
     <description>a sts mod.</description>
 
     <dependencies>

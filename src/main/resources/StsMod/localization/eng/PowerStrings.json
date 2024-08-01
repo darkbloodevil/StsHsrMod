@@ -40,5 +40,11 @@
     "DESCRIPTIONS": [
       "Extend the duration of enemies' Weakness Break."
     ]
+  },
+  "${modID}:SlashedDreamPower": {
+    "NAME": "Slashed Dream",
+    "DESCRIPTIONS": [
+      "Increase by 1 when apply a #yDEBUFF to enemy"
+    ]
   }
 }

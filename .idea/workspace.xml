@@ -4,7 +4,80 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="加入残梅绽、弦外音和超击破" />
+    <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="杀戮尖塔mod 加入了韧性条、dot、残梅绽、超击破、弦外音">
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/action/FireFlyTypeIVCompleteCombustionAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/FineIwillDoItMyself.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/FireFlyTypeIVCompleteCombustion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/PromiseNotCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/SlashedDreamCriesInRed.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/VictoryRush.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/sam/FireflyTypeIVDeathstarOverload.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/sam/FireflyTypeIVPyrogenicDecimation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/sam/OrderAerialBombardment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/sam/OrderFlarePropulsion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/interfaces/AtWeaknessBreak.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/powers/PromiseNotCommandPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/powers/SlashedDreamPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/powers/VictoryRushPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/StsMod/util/RandomSelection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/attack/CaressingMoonlight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/attack/CaressingMoonlight_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/attack/SlashedDreamCriesInRed.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/attack/SlashedDreamCriesInRed_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/power/AllOutFootlightParade.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/power/AllOutFootlightParade_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/power/PromiseNotCommand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/power/PromiseNotCommand_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/power/StringSingsSlowSwirls.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/power/StringSingsSlowSwirls_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/power/VictoryRush.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/power/VictoryRush_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/raw/1050px-卡芙卡立绘.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/raw/8E$%W~ADV8YB(ZKFVN3UYOJ.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/raw/900px-阮•梅立绘.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/raw/AllOutFootlightParade.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/raw/PromiseNotCommand.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/raw/VictoryRush.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/raw/微信图片_20240730220807.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/skill/PetalsToStreamReposeInDream.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/cards/skill/PetalsToStreamReposeInDream_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/powers/PromiseNotCommandPower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/powers/SlashedDreamPower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/StsMod/images/powers/VictoryRushPower.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/ModHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/ModHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/StsMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/HsrMod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/action/DepleteToughnessAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/action/DepleteToughnessAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/cards/ApplyDotCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/ApplyDotCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/cards/BaseCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/BaseCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/cards/CaressingMoonlight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/CaressingMoonlight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/cards/PetalsToStreamReposeInDream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/PetalsToStreamReposeInDream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/cards/StringSingsSlowSwirls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/cards/StringSingsSlowSwirls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/characters/StsCharacter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/characters/StsCharacter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/core/HsrDamageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/core/HsrDamageInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/patchs/MonsterPatch.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/potions/StsPotion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/potions/StsPotion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/powers/BackupDancerPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/powers/BackupDancerPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/powers/BreakPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/powers/BreakPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/powers/DotPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/powers/DotPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/powers/LightningDotPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/powers/LightningDotPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/powers/OvertonePower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/powers/OvertonePower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/powers/ThanatoplumRebloomPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/powers/ThanatoplumRebloomPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/powers/ToughnessPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/powers/ToughnessPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/powers/ToughnessProtectPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/powers/ToughnessProtectPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/relics/BaseRelic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/relics/BaseRelic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/relics/DepleteToughnessRelic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/relics/HonkaiStarRailRelic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/relics/RubertEmpireMechanicalCogwheel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/relics/RubertEmpireMechanicalCogwheel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/util/TextureLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/util/TextureLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/StsMod/util/ToughnessUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StsMod/util/ToughnessUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/StsMod/localization/eng/CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StsMod/localization/eng/CardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/StsMod/localization/eng/Keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StsMod/localization/eng/Keywords.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/StsMod/localization/eng/PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StsMod/localization/eng/PowerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/StsMod/localization/eng/RelicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StsMod/localization/eng/RelicStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/StsMod/localization/zhs/RelicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/StsMod/localization/zhs/RelicStrings.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +87,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -38,20 +112,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Maven.StsMod [clean].executor": "Run",
-    "Maven.StsMod [package].executor": "Run",
-    "Maven.StsMod [verify].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Javaprojects/StsMod/src/main/resources/StsMod/images/cards/attack",
-    "onboarding.tips.debug.path": "D:/Javaprojects/StsMod/src/main/java/org/example/Main.java",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Maven.StsMod [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.StsMod [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.StsMod [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Javaprojects/StsMod/src/main/resources/StsMod/images/cards/attack&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Javaprojects/StsMod/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.36999148&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Javaprojects\StsMod\src\main\resources\StsMod\images\cards\attack" />
@@ -61,6 +138,7 @@
       <recent name="D:\Javaprojects\StsMod\src\main\java\StsMod\characters" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\StsMod\images\cards\attack" />
       <recent name="D:\Javaprojects\StsMod\src\main\resources" />
       <recent name="D:\Javaprojects\StsMod\src\main\resources\StsResources" />
       <recent name="D:\Javaprojects\StsMod\src\main\java\StsMod\potions" />
@@ -116,7 +194,15 @@
       <option name="project" value="LOCAL" />
       <updated>1721926853820</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="杀戮尖塔mod 加入了韧性条、dot、残梅绽、超击破、弦外音">
+      <option name="closed" value="true" />
+      <created>1721928276722</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721928276722</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -167,17 +253,7 @@
     <MESSAGE value="加入韧性条和鲁伯特帝国机械齿轮" />
     <MESSAGE value="韧性条完善" />
     <MESSAGE value="加入残梅绽、弦外音和超击破" />
-    <option name="LAST_COMMIT_MESSAGE" value="加入残梅绽、弦外音和超击破" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/StsMod/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="杀戮尖塔mod 加入了韧性条、dot、残梅绽、超击破、弦外音" />
+    <option name="LAST_COMMIT_MESSAGE" value="杀戮尖塔mod 加入了韧性条、dot、残梅绽、超击破、弦外音" />
   </component>
 </project>

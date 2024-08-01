@@ -1,6 +1,7 @@
 package StsMod.relics;
 
 import StsMod.action.DepleteToughnessAction;
+import StsMod.cards.SlashedDreamCriesInRed;
 import StsMod.characters.StsCharacter;
 import StsMod.core.HsrDamageInfo;
 import StsMod.powers.*;
@@ -8,25 +9,24 @@ import StsMod.util.ToughnessUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
-import static StsMod.StsMod.makeID;
+import static StsMod.HsrMod.makeID;
 
-public class DepleteToughnessRelic extends BaseRelic {
+public class HonkaiStarRailRelic extends BaseRelic {
 
-    public static final String ID = makeID(DepleteToughnessRelic.class.getSimpleName()); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
+    public static final String ID = makeID(HonkaiStarRailRelic.class.getSimpleName()); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
     private static final RelicTier RARITY = RelicTier.STARTER; //The relic's rarity.
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
 
 
-    public DepleteToughnessRelic() {
-        super(ID, DepleteToughnessRelic.class.getSimpleName(), StsCharacter.Meta.CARD_COLOR, RARITY, SOUND);
+    public HonkaiStarRailRelic() {
+        super(ID, HonkaiStarRailRelic.class.getSimpleName(), StsCharacter.Meta.CARD_COLOR, RARITY, SOUND);
     }
 
     @Override
@@ -39,6 +39,13 @@ public class DepleteToughnessRelic extends BaseRelic {
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             onSpawnMonster(monster);
         }
+//        CardGroup deck = AbstractDungeon.player.masterDeck;
+//        for (AbstractCard c : deck.group) {
+//            // 如果牌库有SlashedDreamCriesInRed，加入SlashedDreamPower
+//            if (c.cardID.equals(SlashedDreamCriesInRed.ID)) {
+//                addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlashedDreamPower(AbstractDungeon.player, 0)));
+//            }
+//        }
     }
 
     @Override
@@ -51,16 +58,17 @@ public class DepleteToughnessRelic extends BaseRelic {
 
     /**
      * 计算削韧值
+     *
      * @param info
      * @return
      */
-    private int get_toughness_reduction(DamageInfo info){
-        if(info instanceof HsrDamageInfo){
-            HsrDamageInfo h_info=(HsrDamageInfo) info;
+    private int get_toughness_reduction(DamageInfo info) {
+        if (info instanceof HsrDamageInfo) {
+            HsrDamageInfo h_info = (HsrDamageInfo) info;
             // 有弦外音就x1.5
-            if (AbstractDungeon.player.hasPower(OvertonePower.POWER_ID)){
-                return (int) (h_info.toughness_reduction*1.5);
-            }else {
+            if (AbstractDungeon.player.hasPower(OvertonePower.POWER_ID)) {
+                return (int) (h_info.toughness_reduction * 1.5);
+            } else {
                 return h_info.toughness_reduction;
             }
         }
@@ -69,12 +77,12 @@ public class DepleteToughnessRelic extends BaseRelic {
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         flash();
-        if (info.type!= DamageInfo.DamageType.NORMAL){
-            isDone=true;
+        if (info.type != DamageInfo.DamageType.NORMAL) {
+            isDone = true;
             return;
         }
         if (target instanceof AbstractMonster) {
-            int reduction_amount=get_toughness_reduction(info);
+            int reduction_amount = get_toughness_reduction(info);
             if (target.hasPower(BreakPower.POWER_ID) || target.hasPower(ToughnessProtectPower.POWER_ID)) {
                 // 留给超击破
                 if (target.hasPower(BreakPower.POWER_ID) && AbstractDungeon.player.hasPower(BackupDancerPower.POWER_ID)) {
@@ -83,9 +91,11 @@ public class DepleteToughnessRelic extends BaseRelic {
                 }
 
             } else {
+                // 削韧
                 addToTop(new DepleteToughnessAction((AbstractMonster) target, AbstractDungeon.player, reduction_amount));
+
             }
         }
-        isDone=true;
+        isDone = true;
     }
 }

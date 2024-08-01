@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import java.util.HashMap;
 import java.util.Locale;
 
-import static StsMod.StsMod.*;
+import static StsMod.HsrMod.*;
 
 
 public class TextureLoader {
