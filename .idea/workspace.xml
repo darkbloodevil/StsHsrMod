@@ -4,37 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="设定random种子">
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/AwaitingSystemResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/interfaces/DurationInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/AwaitingSystemResponsePower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/variables/BaseVar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/variables/DurationVar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/AwaitingSystemResponse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/AwaitingSystemResponse_p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/AwaitingSystemResponse.png" afterDir="false" />
+    <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="加入银狼">
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/VoxHarmoniqueOpusCosmiqueAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/BleakBreedsBliss.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/VoxHarmoniqueOpusCosmique.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BleakBreedsBlissPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/BleakBreedsBliss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/BleakBreedsBliss_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/BleakBreedsBliss.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/AwaitingSystemResponsePower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/BleakBreedsBlissPower.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/HsrMod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/HsrMod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/action/FireFlyTypeIVCompleteCombustionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/FireFlyTypeIVCompleteCombustionAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/AllOutFootlightParade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/AllOutFootlightParade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/ApplyDotCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/ApplyDotCard.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/FireflyTypeIVCompleteCombustion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/FyreflyTypeIVCompleteCombustion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/ItsMagicIaddSomeMagic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/ItsMagicIaddSomeMagic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/PetalsToStreamReposeInDream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/PetalsToStreamReposeInDream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/PromiseNotCommand.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/PromiseNotCommand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/SlashedDreamCriesInRed.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/SlashedDreamCriesInRed.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/StringSingsSlowSwirls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/StringSingsSlowSwirls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/VictoryRush.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/VictoryRush.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/sam/FireflyTypeIVDeathstarOverload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/sam/FyreflyTypeIVDeathstarOverload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/sam/FireflyTypeIVPyrogenicDecimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/sam/FyreflyTypeIVPyrogenicDecimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FineIwillDoItMyselfPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FineIwillDoItMyselfPower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/PromiseNotCommandPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/PromiseNotCommandPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/relics/HonkaiStarRailRelic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/relics/HonkaiStarRailRelic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/util/RandomSelection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/util/RandomUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/FireflyTypeIVCompleteCombustion.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/FyreflyTypeIVCompleteCombustion.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/FireflyTypeIVCompleteCombustion_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/FyreflyTypeIVCompleteCombustion_p.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/CardStrings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/Keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/Keywords.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,7 +167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722592959867</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="加入银狼">
+      <option name="closed" value="true" />
+      <created>1722658608905</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722658608905</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -241,6 +230,7 @@
     <MESSAGE value="加入了流萤、姬子、黄泉" />
     <MESSAGE value="加入黑塔，修复流萤问题" />
     <MESSAGE value="设定random种子" />
-    <option name="LAST_COMMIT_MESSAGE" value="设定random种子" />
+    <MESSAGE value="加入银狼" />
+    <option name="LAST_COMMIT_MESSAGE" value="加入银狼" />
   </component>
 </project>
