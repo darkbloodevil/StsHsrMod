@@ -32,6 +32,7 @@ public class VictoryRush extends BaseCard {
 
     @Override
     public void upgrade() {
+        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPG_Magic);

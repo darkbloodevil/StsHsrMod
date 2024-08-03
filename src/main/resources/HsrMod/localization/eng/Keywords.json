@@ -1,17 +1,5 @@
 [
   {
-    "PROPER_NAME": "This is displayed in the tooltip.",
-    "NAMES": [
-      "these",
-      "are",
-      "detected",
-      "in",
-      "the",
-      "text"
-    ],
-    "DESCRIPTION": "This is displayed in the tooltip. Spaces should not be used be avoided in NAMES, with the exception of multi-word keywords (see next entry)."
-  },
-  {
     "PROPER_NAME": "Toughness",
     "NAMES": [
       "toughness"
@@ -26,10 +14,17 @@
     "DESCRIPTION": "Deal damage at the start of the target's turn. Dot with same type and same amount will extend duration."
   },
   {
-    "PROPER_NAME": "FollowUpAttack",
+    "PROPER_NAME": "Follow-Up Attack",
     "NAMES": [
-      "Follow-Up attack"
+      "Follow-Up"
     ],
     "DESCRIPTION": "Deal damage at the start of the target's turn. Dot with same type and same amount will extend duration."
+  },
+  {
+    "PROPER_NAME": "Counter",
+    "NAMES": [
+      "Counter"
+    ],
+    "DESCRIPTION": "Launch a #yFollow-Up #yAttack when attacked."
   }
 ]

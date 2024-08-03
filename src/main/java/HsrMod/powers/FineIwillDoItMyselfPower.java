@@ -24,10 +24,11 @@ public class FineIwillDoItMyselfPower extends BasePower {
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
     private ArrayList<String> under_half;
-    int damage;
+    int damage_amount;
 
     public FineIwillDoItMyselfPower(AbstractCreature owner, AbstractCreature source, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, source, amount);
+        this.damage_amount=amount;
         under_half = new ArrayList<>();
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if ((double) monster.currentHealth / monster.maxHealth < 0.5) {
@@ -53,8 +54,7 @@ public class FineIwillDoItMyselfPower extends BasePower {
                 if ((double) monster.currentHealth / monster.maxHealth < 0.5 && !under_half.contains(monster.id)) {
                     under_half.add(monster.id);
                     triggered=true;
-
-                    addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(AbstractDungeon.player,7, DamageInfo.DamageType.NORMAL)));
+                    addToTop(new HsrDamageAllEnemiesAction(new HsrDamageInfo(AbstractDungeon.player,damage_amount, DamageInfo.DamageType.NORMAL)));
                 }
             }
             if (!triggered){

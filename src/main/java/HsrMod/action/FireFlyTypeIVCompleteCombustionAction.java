@@ -1,10 +1,10 @@
 package HsrMod.action;
 
-import HsrMod.cards.sam.FireflyTypeIVDeathstarOverload;
-import HsrMod.cards.sam.FireflyTypeIVPyrogenicDecimation;
+import HsrMod.cards.sam.FyreflyTypeIVDeathstarOverload;
+import HsrMod.cards.sam.FyreflyTypeIVPyrogenicDecimation;
 import HsrMod.cards.sam.OrderAerialBombardment;
 import HsrMod.cards.sam.OrderFlarePropulsion;
-import HsrMod.util.RandomSelection;
+import HsrMod.util.RandomUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
@@ -87,11 +87,11 @@ public class FireFlyTypeIVCompleteCombustionAction extends AbstractGameAction {
         ArrayList<AbstractCard> pile = new ArrayList<>();
         pile.add(new OrderFlarePropulsion());
         pile.add(new OrderAerialBombardment());
-        pile.add(new FireflyTypeIVPyrogenicDecimation());
-        pile.add(new FireflyTypeIVDeathstarOverload());
+        pile.add(new FyreflyTypeIVPyrogenicDecimation());
+        pile.add(new FyreflyTypeIVDeathstarOverload());
 
         ArrayList<AbstractCard> chosen = new ArrayList<>();
-        for (int i : RandomSelection.selectRandomElements(pile.size(), n)) {
+        for (int i : RandomUtil.selectRandomElements(pile.size(), n)) {
             chosen.add(pile.get(i));
         }
 

@@ -1,12 +1,14 @@
 package HsrMod;
 
 import HsrMod.cards.BaseCard;
-import HsrMod.cards.sam.FireflyTypeIVDeathstarOverload;
+import HsrMod.cards.sam.FyreflyTypeIVDeathstarOverload;
 import HsrMod.characters.StsCharacter;
 import HsrMod.potions.BasePotion;
 import HsrMod.relics.BaseRelic;
+import HsrMod.variables.BaseVar;
 import basemod.AutoAdd;
 import basemod.BaseMod;
+import basemod.abstracts.DynamicVariable;
 import basemod.interfaces.*;
 import HsrMod.util.GeneralUtils;
 import HsrMod.util.KeywordInfo;
@@ -241,12 +243,19 @@ public class HsrMod implements
 
     @Override
     public void receiveEditCards() {
+        // 自动载入变量
+        new AutoAdd(modID) //Loads files from this mod
+                .packageFilter(BaseVar.class) //In the same package as this class
+                .any(DynamicVariable.class, (info, variable) -> { //Run this code for any classes that extend this class
+                    BaseMod.addDynamicVariable(variable);
+                });
+        // 自动载入卡
         new AutoAdd(modID) //Loads files from this mod
                 .packageFilter(BaseCard.class) //In the same package as this class
                 .setDefaultSeen(true) //And marks them as seen in the compendium
                 .cards(); //Adds the cards
         new AutoAdd(modID) //Loads files from this mod
-                .packageFilter(FireflyTypeIVDeathstarOverload.class) //In the same package as this class
+                .packageFilter(FyreflyTypeIVDeathstarOverload.class) //In the same package as this class
                 .setDefaultSeen(true) //And marks them as seen in the compendium
                 .cards(); //Adds the cards
     }

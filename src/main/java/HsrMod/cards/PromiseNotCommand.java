@@ -1,6 +1,7 @@
 package HsrMod.cards;
 
 import HsrMod.characters.StsCharacter;
+import HsrMod.interfaces.DurationInterface;
 import HsrMod.powers.PromiseNotCommandPower;
 import HsrMod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/7/30 16:51
  * @description
  */
-public class PromiseNotCommand extends BaseCard {
+public class PromiseNotCommand extends BaseCard implements DurationInterface {
     public static final String ID = makeID(PromiseNotCommand.class.getSimpleName());
     private static final CardStats info = new CardStats(
             StsCharacter.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -27,11 +28,13 @@ public class PromiseNotCommand extends BaseCard {
 
     public PromiseNotCommand() {
         super(ID, info);
+        this.setMagic(DAMAGE);
         this.magicNumber = DAMAGE;
     }
 
     @Override
     public void upgrade() {
+        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPG_Magic);
@@ -44,5 +47,10 @@ public class PromiseNotCommand extends BaseCard {
         PromiseNotCommandPower pncp = new PromiseNotCommandPower(p, p, TURNS, magicNumber);
 
         addToBot(new ApplyPowerAction(p, p, pncp));
+    }
+
+    @Override
+    public int get_duration() {
+        return TURNS;
     }
 }

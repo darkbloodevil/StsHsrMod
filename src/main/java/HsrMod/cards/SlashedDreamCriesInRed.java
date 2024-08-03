@@ -65,6 +65,7 @@ public class SlashedDreamCriesInRed extends BaseCard implements StartupCard {
 
     @Override
     public void upgrade() {
+        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             initializeDescription();

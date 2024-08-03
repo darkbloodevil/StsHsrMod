@@ -19,31 +19,43 @@
   },
   "${modID}:CaressingMoonlight": {
     "NAME": "Caressing Moonlight",
-    "DESCRIPTION": "Deal !D! damage. Trigger all Dots of the target."
+    "DESCRIPTION": "Deal !D! damage. Trigger all ${modID}:Dot of the target."
   },
   "${modID}:AllOutFootlightParade": {
     "NAME": "All-Out Footlight Parade",
-    "DESCRIPTION": "Gain BackupDancer power."
+    "DESCRIPTION": "When attack enemy targets that are in the Weakness Broken state, the Toughness Reduction of this attack will be converted into 1 instance of Super Break DMG."
   },
   "${modID}:StringSingsSlowSwirls": {
     "NAME": "String Sings Slow Swirls",
-    "DESCRIPTION": "Gain Overtone power.",
-    "UPGRADE_DESCRIPTION": "Innate.NL Gain Overtone power."
+    "DESCRIPTION": "Weakness Break Efficiency increases by 50%.",
+    "UPGRADE_DESCRIPTION": "Innate.NL Weakness Break Efficiency increases by 50%."
   },
   "${modID}:PetalsToStreamReposeInDream": {
     "NAME": "Petals To Stream, Repose In Dream",
-    "DESCRIPTION": "Gain ThanatoplumRebloom power."
+    "DESCRIPTION": "Extend the duration of enemies' Weakness Break for one turn."
   },
   "${modID}:PromiseNotCommand": {
     "NAME": "Promise, Not Command",
-    "DESCRIPTION": "Svarog will retaliate enemies who attack Clara with a Counter"
+    "DESCRIPTION": "${modID}:Counter !M!. NL Duration !duration!"
   },
   "${modID}:VictoryRush": {
     "NAME": "Victory Rush",
-    "DESCRIPTION": "When an enemy is inflicted with Weakness Break, deal 10 hsrmod:FollowUpAttack damage."
+    "DESCRIPTION": "When an enemy is inflicted with Weakness Break, deal !M! ${modID}:Follow-Up damage."
   },
   "${modID}:SlashedDreamCriesInRed": {
     "NAME": "Slashed Dream Cries In Red",
     "DESCRIPTION": "You can't play this card until you have 9 Slashed Dream. Deal 50 damage to all enemies."
+  },
+  "${modID}:FyreflyTypeIVCompleteCombustion": {
+    "NAME": "Fyrefly Type-IV: Complete Combustion",
+    "DESCRIPTION": "You can't play this card until you have 9 Slashed Dream. Deal 50 damage to all enemies."
+  },
+  "${modID}:ItsMagicIaddSomeMagic": {
+    "NAME": "It's Magic, I Add SomeMagic",
+    "DESCRIPTION": "Deal !D! damage. Deal !M! ${modID}:Follow-Up damage."
+  },
+  "${modID}:AwaitingSystemResponse": {
+    "NAME": "Awaiting System Response...",
+    "DESCRIPTION": "Deal !D! damage. "
   }
 }

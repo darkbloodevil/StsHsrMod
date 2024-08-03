@@ -27,6 +27,7 @@ public class PromiseNotCommandPower extends BasePower {
         this.damage_amount = damage_amount;
     }
 
+    @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
             this.flash();
@@ -45,7 +46,6 @@ public class PromiseNotCommandPower extends BasePower {
         if (!isPlayer) {
             amount--;
             if (this.amount == 0) {
-//                this.owner.powers.remove(this);
                 addToBot(new RemoveSpecificPowerAction(owner, owner, this));
 
             }

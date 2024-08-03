@@ -36,13 +36,6 @@ public class HonkaiStarRailRelic extends BaseRelic {
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             onSpawnMonster(monster);
         }
-//        CardGroup deck = AbstractDungeon.player.masterDeck;
-//        for (AbstractCard c : deck.group) {
-//            // 如果牌库有SlashedDreamCriesInRed，加入SlashedDreamPower
-//            if (c.cardID.equals(SlashedDreamCriesInRed.ID)) {
-//                addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlashedDreamPower(AbstractDungeon.player, 0)));
-//            }
-//        }
     }
 
     @Override
@@ -84,7 +77,7 @@ public class HonkaiStarRailRelic extends BaseRelic {
                 // 留给超击破
                 if (target.hasPower(BreakPower.POWER_ID) && AbstractDungeon.player.hasPower(BackupDancerPower.POWER_ID)) {
 
-                    addToBot(new DamageAction(target, new DamageInfo(AbstractDungeon.player, reduction_amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                    addToTop(new DamageAction(target, new DamageInfo(AbstractDungeon.player, reduction_amount, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
                 }
 
             } else {

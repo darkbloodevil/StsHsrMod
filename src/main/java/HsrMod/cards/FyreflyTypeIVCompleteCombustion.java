@@ -3,7 +3,6 @@ package HsrMod.cards;
 import HsrMod.action.FireFlyTypeIVCompleteCombustionAction;
 import HsrMod.characters.StsCharacter;
 import HsrMod.util.CardStats;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -12,8 +11,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/7/31 17:41
  * @description
  */
-public class FireflyTypeIVCompleteCombustion extends BaseCard {
-    public static final String ID = makeID(FireflyTypeIVCompleteCombustion.class.getSimpleName());
+public class FyreflyTypeIVCompleteCombustion extends BaseCard {
+    public static final String ID = makeID(FyreflyTypeIVCompleteCombustion.class.getSimpleName());
     private static final CardStats info = new CardStats(
             StsCharacter.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
             CardType.SKILL, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
@@ -27,7 +26,7 @@ public class FireflyTypeIVCompleteCombustion extends BaseCard {
     private static final int UPG_Magic = 2;
     private static final int TURNS = 3;
 
-    public FireflyTypeIVCompleteCombustion() {
+    public FyreflyTypeIVCompleteCombustion() {
         super(ID, info);
         this.exhaust=true;
     }
@@ -39,6 +38,7 @@ public class FireflyTypeIVCompleteCombustion extends BaseCard {
 
     @Override
     public void upgrade() {
+        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
 //            upgradeMagicNumber(UPG_Magic);
