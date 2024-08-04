@@ -3,6 +3,7 @@ package HsrMod.cards;
 import HsrMod.action.TriggerDebuffAction;
 import HsrMod.characters.StsCharacter;
 import HsrMod.core.HsrDamageInfo;
+import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.CardStats;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -14,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @author darkbloodevil
  * @date 2024/7/24 22:19
  */
-public class CaressingMoonlight extends BaseCard {
+public class CaressingMoonlight extends BaseCard implements ToughnessReductionInterface {
     public static final String ID = makeID(CaressingMoonlight.class.getSimpleName());
     private static final CardStats info = new CardStats(
             StsCharacter.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -27,11 +28,11 @@ public class CaressingMoonlight extends BaseCard {
     //but constants at the top of the file are easy to adjust.
     private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 3;
+    private static final int REDUCTION = 4;
 
     public CaressingMoonlight() {
         super(ID, info);
-        setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
-//        tags.add(CardTags.STARTER_STRIKE);
+        setDamage(DAMAGE, UPG_DAMAGE);
     }
 
     @Override
@@ -39,5 +40,10 @@ public class CaressingMoonlight extends BaseCard {
         addToBot(new DamageAction(m, new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL,4), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         addToBot(new TriggerDebuffAction(m, p));
 
+    }
+
+    @Override
+    public int get_toughness_reduction() {
+        return REDUCTION;
     }
 }

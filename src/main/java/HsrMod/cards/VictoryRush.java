@@ -1,6 +1,7 @@
 package HsrMod.cards;
 
 import HsrMod.characters.StsCharacter;
+import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.powers.VictoryRushPower;
 import HsrMod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -13,7 +14,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/7/30 18:00
  * @description
  */
-public class VictoryRush extends BaseCard {
+public class VictoryRush extends BaseCard implements ToughnessReductionInterface {
     public static final String ID = makeID(VictoryRush.class.getSimpleName());
     private static final CardStats info = new CardStats(
             StsCharacter.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -24,6 +25,7 @@ public class VictoryRush extends BaseCard {
     );
     private static final int DAMAGE = 10;
     private static final int UPG_Magic = 5;
+    private static final int REDUCTION = 2;
 
     public VictoryRush() {
         super(ID, info);
@@ -43,8 +45,13 @@ public class VictoryRush extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        VictoryRushPower pncp = new VictoryRushPower(p, p, magicNumber);
+        VictoryRushPower pncp = new VictoryRushPower(p, p, magicNumber,REDUCTION);
 
         addToBot(new ApplyPowerAction(p, p, pncp));
+    }
+
+    @Override
+    public int get_toughness_reduction() {
+        return REDUCTION;
     }
 }

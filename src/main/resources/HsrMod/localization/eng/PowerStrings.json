@@ -46,5 +46,47 @@
     "DESCRIPTIONS": [
       "Increase by 1 when apply a #yDEBUFF to enemy"
     ]
+  },
+  "${modID}:AwaitingSystemResponsePower": {
+    "NAME": "Awaiting System Response",
+    "DESCRIPTIONS": [
+      "Apply a random #yDEBUFF in #yweakness/#yvulnerable/lose 2 #ystrength this turn when attack."
+    ]
+  },
+  "${modID}:BleakBreedsBlissPower": {
+    "NAME": "Bleak Breeds Bliss",
+    "DESCRIPTIONS": [
+      "When health is under 50%, heal the amount of unblocked damage when attacked."
+    ]
+  },
+  "${modID}:FineIwillDoItMyselfPower": {
+    "NAME": "Fine I Will Do It Myself",
+    "DESCRIPTIONS": [
+      "Deal !M! ${modID}:Follow-Up damage when any enemy's health is under 50% by this damage."
+    ]
+  },
+  "${modID}:FireDotPower": {
+    "NAME": "Fire Dot",
+    "DESCRIPTIONS": [
+      "Deal %d Fire ${modID}:Dot damage at the start of turn."
+    ]
+  },
+  "${modID}:LightningDotPower": {
+    "NAME": "Lightning Dot",
+    "DESCRIPTIONS": [
+      "Deal %d Lightning ${modID}:Dot damage at the start of turn."
+    ]
+  },
+  "${modID}:PromiseNotCommandPower": {
+    "NAME": "Promise Not Command",
+    "DESCRIPTIONS": [
+      "${modID}:Counter %d."
+    ]
+  },
+  "${modID}:VictoryRushPower": {
+    "NAME": "Victory Rush",
+    "DESCRIPTIONS": [
+      "When an enemy is inflicted with ${modID}:Weakness_Break, deal %d ${modID}:Follow-Up damage and ${modID}:Toughness_Reduction %d."
+    ]
   }
 }

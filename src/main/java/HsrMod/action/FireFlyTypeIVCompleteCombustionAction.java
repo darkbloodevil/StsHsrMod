@@ -1,9 +1,6 @@
 package HsrMod.action;
 
-import HsrMod.cards.sam.FyreflyTypeIVDeathstarOverload;
-import HsrMod.cards.sam.FyreflyTypeIVPyrogenicDecimation;
-import HsrMod.cards.sam.OrderAerialBombardment;
-import HsrMod.cards.sam.OrderFlarePropulsion;
+import HsrMod.cards.sam.*;
 import HsrMod.util.RandomUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -45,9 +42,6 @@ public class FireFlyTypeIVCompleteCombustionAction extends AbstractGameAction {
             return;
         }
         if (!this.retrieveCard) {
-//            AbstractDungeon.cardRewardScreen.customCombatOpen(generatedCards, CardRewardScreen.TEXT[1], (this.cardType != null));
-            System.out.println("==========");
-            System.out.println(AbstractDungeon.cardRewardScreen.discoveryCard==null);
             if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {
                 System.out.println(AbstractDungeon.cardRewardScreen.discoveryCard.cardID);
                 AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();
@@ -89,6 +83,8 @@ public class FireFlyTypeIVCompleteCombustionAction extends AbstractGameAction {
         pile.add(new OrderAerialBombardment());
         pile.add(new FyreflyTypeIVPyrogenicDecimation());
         pile.add(new FyreflyTypeIVDeathstarOverload());
+        pile.add(new ChrysalidPyronexus());
+        pile.add(new DeltaOrderMeteoricIncineration());
 
         ArrayList<AbstractCard> chosen = new ArrayList<>();
         for (int i : RandomUtil.selectRandomElements(pile.size(), n)) {

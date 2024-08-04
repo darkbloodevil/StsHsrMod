@@ -3,6 +3,7 @@ package HsrMod.cards.sam;
 import HsrMod.cards.BaseCard;
 import HsrMod.characters.StsCharacter;
 import HsrMod.core.HsrDamageInfo;
+import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.CardStats;
 import HsrMod.util.ToughnessUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -19,7 +20,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/1 14:43
  * @description
  */
-public class FyreflyTypeIVDeathstarOverload extends BaseCard {
+public class FyreflyTypeIVDeathstarOverload extends BaseCard implements ToughnessReductionInterface {
     public static final String ID = makeID(FyreflyTypeIVDeathstarOverload.class.getSimpleName());
     private static final CardStats info = new CardStats(
             StsCharacter.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -29,8 +30,6 @@ public class FyreflyTypeIVDeathstarOverload extends BaseCard {
             0 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
     int toughness_reduction = 8;
-    //These will be used in the constructor. Technically you can just use the values directly,
-    //but constants at the top of the file are easy to adjust.
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
     private static final int UPG_Magic = 2;
@@ -56,5 +55,10 @@ public class FyreflyTypeIVDeathstarOverload extends BaseCard {
             addToBot(new DrawCardAction(1));
             addToBot(new HealAction(p,p,magicNumber));
         }
+    }
+
+    @Override
+    public int get_toughness_reduction() {
+        return toughness_reduction;
     }
 }

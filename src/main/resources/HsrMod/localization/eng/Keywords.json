@@ -7,6 +7,30 @@
     "DESCRIPTION": "When toughness is down to zero, get stunned."
   },
   {
+    "PROPER_NAME": "Weakness Broken",
+    "NAMES": [
+      "Weakness Broken",
+      "Weakness_Broken"
+    ],
+    "DESCRIPTION": "Weakness Broken state. Get stunned and can not deplete toughness."
+  },
+  {
+    "PROPER_NAME": "Weakness Break",
+    "NAMES": [
+      "Weakness Break",
+      "Weakness_Break"
+    ],
+    "DESCRIPTION": "When toughness is down to zero, trigger all the #yweakness #ybreak effects"
+  },
+  {
+    "PROPER_NAME": "Toughness Reduction",
+    "NAMES": [
+      "Toughness Reduction",
+      "Toughness_Reduction"
+    ],
+    "DESCRIPTION": "Amount of #yToughness #yReduction to target enemy"
+  },
+  {
     "PROPER_NAME": "Dot",
     "NAMES": [
       "Dot"
@@ -26,5 +50,20 @@
       "Counter"
     ],
     "DESCRIPTION": "Launch a #yFollow-Up #yAttack when attacked."
+  },
+  {
+    "PROPER_NAME": "Slashed Dream",
+    "NAMES": [
+      "Slashed Dreams",
+      "Slashed_Dreams"
+    ],
+    "DESCRIPTION": "When apply DEBUFF to enemy, increase by 1."
+  },
+  {
+    "PROPER_NAME": "SAM",
+    "NAMES": [
+      "SAM"
+    ],
+    "DESCRIPTION": "A group of very powerful cards which can only gained by #gFyrefly #gType-IV: #gComplete #gCombustion"
   }
 ]

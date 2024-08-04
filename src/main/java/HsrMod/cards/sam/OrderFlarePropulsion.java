@@ -3,6 +3,7 @@ package HsrMod.cards.sam;
 import HsrMod.cards.BaseCard;
 import HsrMod.characters.StsCharacter;
 import HsrMod.core.HsrDamageInfo;
+import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.CardStats;
 import HsrMod.util.ToughnessUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -17,7 +18,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/1 10:58
  * @description
  */
-public class OrderFlarePropulsion extends BaseCard {
+public class OrderFlarePropulsion extends BaseCard implements ToughnessReductionInterface {
     public static final String ID = makeID(OrderFlarePropulsion.class.getSimpleName());
     private static final CardStats info = new CardStats(
             StsCharacter.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -44,5 +45,10 @@ public class OrderFlarePropulsion extends BaseCard {
         if (ToughnessUtil.target_on_break(m)){
             addToBot(new DrawCardAction(2));
         }
+    }
+
+    @Override
+    public int get_toughness_reduction() {
+        return toughness_reduction;
     }
 }
