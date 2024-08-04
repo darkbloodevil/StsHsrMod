@@ -1,7 +1,10 @@
 package HsrMod;
 
 import HsrMod.cards.BaseCard;
+import HsrMod.cards.attacks.SuperStrike;
+import HsrMod.cards.powers.AllOutFootlightParade;
 import HsrMod.cards.sam.FyreflyTypeIVDeathstarOverload;
+import HsrMod.cards.skills.ApplyDotCard;
 import HsrMod.characters.StsCharacter;
 import HsrMod.potions.BasePotion;
 import HsrMod.relics.BaseRelic;
@@ -252,6 +255,18 @@ public class HsrMod implements
         // 自动载入卡
         new AutoAdd(modID) //Loads files from this mod
                 .packageFilter(BaseCard.class) //In the same package as this class
+                .setDefaultSeen(true) //And marks them as seen in the compendium
+                .cards(); //Adds the cards
+        new AutoAdd(modID) //Loads files from this mod
+                .packageFilter(SuperStrike.class) //In the same package as this class
+                .setDefaultSeen(true) //And marks them as seen in the compendium
+                .cards(); //Adds the cards
+        new AutoAdd(modID) //Loads files from this mod
+                .packageFilter(ApplyDotCard.class) //In the same package as this class
+                .setDefaultSeen(true) //And marks them as seen in the compendium
+                .cards(); //Adds the cards
+        new AutoAdd(modID) //Loads files from this mod
+                .packageFilter(AllOutFootlightParade.class) //In the same package as this class
                 .setDefaultSeen(true) //And marks them as seen in the compendium
                 .cards(); //Adds the cards
         new AutoAdd(modID) //Loads files from this mod

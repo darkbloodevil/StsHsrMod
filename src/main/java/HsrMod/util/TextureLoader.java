@@ -91,7 +91,7 @@ public class TextureLoader {
         {
             switch (cardType) {
                 case ATTACK:
-                    textureString = imagePath("cards/attack/default.png");
+                    textureString = imagePath("cards/attacks/default.png");
                     break;
                 case POWER:
                     textureString = imagePath("cards/power/default.png");

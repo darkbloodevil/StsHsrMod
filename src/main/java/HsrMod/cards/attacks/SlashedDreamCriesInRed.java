@@ -1,5 +1,6 @@
-package HsrMod.cards;
+package HsrMod.cards.attacks;
 
+import HsrMod.cards.BaseCard;
 import HsrMod.characters.StsCharacter;
 import HsrMod.powers.SlashedDreamPower;
 import HsrMod.util.CardStats;

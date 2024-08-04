@@ -1,5 +1,6 @@
-package HsrMod.cards;
+package HsrMod.cards.powers;
 
+import HsrMod.cards.BaseCard;
 import HsrMod.characters.StsCharacter;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.powers.VictoryRushPower;

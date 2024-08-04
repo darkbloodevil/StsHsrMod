@@ -1,6 +1,7 @@
-package HsrMod.cards;
+package HsrMod.cards.skills;
 
 import HsrMod.action.ApplyDotAction;
+import HsrMod.cards.BaseCard;
 import HsrMod.characters.StsCharacter;
 import HsrMod.powers.LightningDotPower;
 import HsrMod.util.CardStats;
