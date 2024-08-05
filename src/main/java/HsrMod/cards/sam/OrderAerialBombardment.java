@@ -1,7 +1,7 @@
 package HsrMod.cards.sam;
 
 import HsrMod.cards.BaseCard;
-import HsrMod.characters.StsCharacter;
+import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.CardStats;
@@ -22,7 +22,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 public class OrderAerialBombardment extends BaseCard implements ToughnessReductionInterface {
     public static final String ID = makeID(OrderAerialBombardment.class.getSimpleName());
     private static final CardStats info = new CardStats(
-            StsCharacter.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
+            Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
             CardType.ATTACK, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardRarity.SPECIAL, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
@@ -37,7 +37,7 @@ public class OrderAerialBombardment extends BaseCard implements ToughnessReducti
     public OrderAerialBombardment() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
-//        tags.add(CardTags.STARTER_STRIKE);
+        this.retain=true;
     }
 
     @Override

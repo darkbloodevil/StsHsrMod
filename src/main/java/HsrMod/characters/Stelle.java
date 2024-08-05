@@ -29,7 +29,7 @@ import static HsrMod.HsrMod.characterPath;
 import static HsrMod.HsrMod.makeID;
 
 // 继承CustomPlayer类
-public class StsCharacter extends CustomPlayer {
+public class Stelle extends CustomPlayer {
     //Stats
     public static final int ENERGY_PER_TURN = 3;
     public static final int MAX_HP = 70;
@@ -38,7 +38,7 @@ public class StsCharacter extends CustomPlayer {
     public static final int ORB_SLOTS = 0;
 
     //Strings
-    private static final String ID = makeID("Stelle"); //This should match whatever you have in the CharacterStrings.json file
+    private static final String ID = makeID(Stelle.class.getSimpleName()); //This should match whatever you have in the CharacterStrings.json file
     private static String[] getNames() { return CardCrawlGame.languagePack.getCharacterString(ID).NAMES; }
     private static String[] getText() { return CardCrawlGame.languagePack.getCharacterString(ID).TEXT; }
 
@@ -80,7 +80,7 @@ public class StsCharacter extends CustomPlayer {
         }
 
         public static void registerCharacter() {
-            BaseMod.addCharacter(new StsCharacter(), CHAR_SELECT_BUTTON, CHAR_SELECT_PORTRAIT);
+            BaseMod.addCharacter(new Stelle(), CHAR_SELECT_BUTTON, CHAR_SELECT_PORTRAIT);
         }
     }
 
@@ -93,7 +93,7 @@ public class StsCharacter extends CustomPlayer {
 
     //Actual character class code below this point
 
-    public StsCharacter() {
+    public Stelle() {
         super(getNames()[0], Meta.STELLE_CHARACTER,
                 new CustomEnergyOrb(null, null, null), //Energy Orb
                 new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
@@ -233,6 +233,6 @@ public class StsCharacter extends CustomPlayer {
     @Override
     public AbstractPlayer newInstance() {
         //Makes a new instance of your character class.
-        return new StsCharacter();
+        return new Stelle();
     }
 }

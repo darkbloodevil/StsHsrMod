@@ -1,7 +1,7 @@
 package HsrMod.relics;
 
 import HsrMod.action.DepleteToughnessAction;
-import HsrMod.characters.StsCharacter;
+import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.powers.*;
 import HsrMod.util.ToughnessUtil;
@@ -23,7 +23,7 @@ public class HonkaiStarRailRelic extends BaseRelic {
 
 
     public HonkaiStarRailRelic() {
-        super(ID, HonkaiStarRailRelic.class.getSimpleName(), StsCharacter.Meta.CARD_COLOR, RARITY, SOUND);
+        super(ID, HonkaiStarRailRelic.class.getSimpleName(), Stelle.Meta.CARD_COLOR, RARITY, SOUND);
     }
 
     @Override

@@ -1,11 +1,11 @@
 package HsrMod;
 
 import HsrMod.cards.BaseCard;
-import HsrMod.cards.attacks.SuperStrike;
+import HsrMod.cards.attacks.CaressingMoonlight;
 import HsrMod.cards.powers.AllOutFootlightParade;
 import HsrMod.cards.sam.FyreflyTypeIVDeathstarOverload;
-import HsrMod.cards.skills.ApplyDotCard;
-import HsrMod.characters.StsCharacter;
+import HsrMod.cards.skills.DifficultyPaying;
+import HsrMod.characters.Stelle;
 import HsrMod.potions.BasePotion;
 import HsrMod.relics.BaseRelic;
 import HsrMod.variables.BaseVar;
@@ -60,7 +60,7 @@ public class HsrMod implements
     //This will be called by ModTheSpire because of the @SpireInitializer annotation at the top of the class.
     public static void initialize() {
         new HsrMod();
-        StsCharacter.Meta.registerColor();
+        Stelle.Meta.registerColor();
     }
 
     public HsrMod() {
@@ -241,7 +241,7 @@ public class HsrMod implements
 
     @Override
     public void receiveEditCharacters() {
-        StsCharacter.Meta.registerCharacter();
+        Stelle.Meta.registerCharacter();
     }
 
     @Override
@@ -252,17 +252,17 @@ public class HsrMod implements
                 .any(DynamicVariable.class, (info, variable) -> { //Run this code for any classes that extend this class
                     BaseMod.addDynamicVariable(variable);
                 });
-        // 自动载入卡
+//        // 自动载入卡
         new AutoAdd(modID) //Loads files from this mod
                 .packageFilter(BaseCard.class) //In the same package as this class
                 .setDefaultSeen(true) //And marks them as seen in the compendium
                 .cards(); //Adds the cards
         new AutoAdd(modID) //Loads files from this mod
-                .packageFilter(SuperStrike.class) //In the same package as this class
+                .packageFilter(CaressingMoonlight.class) //In the same package as this class
                 .setDefaultSeen(true) //And marks them as seen in the compendium
                 .cards(); //Adds the cards
         new AutoAdd(modID) //Loads files from this mod
-                .packageFilter(ApplyDotCard.class) //In the same package as this class
+                .packageFilter(DifficultyPaying.class) //In the same package as this class
                 .setDefaultSeen(true) //And marks them as seen in the compendium
                 .cards(); //Adds the cards
         new AutoAdd(modID) //Loads files from this mod

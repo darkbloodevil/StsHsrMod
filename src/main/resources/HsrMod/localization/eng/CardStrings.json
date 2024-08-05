@@ -19,7 +19,31 @@
   },
   "${modID}:CaressingMoonlight": {
     "NAME": "Caressing Moonlight",
-    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Toughness_Reduction !reduction!. NL Trigger all ${modID}:Dot of the target."
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL ${modID}:Toughness_Reduction !reduction!. NL Trigger all ${modID}:Dot of the target."
+  },
+  "${modID}:DivineCastigation": {
+    "NAME": "Divine Castigation",
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Toughness_Reduction !reduction!."
+  },
+  "${modID}:FlorephemeralDreamflux": {
+    "NAME": "Florephemeral Dreamflux",
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Toughness_Reduction !reduction!. NL Randomly exhaust 2 cards."
+  },
+  "${modID}:HighPoles": {
+    "NAME": "High Poles",
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Toughness_Reduction !reduction!. NL Cause fire ${modID}:Dot damage !M! duration !duration!."
+  },
+  "${modID}:ItsMagicIaddSomeMagic": {
+    "NAME": "It's Magic, I Add SomeMagic",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL ${modID}:Toughness_Reduction !reduction! . NL Deal !M! ${modID}:Follow-Up damage when any enemy's health is under 50% by this damage."
+  },
+  "${modID}:SlashedDreamCriesInRed": {
+    "NAME": "Slashed Dream Cries In Red",
+    "DESCRIPTION": "You can't play this card until you have 9 ${modID}:Slashed_Dreams. Deal !D! damage to all enemies."
+  },
+  "${modID}:TwilightTrill": {
+    "NAME": "STwilight Trill",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Cause lightning ${modID}:Dot damage !M! duration !duration!."
   },
   "${modID}:AllOutFootlightParade": {
     "NAME": "All-Out Footlight Parade",
@@ -30,6 +54,55 @@
     "DESCRIPTION": "Weakness Break Efficiency increases by 50%.",
     "UPGRADE_DESCRIPTION": "Innate.NL Weakness Break Efficiency increases by 50%."
   },
+  "${modID}:VictoryRush": {
+    "NAME": "Victory Rush",
+    "DESCRIPTION": "When an enemy is inflicted with ${modID}:Weakness_Break, deal !M! ${modID}:Follow-Up damage and ${modID}:Toughness_Reduction !reduction!."
+  },
+  "${modID}:AwaitingSystemResponse": {
+    "NAME": "Awaiting System Response...",
+    "DESCRIPTION": "Apply a random DEBUFF in weakness/vulnerable/lose 2 strength this turn when attack."
+  },
+  "${modID}:BleakBreedsBliss": {
+    "NAME": "Bleak Breeds Bliss",
+    "DESCRIPTION": "When health is under 50%, heal the amount of unblocked damage when attacked."
+  },
+  "${modID}:DifficultyPaying": {
+    "NAME": "Difficulty Paying",
+    "DESCRIPTION": "Exhaust NL The target get 50% more ${modID}:Follow-Up damage. Every 3 times you attack the enemy, draw a card."
+  },
+  "${modID}:FiendImpeachmentOfEvil": {
+    "NAME": "Fiend Impeachment Of Evil",
+    "DESCRIPTION": "Enemies get Weak and loss 2 strength this turn."
+  },
+  "${modID}:FyreflyTypeIVCompleteCombustion": {
+    "NAME": "Fyrefly Type-IV: Complete Combustion",
+    "DESCRIPTION": "Retain NL Randomly add 3 ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately.",
+    "UPGRADE_DESCRIPTION": "Retain NL Randomly add 3 upgraded ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately."
+  },
+  "${modID}:FyreflyTypeIVDeathstarOverload": {
+    "NAME": "Fyrefly Type-IV: Deathstar Overload",
+    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and heal !M! ."
+  },
+  "${modID}:FyreflyTypeIVPyrogenicDecimation": {
+    "NAME": "Fyrefly Type-IV: Pyrogenic Decimation",
+    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card."
+  },
+  "${modID}:ChrysalidPyronexus": {
+    "NAME": "Chrysalid Pyronexus",
+    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and gain !M! block."
+  },
+  "${modID}:DeltaOrderMeteoricIncineration": {
+    "NAME": "Δ Order: Meteoric Incineration",
+    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and cause fire ${modID}:Dot damage !M! duration !duration!."
+  },
+  "${modID}:OrderAerialBombardment": {
+    "NAME": "Order: Aerial Bombardment",
+    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and gain 1 energy."
+  },
+  "${modID}:OrderFlarePropulsion": {
+    "NAME": "Order: Flare Propulsion",
+    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 2 cards."
+  },
   "${modID}:PetalsToStreamReposeInDream": {
     "NAME": "Petals To Stream, Repose In Dream",
     "DESCRIPTION": "Extend the duration of enemies' ${modID}:Weakness_Broken for one turn."
@@ -38,57 +111,16 @@
     "NAME": "Promise, Not Command",
     "DESCRIPTION": "${modID}:Counter !M!. NL Duration !duration!"
   },
-  "${modID}:VictoryRush": {
-    "NAME": "Victory Rush",
-    "DESCRIPTION": "When an enemy is inflicted with ${modID}:Weakness_Break, deal !M! ${modID}:Follow-Up damage and ${modID}:Toughness_Reduction !reduction!."
+  "${modID}:TailSpiritualDomination": {
+    "NAME": "Tail Spiritual Domination",
+    "DESCRIPTION": "Gain 1 energy and 2 strength."
   },
-  "${modID}:SlashedDreamCriesInRed": {
-    "NAME": "Slashed Dream Cries In Red",
-    "DESCRIPTION": "You can't play this card until you have 9 ${modID}:Slashed_Dreams. Deal !D! damage to all enemies."
-  },
-  "${modID}:FyreflyTypeIVCompleteCombustion": {
-    "NAME": "Fyrefly Type-IV: Complete Combustion",
-    "DESCRIPTION": "Randomly add 3 ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately.",
-    "UPGRADE_DESCRIPTION": "Randomly add 3 upgraded ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately."
-  },
-  "${modID}:FyreflyTypeIVDeathstarOverload": {
-    "NAME": "Fyrefly Type-IV: Deathstar Overload",
-    "DESCRIPTION": "Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and heal !M! ."
-  },
-  "${modID}:FyreflyTypeIVPyrogenicDecimation": {
-    "NAME": "Fyrefly Type-IV: Pyrogenic Decimation",
-    "DESCRIPTION": "Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card."
-  },
-  "${modID}:ChrysalidPyronexus": {
-    "NAME": "Chrysalid Pyronexus",
-    "DESCRIPTION": "Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and gain !M! block."
-  },
-  "${modID}:DeltaOrderMeteoricIncineration": {
-    "NAME": "Δ Order: Meteoric Incineration",
-    "DESCRIPTION": "Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and cause fire ${modID}:Dot damage !M! duration !duration!."
-  },
-  "${modID}:OrderAerialBombardment": {
-    "NAME": "Order: Aerial Bombardment",
-    "DESCRIPTION": "Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and gain 1 energy."
-  },
-  "${modID}:OrderFlarePropulsion": {
-    "NAME": "Order: Flare Propulsion",
-    "DESCRIPTION": "Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 2 cards."
-  },
-  "${modID}:ItsMagicIaddSomeMagic": {
-    "NAME": "It's Magic, I Add SomeMagic",
-    "DESCRIPTION": "Deal !D! damage to all enemies. Deal !M! ${modID}:Follow-Up damage when any enemy's health is under 50% by this damage."
-  },
-  "${modID}:AwaitingSystemResponse": {
-    "NAME": "Awaiting System Response...",
-    "DESCRIPTION": "Apply a random DEBUFF in weakness/vulnerable/lose 2 strength this turn when attack."
+  "${modID}:TheHeroWithAThousandFaces": {
+    "NAME": "The Hero With A Thousand Faces",
+    "DESCRIPTION": "Gain !M! energy when drawn NL Draw !M! cards when move into discard pile."
   },
   "${modID}:VoxHarmoniqueOpusCosmique": {
     "NAME": "Vox Harmonique Opus Cosmique",
     "DESCRIPTION": "Choose 3 cards in your draw pile, set their costs to 0 and put them in the top of the draw pile. "
-  },
-  "${modID}:BleakBreedsBliss": {
-    "NAME": "Bleak Breeds Bliss",
-    "DESCRIPTION": "When health is under 50%, heal the amount of unblocked damage when attacked."
   }
 }

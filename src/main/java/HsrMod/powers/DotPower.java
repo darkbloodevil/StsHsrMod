@@ -42,7 +42,7 @@ public class DotPower extends BasePower {
     public void dot_damage(String from) {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flashWithoutSound();
-            this.addToBot(new DotLoseHpAction(this.owner, this.source, this.damage_amount, AbstractGameAction.AttackEffect.NONE));
+            this.addToBot(new DotLoseHpAction(this.owner, this.source, this.damage_amount, AbstractGameAction.AttackEffect.POISON));
             HsrMod.logger.info(String.format("==========%s is now triggered from=========", ID, from));
 
         }

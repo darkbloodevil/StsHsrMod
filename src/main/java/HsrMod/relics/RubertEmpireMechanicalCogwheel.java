@@ -1,6 +1,6 @@
 package HsrMod.relics;
 
-import HsrMod.characters.StsCharacter;
+import HsrMod.characters.Stelle;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
@@ -15,7 +15,7 @@ public class RubertEmpireMechanicalCogwheel extends BaseRelic {
 
 
     public RubertEmpireMechanicalCogwheel() {
-        super(ID, RubertEmpireMechanicalCogwheel.class.getSimpleName(), StsCharacter.Meta.CARD_COLOR, RARITY, SOUND);
+        super(ID, RubertEmpireMechanicalCogwheel.class.getSimpleName(), Stelle.Meta.CARD_COLOR, RARITY, SOUND);
     }
 
     @Override
