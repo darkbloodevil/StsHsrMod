@@ -30,6 +30,7 @@ public class PromiseNotCommand extends BaseCard implements DurationInterface {
     public PromiseNotCommand() {
         super(ID, info);
         this.setMagic(DAMAGE);
+        this.baseMagicNumber=DAMAGE;
         this.magicNumber = DAMAGE;
     }
 

@@ -30,6 +30,7 @@ public class VictoryRush extends BaseCard implements ToughnessReductionInterface
 
     public VictoryRush() {
         super(ID, info);
+        this.baseMagicNumber=DAMAGE;
         this.magicNumber = DAMAGE;
     }
 

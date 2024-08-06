@@ -39,7 +39,8 @@ public class HighPoles extends BaseCard implements ToughnessReductionInterface, 
     public HighPoles() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
-        this.magicNumber = 4;
+        this.baseMagicNumber=4;
+        this.magicNumber = baseMagicNumber;
     }
 
     @Override

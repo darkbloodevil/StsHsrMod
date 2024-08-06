@@ -29,14 +29,15 @@ public class TheHeroWithAThousandFaces extends BaseCard {
 
     public TheHeroWithAThousandFaces() {
         super(ID, info);
-        this.magicNumber = 1;
+        this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(m, p, new ProofOfDebtPower(m, p)));
+        addToBot(new GainEnergyAction(this.magicNumber));
     }
-
+    @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         return false;
     }
@@ -47,17 +48,29 @@ public class TheHeroWithAThousandFaces extends BaseCard {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
+
             initializeDescription();
         }
     }
 
     @Override
     public void triggerWhenDrawn() {
-        addToBot(new GainEnergyAction(this.magicNumber));
+        super.triggerWhenDrawn();
+        addToBot(new GainEnergyAction(magicNumber));
     }
 
     @Override
-    public void onMoveToDiscard() {
-        addToBot(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
+    public void triggerOnEndOfPlayerTurn() {
+        super.triggerOnEndOfPlayerTurn();
+        if (!this.retain) {
+            addToBot(new DrawCardAction(AbstractDungeon.player, magicNumber));
+        }
     }
+
+    @Override
+    public void triggerOnManualDiscard() {
+        super.triggerOnManualDiscard();
+        addToBot(new DrawCardAction(AbstractDungeon.player, magicNumber));
+    }
+
 }

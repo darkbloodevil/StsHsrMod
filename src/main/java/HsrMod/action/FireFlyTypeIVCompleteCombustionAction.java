@@ -1,6 +1,6 @@
 package HsrMod.action;
 
-import HsrMod.cards.sam.*;
+import HsrMod.cards.specials.*;
 import HsrMod.util.RandomUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

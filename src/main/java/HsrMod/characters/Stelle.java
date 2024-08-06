@@ -1,8 +1,12 @@
 package HsrMod.characters;
 
+import HsrMod.cards.attacks.StardustAce;
+import HsrMod.cards.skills.EverBurningAmber;
+import HsrMod.relics.HonkaiStarRailRelic;
 import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
+import basemod.animations.AbstractAnimation;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -96,9 +100,14 @@ public class Stelle extends CustomPlayer {
     public Stelle() {
         super(getNames()[0], Meta.STELLE_CHARACTER,
                 new CustomEnergyOrb(null, null, null), //Energy Orb
-                new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
+                new AbstractAnimation() { //Change the Animation line to this
+                    @Override
+                    public Type type() {
+                        return Type.NONE; //A NONE animation results in the image given in initializeClass being used
+                    }
+                }); //Animation
 
-        initializeClass(null,
+        initializeClass(characterPath("stelle.png"),
                 SHOULDER_2,
                 SHOULDER_1,
                 CORPSE,
@@ -118,9 +127,14 @@ public class Stelle extends CustomPlayer {
         //If you want multiple of the same card, you have to add it multiple times.
         retVal.add(Strike_Red.ID);
         retVal.add(Strike_Red.ID);
+        retVal.add(Strike_Red.ID);
+        retVal.add(Strike_Red.ID);
         retVal.add(Defend_Blue.ID);
         retVal.add(Defend_Blue.ID);
-        retVal.add(Neutralize.ID);
+        retVal.add(Defend_Blue.ID);
+        retVal.add(Defend_Blue.ID);
+        retVal.add(StardustAce.ID);
+        retVal.add(EverBurningAmber.ID);
 
         return retVal;
     }
@@ -129,7 +143,7 @@ public class Stelle extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         //IDs of starting relics. You can have multiple, but one is recommended.
-        retVal.add(BurningBlood.ID);
+        retVal.add(HonkaiStarRailRelic.ID);
 
         return retVal;
     }

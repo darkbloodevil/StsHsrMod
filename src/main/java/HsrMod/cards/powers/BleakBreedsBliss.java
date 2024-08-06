@@ -25,6 +25,7 @@ public class BleakBreedsBliss extends BaseCard {
     static int UPG_Magic=1;
     public BleakBreedsBliss() {
         super(ID, info);
+        this.baseMagicNumber=1;
         this.magicNumber=1;
     }
 

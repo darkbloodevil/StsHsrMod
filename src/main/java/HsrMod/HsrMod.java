@@ -3,7 +3,7 @@ package HsrMod;
 import HsrMod.cards.BaseCard;
 import HsrMod.cards.attacks.CaressingMoonlight;
 import HsrMod.cards.powers.AllOutFootlightParade;
-import HsrMod.cards.sam.FyreflyTypeIVDeathstarOverload;
+import HsrMod.cards.specials.FyreflyTypeIVDeathstarOverload;
 import HsrMod.cards.skills.DifficultyPaying;
 import HsrMod.characters.Stelle;
 import HsrMod.potions.BasePotion;

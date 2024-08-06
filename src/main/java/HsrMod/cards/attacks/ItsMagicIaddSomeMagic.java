@@ -35,6 +35,7 @@ public class ItsMagicIaddSomeMagic extends BaseCard implements ToughnessReductio
     public ItsMagicIaddSomeMagic() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
+        this.baseMagicNumber=DAMAGE;
         this.magicNumber=DAMAGE;
     }
     @Override

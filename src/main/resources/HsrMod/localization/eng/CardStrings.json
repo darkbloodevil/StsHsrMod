@@ -41,8 +41,20 @@
     "NAME": "Slashed Dream Cries In Red",
     "DESCRIPTION": "You can't play this card until you have 9 ${modID}:Slashed_Dreams. Deal !D! damage to all enemies."
   },
+  "${modID}:StardustAce": {
+    "NAME": "Stardust Ace",
+    "DESCRIPTION": "Choose: attack one or attack all ."
+  },
+  "${modID}:FarewellHit": {
+    "NAME": "Farewell Hit",
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Toughness_Reduction !reduction! ."
+  },
+  "${modID}:RIPHomeRun": {
+    "NAME": "RIP Home Run",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL ${modID}:Toughness_Reduction !reduction! ."
+  },
   "${modID}:TwilightTrill": {
-    "NAME": "STwilight Trill",
+    "NAME": "Twilight Trill",
     "DESCRIPTION": "Deal !D! damage to all enemies. NL Cause lightning ${modID}:Dot damage !M! duration !duration!."
   },
   "${modID}:AllOutFootlightParade": {
@@ -60,15 +72,19 @@
   },
   "${modID}:AwaitingSystemResponse": {
     "NAME": "Awaiting System Response...",
-    "DESCRIPTION": "Apply a random DEBUFF in weakness/vulnerable/lose 2 strength this turn when attack."
+    "DESCRIPTION": "When attack, apply a random DEBUFF in weak/vulnerable/-2 strength this turn to enemy."
   },
   "${modID}:BleakBreedsBliss": {
     "NAME": "Bleak Breeds Bliss",
-    "DESCRIPTION": "When health is under 50%, heal the amount of unblocked damage when attacked."
+    "DESCRIPTION": "When health is under half, heal the amount of unblocked damage when attacked."
   },
   "${modID}:DifficultyPaying": {
     "NAME": "Difficulty Paying",
     "DESCRIPTION": "Exhaust NL The target get 50% more ${modID}:Follow-Up damage. Every 3 times you attack the enemy, draw a card."
+  },
+  "${modID}:EverBurningAmber": {
+    "NAME": "Ever Burning Amber",
+    "DESCRIPTION": "Gain !D! Block. NL Apply !M! weak to all enemies."
   },
   "${modID}:FiendImpeachmentOfEvil": {
     "NAME": "Fiend Impeachment Of Evil",

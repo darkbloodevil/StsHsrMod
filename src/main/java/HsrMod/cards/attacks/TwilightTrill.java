@@ -39,6 +39,7 @@ public class TwilightTrill extends BaseCard implements ToughnessReductionInterfa
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
         this.magicNumber = 7;
+        this.baseMagicNumber = 7;
     }
 
     @Override

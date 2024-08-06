@@ -30,9 +30,6 @@ public class SlashedDreamCriesInRed extends BaseCard implements StartupCard {
             CardTarget.ALL_ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             0 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    //These will be used in the constructor. Technically you can just use the values directly,
-    //but constants at the top of the file are easy to adjust.
-    private static final int UPG_COST = 1;
 
     public SlashedDreamCriesInRed() {
         super(ID, info);
