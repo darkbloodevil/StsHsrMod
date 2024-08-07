@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import com.megacrit.cardcrawl.vfx.combat.PowerDebuffEffect;
@@ -20,12 +21,11 @@ import java.util.Collections;
  * @author darkbloodevil
  * @date 2024/7/23 16:07
  * @description 类似*ApplyPowerAction*, 但是只有同伤害的同类dot才是叠加amount（持续时间）
- *
  */
 public class ApplyDotAction extends AbstractGameAction {
-//    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ApplyDotAction.class.getSimpleName());
+    //    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ApplyDotAction.class.getSimpleName());
 //    public static final String[] TEXT = uiStrings.TEXT;
-    public static final String[] TEXT = new String[]{"ApplyDotAction","ApplyDotAction"};
+    public static final String[] TEXT = new String[]{"ApplyDotAction", "ApplyDotAction"};
     private AbstractPower powerToApply;
     private float startingDuration;
 
@@ -41,6 +41,14 @@ public class ApplyDotAction extends AbstractGameAction {
         this.setValues(target, source, stackAmount);
         this.duration = this.startingDuration;
         this.powerToApply = powerToApply;
+
+        // dot伤害受到攻击力修正
+        int strength = 0;
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+            strength = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+        }
+        powerToApply.stackPower(strength);
+
         this.actionType = ActionType.POWER;
         this.attackEffect = effect;
         if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
@@ -67,21 +75,12 @@ public class ApplyDotAction extends AbstractGameAction {
         this(target, source, powerToApply, stackAmount, false, effect);
     }
 
-
-    public ApplyDotAction(AbstractMonster target, AbstractCreature source, int amount) {
-        this.target = target;
-        this.source = source;
-        this.amount = amount;
-        this.actionType = ActionType.DEBUFF;
-        this.duration = Settings.ACTION_DUR_FAST;
-    }
-
     public void update() {
         if (this.target == null || this.target.isDeadOrEscaped()) {
             this.isDone = true;
             return;
         }
-        if (!(this.powerToApply instanceof DotPower)){
+        if (!(this.powerToApply instanceof DotPower)) {
             this.isDone = true;
             return;
         }
@@ -113,9 +112,9 @@ public class ApplyDotAction extends AbstractGameAction {
             boolean hasBuffAlready = false;
             for (AbstractPower p : this.target.powers) {
                 if (p.ID.equals(this.powerToApply.ID)) {
-                    DotPower old_dot=(DotPower)p;
-                    DotPower new_dot=(DotPower)powerToApply;
-                    if (old_dot.damage_amount==new_dot.damage_amount){
+                    DotPower old_dot = (DotPower) p;
+                    DotPower new_dot = (DotPower) powerToApply;
+                    if (old_dot.damage_amount == new_dot.damage_amount) {
                         p.stackPower(this.amount);
                         p.flash();
                         if (this.amount > 0) {
