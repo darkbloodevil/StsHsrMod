@@ -133,7 +133,7 @@
   },
   "${modID}:TheHeroWithAThousandFaces": {
     "NAME": "The Hero With A Thousand Faces",
-    "DESCRIPTION": "Gain !M! energy when drawn NL Draw !M! cards when move into discard pile."
+    "DESCRIPTION": "Gain !M! energy and discard 1 non-attack card when drawn NL Draw !M! cards when move into discard pile."
   },
   "${modID}:VoxHarmoniqueOpusCosmique": {
     "NAME": "Vox Harmonique Opus Cosmique",

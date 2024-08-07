@@ -9,7 +9,8 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
  * @description 加入了削韧量和元素类型
  */
 public class HsrDamageInfo extends DamageInfo {
-    public int toughness_reduction = 1;
+    // 默认4削韧
+    public int toughness_reduction = 4;
     public boolean is_follow_up = false;
 
     public HsrDamageInfo(AbstractCreature damageSource, int base, DamageType type) {
@@ -24,6 +25,6 @@ public class HsrDamageInfo extends DamageInfo {
     public HsrDamageInfo(AbstractCreature damageSource, int base, DamageType type, int toughness_reduction, boolean is_follow_up) {
         super(damageSource, base, type);
         this.toughness_reduction = toughness_reduction;
-        this.is_follow_up = true;
+        this.is_follow_up = is_follow_up;
     }
 }

@@ -6,6 +6,7 @@ import HsrMod.powers.ThanatoplumRebloomPower;
 import HsrMod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 /**
@@ -30,13 +31,14 @@ public class PetalsToStreamReposeInDream extends BaseCard {
 
     public PetalsToStreamReposeInDream() {
         super(ID, info);
-        this.exhaust=true;
+        this.exhaust = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToTop(new ApplyPowerAction(m, p, new ThanatoplumRebloomPower(m, p)));
-
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            addToTop(new ApplyPowerAction(monster, p, new ThanatoplumRebloomPower(monster, p)));
+        }
     }
 
     @Override
@@ -44,7 +46,7 @@ public class PetalsToStreamReposeInDream extends BaseCard {
         super.upgrade();
         if (!this.upgraded) {
             upgradeName();
-            this.exhaust=false;
+            this.exhaust = false;
 //            upgradeMagicNumber(UPG_Magic);
             initializeDescription();
         }

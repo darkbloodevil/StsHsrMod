@@ -1,5 +1,6 @@
 package HsrMod.cards.skills;
 
+import HsrMod.action.DiscardTypeAction;
 import HsrMod.cards.BaseCard;
 import HsrMod.characters.Stelle;
 import HsrMod.powers.ProofOfDebtPower;
@@ -37,6 +38,7 @@ public class TheHeroWithAThousandFaces extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainEnergyAction(this.magicNumber));
     }
+
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         return false;
@@ -44,19 +46,19 @@ public class TheHeroWithAThousandFaces extends BaseCard {
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(1);
-
             initializeDescription();
         }
+        super.upgrade();
     }
 
     @Override
     public void triggerWhenDrawn() {
         super.triggerWhenDrawn();
         addToBot(new GainEnergyAction(magicNumber));
+        addToBot(new DiscardTypeAction(1, CardType.ATTACK));
     }
 
     @Override

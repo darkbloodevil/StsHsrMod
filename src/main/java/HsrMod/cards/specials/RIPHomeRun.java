@@ -26,7 +26,7 @@ import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
  * @date 2024/8/6 21:18
  * @description
  */
-public class RIPHomeRun extends BaseCard implements ToughnessReductionInterface{
+public class RIPHomeRun extends BaseCard implements ToughnessReductionInterface {
     public static final String ID = makeID(RIPHomeRun.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -54,16 +54,18 @@ public class RIPHomeRun extends BaseCard implements ToughnessReductionInterface{
         }
     }
 
+    @Override
     public void onChoseThisOption() {
-        for (AbstractMonster m: AbstractDungeon.getMonsters().monsters){
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
             addToBot(new DamageAction(m, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster no_use) {
-
-
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            addToBot(new DamageAction(m, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        }
     }
 
     @Override

@@ -56,6 +56,7 @@ public class FarewellHit extends BaseCard implements ToughnessReductionInterface
             initializeDescription();
         }
     }
+    @Override
     public void onChoseThisOption() {
         for (AbstractMonster m:AbstractDungeon.getMonsters().monsters) {
             if (m.id.equals(target)){
@@ -66,7 +67,13 @@ public class FarewellHit extends BaseCard implements ToughnessReductionInterface
 
     }
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(AbstractPlayer p, AbstractMonster no_use) {
+        for (AbstractMonster m:AbstractDungeon.getMonsters().monsters) {
+            if (m.id.equals(target)){
+                addToBot(new DamageAction(m, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+                break;
+            }
+        }
     }
 
     @Override

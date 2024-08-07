@@ -27,11 +27,12 @@ public class BreakAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_FAST) {
             StunMonsterPower stun_power=new StunMonsterPower((AbstractMonster)this.target, this.amount);
             stun_power.type= AbstractPower.PowerType.BUFF;
-            AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.target, this.source, stun_power, this.amount));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this.target, this.source, stun_power, this.amount));
             AbstractDungeon.actionManager.addToTop(new BreakTransformAction((AbstractMonster) target, source, new BreakPower(target, source)));
 
         }
 
         this.tickDuration();
+        isDone=true;
     }
 }
