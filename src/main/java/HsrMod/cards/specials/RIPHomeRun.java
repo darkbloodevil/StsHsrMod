@@ -1,6 +1,8 @@
 package HsrMod.cards.specials;
 
+import HsrMod.action.HsrDamageAllEnemiesAction;
 import HsrMod.cards.BaseCard;
+import HsrMod.cards.attacks.BaseAttack;
 import HsrMod.cards.attacks.HighPoles;
 import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
@@ -26,7 +28,7 @@ import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
  * @date 2024/8/6 21:18
  * @description
  */
-public class RIPHomeRun extends BaseCard implements ToughnessReductionInterface {
+public class RIPHomeRun extends BaseAttack {
     public static final String ID = makeID(RIPHomeRun.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -35,14 +37,14 @@ public class RIPHomeRun extends BaseCard implements ToughnessReductionInterface 
             CardTarget.ALL_ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 4;
-    private static final int toughness_reduction = 6;
+    public static final int DAMAGE = 10;
+    public static final int UPG_DAMAGE = 4;
 
 
     public RIPHomeRun() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
+        toughness_reduction = 6;
     }
 
     @Override
@@ -63,9 +65,11 @@ public class RIPHomeRun extends BaseCard implements ToughnessReductionInterface 
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster no_use) {
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            addToBot(new DamageAction(m, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        }
+//        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+//            addToBot(new DamageAction(m, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+//        }
+        addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL,toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+
     }
 
     @Override

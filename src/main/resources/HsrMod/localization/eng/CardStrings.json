@@ -17,9 +17,18 @@
     "NAME": "ApplyDotCard",
     "DESCRIPTION": "Test Dot!"
   },
+  "${modID}:ButterflyFlurry": {
+    "NAME": "Butterfly Flurry",
+    "DESCRIPTION": "Exhaust NL Deal !D! damage. ${modID}:Toughness_Reduction !reduction!. NL If kill, gain !M! temporary strength and won't be exhaust."
+  },
   "${modID}:CaressingMoonlight": {
     "NAME": "Caressing Moonlight",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL ${modID}:Toughness_Reduction !reduction!. NL Trigger all ${modID}:Dot of the target."
+    "DESCRIPTION": "Deal !D! damage. NL Trigger all ${modID}:Dot of the target."
+  },
+  "${modID}:CherryOnTop": {
+    "NAME": "Cherry On Top",
+    "DESCRIPTION": "Randomly choose X times: deal !D! damage/ draw 2 cards / gain 2 energy and randomly discard 1",
+    "UPGRADE_DESCRIPTION": "Randomly choose X+1 times: deal !D! damage/ draw 2 cards / gain 2 energy and randomly discard 1"
   },
   "${modID}:DivineCastigation": {
     "NAME": "Divine Castigation",
@@ -29,21 +38,33 @@
     "NAME": "Florephemeral Dreamflux",
     "DESCRIPTION": "Deal !D! damage. NL ${modID}:Toughness_Reduction !reduction!. NL Randomly exhaust 2 cards."
   },
+  "${modID}:GalvnicChords": {
+    "NAME": "Galvnic Chords",
+    "DESCRIPTION": "Deal !D! damage. NL If the target is inflicted with ${modID}:Dot, draw 1 card and gain 1 energy."
+  },
   "${modID}:HighPoles": {
     "NAME": "High Poles",
-    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Toughness_Reduction !reduction!. NL Cause fire ${modID}:Dot damage !M! duration !duration!."
+    "DESCRIPTION": "Deal !D! damage. NL Cause fire ${modID}:Dot damage !M! duration !duration!."
   },
   "${modID}:ItsMagicIaddSomeMagic": {
     "NAME": "It's Magic, I Add SomeMagic",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL ${modID}:Toughness_Reduction !reduction! . NL Deal !M! ${modID}:Follow-Up damage when any enemy's health is under 50% by this damage."
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Deal !M! ${modID}:Follow-Up damage when any enemy's health is under 50% by this damage."
+  },
+  "${modID}:PranaExtirpated": {
+    "NAME": "Prana Extirpated",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL ${modID}:Lightning-Lord increase by 2."
+  },
+  "${modID}:ShapeOfTaixuDawnHerald": {
+    "NAME": "Shape Of Taixu: Dawn Herald",
+    "DESCRIPTION": "Deal !D! damage. NL If the target is in ${modID}:Weakness_Break, draw 1 card and gain 1 energy."
   },
   "${modID}:SlashedDreamCriesInRed": {
     "NAME": "Slashed Dream Cries In Red",
-    "DESCRIPTION": "You can't play this card until you have 9 ${modID}:Slashed_Dreams. Deal !D! damage to all enemies."
+    "DESCRIPTION": "Retain. NL You can't play this card until you have 9 ${modID}:Slashed_Dreams. Deal !D! damage to all enemies."
   },
   "${modID}:StardustAce": {
     "NAME": "Stardust Ace",
-    "DESCRIPTION": "Choose: attack one or attack all ."
+    "DESCRIPTION": "Deal !D1! damage to one or deal !D2! to all."
   },
   "${modID}:FarewellHit": {
     "NAME": "Farewell Hit",
@@ -64,11 +85,11 @@
   "${modID}:StringSingsSlowSwirls": {
     "NAME": "String Sings Slow Swirls",
     "DESCRIPTION": "Weakness Break Efficiency increases by 50%.",
-    "UPGRADE_DESCRIPTION": "Innate.NL Weakness Break Efficiency increases by 50%."
+    "UPGRADE_DESCRIPTION": "Innate. NL Weakness Break Efficiency increases by 50%."
   },
   "${modID}:VictoryRush": {
     "NAME": "Victory Rush",
-    "DESCRIPTION": "When an enemy is inflicted with ${modID}:Weakness_Break, deal !M! ${modID}:Follow-Up damage and ${modID}:Toughness_Reduction !reduction!."
+    "DESCRIPTION": "When an enemy is inflicted with ${modID}:Weakness_Break, deal !M! ${modID}:Follow-Up damage to all enemies and ${modID}:Toughness_Reduction !reduction!."
   },
   "${modID}:AwaitingSystemResponse": {
     "NAME": "Awaiting System Response...",
@@ -78,13 +99,21 @@
     "NAME": "Bleak Breeds Bliss",
     "DESCRIPTION": "When health is under half, heal the amount of unblocked damage when attacked."
   },
+  "${modID}:AmidstTheRejoicingClouds": {
+    "NAME": "Amidst The Rejoicing Clouds",
+    "DESCRIPTION": "Exhaust NL Choose a card in hand, it cost 0 this turn and its damage increase by !M! this battle."
+  },
+  "${modID}:CombatRedeployment": {
+    "NAME": "Combat Redeployment",
+    "DESCRIPTION": "Exhaust NL Choose a card in draw pile/ discard pile and add it to your hand. it cost 0 this turn."
+  },
   "${modID}:DifficultyPaying": {
     "NAME": "Difficulty Paying",
     "DESCRIPTION": "Exhaust NL The target get 50% more ${modID}:Follow-Up damage. Every 3 times you attack the enemy, draw a card."
   },
   "${modID}:EverBurningAmber": {
     "NAME": "Ever Burning Amber",
-    "DESCRIPTION": "Gain !D! Block. NL Apply !M! weak to all enemies."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! weak to all enemies."
   },
   "${modID}:FiendImpeachmentOfEvil": {
     "NAME": "Fiend Impeachment Of Evil",
@@ -121,7 +150,9 @@
   },
   "${modID}:PetalsToStreamReposeInDream": {
     "NAME": "Petals To Stream, Repose In Dream",
-    "DESCRIPTION": "Extend the duration of enemies' ${modID}:Weakness_Broken for one turn."
+    "DESCRIPTION": "Exhaust NL Extend the duration of enemies' ${modID}:Weakness_Broken for one turn.",
+    "UPGRADE_DESCRIPTION": "Extend the duration of enemies' ${modID}:Weakness_Broken for one turn."
+
   },
   "${modID}:PromiseNotCommand": {
     "NAME": "Promise, Not Command",

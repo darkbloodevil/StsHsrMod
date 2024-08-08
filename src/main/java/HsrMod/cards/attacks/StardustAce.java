@@ -6,6 +6,7 @@ import HsrMod.cards.specials.RIPHomeRun;
 import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.DurationInterface;
+import HsrMod.interfaces.MultiDamageInterface;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.powers.FireDotPower;
 import HsrMod.util.CardStats;
@@ -17,6 +18,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.optionCards.BecomeAlmighty;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.ArrayList;
@@ -29,7 +31,7 @@ import java.util.ArrayList;
  * Farewell hit
  * RIP Home Run
  */
-public class StardustAce extends BaseCard {
+public class StardustAce extends BaseAttack implements MultiDamageInterface {
     public static final String ID = makeID(StardustAce.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -38,8 +40,8 @@ public class StardustAce extends BaseCard {
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 5;
 
 
     public StardustAce() {
@@ -48,19 +50,11 @@ public class StardustAce extends BaseCard {
     }
 
     @Override
-    public void upgrade() {
-        super.upgrade();
-        if (!this.upgraded) {
-            upgradeName();
-            initializeDescription();
-        }
-    }
-
-    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> stanceChoices = new ArrayList<>();
-        stanceChoices.add(new RIPHomeRun());
         stanceChoices.add(new FarewellHit(m.id));
+        stanceChoices.add(new RIPHomeRun());
+
         if (this.upgraded) {
             for (AbstractCard c : stanceChoices) {
                 c.upgrade();
@@ -69,5 +63,17 @@ public class StardustAce extends BaseCard {
         addToBot((AbstractGameAction) new ChooseOneAction(stanceChoices));
     }
 
+    @Override
+    public int[] get_multi_damage() {
+        int[] damages = new int[2];
+        damages[0] = FarewellHit.DAMAGE;
+        damages[1] = RIPHomeRun.DAMAGE;
+        if (upgraded) {
+            damages[0]+=FarewellHit.UPG_DAMAGE;
+            damages[1]+=RIPHomeRun.UPG_DAMAGE;
+        }
+
+        return damages;
+    }
 }
 

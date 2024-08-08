@@ -1,5 +1,6 @@
 package HsrMod.powers;
 
+import HsrMod.action.HsrDamageAllEnemiesAction;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.AtWeaknessBreak;
 import HsrMod.interfaces.ToughnessReductionInterface;
@@ -38,8 +39,7 @@ public class VictoryRushPower extends BasePower implements AtWeaknessBreak, Toug
     public void at_weakness_break(AbstractCreature target) {
 
         this.flash();
-        this.addToBot(new DamageAction(target, new HsrDamageInfo(this.owner, this.amount, DamageInfo.DamageType.NORMAL, this.toughness_reduction, true), AbstractGameAction.AttackEffect.FIRE, true));
-
+        this.addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(this.owner, this.amount, DamageInfo.DamageType.NORMAL, this.toughness_reduction, true), AbstractGameAction.AttackEffect.FIRE));
     }
 
     @Override

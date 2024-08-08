@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/4 22:43
  * @description 桂乃芬被动
  */
-public class HighPoles extends BaseCard implements ToughnessReductionInterface, DurationInterface {
+public class HighPoles extends BaseAttack implements ToughnessReductionInterface, DurationInterface {
     public static final String ID = makeID(HighPoles.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -32,7 +32,6 @@ public class HighPoles extends BaseCard implements ToughnessReductionInterface, 
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
     private static final int UPG_Magic = 2;
-    private static final int toughness_reduction = 4;
     private static final int duration = 2;
 
 

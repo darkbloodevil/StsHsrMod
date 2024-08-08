@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
  * @date 2024/8/7 17:15
  * @description
  */
-public class GalvnicChords extends BaseCard implements ToughnessReductionInterface {
+public class GalvnicChords extends BaseAttack implements ToughnessReductionInterface {
     public static final String ID = makeID(GalvnicChords.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -32,12 +32,12 @@ public class GalvnicChords extends BaseCard implements ToughnessReductionInterfa
     );
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
-    private static final int toughness_reduction = 4;
 
 
     public GalvnicChords() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
+        int toughness_reduction = 4;
     }
 
 

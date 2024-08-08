@@ -12,19 +12,32 @@ public class HsrDamageInfo extends DamageInfo {
     // 默认4削韧
     public int toughness_reduction = 4;
     public boolean is_follow_up = false;
+    AbstractCreature damageSource; int base; DamageType type;
 
     public HsrDamageInfo(AbstractCreature damageSource, int base, DamageType type) {
         super(damageSource, base, type);
+        this.damageSource=damageSource;
+        this.base=base;
+        this.type=type;
     }
 
     public HsrDamageInfo(AbstractCreature damageSource, int base, DamageType type, int toughness_reduction) {
         super(damageSource, base, type);
+        this.damageSource=damageSource;
+        this.base=base;
+        this.type=type;
         this.toughness_reduction = toughness_reduction;
     }
 
     public HsrDamageInfo(AbstractCreature damageSource, int base, DamageType type, int toughness_reduction, boolean is_follow_up) {
         super(damageSource, base, type);
+        this.damageSource=damageSource;
+        this.base=base;
+        this.type=type;
         this.toughness_reduction = toughness_reduction;
         this.is_follow_up = is_follow_up;
+    }
+    public HsrDamageInfo clone(){
+        return new HsrDamageInfo(damageSource,base,type,toughness_reduction,is_follow_up);
     }
 }

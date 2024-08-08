@@ -1,7 +1,10 @@
 package HsrMod.cards.attacks;
 
+import HsrMod.action.HsrDamageAllEnemiesAction;
 import HsrMod.cards.BaseCard;
 import HsrMod.characters.Stelle;
+import HsrMod.core.HsrDamageInfo;
+import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.powers.SlashedDreamPower;
 import HsrMod.util.CardStats;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
@@ -10,6 +13,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -21,7 +25,7 @@ import com.megacrit.cardcrawl.vfx.combat.GrandFinalEffect;
  * @date 2024/7/30 14:33
  * @description 我为逝者哀哭
  */
-public class SlashedDreamCriesInRed extends BaseCard implements StartupCard {
+public class SlashedDreamCriesInRed extends BaseAttack implements StartupCard, ToughnessReductionInterface {
     public static final String ID = makeID(SlashedDreamCriesInRed.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -35,6 +39,8 @@ public class SlashedDreamCriesInRed extends BaseCard implements StartupCard {
         super(ID, info);
         this.baseDamage = 50;
         this.isMultiDamage = true;
+        this.retain = true;
+        toughness_reduction = 10;
     }
 
     public void triggerOnGlowCheck() {
@@ -44,13 +50,14 @@ public class SlashedDreamCriesInRed extends BaseCard implements StartupCard {
         }
 
     }
+
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
         if (!canUse) {
             return false;
         } else if (p.hasPower(SlashedDreamPower.POWER_ID)) {
-            if(p.getPower(SlashedDreamPower.POWER_ID).amount>=9){
+            if (p.getPower(SlashedDreamPower.POWER_ID).amount >= 9) {
                 this.cantUseMessage = cardStrings.UPGRADE_DESCRIPTION;
                 return true;
             }
@@ -71,20 +78,27 @@ public class SlashedDreamCriesInRed extends BaseCard implements StartupCard {
         }
     }
 
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (Settings.FAST_MODE) {
             this.addToBot(new VFXAction(new GrandFinalEffect(), 0.7F));
         } else {
             this.addToBot(new VFXAction(new GrandFinalEffect(), 1.0F));
         }
+        addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 
-        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
-        this.addToBot(new ApplyPowerAction(p,p,new SlashedDreamPower(p,-9),-9));
+//        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+        this.addToBot(new ApplyPowerAction(p, p, new SlashedDreamPower(p, -9), -9));
     }
 
     @Override
     public boolean atBattleStartPreDraw() {
         addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlashedDreamPower(AbstractDungeon.player, 0)));
         return false;
+    }
+
+    @Override
+    public int get_toughness_reduction() {
+        return toughness_reduction;
     }
 }

@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/7 17:06
  * @description
  */
-public class ShapeOfTaixuDawnHerald extends BaseCard implements ToughnessReductionInterface {
+public class ShapeOfTaixuDawnHerald extends BaseAttack implements ToughnessReductionInterface {
     public static final String ID = makeID(ShapeOfTaixuDawnHerald.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -29,14 +29,14 @@ public class ShapeOfTaixuDawnHerald extends BaseCard implements ToughnessReducti
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    private static final int DAMAGE = 7;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
-    private static final int toughness_reduction = 6;
 
 
     public ShapeOfTaixuDawnHerald() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
+        toughness_reduction = 6;
     }
 
 

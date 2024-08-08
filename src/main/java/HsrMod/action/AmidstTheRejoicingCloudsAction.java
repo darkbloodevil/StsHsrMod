@@ -1,5 +1,6 @@
 package HsrMod.action;
 
+import HsrMod.util.CardAdapter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -47,8 +48,11 @@ public class AmidstTheRejoicingCloudsAction extends AbstractGameAction {
 
         }
         if (!AbstractDungeon.handCardSelectScreen.wereCardsRetrieved) {
+            CardAdapter adapter= new CardAdapter();
+            adapter.setCostForTurn(0);
+            adapter.setDamage(this.amount);
             for (AbstractCard c : AbstractDungeon.handCardSelectScreen.selectedCards.group) {
-                addToBot(new AdaptCardAction(c, c.magicNumber, 0, 0));
+                addToBot(new AdaptCardAction(c, adapter));
             }
             AbstractDungeon.handCardSelectScreen.wereCardsRetrieved = true;
         }

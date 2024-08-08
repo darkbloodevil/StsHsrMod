@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/4 17:29
  * @description 镜流Q
  */
-public class FlorephemeralDreamflux extends BaseCard implements ToughnessReductionInterface {
+public class FlorephemeralDreamflux extends BaseAttack implements ToughnessReductionInterface {
     public static final String ID = makeID(FlorephemeralDreamflux.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -26,7 +26,6 @@ public class FlorephemeralDreamflux extends BaseCard implements ToughnessReducti
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    int toughness_reduction = 6;
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
 
@@ -34,6 +33,7 @@ public class FlorephemeralDreamflux extends BaseCard implements ToughnessReducti
     public FlorephemeralDreamflux() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
+        toughness_reduction = 6;
     }
 
 

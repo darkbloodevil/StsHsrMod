@@ -1,6 +1,7 @@
 package HsrMod.cards.specials;
 
 import HsrMod.cards.BaseCard;
+import HsrMod.cards.attacks.BaseAttack;
 import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.ToughnessReductionInterface;
@@ -19,7 +20,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/4 14:16
  * @description
  */
-public class ChrysalidPyronexus extends BaseCard implements ToughnessReductionInterface {
+public class ChrysalidPyronexus extends BaseAttack {
     public static final String ID = makeID(ChrysalidPyronexus.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -28,7 +29,6 @@ public class ChrysalidPyronexus extends BaseCard implements ToughnessReductionIn
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             0 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    int toughness_reduction = 8;
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
     private static final int BLOCK = 7;
@@ -39,6 +39,7 @@ public class ChrysalidPyronexus extends BaseCard implements ToughnessReductionIn
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
         setBlock(BLOCK,UPG_BLOCK);
         this.retain=true;
+        toughness_reduction = 8;
     }
 
     @Override

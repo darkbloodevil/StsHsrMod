@@ -1,6 +1,7 @@
 package HsrMod.cards.specials;
 
 import HsrMod.cards.BaseCard;
+import HsrMod.cards.attacks.BaseAttack;
 import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.ToughnessReductionInterface;
@@ -20,7 +21,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/1 14:43
  * @description
  */
-public class FyreflyTypeIVDeathstarOverload extends BaseCard implements ToughnessReductionInterface {
+public class FyreflyTypeIVDeathstarOverload extends BaseAttack {
     public static final String ID = makeID(FyreflyTypeIVDeathstarOverload.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -29,7 +30,6 @@ public class FyreflyTypeIVDeathstarOverload extends BaseCard implements Toughnes
             AbstractCard.CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             0 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    int toughness_reduction = 8;
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
     private static final int UPG_Magic = 2;
@@ -40,6 +40,7 @@ public class FyreflyTypeIVDeathstarOverload extends BaseCard implements Toughnes
         this.exhaust=true;
         this.magicNumber=5;
         this.retain=true;
+        toughness_reduction = 8;
     }
     @Override
     public void upgrade() {

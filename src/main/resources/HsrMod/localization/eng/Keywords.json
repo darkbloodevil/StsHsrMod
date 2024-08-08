@@ -33,7 +33,8 @@
   {
     "PROPER_NAME": "Dot",
     "NAMES": [
-      "Dot"
+      "Dot",
+      "Dots"
     ],
     "DESCRIPTION": "Deal damage at the start of the target's turn. Dot with same type and same amount will extend duration."
   },
@@ -65,5 +66,12 @@
       "SAM"
     ],
     "DESCRIPTION": "A group of very powerful cards which can only gained by #gFyrefly #gType-IV: #gComplete #gCombustion"
+  },
+  {
+    "PROPER_NAME": "Lightning-Lord",
+    "NAMES": [
+      "Lightning-Lord"
+    ],
+    "DESCRIPTION": "Deal damage every 3 turns. Gain this power at the start of the game when you have #yPrana #yExtirpated in deck."
   }
 ]

@@ -1,6 +1,7 @@
 package HsrMod.cards.specials;
 
 import HsrMod.cards.BaseCard;
+import HsrMod.cards.attacks.BaseAttack;
 import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.ToughnessReductionInterface;
@@ -18,7 +19,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/1 11:55
  * @description
  */
-public class FyreflyTypeIVPyrogenicDecimation extends BaseCard implements ToughnessReductionInterface {
+public class FyreflyTypeIVPyrogenicDecimation extends BaseAttack{
     public static final String ID = makeID(FyreflyTypeIVPyrogenicDecimation.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -27,7 +28,6 @@ public class FyreflyTypeIVPyrogenicDecimation extends BaseCard implements Toughn
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             0 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    int toughness_reduction = 10;
     //These will be used in the constructor. Technically you can just use the values directly,
     //but constants at the top of the file are easy to adjust.
     private static final int DAMAGE = 8;
@@ -37,6 +37,7 @@ public class FyreflyTypeIVPyrogenicDecimation extends BaseCard implements Toughn
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
         this.retain=true;
+        toughness_reduction = 10;
     }
 
     @Override

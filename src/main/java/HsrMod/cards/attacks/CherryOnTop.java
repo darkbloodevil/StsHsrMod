@@ -13,7 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/7 15:02
  * @description 青雀强化A
  */
-public class CherryOnTop extends BaseCard implements ToughnessReductionInterface {
+public class CherryOnTop extends BaseAttack implements ToughnessReductionInterface {
     public static final String ID = makeID(CherryOnTop.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -23,7 +23,6 @@ public class CherryOnTop extends BaseCard implements ToughnessReductionInterface
             -1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
     private static final int DAMAGE = 6;
-    private static final int toughness_reduction = 4;
 
 
     public CherryOnTop() {

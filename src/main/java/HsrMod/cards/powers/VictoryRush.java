@@ -24,8 +24,8 @@ public class VictoryRush extends BaseCard implements ToughnessReductionInterface
             AbstractCard.CardTarget.SELF, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             1
     );
-    private static final int DAMAGE = 10;
-    private static final int UPG_Magic = 5;
+    private static final int DAMAGE = 8;
+    private static final int UPG_Magic = 4;
     private static final int REDUCTION = 2;
 
     public VictoryRush() {

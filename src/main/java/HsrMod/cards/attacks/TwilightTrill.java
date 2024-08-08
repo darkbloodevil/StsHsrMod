@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/4 17:13
  * @description 卡芙卡q
  */
-public class TwilightTrill extends BaseCard implements ToughnessReductionInterface, DurationInterface {
+public class TwilightTrill extends BaseAttack implements ToughnessReductionInterface, DurationInterface {
     public static final String ID = makeID(TwilightTrill.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -32,7 +32,6 @@ public class TwilightTrill extends BaseCard implements ToughnessReductionInterfa
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 4;
     private static final int UPG_Magic = 3;
-    private static final int toughness_reduction = 4;
     private static final int duration = 2;
 
     public TwilightTrill() {

@@ -77,6 +77,12 @@
       "Deal %d Lightning ${modID}:Dot damage at the start of turn."
     ]
   },
+  "${modID}:WindDotPower": {
+    "NAME": "Wind Dot",
+    "DESCRIPTIONS": [
+      "Deal %d Lightning ${modID}:Dot damage at the start of turn."
+    ]
+  },
   "${modID}:PromiseNotCommandPower": {
     "NAME": "Promise Not Command",
     "DESCRIPTIONS": [
@@ -90,9 +96,16 @@
     ]
   },
   "${modID}:ProofOfDebtPower": {
-    "NAME": "Victory Rush",
+    "NAME": "Proof Of Debt",
     "DESCRIPTIONS": [
       "Take 50% more ${modID}:Follow-Up damage. Attacked every 3 times, draw a card."
     ]
+  },
+  "${modID}:LightningLordPower": {
+    "NAME": "Lightning-Lord Power",
+    "DESCRIPTIONS": [
+      "${modID}:Lightning-Lord will attack in %d turn."
+    ]
   }
+
 }
