@@ -26,6 +26,7 @@ public class AdaptCardAction extends AbstractGameAction {
         copy_card.unhover();
         if (copy_card.baseDamage >= 0) {
             copy_card.baseDamage += adapter.getDamage();
+
         }
         if (copy_card.cost >= 0 && adapter.is_cost_modified) {
             copy_card.cost = adapter.getCost();
@@ -42,7 +43,7 @@ public class AdaptCardAction extends AbstractGameAction {
         if (copy_card.magicNumber >= 0) {
             copy_card.baseMagicNumber += adapter.getMagicNumber();
         }
-
+        copy_card.initializeDescription();
         AbstractDungeon.player.hand.addToTop(copy_card);
         AbstractDungeon.player.hand.removeCard(target_card);
         isDone = true;

@@ -20,6 +20,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  */
 public class TheHeroWithAThousandFaces extends BaseCard {
     public static final String ID = makeID(TheHeroWithAThousandFaces.class.getSimpleName());
+    private static final int max_trigger=10;
+    private static int triggered=0;
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
             AbstractCard.CardType.SKILL, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
@@ -57,6 +59,9 @@ public class TheHeroWithAThousandFaces extends BaseCard {
     @Override
     public void triggerWhenDrawn() {
         super.triggerWhenDrawn();
+        triggered++;
+        if (triggered>=10)
+            return;
         addToBot(new GainEnergyAction(magicNumber));
         addToBot(new DiscardTypeAction(1, CardType.ATTACK));
     }
@@ -75,4 +80,9 @@ public class TheHeroWithAThousandFaces extends BaseCard {
         addToBot(new DrawCardAction(AbstractDungeon.player, magicNumber));
     }
 
+    @Override
+    public void triggerOnCardPlayed(AbstractCard cardPlayed) {
+        super.triggerOnCardPlayed(cardPlayed);
+        triggered=0;
+    }
 }

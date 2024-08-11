@@ -32,14 +32,23 @@ public class DotPower extends BasePower {
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
+        updateDescription();
+        flash();
+    }
 
+    public void stackDamage(int stackAmount){
+        HsrMod.logger.info(String.format("===stackDamage before %d  amount %d===", damage_amount, stackAmount));
+        this.damage_amount+=stackAmount;
+        HsrMod.logger.info(String.format("===stackDamage after %d  amount %d===", damage_amount, stackAmount));
     }
 
     public void dot_damage(String from) {
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             this.flashWithoutSound();
             this.addToBot(new DotLoseHpAction(this.owner, this.source, this.damage_amount, AbstractGameAction.AttackEffect.POISON));
-            HsrMod.logger.info(String.format("==========%s is now triggered from=========", ID, from));
+            HsrMod.logger.info(String.format("==========%s is now triggered from %s=========", ID, from));
+            HsrMod.logger.info(String.format("===dot amount %d===", damage_amount));
+
         }
     }
 
@@ -54,9 +63,9 @@ public class DotPower extends BasePower {
             amount--;
             if (this.amount == 0) {
                 addToBot(new RemoveSpecificPowerAction(owner, owner, this));
-
             }
-
         }
+        updateDescription();
+        flash();
     }
 }

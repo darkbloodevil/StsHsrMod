@@ -12,7 +12,9 @@ public class HsrDamageInfo extends DamageInfo {
     // 默认4削韧
     public int toughness_reduction = 4;
     public boolean is_follow_up = false;
-    AbstractCreature damageSource; int base; DamageType type;
+    public AbstractCreature damageSource;
+    public int base;
+    public DamageType type;
 
     public HsrDamageInfo(AbstractCreature damageSource, int base, DamageType type) {
         super(damageSource, base, type);

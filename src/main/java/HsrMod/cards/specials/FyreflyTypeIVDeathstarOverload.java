@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/1 14:43
  * @description
  */
-public class FyreflyTypeIVDeathstarOverload extends BaseAttack {
+public class FyreflyTypeIVDeathstarOverload extends SAMCard {
     public static final String ID = makeID(FyreflyTypeIVDeathstarOverload.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -32,15 +32,14 @@ public class FyreflyTypeIVDeathstarOverload extends BaseAttack {
     );
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
-    private static final int UPG_Magic = 2;
+    private static final int UPG_Magic = 3;
 
     public FyreflyTypeIVDeathstarOverload() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
         this.exhaust=true;
-        this.magicNumber=5;
-        this.retain=true;
-        toughness_reduction = 8;
+        this.magicNumber=7;
+        this.baseMagicNumber=7;
     }
     @Override
     public void upgrade() {
@@ -49,18 +48,14 @@ public class FyreflyTypeIVDeathstarOverload extends BaseAttack {
             upgradeMagicNumber(UPG_Magic);
             initializeDescription();
         }
-    }
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        if (ToughnessUtil.target_on_break(m)){
-            addToBot(new DrawCardAction(1));
-            addToBot(new HealAction(p,p,magicNumber));
-        }
+        super.upgrade();
     }
 
+
     @Override
-    public int get_toughness_reduction() {
-        return toughness_reduction;
+    public void on_break_trigger(AbstractPlayer p, AbstractMonster m) {
+        super.on_break_trigger(p, m);
+        addToBot(new DrawCardAction(2));
+        addToBot(new HealAction(p,p,magicNumber));
     }
 }

@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 /**
@@ -22,7 +23,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/8/4 14:34
  * @description
  */
-public class DeltaOrderMeteoricIncineration extends BaseAttack implements DurationInterface {
+public class DeltaOrderMeteoricIncineration extends SAMCard implements DurationInterface {
     public static final String ID = makeID(DeltaOrderMeteoricIncineration.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -41,8 +42,6 @@ public class DeltaOrderMeteoricIncineration extends BaseAttack implements Durati
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
         this.magicNumber = 5;
-        this.retain=true;
-        toughness_reduction = 8;
     }
 
     @Override
@@ -55,18 +54,11 @@ public class DeltaOrderMeteoricIncineration extends BaseAttack implements Durati
         }
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        if (ToughnessUtil.target_on_break(m)) {
-            addToBot(new DrawCardAction(1));
-            addToBot(new ApplyPowerAction(m, p, new FireDotPower(m, p, DURATION, this.magicNumber)));
-        }
-    }
 
     @Override
-    public int get_toughness_reduction() {
-        return toughness_reduction;
+    public void on_break_trigger(AbstractPlayer p, AbstractMonster m) {
+        super.on_break_trigger(p, m);
+        addToBot(new ApplyPowerAction(m, p, new FireDotPower(m, p, DURATION, this.magicNumber)));
     }
 
     @Override

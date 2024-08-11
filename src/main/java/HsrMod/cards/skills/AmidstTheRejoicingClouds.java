@@ -26,7 +26,7 @@ public class AmidstTheRejoicingClouds extends BaseCard {
 
     public AmidstTheRejoicingClouds() {
         super(ID, info);
-        this.magicNumber = 5;
+        this.magicNumber = 7;
         this.baseMagicNumber = 5;
         this.exhaust = true;
     }

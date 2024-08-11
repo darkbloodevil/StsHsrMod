@@ -1,5 +1,6 @@
 package HsrMod.cards.attacks;
 
+import HsrMod.action.ApplyDotAction;
 import HsrMod.cards.BaseCard;
 import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
@@ -55,7 +56,7 @@ public class HighPoles extends BaseAttack implements ToughnessReductionInterface
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.NONE));
-        addToBot(new ApplyPowerAction(m, p, new FireDotPower(m, p, 2, this.magicNumber)));
+        addToBot(new ApplyDotAction(m, p, new FireDotPower(m, p, 2, this.magicNumber)));
 
     }
 

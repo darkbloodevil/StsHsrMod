@@ -26,6 +26,7 @@ public class VoxHarmoniqueOpusCosmique extends BaseCard {
 
     public VoxHarmoniqueOpusCosmique() {
         super(ID, info);
+        this.exhaust=true;
     }
 
     @Override

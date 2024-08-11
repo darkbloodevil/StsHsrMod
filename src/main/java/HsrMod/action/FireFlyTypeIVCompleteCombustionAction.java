@@ -35,7 +35,7 @@ public class FireFlyTypeIVCompleteCombustionAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        ArrayList<AbstractCard> generatedCards = this.generate_cards(3);
+        ArrayList<AbstractCard> generatedCards = this.generate_cards(4);
         if (this.duration == Settings.ACTION_DUR_FAST) {
             AbstractDungeon.cardRewardScreen.customCombatOpen(generatedCards, CardRewardScreen.TEXT[1], (this.cardType != null));
             tickDuration();

@@ -13,7 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 /**
  * @author darkbloodevil
  * @date 2024/8/8 16:33
- * @description
+ * @description 希儿
+ * @TODO 加入多次升级
  */
 public class ButterflyFlurry extends BaseAttack {
     public static final String ID = makeID(ButterflyFlurry.class.getSimpleName());

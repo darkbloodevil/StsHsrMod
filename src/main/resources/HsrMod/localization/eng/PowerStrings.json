@@ -80,7 +80,7 @@
   "${modID}:WindDotPower": {
     "NAME": "Wind Dot",
     "DESCRIPTIONS": [
-      "Deal %d Lightning ${modID}:Dot damage at the start of turn."
+      "Deal %d Wind ${modID}:Dot damage at the start of turn."
     ]
   },
   "${modID}:PromiseNotCommandPower": {
@@ -104,7 +104,7 @@
   "${modID}:LightningLordPower": {
     "NAME": "Lightning-Lord Power",
     "DESCRIPTIONS": [
-      "${modID}:Lightning-Lord will attack in %d turn."
+      "${modID}:Lightning-Lord will attack in %d turn. Lightning-Lord can deals %d x %d damage."
     ]
   }
 

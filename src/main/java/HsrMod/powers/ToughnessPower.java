@@ -1,6 +1,7 @@
 package HsrMod.powers;
 
 import HsrMod.action.BreakAction;
+import HsrMod.interfaces.AtDepletingToughness;
 import HsrMod.interfaces.AtWeaknessBreak;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -33,10 +34,21 @@ public class ToughnessPower extends BasePower {
     public void stackPower(int stackAmount) {
         if (stackAmount > 0) {
             super.stackPower(stackAmount);
+            // 恢复韧性只恢复到固定数值
+            amount = stackAmount;
             is_toughness_protect = false;
         } else {
             if (!is_toughness_protect) {
                 super.stackPower(stackAmount);
+                // 削韧时生效
+                for (AbstractPower power : AbstractDungeon.player.powers) {
+                    if (power instanceof AtDepletingToughness) {
+                        AtDepletingToughness dt_power = (AtDepletingToughness) power;
+                        dt_power.at_depleting_toughness(owner, stackAmount);
+                        power.flash();
+                    }
+                }
+
                 if (this.amount <= 0) {
                     this.amount = 0;
                     this.fontScale = 8.0F;
@@ -44,8 +56,8 @@ public class ToughnessPower extends BasePower {
                     // 弱点击破时生效
                     for (AbstractPower power : AbstractDungeon.player.powers) {
                         if (power instanceof AtWeaknessBreak) {
-                            AtWeaknessBreak dt_power = (AtWeaknessBreak) power;
-                            dt_power.at_weakness_break(owner);
+                            AtWeaknessBreak wb_power = (AtWeaknessBreak) power;
+                            wb_power.at_weakness_break(owner);
                             power.flash();
                         }
                     }

@@ -39,11 +39,17 @@ public class HonkaiStarRailRelic extends BaseRelic {
     }
 
     @Override
-    public void onSpawnMonster(AbstractMonster monster) {
-        super.onSpawnMonster(monster);
-        int toughness = ToughnessUtil.get_toughness(monster);
-        addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new ToughnessPower(monster, AbstractDungeon.player, toughness),
-                toughness));
+    public void onSpawnMonster(AbstractMonster no_use) {
+        super.onSpawnMonster(no_use);
+        for (AbstractMonster monster:AbstractDungeon.getMonsters().monsters) {
+            // 如果没有韧性条 那就加入韧性条
+            if (!monster.hasPower(ToughnessPower.POWER_ID)){
+                int toughness = ToughnessUtil.get_toughness(monster);
+                addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new ToughnessPower(monster, AbstractDungeon.player, toughness),
+                        toughness));
+            }
+        }
+
     }
 
     /**
@@ -73,6 +79,8 @@ public class HonkaiStarRailRelic extends BaseRelic {
         }
         if (target instanceof AbstractMonster) {
             int reduction_amount = get_toughness_reduction(info);
+
+
             if (target.hasPower(BreakPower.POWER_ID) || target.hasPower(ToughnessProtectPower.POWER_ID)) {
                 // 留给超击破
                 if (target.hasPower(BreakPower.POWER_ID) && AbstractDungeon.player.hasPower(BackupDancerPower.POWER_ID)) {

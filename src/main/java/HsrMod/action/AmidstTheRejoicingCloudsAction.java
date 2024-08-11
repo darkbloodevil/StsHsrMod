@@ -22,7 +22,7 @@ public class AmidstTheRejoicingCloudsAction extends AbstractGameAction {
         this.p = AbstractDungeon.player;
         setValues(target, source, amount);
         this.duration = DURATION;
-        this.amount=1;
+        this.amount=amount;
     }
 
     @Override
@@ -33,13 +33,8 @@ public class AmidstTheRejoicingCloudsAction extends AbstractGameAction {
                 return;
             }
 
-            if (this.amount < 0) {
-                AbstractDungeon.handCardSelectScreen.open("handCardSelectScreen", 99, true, true);
-                AbstractDungeon.player.hand.applyPowers();
-                tickDuration();
-                return;
-            }
-            if (this.p.hand.size() > this.amount) {
+
+            if (!this.p.hand.isEmpty()) {
                 AbstractDungeon.handCardSelectScreen.open("handCardSelectScreen", 1, false);
             }
             AbstractDungeon.player.hand.applyPowers();

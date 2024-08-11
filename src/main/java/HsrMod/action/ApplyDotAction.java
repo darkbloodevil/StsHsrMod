@@ -1,6 +1,7 @@
 package HsrMod.action;
 
 import HsrMod.powers.DotPower;
+import HsrMod.util.PlayerPropertyUtil;
 import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
@@ -26,7 +27,7 @@ public class ApplyDotAction extends AbstractGameAction {
     //    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(ApplyDotAction.class.getSimpleName());
 //    public static final String[] TEXT = uiStrings.TEXT;
     public static final String[] TEXT = new String[]{"ApplyDotAction", "ApplyDotAction"};
-    private AbstractPower powerToApply;
+    private DotPower powerToApply;
     private float startingDuration;
 
     public ApplyDotAction(AbstractCreature target, AbstractCreature source, AbstractPower powerToApply, int stackAmount, boolean isFast, AbstractGameAction.AttackEffect effect) {
@@ -40,14 +41,10 @@ public class ApplyDotAction extends AbstractGameAction {
 
         this.setValues(target, source, stackAmount);
         this.duration = this.startingDuration;
-        this.powerToApply = powerToApply;
+        this.powerToApply = (DotPower) powerToApply;
 
         // dot伤害受到攻击力修正
-        int strength = 0;
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            strength = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-        }
-        powerToApply.stackPower(strength);
+        this.powerToApply.stackDamage(PlayerPropertyUtil.get_strength());
 
         this.actionType = ActionType.POWER;
         this.attackEffect = effect;
@@ -77,10 +74,6 @@ public class ApplyDotAction extends AbstractGameAction {
 
     public void update() {
         if (this.target == null || this.target.isDeadOrEscaped()) {
-            this.isDone = true;
-            return;
-        }
-        if (!(this.powerToApply instanceof DotPower)) {
             this.isDone = true;
             return;
         }
@@ -141,18 +134,6 @@ public class ApplyDotAction extends AbstractGameAction {
 
                 AbstractDungeon.effectList.add(new PowerDebuffEffect(this.target.hb.cX - this.target.animX, this.target.hb.cY + this.target.hb.height / 2.0F, this.powerToApply.name));
                 AbstractDungeon.onModifyPower();
-                if (this.target.isPlayer) {
-                    int buffCount = 0;
-                    for (AbstractPower p : this.target.powers) {
-                        if (p.type == AbstractPower.PowerType.BUFF) {
-                            buffCount++;
-                        }
-                    }
-                    if (buffCount >= 10) {
-                        UnlockTracker.unlockAchievement("POWERFUL");
-                    }
-                }
-
             }
             this.isDone = true;
             tickDuration();

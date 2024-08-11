@@ -82,6 +82,22 @@
     "NAME": "All-Out Footlight Parade",
     "DESCRIPTION": "When attack enemy targets that are in the ${modID}:Weakness_Broken state, the Toughness Reduction of this attack will be converted into 1 instance of Super Break DMG."
   },
+  "${modID}:AwaitingSystemResponse": {
+    "NAME": "Awaiting System Response...",
+    "DESCRIPTION": "When attack, apply a random DEBUFF in weak/vulnerable/-2 strength this turn to enemy."
+  },
+  "${modID}:BleakBreedsBliss": {
+    "NAME": "Bleak Breeds Bliss",
+    "DESCRIPTION": "When health is under half, heal the amount of unblocked damage when attacked."
+  },
+  "${modID}:Dreamdiver": {
+    "NAME": "Dreamdiver",
+    "DESCRIPTION": "Before you play cards, pick up a card in your discard pile and put it on the top of your draw pile."
+  },
+  "${modID}:KarmicPerpetuation": {
+    "NAME": "Karmic Perpetuation",
+    "DESCRIPTION": "Draw !M! cards every time you deplete 8 point of toughness."
+  },
   "${modID}:StringSingsSlowSwirls": {
     "NAME": "String Sings Slow Swirls",
     "DESCRIPTION": "Weakness Break Efficiency increases by 50%.",
@@ -91,14 +107,8 @@
     "NAME": "Victory Rush",
     "DESCRIPTION": "When an enemy is inflicted with ${modID}:Weakness_Break, deal !M! ${modID}:Follow-Up damage to all enemies and ${modID}:Toughness_Reduction !reduction!."
   },
-  "${modID}:AwaitingSystemResponse": {
-    "NAME": "Awaiting System Response...",
-    "DESCRIPTION": "When attack, apply a random DEBUFF in weak/vulnerable/-2 strength this turn to enemy."
-  },
-  "${modID}:BleakBreedsBliss": {
-    "NAME": "Bleak Breeds Bliss",
-    "DESCRIPTION": "When health is under half, heal the amount of unblocked damage when attacked."
-  },
+
+
   "${modID}:AmidstTheRejoicingClouds": {
     "NAME": "Amidst The Rejoicing Clouds",
     "DESCRIPTION": "Exhaust NL Choose a card in hand, it cost 0 this turn and its damage increase by !M! this battle."
@@ -121,32 +131,32 @@
   },
   "${modID}:FyreflyTypeIVCompleteCombustion": {
     "NAME": "Fyrefly Type-IV: Complete Combustion",
-    "DESCRIPTION": "Retain NL Randomly add 3 ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately.",
-    "UPGRADE_DESCRIPTION": "Retain NL Randomly add 3 upgraded ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately."
-  },
-  "${modID}:FyreflyTypeIVDeathstarOverload": {
-    "NAME": "Fyrefly Type-IV: Deathstar Overload",
-    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and heal !M! ."
-  },
-  "${modID}:FyreflyTypeIVPyrogenicDecimation": {
-    "NAME": "Fyrefly Type-IV: Pyrogenic Decimation",
-    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card."
+    "DESCRIPTION": "Exhaust Retain NL Randomly add 4 ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately.",
+    "UPGRADE_DESCRIPTION": "Exhaust Retain NL Randomly add 4 upgraded ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately."
   },
   "${modID}:ChrysalidPyronexus": {
     "NAME": "Chrysalid Pyronexus",
-    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and gain !M! block."
+    "DESCRIPTION": "Retain . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , gain !B! block and deal ${modID}:Super_Break."
   },
   "${modID}:DeltaOrderMeteoricIncineration": {
     "NAME": "Δ Order: Meteoric Incineration",
-    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and cause fire ${modID}:Dot damage !M! duration !duration!."
+    "DESCRIPTION": "Retain . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , cause fire ${modID}:Dot damage !M! duration !duration! and deal ${modID}:Super_Break."
+  },
+  "${modID}:FyreflyTypeIVDeathstarOverload": {
+    "NAME": "Fyrefly Type-IV: Deathstar Overload",
+    "DESCRIPTION": "Retain . Exhaust . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card, heal !M! and deal ${modID}:Super_Break."
+  },
+  "${modID}:FyreflyTypeIVPyrogenicDecimation": {
+    "NAME": "Fyrefly Type-IV: Pyrogenic Decimation",
+    "DESCRIPTION": "Retain . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , deal ${modID}:Super_Break ."
   },
   "${modID}:OrderAerialBombardment": {
     "NAME": "Order: Aerial Bombardment",
-    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and gain 1 energy."
+    "DESCRIPTION": "Retain . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , gain !M! energy."
   },
   "${modID}:OrderFlarePropulsion": {
     "NAME": "Order: Flare Propulsion",
-    "DESCRIPTION": "Retain NL Deal !D! damage NL ${modID}:Toughness_Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 2 cards."
+    "DESCRIPTION": "Retain . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw !M! cards."
   },
   "${modID}:PetalsToStreamReposeInDream": {
     "NAME": "Petals To Stream, Repose In Dream",
@@ -160,7 +170,8 @@
   },
   "${modID}:TailSpiritualDomination": {
     "NAME": "Tail Spiritual Domination",
-    "DESCRIPTION": "Gain 1 energy and 2 strength."
+    "DESCRIPTION": "Exhaust NL Gain 1 energy and 2 strength.",
+    "UPGRADE_DESCRIPTION": "Gain 1 energy and 2 strength."
   },
   "${modID}:TheHeroWithAThousandFaces": {
     "NAME": "The Hero With A Thousand Faces",
@@ -168,6 +179,6 @@
   },
   "${modID}:VoxHarmoniqueOpusCosmique": {
     "NAME": "Vox Harmonique Opus Cosmique",
-    "DESCRIPTION": "Choose 3 cards in your draw pile, set their costs to 0 and put them in the top of the draw pile. "
+    "DESCRIPTION": "Exhaust NL Choose 3 cards in your draw pile, decrease their costs by 1 and put them in the top of the draw pile. "
   }
 }

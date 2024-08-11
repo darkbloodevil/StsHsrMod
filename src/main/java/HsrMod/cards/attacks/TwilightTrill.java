@@ -1,5 +1,6 @@
 package HsrMod.cards.attacks;
 
+import HsrMod.action.ApplyDotAction;
 import HsrMod.action.HsrDamageAllEnemiesAction;
 import HsrMod.cards.BaseCard;
 import HsrMod.characters.Stelle;
@@ -55,7 +56,7 @@ public class TwilightTrill extends BaseAttack implements ToughnessReductionInter
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.NONE));
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            addToBot(new ApplyPowerAction(monster, p, new LightningDotPower(monster, p, duration, this.magicNumber)));
+            addToBot(new ApplyDotAction(monster, p, new LightningDotPower(monster, p, duration, this.magicNumber)));
         }
     }
 

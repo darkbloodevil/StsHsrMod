@@ -43,12 +43,11 @@ public class PetalsToStreamReposeInDream extends BaseCard {
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             this.exhaust = false;
-//            upgradeMagicNumber(UPG_Magic);
             initializeDescription();
         }
+        super.upgrade();
     }
 }

@@ -2,6 +2,7 @@ package HsrMod.powers;
 
 import HsrMod.action.HsrDamageAllEnemiesAction;
 import HsrMod.core.HsrDamageInfo;
+import HsrMod.util.DamageUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -45,7 +46,7 @@ public class FineIwillDoItMyselfPower extends BasePower {
                     AbstractPower ap = AbstractDungeon.player.getPower(POWER_ID);
                     ap.onSpecificTrigger();
                 }
-                isDone=true;
+                isDone = true;
             }
         };
     }
@@ -62,7 +63,8 @@ public class FineIwillDoItMyselfPower extends BasePower {
             if ((double) monster.currentHealth / monster.maxHealth < 0.5 && !under_half.contains(monster.id)) {
                 under_half.add(monster.id);
                 triggered = true;
-                addToTop(new HsrDamageAllEnemiesAction(new HsrDamageInfo(AbstractDungeon.player, damage_amount, DamageInfo.DamageType.NORMAL, toughness_reduction)));
+                addToTop(new HsrDamageAllEnemiesAction(DamageUtil.deal_followUp_info(AbstractDungeon.player, damage_amount, toughness_reduction)));
+                ;
             }
         }
         if (!triggered) {

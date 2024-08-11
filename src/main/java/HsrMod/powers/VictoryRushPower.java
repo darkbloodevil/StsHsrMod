@@ -4,9 +4,11 @@ import HsrMod.action.HsrDamageAllEnemiesAction;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.AtWeaknessBreak;
 import HsrMod.interfaces.ToughnessReductionInterface;
+import HsrMod.util.DamageUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -39,7 +41,7 @@ public class VictoryRushPower extends BasePower implements AtWeaknessBreak, Toug
     public void at_weakness_break(AbstractCreature target) {
 
         this.flash();
-        this.addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(this.owner, this.amount, DamageInfo.DamageType.NORMAL, this.toughness_reduction, true), AbstractGameAction.AttackEffect.FIRE));
+        this.addToBot(new HsrDamageAllEnemiesAction(DamageUtil.deal_followUp_info((AbstractPlayer) this.owner, this.amount, this.toughness_reduction), AbstractGameAction.AttackEffect.FIRE));
     }
 
     @Override

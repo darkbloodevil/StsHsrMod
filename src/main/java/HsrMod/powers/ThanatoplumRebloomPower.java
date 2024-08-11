@@ -17,7 +17,7 @@ public class ThanatoplumRebloomPower extends BasePower {
     public boolean is_triggered = false;
 
     public ThanatoplumRebloomPower(AbstractCreature owner, AbstractCreature source) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, source, 1);
+        super(POWER_ID, TYPE, TURN_BASED, owner, source, 0);
     }
 
     @Override

@@ -1,10 +1,12 @@
 package HsrMod.powers;
 
 import HsrMod.core.HsrDamageInfo;
+import HsrMod.util.DamageUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
@@ -32,7 +34,7 @@ public class PromiseNotCommandPower extends BasePower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
             this.flash();
-            this.addToTop(new DamageAction(info.owner, new HsrDamageInfo(this.owner, this.damage_amount, DamageInfo.DamageType.NORMAL, this.toughness_reduction, true), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
+            this.addToTop(new DamageAction(info.owner, DamageUtil.deal_followUp_info((AbstractPlayer) this.owner, this.damage_amount, this.toughness_reduction), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
         }
 
         return damageAmount;
