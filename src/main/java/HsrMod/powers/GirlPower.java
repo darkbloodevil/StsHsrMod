@@ -1,6 +1,5 @@
 package HsrMod.powers;
 
-import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.DamageUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,17 +14,17 @@ import static HsrMod.HsrMod.makeID;
 
 /**
  * @author darkbloodevil
- * @date 2024/7/30 17:01
+ * @date 2024/8/14 15:55
  * @description
  */
-public class PromiseNotCommandPower extends BasePower implements ToughnessReductionInterface {
-    public static final String POWER_ID = makeID(PromiseNotCommandPower.class.getSimpleName());
+public class GirlPower extends BasePower implements ToughnessReductionInterface {
+    public static final String POWER_ID = makeID(GirlPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
     public int damage_amount;
-    public int toughness_reduction = 6;
+    public int toughness_reduction = 4;
 
-    public PromiseNotCommandPower(AbstractCreature owner, AbstractCreature source, int amount, int damage_amount) {
+    public GirlPower(AbstractCreature owner, AbstractCreature source, int amount, int damage_amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, source, amount);
         this.damage_amount = damage_amount;
         this.amount = amount;
@@ -33,7 +32,7 @@ public class PromiseNotCommandPower extends BasePower implements ToughnessReduct
 
     @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
-        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
+        if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner && this.owner.currentBlock > 0) {
             this.flash();
             this.addToTop(new DamageAction(info.owner, DamageUtil.deal_followUp_info((AbstractPlayer) this.owner, this.damage_amount, this.toughness_reduction), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
         }
@@ -43,7 +42,7 @@ public class PromiseNotCommandPower extends BasePower implements ToughnessReduct
 
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0],damage_amount);
+        this.description = String.format(DESCRIPTIONS[0], damage_amount);
     }
 
     @Override

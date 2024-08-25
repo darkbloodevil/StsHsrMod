@@ -10,15 +10,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 /**
  * @author darkbloodevil
- * @date 2024/8/8 16:05
+ * @date 2024/8/11 14:32
  * @description
  */
-public class CombatRedeploymentAction extends AbstractGameAction {
+public class DanceDanceDanceAction  extends AbstractGameAction {
     int amount;
     private AbstractPlayer p;
 
-    public CombatRedeploymentAction() {
-        this.amount = 1;
+    public DanceDanceDanceAction() {
+        this.amount = 4;
         this.p = AbstractDungeon.player;
         setValues(this.p, AbstractDungeon.player, amount);
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;
@@ -29,9 +29,6 @@ public class CombatRedeploymentAction extends AbstractGameAction {
     public void update() {
         if (this.duration == Settings.ACTION_DUR_MED) {
             CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-            for (AbstractCard c : this.p.drawPile.group) {
-                tmp.addToRandomSpot(c);
-            }
             for (AbstractCard c : this.p.discardPile.group) {
                 tmp.addToRandomSpot(c);
             }
@@ -39,7 +36,6 @@ public class CombatRedeploymentAction extends AbstractGameAction {
                 isDone = true;
                 return;
             }
-//            AbstractDungeon.gridSelectScreen.open(tmp, Math.min(this.amount, tmp.size()), "", false);
             AbstractDungeon.gridSelectScreen.open(tmp, Math.min(this.amount, tmp.size()), true, "");
 
             tickDuration();
@@ -49,21 +45,12 @@ public class CombatRedeploymentAction extends AbstractGameAction {
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                 AbstractCard copy_card = c.makeStatEquivalentCopy();
                 copy_card.unhover();
-                if (copy_card.cost > 0) {
-                    copy_card.costForTurn = 0;
-                    copy_card.isCostModified = true;
-                    copy_card.superFlash(Color.GOLD.cpy());
-                }
-                AbstractDungeon.player.hand.addToTop(copy_card);
+                AbstractDungeon.player.drawPile.addToTop(copy_card);
                 if (this.p.discardPile.contains(c)) {
                     AbstractDungeon.player.discardPile.removeCard(c);
-                } else if (this.p.drawPile.contains(c)) {
-                    AbstractDungeon.player.drawPile.removeCard(c);
                 }
-
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-
         }
         tickDuration();
         isDone = true;

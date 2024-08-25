@@ -43,7 +43,8 @@ public class VoxHarmoniqueOpusCosmiqueAction extends AbstractGameAction {
                 isDone = true;
                 return;
             }
-            AbstractDungeon.gridSelectScreen.open(tmp, Math.min(this.amount,tmp.size()), "", false);
+//            AbstractDungeon.gridSelectScreen.open(tmp, Math.min(this.amount,tmp.size()), "", false);
+            AbstractDungeon.gridSelectScreen.open(tmp, Math.min(this.amount, tmp.size()), true, "");
 
             tickDuration();
             return;

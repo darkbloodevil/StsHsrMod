@@ -1,5 +1,6 @@
 package HsrMod.relics;
 
+import HsrMod.HsrMod;
 import HsrMod.action.DepleteToughnessAction;
 import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
@@ -8,6 +9,7 @@ import HsrMod.util.ToughnessUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -41,9 +43,9 @@ public class HonkaiStarRailRelic extends BaseRelic {
     @Override
     public void onSpawnMonster(AbstractMonster no_use) {
         super.onSpawnMonster(no_use);
-        for (AbstractMonster monster:AbstractDungeon.getMonsters().monsters) {
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             // 如果没有韧性条 那就加入韧性条
-            if (!monster.hasPower(ToughnessPower.POWER_ID)){
+            if (!monster.hasPower(ToughnessPower.POWER_ID)) {
                 int toughness = ToughnessUtil.get_toughness(monster);
                 addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new ToughnessPower(monster, AbstractDungeon.player, toughness),
                         toughness));
@@ -70,6 +72,7 @@ public class HonkaiStarRailRelic extends BaseRelic {
         }
         return 4;
     }
+
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         flash();
@@ -95,5 +98,14 @@ public class HonkaiStarRailRelic extends BaseRelic {
             }
         }
         isDone = true;
+    }
+
+    @Override
+    public void onBlockBroken(AbstractCreature m) {
+        super.onBlockBroken(m);
+        if (AbstractDungeon.player.hasPower(TheShieldPower.POWER_ID)){
+            int amount=AbstractDungeon.player.getPower(TheShieldPower.POWER_ID).amount;
+            addToBot(new GainBlockAction(AbstractDungeon.player,amount));
+        }
     }
 }

@@ -4,62 +4,101 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="attack继承BaseAttack; 补全贴图; 加入景元元、布洛妮娅、希儿; 完善描述; 修改初始牌描述">
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/DreamdiverAction.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/powers/Dreamdiver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/powers/KarmicPerpetuation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/SAMCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/interfaces/AtDepletingToughness.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/DreamdiverPower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/KarmaPower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/util/DamageUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/util/PlayerPropertyUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/SAMCard.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/Dreamdiver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/Dreamdiver_p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/KarmicPerpetuation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/KarmicPerpetuation_p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/Dreamdiver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/KarmicPerpetuation.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/待测试.md" afterDir="false" />
+    <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="雪衣、花火e；修复dot、追加攻击、停云bug；加强萨姆">
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/DanceDanceDanceAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/ExhaustTargetTypeAction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/ChampagneEtiquette.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/DecadenceFalseTwilight.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/Frostbite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/MeteorStorm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/ZoneSuppression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/powers/FangOfFlareFlaying.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/powers/KnownByStarsShownByHearts.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/powers/QuidProQuo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/powers/TrendOfTheUniversalMarket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/DanceDanceDance.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/LoveHealAndChoose.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/SamsaraLocked.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/SnowfieldFirstAid.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/TailsmanProtection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/ThePowerOfCuteness.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/patchs/ToughnessBarPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BurdenPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/DivineProvisionPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/DotVulnerablePower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FangOfFlareFlayingPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/GirlPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/MatrixOfPresciencePower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/QuidProQuoPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/TheShieldPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/TrendOfTheUniversalMarketPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/ChampagneEtiquette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/ChampagneEtiquette_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/DecadenceFalseTwilight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/DecadenceFalseTwilight_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/Frostbite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/Frostbite_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/MeteorStorm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/MeteorStorm_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/ZoneSuppression.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/ZoneSuppression_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/FangOfFlareFlaying.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/FangOfFlareFlaying_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/KnownByStarsShownByHearts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/KnownByStarsShownByHearts_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/QuidProQuo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/QuidProQuo_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/TheShield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/TheShield_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/TrendOfTheUniversalMarket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/power/TrendOfTheUniversalMarket_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/ChampagneEtiquette.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/DanceDanceDance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/DecadenceFalseTwilight.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/FangOfFlareFlaying.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/Frostbite.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/KnownByStarsShownByHearts.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/LoveHealAndChoose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/MeteorStorm.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/QuidProQuo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/SamsaraLocked.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/SnowfieldFirstAid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/TailsmanProtection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/ThePowerOfCuteness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/TheShield.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/TrendOfTheUniversalMarket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/ZoneSuppression.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/DanceDanceDance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/DanceDanceDance_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/LoveHealAndChoose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/LoveHealAndChoose_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/SamsaraLocked.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/SamsaraLocked_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/SnowfieldFirstAid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/SnowfieldFirstAid_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/TailsmanProtection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/TailsmanProtection_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/ThePowerOfCuteness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/ThePowerOfCuteness_p.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/BurdenPower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/DivineProvisionPower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/DotVulnerablePower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/FangOfFlareFlayingPower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/GirlPower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/MatrixOfPresciencePower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/QuidProQuoPower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/TheShieldPower.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/TrendOfTheUniversalMarketPower.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/action/AdaptCardAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/AdaptCardAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/action/AmidstTheRejoicingCloudsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/AmidstTheRejoicingCloudsAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/action/ApplyDotAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/ApplyDotAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/action/FireFlyTypeIVCompleteCombustionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/FireFlyTypeIVCompleteCombustionAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/action/CombatRedeploymentAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/CombatRedeploymentAction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/action/VoxHarmoniqueOpusCosmiqueAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/VoxHarmoniqueOpusCosmiqueAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/ButterflyFlurry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/ButterflyFlurry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/CherryOnTop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/CherryOnTop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/DivineCastigation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/DivineCastigation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/HighPoles.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/HighPoles.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/PranaExtirpated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/PranaExtirpated.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/TwilightTrill.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/TwilightTrill.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/powers/StringSingsSlowSwirls.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/powers/StringSingsSlowSwirls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/AmidstTheRejoicingClouds.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/AmidstTheRejoicingClouds.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/FyreflyTypeIVCompleteCombustion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/FyreflyTypeIVCompleteCombustion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/PetalsToStreamReposeInDream.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/PetalsToStreamReposeInDream.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/TheHeroWithAThousandFaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/TheHeroWithAThousandFaces.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/VoxHarmoniqueOpusCosmique.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/VoxHarmoniqueOpusCosmique.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/ChrysalidPyronexus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/ChrysalidPyronexus.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/DeltaOrderMeteoricIncineration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/DeltaOrderMeteoricIncineration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/FyreflyTypeIVDeathstarOverload.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/FyreflyTypeIVDeathstarOverload.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/FyreflyTypeIVPyrogenicDecimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/FyreflyTypeIVPyrogenicDecimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/OrderAerialBombardment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/OrderAerialBombardment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/OrderFlarePropulsion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/OrderFlarePropulsion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/core/HsrDamageInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/core/HsrDamageInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/DotPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/DotPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FineIwillDoItMyselfPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FineIwillDoItMyselfPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/LightningLordPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/LightningLordPower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/PromiseNotCommandPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/PromiseNotCommandPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/ThanatoplumRebloomPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/ThanatoplumRebloomPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/ToughnessPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/ToughnessPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/VictoryRushPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/VictoryRushPower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/relics/HonkaiStarRailRelic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/relics/HonkaiStarRailRelic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/CherryOnTop.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/CherryOnTop.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/CherryOnTop_p.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/CherryOnTop_p.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/util/RandomUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/util/RandomUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/CardStrings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/Keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/Keywords.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/PowerStrings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,11 +164,11 @@
       <recent name="D:\Javaprojects\StsMod\src\main\java\StsMod\potions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod\images\cards\power" />
       <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod\images\cards\skill" />
       <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod\images\character" />
       <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\StsMod\images\cards\attack" />
       <recent name="D:\Javaprojects\StsMod\src\main\resources" />
-      <recent name="D:\Javaprojects\StsMod\src\main\resources\StsResources" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -285,7 +324,15 @@
       <option name="project" value="LOCAL" />
       <updated>1723141828850</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="雪衣、花火e；修复dot、追加攻击、停云bug；加强萨姆">
+      <option name="closed" value="true" />
+      <created>1723353704467</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1723353704467</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -349,6 +396,7 @@
     <MESSAGE value="dot伤害受到攻击力修正" />
     <MESSAGE value="修改同协主q的稀有度；加入素裳、希露瓦、青雀；修复花火bug并加入弃牌" />
     <MESSAGE value="attack继承BaseAttack; 补全贴图; 加入景元元、布洛妮娅、希儿; 完善描述; 修改初始牌描述" />
-    <option name="LAST_COMMIT_MESSAGE" value="attack继承BaseAttack; 补全贴图; 加入景元元、布洛妮娅、希儿; 完善描述; 修改初始牌描述" />
+    <MESSAGE value="雪衣、花火e；修复dot、追加攻击、停云bug；加强萨姆" />
+    <option name="LAST_COMMIT_MESSAGE" value="雪衣、花火e；修复dot、追加攻击、停云bug；加强萨姆" />
   </component>
 </project>

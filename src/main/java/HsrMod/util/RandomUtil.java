@@ -17,12 +17,25 @@ import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 public class RandomUtil {
     public static Random selectionRandomRng;
 
+    public static java.util.Random get_seed() {
+        selectionRandomRng = new Random(Settings.seed + floorNum + cardRandomRng.random(1024));
+        return new java.util.Random(selectionRandomRng.nextInt());
+    }
+
+
     public static int random_int(int range) {
 
-        selectionRandomRng = new Random(Settings.seed + floorNum+cardRandomRng.random(1024));
+        selectionRandomRng = new Random(Settings.seed + floorNum + cardRandomRng.random(1024));
 
 
         return selectionRandomRng.nextInt(range);
+    }
+    public static int random_int() {
+
+        selectionRandomRng = new Random(Settings.seed + floorNum + cardRandomRng.random(1024));
+
+
+        return selectionRandomRng.nextInt();
     }
 
     public static int[] selectRandomElements(int m, int n) {
@@ -35,7 +48,7 @@ public class RandomUtil {
         int arrayLength = array.length;
 
         for (int i = 0; i < n; i++) {
-            selectionRandomRng = new Random(Settings.seed + floorNum+cardRandomRng.random(1024));
+            selectionRandomRng = new Random(Settings.seed + floorNum + cardRandomRng.random(1024));
             // 从剩余的元素中随机选择一个
             int randomIndex = selectionRandomRng.nextInt(arrayLength - i);
             result[i] = array[randomIndex];
