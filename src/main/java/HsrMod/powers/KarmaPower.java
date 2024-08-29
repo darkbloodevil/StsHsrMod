@@ -27,7 +27,7 @@ public class KarmaPower extends BasePower implements AtDepletingToughness {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = String.format(DESCRIPTIONS[0],magic,trigger_threshold);
     }
 
     @Override

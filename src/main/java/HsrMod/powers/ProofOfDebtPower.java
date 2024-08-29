@@ -40,6 +40,11 @@ public class ProofOfDebtPower extends BasePower {
     }
 
     @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(0);
+    }
+
+    @Override
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.NORMAL)
             return super.onAttacked(info, damageAmount);

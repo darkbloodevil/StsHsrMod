@@ -27,8 +27,14 @@ public class BurdenPower extends BasePower {
     }
 
     @Override
+    public void stackPower(int stackAmount) {
+        super.stackPower(0);
+        this.turns+=stackAmount;
+    }
+
+    @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = String.format(DESCRIPTIONS[0],turns);
     }
 
     @Override

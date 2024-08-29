@@ -18,7 +18,7 @@ import javax.swing.*;
  * @description
  */
 public class VoxHarmoniqueOpusCosmiqueAction extends AbstractGameAction {
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("AnyCardFromDeckToHandAction");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(VoxHarmoniqueOpusCosmiqueAction.class.getSimpleName());
     public static final String[] TEXT = uiStrings.TEXT;
     int amount;
     private AbstractPlayer p;
@@ -44,7 +44,7 @@ public class VoxHarmoniqueOpusCosmiqueAction extends AbstractGameAction {
                 return;
             }
 //            AbstractDungeon.gridSelectScreen.open(tmp, Math.min(this.amount,tmp.size()), "", false);
-            AbstractDungeon.gridSelectScreen.open(tmp, Math.min(this.amount, tmp.size()), true, "");
+            AbstractDungeon.gridSelectScreen.open(tmp, Math.min(this.amount, tmp.size()), true, String.format(uiStrings.TEXT[0],amount));
 
             tickDuration();
             return;

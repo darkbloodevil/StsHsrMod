@@ -5,22 +5,12 @@
       "You are Very Cool and Strong."
     ]
   },
-  "${modID}:ToughnessPower": {
-    "NAME": "Toughness",
+
+
+  "${modID}:AwaitingSystemResponsePower": {
+    "NAME": "Awaiting System Response",
     "DESCRIPTIONS": [
-      "When toughness is down to zero, get stunned."
-    ]
-  },
-  "${modID}:BreakPower": {
-    "NAME": "Weak break",
-    "DESCRIPTIONS": [
-      "Attack now!"
-    ]
-  },
-  "${modID}:ToughnessProtectPower": {
-    "NAME": "Toughness Protect",
-    "DESCRIPTIONS": [
-      "Toughness cannot be damaged"
+      "Apply a random #yDEBUFF in #yweak/#yvulnerable/lose 2 #ystrength this turn when attack."
     ]
   },
   "${modID}:BackupDancerPower": {
@@ -29,34 +19,52 @@
       "When attack enemy targets that are in the Weakness Broken state, the Toughness Reduction of this attack will be converted into 1 instance of Super Break DMG."
     ]
   },
-  "${modID}:OvertonePower": {
-    "NAME": "Overtone",
-    "DESCRIPTIONS": [
-      "Weakness Break Efficiency increases by 50%."
-    ]
-  },
-  "${modID}:ThanatoplumRebloomPower": {
-    "NAME": "Thanatoplum Rebloom",
-    "DESCRIPTIONS": [
-      "Extend the duration of enemies' Weakness Break."
-    ]
-  },
-  "${modID}:SlashedDreamPower": {
-    "NAME": "Slashed Dream",
-    "DESCRIPTIONS": [
-      "Increase by 1 when apply a #yDEBUFF to enemy"
-    ]
-  },
-  "${modID}:AwaitingSystemResponsePower": {
-    "NAME": "Awaiting System Response",
-    "DESCRIPTIONS": [
-      "Apply a random #yDEBUFF in #yweakness/#yvulnerable/lose 2 #ystrength this turn when attack."
-    ]
-  },
   "${modID}:BleakBreedsBlissPower": {
     "NAME": "Bleak Breeds Bliss",
     "DESCRIPTIONS": [
       "When health is under 50%, heal the amount of unblocked damage when attacked."
+    ]
+  },
+  "${modID}:BlissOfOtherworldsEmbracePower": {
+    "NAME": "Bliss Of Otherworld's Embrace",
+    "DESCRIPTIONS": [
+      "Give a %s at the start of turn."
+    ]
+  },
+  "${modID}:BreakPower": {
+    "NAME": "Weak break",
+    "DESCRIPTIONS": [
+      "Attack now!"
+    ]
+  },
+  "${modID}:BurdenPower": {
+    "NAME": "Burden",
+    "DESCRIPTIONS": [
+      "Gain 1 energy every 2 attacks. Last for %d turns."
+    ]
+  },
+  "${modID}:DivineProvisionPower": {
+    "NAME": "Divine Provision",
+    "DESCRIPTIONS": [
+      "Heal %d when play a card."
+    ]
+  },
+  "${modID}:DotVulnerablePower": {
+    "NAME": "Dot Vulnerable",
+    "DESCRIPTIONS": [
+      "Dot damage increase by %.2f"
+    ]
+  },
+  "${modID}:DreamdiverPower": {
+    "NAME": "Dreamdiver",
+    "DESCRIPTIONS": [
+      "Choose a card in your discard pile and put it at the top of the draw pile at the start of each turn."
+    ]
+  },
+  "${modID}:FangOfFlareFlayingPower": {
+    "NAME": "Fang Of Flare Flaying",
+    "DESCRIPTIONS": [
+      "Deal %d ${modID}:Follow-Up damage after attack 8 times."
     ]
   },
   "${modID}:FineIwillDoItMyselfPower": {
@@ -71,16 +79,46 @@
       "Deal %d Fire ${modID}:Dot damage at the start of turn."
     ]
   },
+  "${modID}:GirlPower": {
+    "NAME": "Girl Power",
+    "DESCRIPTIONS": [
+      "Counter %d when you have block."
+    ]
+  },
+  "${modID}:KarmaPower": {
+    "NAME": "Karma",
+    "DESCRIPTIONS": [
+      "Draw %d card when depleted %d toughness."
+    ]
+  },
   "${modID}:LightningDotPower": {
     "NAME": "Lightning Dot",
     "DESCRIPTIONS": [
       "Deal %d Lightning ${modID}:Dot damage at the start of turn."
     ]
   },
-  "${modID}:WindDotPower": {
-    "NAME": "Wind Dot",
+  "${modID}:LightningLordPower": {
+    "NAME": "Lightning-Lord",
     "DESCRIPTIONS": [
-      "Deal %d Wind ${modID}:Dot damage at the start of turn."
+      "${modID}:Lightning-Lord will attack in %d turn. Lightning-Lord can deals %d x %d damage."
+    ]
+  },
+  "${modID}:MatrixOfPresciencePower": {
+    "NAME": "Matrix Of Prescience",
+    "DESCRIPTIONS": [
+      "Damage more than 5 only deal 5 damage."
+    ]
+  },
+  "${modID}:OvertonePower": {
+    "NAME": "Overtone",
+    "DESCRIPTIONS": [
+      "Weakness Break Efficiency increases by 50%."
+    ]
+  },
+  "${modID}:PrayerOfAbyssFlowerPower": {
+    "NAME": "Prayer Of Abyss Flower",
+    "DESCRIPTIONS": [
+      "Heal by the amount of damage when attacked (no more than %d)."
     ]
   },
   "${modID}:PromiseNotCommandPower": {
@@ -89,22 +127,66 @@
       "${modID}:Counter %d."
     ]
   },
-  "${modID}:VictoryRushPower": {
-    "NAME": "Victory Rush",
-    "DESCRIPTIONS": [
-      "When an enemy is inflicted with ${modID}:Weakness_Break, deal %d ${modID}:Follow-Up damage and ${modID}:Toughness_Reduction %d."
-    ]
-  },
   "${modID}:ProofOfDebtPower": {
     "NAME": "Proof Of Debt",
     "DESCRIPTIONS": [
       "Take 50% more ${modID}:Follow-Up damage. Attacked every 3 times, draw a card."
     ]
   },
-  "${modID}:LightningLordPower": {
-    "NAME": "Lightning-Lord Power",
+  "${modID}:QuidProQuoPower": {
+    "NAME": "Quid Pro Quo",
     "DESCRIPTIONS": [
-      "${modID}:Lightning-Lord will attack in %d turn. Lightning-Lord can deals %d x %d damage."
+      "When energy is less than half, draw %d card when play a non-zero cost card."
+    ]
+  },
+  "${modID}:SlashedDreamPower": {
+    "NAME": "Slashed Dream",
+    "DESCRIPTIONS": [
+      "Increase by 1 when apply a #yDEBUFF to enemy"
+    ]
+  },
+  "${modID}:ThanatoplumRebloomPower": {
+    "NAME": "Thanatoplum Rebloom",
+    "DESCRIPTIONS": [
+      "Extend the duration of enemies' Weakness Break."
+    ]
+  },
+  "${modID}:TheShieldPower": {
+    "NAME": "The Shield",
+    "DESCRIPTIONS": [
+      "At the start of turn, give enemies %d block. When break block, gain %d block."
+    ]
+  },
+  "${modID}:ToughnessPower": {
+    "NAME": "Toughness",
+    "DESCRIPTIONS": [
+      "When toughness is down to zero, get stunned."
+    ]
+  },
+  "${modID}:ToughnessProtectPower": {
+    "NAME": "Toughness Protect",
+    "DESCRIPTIONS": [
+      "Toughness cannot be damaged"
+    ]
+  },
+  "${modID}:TrendOfTheUniversalMarketPower": {
+    "NAME": "Trend Of The Universal Market",
+    "DESCRIPTIONS": [
+      "When attacked, apply %d fire ${modID}:Dot damage."
+    ]
+  },
+
+  "${modID}:VictoryRushPower": {
+    "NAME": "Victory Rush",
+    "DESCRIPTIONS": [
+      "When an enemy is inflicted with ${modID}:Weakness_Break, deal %d ${modID}:Follow-Up damage and ${modID}:Toughness_Reduction %d."
+    ]
+  },
+
+  "${modID}:WindDotPower": {
+    "NAME": "Wind Dot",
+    "DESCRIPTIONS": [
+      "Deal %d Wind ${modID}:Dot damage at the start of turn."
     ]
   }
 

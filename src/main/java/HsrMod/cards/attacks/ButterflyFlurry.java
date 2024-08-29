@@ -26,18 +26,33 @@ public class ButterflyFlurry extends BaseAttack {
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
     private static final int DAMAGE = 12;
-    private static final int UPG_DAMAGE = 4;
+    private static final float UPG_DAMAGE_RATIO = 0.4f;
 
 
     public ButterflyFlurry() {
         super(ID, info);
-        setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
+        setDamage(DAMAGE); //Sets the card's damage and how much it changes when upgraded.
         this.baseMagicNumber = 5;
         this.toughness_reduction = 6;
         this.magicNumber = baseMagicNumber;
         this.exhaust = true;
     }
 
+    @Override
+    public void upgrade() {
+        this.timesUpgraded++;
+        this.upgraded = true;
+        this.upgradeMagicNumber(1);
+        this.upgradeDamage((int) (UPG_DAMAGE_RATIO * this.baseDamage));
+        this.name = cardStrings.NAME + "+" + this.timesUpgraded;
+        initializeTitle();
+        this.initializeDescription();
+
+    }
+
+    public boolean canUpgrade() {
+        return true;
+    }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

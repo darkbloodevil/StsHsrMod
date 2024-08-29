@@ -35,7 +35,9 @@
     "PROPER_NAME": "Dot",
     "NAMES": [
       "Dot",
-      "Dots"
+      "Dots",
+      "dot",
+      "dots"
     ],
     "DESCRIPTION": "Deal damage at the start of the target's turn. Dot with same type and same amount will extend duration."
   },
@@ -44,7 +46,7 @@
     "NAMES": [
       "Follow-Up"
     ],
-    "DESCRIPTION": "Deal damage at the start of the target's turn. Dot with same type and same amount will extend duration."
+    "DESCRIPTION": "A type of attack."
   },
   {
     "PROPER_NAME": "Counter",

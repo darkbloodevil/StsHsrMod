@@ -12,5 +12,40 @@
       "This": "Contains pairs of Strings, used to get values based on keys.",
       "This is a key": "This is a value."
     }
+  },
+  "DracoreLibreAction": {
+    "TEXT": [
+      "Choose at most 3 cards to discard."
+    ]
+  },
+  "DreamdiverAction": {
+    "TEXT": [
+      "Choose %d card(s)."
+    ]
+  },
+  "AmidstTheRejoicingCloudsAction": {
+    "TEXT": [
+      "Choose a attack card."
+    ]
+  },
+  "CombatRedeploymentAction": {
+    "TEXT": [
+      "Choose a card."
+    ]
+  },
+  "DanceDanceDanceAction": {
+    "TEXT": [
+      "Choose %d card(s)."
+    ]
+  },
+  "FireFlyTypeIVCompleteCombustionAction": {
+    "TEXT": [
+      "Choose a card."
+    ]
+  },
+  "VoxHarmoniqueOpusCosmiqueAction": {
+    "TEXT": [
+      "Choose %d card(s)."
+    ]
   }
 }

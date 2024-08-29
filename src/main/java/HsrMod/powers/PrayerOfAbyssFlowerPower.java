@@ -27,7 +27,13 @@ public class PrayerOfAbyssFlowerPower extends BasePower {
     }
 
     @Override
+    public void updateDescription() {
+        this.description = String.format(DESCRIPTIONS[0],magic);
+    }
+
+    @Override
     public void atStartOfTurn() {
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
     }
 
     @Override

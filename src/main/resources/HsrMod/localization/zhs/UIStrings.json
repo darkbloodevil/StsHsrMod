@@ -12,5 +12,40 @@
       "This": "Contains pairs of Strings, used to get values based on keys.",
       "This is a key": "This is a value."
     }
+  },
+  "DracoreLibreAction": {
+    "TEXT": [
+      "选择至多3张牌弃置."
+    ]
+  },
+  "DreamdiverAction": {
+    "TEXT": [
+      "选择 %d 张卡."
+    ]
+  },
+  "AmidstTheRejoicingCloudsAction": {
+    "TEXT": [
+      "选择 1 张攻击卡."
+    ]
+  },
+  "CombatRedeploymentAction": {
+    "TEXT": [
+      "选择 1 张卡."
+    ]
+  },
+  "DanceDanceDanceAction": {
+    "TEXT": [
+      "选择 %d 张卡."
+    ]
+  },
+  "FireFlyTypeIVCompleteCombustionAction": {
+    "TEXT": [
+      "选择 1 张卡."
+    ]
+  },
+  "VoxHarmoniqueOpusCosmiqueAction": {
+    "TEXT": [
+      "选择 %d 张卡."
+    ]
   }
 }

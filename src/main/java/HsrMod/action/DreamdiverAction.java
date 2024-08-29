@@ -1,12 +1,15 @@
 package HsrMod.action;
 
+import HsrMod.cards.attacks.StardustAce;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 
 /**
  * @author darkbloodevil
@@ -16,6 +19,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 public class DreamdiverAction extends AbstractGameAction {
     int amount;
     private AbstractPlayer p;
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(DreamdiverAction.class.getSimpleName());
 
     public DreamdiverAction() {
         this.amount = 1;
@@ -36,7 +40,7 @@ public class DreamdiverAction extends AbstractGameAction {
                 isDone = true;
                 return;
             }
-            AbstractDungeon.gridSelectScreen.open(tmp, Math.min(this.amount, tmp.size()), true, "");
+            AbstractDungeon.gridSelectScreen.open(tmp, Math.min(this.amount, tmp.size()), true, String.format(uiStrings.TEXT[0],amount));
             tickDuration();
             return;
         }

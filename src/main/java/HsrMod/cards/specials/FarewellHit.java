@@ -31,7 +31,7 @@ public class FarewellHit extends BaseAttack {
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    public static final int DAMAGE = 20;
+    public static final int DAMAGE = 18;
     public static final int UPG_DAMAGE = 8;
 
     String target;

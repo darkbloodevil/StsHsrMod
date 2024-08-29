@@ -1,10 +1,8 @@
 package HsrMod.cards.specials;
 
-import HsrMod.cards.BaseCard;
-import HsrMod.cards.attacks.BaseAttack;
+import HsrMod.action.HsrDamageAllEnemiesAction;
 import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
-import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.CardStats;
 import HsrMod.util.ToughnessUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -20,33 +18,34 @@ import com.megacrit.cardcrawl.powers.BlurPower;
 
 /**
  * @author darkbloodevil
- * @date 2024/8/4 14:16
+ * @date 2024/8/29 10:59
  * @description
  */
-public class ChrysalidPyronexus extends SAMCard {
-    public static final String ID = makeID(ChrysalidPyronexus.class.getSimpleName());
+public class DHGDRSupernovaOverload extends SAMCard {
+    public static final String ID = makeID(DHGDRSupernovaOverload.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
             CardType.ATTACK, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardRarity.SPECIAL, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
-            CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
+            CardTarget.ALL_ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             0 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
-    private static final int BLOCK = 10;
-    private static final int UPG_BLOCK = 4;
 
-    public ChrysalidPyronexus() {
+    public DHGDRSupernovaOverload() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
-        setBlock(BLOCK, UPG_BLOCK);
     }
 
     @Override
-    public void on_break_trigger(AbstractPlayer p, AbstractMonster m) {
-        super.on_break_trigger(p,m);
-        addToBot(new GainBlockAction(p, this.block));
-        addToBot(new ApplyPowerAction(p,p,new BlurPower(p,1)));
+    public void use(AbstractPlayer p, AbstractMonster no_use) {
+        addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL, toughness_reduction)));
+        addToBot(new DrawCardAction(1));
+        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+            if (ToughnessUtil.target_on_break(m)) {
+                on_break_trigger(p, m);
+            }
+        }
     }
 }

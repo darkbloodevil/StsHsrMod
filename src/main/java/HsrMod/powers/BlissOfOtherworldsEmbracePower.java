@@ -32,7 +32,11 @@ public class BlissOfOtherworldsEmbracePower  extends BasePower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        String target="Loom Of Fate's Caprice";
+        if (this.upgraded){
+            target="Loom Of Fate's Caprice+";
+        }
+        this.description = String.format(DESCRIPTIONS[0],target);
     }
 
     @Override

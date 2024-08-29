@@ -31,6 +31,11 @@ public class DivineProvisionPower extends BasePower {
     }
 
     @Override
+    public void updateDescription() {
+        this.description=String.format(DESCRIPTIONS[0],magic);
+    }
+
+    @Override
     public void atEndOfTurn(boolean isPlayer) {
         super.atEndOfTurn(isPlayer);
         addToBot(new RemoveSpecificPowerAction(owner, owner, this));

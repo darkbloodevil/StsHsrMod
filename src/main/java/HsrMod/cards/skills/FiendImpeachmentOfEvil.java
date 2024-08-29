@@ -44,11 +44,12 @@ public class FiendImpeachmentOfEvil extends BaseCard {
 
     @Override
     public void upgrade() {
-        super.upgrade();
+
         if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(0);
             initializeDescription();
         }
+        super.upgrade();
     }
 }

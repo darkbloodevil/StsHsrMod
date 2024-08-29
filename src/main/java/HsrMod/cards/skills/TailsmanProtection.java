@@ -6,6 +6,7 @@ import HsrMod.powers.DivineProvisionPower;
 import HsrMod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -27,6 +28,7 @@ public class TailsmanProtection extends BaseCard {
 
     public TailsmanProtection() {
         super(ID, info);
+        this.tags.add(AbstractCard.CardTags.HEALING);
         this.exhaust = true;
         this.magicNumber = 1;
         this.baseMagicNumber = 1;

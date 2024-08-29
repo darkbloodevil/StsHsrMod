@@ -1,21 +1,94 @@
 [
   {
-    "PROPER_NAME": "This is displayed in the tooltip.",
+    "ID": "Toughness",
+    "PROPER_NAME": "韧性",
     "NAMES": [
-      "these",
-      "are",
-      "detected",
-      "in",
-      "the",
-      "text"
+      "韧性"
     ],
-    "DESCRIPTION": "This is displayed in the tooltip. Spaces should not be used be avoided in NAMES, with the exception of multi-word keywords (see next entry)."
+    "DESCRIPTION": "韧性条归零时，怪物被击晕."
   },
   {
-    "PROPER_NAME": "Toughness",
+    "ID": "Weakness Broken",
+    "PROPER_NAME": "弱点击破",
     "NAMES": [
-      "toughness"
+      "弱点击破"
     ],
-    "DESCRIPTION": "When toughness is down to zero, get stunned."
+    "DESCRIPTION": "弱点击破状态. 敌人被击晕."
+  },
+  {
+    "ID": "Weakness Break",
+    "PROPER_NAME": "击破",
+    "NAMES": [
+      "击破"
+    ],
+    "DESCRIPTION": "当韧性条归零, 触发 #y弱点击破 效果"
+  },
+  {
+    "ID": "Toughness Reduction",
+    "PROPER_NAME": "削韧量",
+    "NAMES": [
+      "削韧量",
+      "削韧"
+    ],
+    "DESCRIPTION": "对敌人 #y韧性 的削减量。"
+  },
+  {
+    "ID": "Dot",
+    "PROPER_NAME": "Dot",
+    "NAMES": [
+      "dot",
+      "dots"
+    ],
+    "DESCRIPTION": "在敌人回合开始时造成伤害. 同伤害不同类型的dot重复添加时会延长时间."
+  },
+  {
+    "ID": "Follow-Up Attack",
+    "PROPER_NAME": "追加攻击",
+    "NAMES": [
+      "追加",
+      "追加攻击"
+    ],
+    "DESCRIPTION": "一种攻击类型."
+  },
+  {
+    "ID": "Counter",
+    "PROPER_NAME": "反击",
+    "NAMES": [
+      "反击"
+    ],
+    "DESCRIPTION": "被攻击时触发 #y追加攻击 ."
+  },
+  {
+    "ID": "Slashed Dream",
+    "PROPER_NAME": "集真赤",
+    "NAMES": [
+      "集真赤"
+    ],
+    "DESCRIPTION": "当对敌人施加DEBUFF时，增加1点."
+  },
+  {
+    "ID": "SAM",
+    "PROPER_NAME": "萨姆卡",
+    "NAMES": [
+      "萨姆卡",
+      "萨姆"
+    ],
+    "DESCRIPTION": "一组零费攻击牌，当敌人处于 #y弱点击破 时有奇效."
+  },
+  {
+    "ID": "Lightning-Lord",
+    "PROPER_NAME": "神君",
+    "NAMES": [
+      "神君"
+    ],
+    "DESCRIPTION": "每3轮造成一次伤害. 当你牌库有 #y斩勘神形 时，在战斗开始时获得该能力."
+  },
+  {
+    "ID": "Super Break",
+    "PROPER_NAME": "超击破",
+    "NAMES": [
+      "超击破"
+    ],
+    "DESCRIPTION": "将削韧量转为伤害，当敌人在 #y弱点击破 状态."
   }
 ]

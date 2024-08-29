@@ -4,8 +4,10 @@ import HsrMod.cards.specials.*;
 import HsrMod.util.RandomUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.screens.CardRewardScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDrawPileEffect;
@@ -25,6 +27,7 @@ public class FireFlyTypeIVCompleteCombustionAction extends AbstractGameAction {
     private boolean retrieveCard = false;
     private boolean returnColorless = false;
     private AbstractCard.CardType cardType = AbstractCard.CardType.SKILL;
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(FireFlyTypeIVCompleteCombustionAction.class.getSimpleName());
 
     public FireFlyTypeIVCompleteCombustionAction(boolean is_upgraded) {
         this.is_upgraded = is_upgraded;
@@ -37,7 +40,7 @@ public class FireFlyTypeIVCompleteCombustionAction extends AbstractGameAction {
     public void update() {
         ArrayList<AbstractCard> generatedCards = this.generate_cards(4);
         if (this.duration == Settings.ACTION_DUR_FAST) {
-            AbstractDungeon.cardRewardScreen.customCombatOpen(generatedCards, CardRewardScreen.TEXT[1], (this.cardType != null));
+            AbstractDungeon.cardRewardScreen.customCombatOpen(generatedCards, uiStrings.TEXT[0], (this.cardType != null));
             tickDuration();
             return;
         }
@@ -79,6 +82,8 @@ public class FireFlyTypeIVCompleteCombustionAction extends AbstractGameAction {
 
     private ArrayList<AbstractCard> generate_cards(int n) {
         ArrayList<AbstractCard> pile = new ArrayList<>();
+
+        pile.add(new DHGDRSupernovaOverload());
         pile.add(new OrderFlarePropulsion());
         pile.add(new OrderAerialBombardment());
         pile.add(new FyreflyTypeIVPyrogenicDecimation());

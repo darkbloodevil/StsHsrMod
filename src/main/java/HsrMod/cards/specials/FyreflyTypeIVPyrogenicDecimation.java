@@ -10,6 +10,7 @@ import HsrMod.util.ToughnessUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -34,6 +35,11 @@ public class FyreflyTypeIVPyrogenicDecimation extends SAMCard{
     public FyreflyTypeIVPyrogenicDecimation() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
-        toughness_reduction = 12;
+        toughness_reduction = 14;
+    }
+    @Override
+    public void on_break_trigger(AbstractPlayer p, AbstractMonster m) {
+        super.on_break_trigger(p, m);
+        addToBot(new DrawCardAction(1));
     }
 }

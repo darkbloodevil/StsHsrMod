@@ -40,13 +40,13 @@ public class LightningLordPower extends BasePower implements ToughnessReductionI
 
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0], this.turns, this.amount, this.get_damage_per_attack());
+        this.description = String.format(DESCRIPTIONS[0], this.turns, this.get_damage_per_attack(), this.amount);
     }
 
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
-        if (stackAmount == 114514) {
+        if (stackAmount == 114514 || this.amount>=114514) {
             this.amount = 3;
         }
         if (this.amount > 10) {
@@ -59,7 +59,7 @@ public class LightningLordPower extends BasePower implements ToughnessReductionI
 
     private int get_damage_per_attack() {
         if (amount >= 6)
-            return 6;
+            return amount;
         return 5;
     }
 

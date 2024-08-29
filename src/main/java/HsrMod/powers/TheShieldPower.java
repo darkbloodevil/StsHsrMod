@@ -26,7 +26,7 @@ public class TheShieldPower extends BasePower {
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+        this.description = String.format(DESCRIPTIONS[0],amount,amount);
     }
 
     @Override
