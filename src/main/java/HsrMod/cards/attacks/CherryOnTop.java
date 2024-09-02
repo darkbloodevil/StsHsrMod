@@ -32,11 +32,12 @@ public class CherryOnTop extends BaseAttack implements ToughnessReductionInterfa
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
+            this.rawDescription=cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
+        super.upgrade();
     }
 
     @Override

@@ -51,6 +51,7 @@ public class DracoreLibreAction extends AbstractGameAction {
         if (this.duration == Settings.ACTION_DUR_MED) {
             if (this.p.hand.group.isEmpty()){
                 isDone = true;
+                addToBot(new DamageAction(target, new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL, toughness_reduction)));
                 return;
             }
             AbstractDungeon.handCardSelectScreen.open(uiStrings.TEXT[0], Math.min(this.max_amount, p.hand.size()), true, true);

@@ -1,5 +1,6 @@
 package HsrMod.cards.attacks;
 
+import HsrMod.action.HsrDamageAction;
 import HsrMod.action.HsrDamageAllEnemiesAction;
 import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
@@ -28,7 +29,7 @@ public class ChampagneEtiquette  extends BaseAttack{
             CardType.ATTACK, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
             CardRarity.COMMON, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
             CardTarget.ALL_ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
-            1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
+            2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
@@ -44,7 +45,8 @@ public class ChampagneEtiquette  extends BaseAttack{
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL,toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        addToBot(new HsrDamageAction(m,new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL,toughness_reduction)));
+//        addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL,toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         addToBot((AbstractGameAction)new GainBlockAction((AbstractCreature)p, (AbstractCreature)p, this.block));
         addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)p, (AbstractCreature)p, (AbstractPower)new FreeAttackPower((AbstractCreature)p, 1), 1));
     }

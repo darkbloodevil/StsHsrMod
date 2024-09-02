@@ -36,6 +36,7 @@ public class BlissOfOtherworldsEmbrace extends BaseCard {
         if (!this.upgraded) {
             upgradeName();
             this.cardsToPreview.upgrade();
+            this.rawDescription=cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
         super.upgrade();

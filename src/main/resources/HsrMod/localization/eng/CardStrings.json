@@ -19,15 +19,15 @@
   },
   "${modID}:ButterflyFlurry": {
     "NAME": "Butterfly Flurry",
-    "DESCRIPTION": "Exhaust NL Deal !D! damage. ${modID}:Toughness_Reduction !reduction!. NL If kill, gain !M! temporary strength and return to hand. NL Can be upgraded multiple times."
+    "DESCRIPTION": "Exhaust NL Deal !D! damage. ${modID}:TR !reduction!. NL If kill, gain !M! temporary strength and return to hand. NL Can be upgraded multiple times."
   },
   "${modID}:CaressingMoonlight": {
     "NAME": "Caressing Moonlight",
-    "DESCRIPTION": "Deal !D! damage. NL Trigger all ${modID}:Dot of the target."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:TR !reduction! NL Trigger all ${modID}:Dot of the target."
   },
   "${modID}:ChampagneEtiquette": {
     "NAME": "Champagne Etiquette",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Gain !B! block. NL Your next attack cost 0."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !B! block. NL Your next attack cost 0."
   },
   "${modID}:DecadenceFalseTwilight": {
     "NAME": "Decadence, False Twilight",
@@ -35,7 +35,7 @@
   },
   "${modID}:DivineCastigation": {
     "NAME": "Divine Castigation",
-    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Toughness_Reduction !reduction!."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:TR !reduction!."
   },
   "${modID}:DracoreLibre": {
     "NAME": "Dracore Libre",
@@ -43,7 +43,7 @@
   },
   "${modID}:FlorephemeralDreamflux": {
     "NAME": "Florephemeral Dreamflux",
-    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Toughness_Reduction !reduction!. NL Randomly exhaust 2 cards."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:TR !reduction!. NL Randomly exhaust 2 cards."
   },
   "${modID}:Frostbite": {
     "NAME": "Frostbite",
@@ -51,7 +51,7 @@
   },
   "${modID}:GalvnicChords": {
     "NAME": "Galvnic Chords",
-    "DESCRIPTION": "Deal !D! damage. NL If the target is inflicted with ${modID}:Dot, draw 1 card and gain 1 [G]."
+    "DESCRIPTION": "Deal !D! damage. NL If the target is inflicted with ${modID}:Dot, draw 1 card and gain 1 [E]."
   },
   "${modID}:HighPoles": {
     "NAME": "High Poles",
@@ -63,7 +63,7 @@
   },
   "${modID}:MeteorStorm": {
     "NAME": "Meteor Storm",
-    "DESCRIPTION": "Deal !D! damage to random enemies !M! times. NL Gain 1 strength by the number of enemies hit for 1 turn. NL ${modID}:Toughness_Reduction !reduction!"
+    "DESCRIPTION": "Deal !D! damage to random enemies !M! times. NL Gain 1 strength by the number of enemies hit for 1 turn. NL ${modID}:TR !reduction!"
   },
   "${modID}:PranaExtirpated": {
     "NAME": "Prana Extirpated",
@@ -71,11 +71,11 @@
   },
   "${modID}:ShapeOfTaixuDawnHerald": {
     "NAME": "Shape Of Taixu: Dawn Herald",
-    "DESCRIPTION": "Deal !D! damage. NL If the target is in ${modID}:Weakness_Break, draw 1 card and gain 1 [G]."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:TR !reduction! NL If the target is in ${modID}:Weakness_Break, draw 1 card and gain 1 [E]."
   },
   "${modID}:SlashedDreamCriesInRed": {
     "NAME": "Slashed Dream Cries In Red",
-    "DESCRIPTION": "Retain. NL You can't play this card until you have 9 ${modID}:Slashed_Dreams. Deal !D! damage to all enemies."
+    "DESCRIPTION": "Retain. NL You can't play this card until you have 9 ${modID}:Slashed_Dreams . NL Deal !D! damage to all enemies. NL ${modID}:TR !reduction!"
   },
   "${modID}:StardustAce": {
     "NAME": "Stardust Ace",
@@ -83,15 +83,15 @@
   },
   "${modID}:FarewellHit": {
     "NAME": "Farewell Hit",
-    "DESCRIPTION": "Deal !D! damage. NL ${modID}:Toughness_Reduction !reduction! ."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:TR !reduction! ."
   },
   "${modID}:RIPHomeRun": {
     "NAME": "RIP Home Run",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL ${modID}:Toughness_Reduction !reduction! ."
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL ${modID}:TR !reduction! ."
   },
   "${modID}:TwilightTrill": {
     "NAME": "Twilight Trill",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Cause lightning ${modID}:Dot damage !M! duration !duration!."
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL ${modID}:TR !reduction! NL Cause lightning ${modID}:Dot damage !M! duration !duration!."
   },
   "${modID}:ZoneSuppression": {
     "NAME": "Zone Suppression",
@@ -99,7 +99,7 @@
   },
   "${modID}:AllOutFootlightParade": {
     "NAME": "All-Out Footlight Parade",
-    "DESCRIPTION": "When attack enemy targets that are in the ${modID}:Weakness_Broken state, the ${modID}:Toughness_Reduction of this attack will be converted into 1 instance of ${modID}:Super_Break DMG."
+    "DESCRIPTION": "When attack enemy targets that are in the ${modID}:Weakness_Broken state, the ${modID}:TR of this attack will be converted into 1 instance of ${modID}:Super_Break DMG."
   },
   "${modID}:AwaitingSystemResponse": {
     "NAME": "Awaiting System Response...",
@@ -140,7 +140,7 @@
   },
   "${modID}:VictoryRush": {
     "NAME": "Victory Rush",
-    "DESCRIPTION": "When an enemy is inflicted with ${modID}:Weakness_Break, deal !M! ${modID}:Follow-Up damage to all enemies and ${modID}:Toughness_Reduction !reduction!."
+    "DESCRIPTION": "When an enemy is inflicted with ${modID}:Weakness_Break, deal !M! ${modID}:Follow-Up damage to all enemies and ${modID}:TR !reduction!."
   },
   "${modID}:AmidstTheRejoicingClouds": {
     "NAME": "Amidst The Rejoicing Clouds",
@@ -153,8 +153,8 @@
   },
   "${modID}:CherryOnTop": {
     "NAME": "Cherry On Top",
-    "DESCRIPTION": "Randomly choose X times: deal !D! damage/ draw 2 cards / gain 2 [G] and randomly discard 1",
-    "UPGRADE_DESCRIPTION": "Randomly choose X+1 times: deal !D! damage/ draw 2 cards / gain 2 [G] and randomly discard 1"
+    "DESCRIPTION": "Randomly choose X times: deal !D! damage/ draw 2 cards / gain 2 [E] and randomly discard 1",
+    "UPGRADE_DESCRIPTION": "Randomly choose X+1 times: deal !D! damage/ draw 2 cards / gain 2 [E] and randomly discard 1"
   },
   "${modID}:CombatRedeployment": {
     "NAME": "Combat Redeployment",
@@ -184,35 +184,35 @@
   },
   "${modID}:ChrysalidPyronexus": {
     "NAME": "Chrysalid Pyronexus",
-    "DESCRIPTION": "Retain . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , gain !B! block and keep block for 1 turn. Deal ${modID}:Super_Break."
+    "DESCRIPTION": "${modID}:SAM . Deal !D! damage NL Extra effect: gain !B! block and keep block for 1 turn."
   },
   "${modID}:DeltaOrderMeteoricIncineration": {
     "NAME": "Δ Order: Meteoric Incineration",
-    "DESCRIPTION": "Retain . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , cause fire ${modID}:Dot damage !M! duration !duration! and deal ${modID}:Super_Break."
+    "DESCRIPTION": "${modID}:SAM . Deal !D! damage NL Extra effect: cause fire ${modID}:Dot damage !M! ."
   },
   "${modID}:DHGDRSupernovaOverload": {
     "NAME": "DHGDR: Supernova Overload",
-    "DESCRIPTION": "Retain . Deal !D! damage to all enemies. NL ${modID}:Reduction !reduction! NL Draw 1 card. If target in ${modID}:Weakness_Broken , deal ${modID}:Super_Break."
+    "DESCRIPTION": "${modID}:SAM . Deal !D! damage to all enemies. NL Draw 1 card. "
   },
   "${modID}:FyreflyTypeIVDeathstarOverload": {
     "NAME": "Fyrefly Type-IV: Deathstar Overload",
-    "DESCRIPTION": "Retain . Exhaust . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 2 cards, heal !M! and deal ${modID}:Super_Break."
+    "DESCRIPTION": "${modID}:SAM . Exhaust . Deal !D! damage NL Extra effect: draw 2 cards, heal !M! ."
   },
   "${modID}:FyreflyTypeIVPyrogenicDecimation": {
     "NAME": "Fyrefly Type-IV: Pyrogenic Decimation",
-    "DESCRIPTION": "Retain . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw 1 card and deal ${modID}:Super_Break ."
+    "DESCRIPTION": "${modID}:SAM . Deal !D! damage NL ${modID}:TR !reduction! NL Extra effect: draw 1 card ."
   },
   "${modID}:OrderAerialBombardment": {
     "NAME": "Order: Aerial Bombardment",
-    "DESCRIPTION": "Retain . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , gain !M! [G] and deal ${modID}:Super_Break."
+    "DESCRIPTION": "${modID}:SAM . Deal !D! damage NL Extra effect: gain !M! [E] ."
   },
   "${modID}:OrderFlarePropulsion": {
     "NAME": "Order: Flare Propulsion",
-    "DESCRIPTION": "Retain . Deal !D! damage NL ${modID}:Reduction !reduction! NL If target in ${modID}:Weakness_Broken , draw !M! cards and deal ${modID}:Super_Break."
+    "DESCRIPTION": "${modID}:SAM . Deal !D! damage NL Extra effect: draw !M! cards ."
   },
   "${modID}:LoomOfFatesCaprice": {
     "NAME": "Loom Of Fate's Caprice",
-    "DESCRIPTION": "For every ${modID}:dot the target has, draw 1 card and gain 1 [G]."
+    "DESCRIPTION": "For every ${modID}:dot the target has, draw 1 card and gain 1 [E]."
   },
   "${modID}:LoveHealAndChoose": {
     "NAME": "Love, Heal And Choose",
@@ -229,11 +229,11 @@
   },
   "${modID}:PromiseNotCommand": {
     "NAME": "Promise, Not Command",
-    "DESCRIPTION": "${modID}:Counter !M!. NL Duration !duration!"
+    "DESCRIPTION": "${modID}:Counter !M!. NL Duration !duration! NL ${modID}:TR !reduction!"
   },
   "${modID}:SamsaraLocked": {
     "NAME": "Samsara Locked",
-    "DESCRIPTION": "Apply burden to enemy for !M! turns, every 2 times you hit the enemy, gain 1 [G]."
+    "DESCRIPTION": "Apply burden to enemy for !M! turns, every 2 times you hit the enemy, gain 1 [E]."
   },
   "${modID}:SnowfieldFirstAid": {
     "NAME": "Snowfield First Aid",
@@ -241,8 +241,8 @@
   },
   "${modID}:TailSpiritualDomination": {
     "NAME": "Tail Spiritual Domination",
-    "DESCRIPTION": "Exhaust NL Gain 1 [G] and 2 strength.",
-    "UPGRADE_DESCRIPTION": "Gain 1 [G] and 2 strength."
+    "DESCRIPTION": "Exhaust NL Gain 1 [E] and 2 strength.",
+    "UPGRADE_DESCRIPTION": "Gain 1 [E] and 2 strength."
   },
   "${modID}:TailsmanProtection": {
     "NAME": "Tailsman Protection",
@@ -250,7 +250,7 @@
   },
   "${modID}:TheHeroWithAThousandFaces": {
     "NAME": "The Hero With A Thousand Faces",
-    "DESCRIPTION": "Gain !M! [G] and discard 1 non-attack card when drawn NL Draw !M! cards when move into discard pile."
+    "DESCRIPTION": "Gain !M! [E] and discard 1 non-attack card when drawn NL Draw !M! cards when move into discard pile."
   },
   "${modID}:ThePowerOfCuteness": {
     "NAME": "The Power Of Cuteness",
@@ -262,6 +262,6 @@
   },
   "${modID}:VoxHarmoniqueOpusCosmique": {
     "NAME": "Vox Harmonique Opus Cosmique",
-    "DESCRIPTION": "Exhaust NL Choose 3 cards in your draw pile, decrease their costs by 1 and put them in the top of the draw pile. "
+    "DESCRIPTION": "Exhaust NL Choose 3 cards in your draw/discard pile, decrease their costs by 1 and put them in the top of the draw pile. "
   }
 }

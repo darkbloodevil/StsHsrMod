@@ -1,5 +1,6 @@
 package HsrMod.powers;
 
+import HsrMod.action.HsrDamageAction;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.DamageUtil;
@@ -23,7 +24,7 @@ public class PromiseNotCommandPower extends BasePower implements ToughnessReduct
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
     public int damage_amount;
-    public int toughness_reduction = 6;
+    public static int toughness_reduction = 6;
 
     public PromiseNotCommandPower(AbstractCreature owner, AbstractCreature source, int amount, int damage_amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, source, amount);
@@ -35,7 +36,7 @@ public class PromiseNotCommandPower extends BasePower implements ToughnessReduct
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner) {
             this.flash();
-            this.addToTop(new DamageAction(info.owner, DamageUtil.deal_followUp_info((AbstractPlayer) this.owner, this.damage_amount, this.toughness_reduction), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
+            this.addToTop(new HsrDamageAction(info.owner, DamageUtil.deal_followUp_info((AbstractPlayer) this.owner, this.damage_amount, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
         }
 
         return damageAmount;

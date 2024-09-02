@@ -32,12 +32,12 @@ public class AwaitingSystemResponse extends BaseCard {
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(UPG_COST);
             initializeDescription();
         }
+        super.upgrade();
     }
 
     @Override

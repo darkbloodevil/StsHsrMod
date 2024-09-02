@@ -42,6 +42,12 @@ public class FarewellHit extends BaseAttack {
         target = "";
         toughness_reduction = 10;
     }
+    public FarewellHit(String m_id,int damage) {
+        super(ID, info);
+        setDamage(damage*2);
+        target = m_id;
+        toughness_reduction = 10;
+    }
 
     public FarewellHit(String m_id) {
         super(ID, info);
@@ -52,11 +58,11 @@ public class FarewellHit extends BaseAttack {
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             initializeDescription();
         }
+        super.upgrade();
     }
 
     @Override

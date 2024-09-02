@@ -23,15 +23,16 @@
   },
   "${modID}:CaressingMoonlight": {
     "NAME": "月光摩挲连绵",
-    "DESCRIPTION": "造成 !D! 点伤害. NL 触发目标身上所有 ${modID}:dot ."
+    "DESCRIPTION": "造成 !D! 点伤害. NL ${modID}:削韧 !reduction! . NL 触发目标身上所有 ${modID}:dot .",
+    "EXTENDED_DESCRIPTION": ["Dot"]
   },
   "${modID}:ChampagneEtiquette": {
     "NAME": "香槟仪礼",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL 获得 !B! 点护甲. NL 你下一张攻击牌消耗 0."
+    "DESCRIPTION": "造成 !D! 点伤害. NL 获得 !B! 点护甲. NL 你下一张攻击牌消耗 0."
   },
   "${modID}:DecadenceFalseTwilight": {
     "NAME": "失坠落, 伪神的黄昏",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL 施加持续 !duration! 轮的易伤和${modID}:dot 增伤. NL 施加 !M! 风 ${modID}:dot ."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL 施加持续 !duration! 轮的易伤和 ${modID}:dot 增伤. NL 施加 !M! 风 ${modID}:dot ."
   },
   "${modID}:DivineCastigation": {
     "NAME": "天罚贯身",
@@ -51,7 +52,7 @@
   },
   "${modID}:GalvanicChords": {
     "NAME": "燃情和弦",
-    "DESCRIPTION": "造成 !D! 点伤害. NL 如果目标身上有 ${modID}:dot, 抽1卡并回1 [G] ."
+    "DESCRIPTION": "造成 !D! 点伤害. NL 如果目标身上有 ${modID}:dot , 抽1卡并回1 [E] ."
   },
   "${modID}:HighPoles": {
     "NAME": "缘竿",
@@ -71,11 +72,11 @@
   },
   "${modID}:ShapeOfTaixuDawnHerald": {
     "NAME": "太虚形蕴·烛夜",
-    "DESCRIPTION": "造成 !D! 点伤害. NL 如果目标处于 ${modID}:弱点击破 , 抽1张牌并且回复 1 [G] ."
+    "DESCRIPTION": "造成 !D! 点伤害. NL ${modID}:削韧 !reduction! NL 如果目标处于 ${modID}:弱点击破 , 抽1张牌并且回复 1 [E] ."
   },
   "${modID}:SlashedDreamCriesInRed": {
     "NAME": "残梦尽染, 一刀缭断",
-    "DESCRIPTION": "保留. NL 你不能打出该卡直到拥有 9 点 ${modID}:集真赤. 对所有敌人造成 !D! 点伤害."
+    "DESCRIPTION": "保留. NL 你不能打出该卡直到拥有 9 点 ${modID}:集真赤 . NL 对所有敌人造成 !D! 点伤害.  NL ${modID}:削韧 !reduction!"
   },
   "${modID}:StardustAce": {
     "NAME": "星尘王牌",
@@ -91,7 +92,7 @@
   },
   "${modID}:TwilightTrill": {
     "NAME": "悲剧尽头的颤音",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL 施加雷电 ${modID}:dot 伤害 !M! 持续 !duration! ."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL ${modID}:削韧 !reduction! . NL 施加雷电 ${modID}:dot 伤害 !M! . "
   },
   "${modID}:ZoneSuppression": {
     "NAME": "领域压制",
@@ -153,8 +154,8 @@
   },
   "${modID}:CherryOnTop": {
     "NAME": "杠上开花",
-    "DESCRIPTION": "随机触发下述效果之一X次: 造成 !D! 点伤害/ 抽 2 张牌 / 获得 2 [G] 并随机弃1张牌",
-    "UPGRADE_DESCRIPTION": "随机触发下述效果之一X+1次: 造成 !D! 点伤害/ 抽 2 张牌 / 获得 2 [G] 并随机弃1张牌"
+    "DESCRIPTION": "随机触发下述效果之一X次: 造成 !D! 点伤害/ 抽 2 张牌 / 获得 2 [E] 并随机弃1张牌",
+    "UPGRADE_DESCRIPTION": "随机触发下述效果之一X+1次: 造成 !D! 点伤害/ 抽 2 张牌 / 获得 2 [E] 并随机弃1张牌"
   },
   "${modID}:CombatRedeployment": {
     "NAME": "作战再部署",
@@ -167,7 +168,7 @@
   },
   "${modID}:DifficultyPaying": {
     "NAME": "支付困难?",
-    "DESCRIPTION": "消耗 NL 目标额外受到50%的 ${modID}追加攻击 伤害. 每攻击目标3次, 抽1张牌."
+    "DESCRIPTION": "消耗 NL 目标额外受到50%的 ${modID}追加 伤害. 每攻击目标3次, 抽1张牌."
   },
   "${modID}:EverBurningAmber": {
     "NAME": "炽燃不灭的琥珀",
@@ -184,35 +185,35 @@
   },
   "${modID}:ChrysalidPyronexus": {
     "NAME": "茧式源火中枢",
-    "DESCRIPTION": "保留 . 造成 !D! 点伤害 NL ${modID}:削韧 !reduction! NL 如果目标处于 ${modID}:弱点击破 状态 , 获得 !B! 护甲并且护甲保留1回合. 造成 ${modID}:超击破 ."
+    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 获得 !B! 护甲并且护甲保留1回合."
   },
   "${modID}:DeltaOrderMeteoricIncineration": {
     "NAME": "Δ指令-焦土陨击",
-    "DESCRIPTION": "保留 . 造成 !D! 点伤害 NL ${modID}:削韧 !reduction! NL 如果目标处于 ${modID}:弱点击破 状态 , 施加火 ${modID}:dot 伤害 !M! 持续 !duration! 并造成 ${modID}:超击破 ."
+    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 施加火 ${modID}:dot 伤害 !M! ."
   },
   "${modID}:DHGDRSupernovaOverload": {
     "NAME": "DHGDR-超新星过载",
-    "DESCRIPTION": "保留 . 对所有敌人造成 !D! 点伤害. NL ${modID}:削韧 !reduction! NL 抽 1 张卡. 如果目标处于 ${modID}:弱点击破 状态 , 造成 ${modID}:超击破 ."
+    "DESCRIPTION": "${modID}:萨姆 NL 对所有敌人造成 !D! 点伤害. NL 抽 1 张卡."
   },
   "${modID}:FyreflyTypeIVDeathstarOverload": {
     "NAME": "火萤Ⅳ型-死星过载",
-    "DESCRIPTION": "保留 .  消耗 . 造成 !D! 点伤害 NL ${modID}:削韧 !reduction! NL 如果目标处于 ${modID}:弱点击破 状态 , 抽 2 张卡, 回复 !M! 并造成 ${modID}:超击破 ."
+    "DESCRIPTION": "${modID}:萨姆 NL 消耗 . 造成 !D! 点伤害 NL 额外效果: NL 抽 2 张卡, 回复 !M! ."
   },
   "${modID}:FyreflyTypeIVPyrogenicDecimation": {
     "NAME": "火萤Ⅳ型-底火斩击",
-    "DESCRIPTION": "保留 . 造成 !D! 点伤害 NL ${modID}:削韧 !reduction! NL 如果目标处于 ${modID}:弱点击破 状态 , 抽 1 张卡并造成 ${modID}:超击破 ."
+    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害. 削韧 !reduction! NL 额外效果: NL 抽 1 张卡 ."
   },
   "${modID}:OrderAerialBombardment": {
     "NAME": "指令-天火轰击",
-    "DESCRIPTION": "保留 . 造成 !D! 点伤害 NL ${modID}:削韧 !reduction! NL 如果目标处于 ${modID}:弱点击破 状态 , 获得 !M! [G] 并造成 ${modID}:超击破 ."
+    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 获得 !M! [E] ."
   },
   "${modID}:OrderFlarePropulsion": {
     "NAME": "指令-闪燃推进",
-    "DESCRIPTION": "保留 . 造成 !D! 点伤害 NL ${modID}:削韧 !reduction! NL 如果目标处于 ${modID}:弱点击破 状态 , 抽 !M! 张卡并造成 ${modID}:超击破 ."
+    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 抽 !M! 张卡 ."
   },
   "${modID}:LoomOfFatesCaprice": {
     "NAME": "无端命运的机杼",
-    "DESCRIPTION": "目标每有一个 ${modID}:dot , 抽1张卡并且回复 1 [G] ."
+    "DESCRIPTION": "目标每有一个 ${modID}:dot , 抽1张卡并且回复 1 [E] ."
   },
   "${modID}:LoveHealAndChoose": {
     "NAME": "爱, 救护与抉择",
@@ -229,11 +230,11 @@
   },
   "${modID}:PromiseNotCommand": {
     "NAME": "是约定不是命令",
-    "DESCRIPTION": "${modID}:反击 !M!. NL 持续 !duration!"
+    "DESCRIPTION": "${modID}:反击 !M!. NL 持续 !duration! NL ${modID}:削韧 !reduction!"
   },
   "${modID}:SamsaraLocked": {
     "NAME": "生灭系缚",
-    "DESCRIPTION": "对敌人施加 !M! 轮的承负, 效果为你每攻击敌人两次, 回复 1 [G] ."
+    "DESCRIPTION": "对敌人施加 !M! 轮的承负, 效果为你每攻击敌人两次, 回复 1 [E] ."
   },
   "${modID}:SnowfieldFirstAid": {
     "NAME": "雪原急救方案",
@@ -241,16 +242,16 @@
   },
   "${modID}:TailSpiritualDomination": {
     "NAME": "尾巴·遣神役鬼",
-    "DESCRIPTION": "消耗 NL 获得 1 [G] 和 2 力量.",
-    "UPGRADE_DESCRIPTION": "获得 1 [G] 和 2 力量."
+    "DESCRIPTION": "消耗 NL 获得 1 [E] 和 2 力量.",
+    "UPGRADE_DESCRIPTION": "获得 1 [E] 和 2 力量."
   },
   "${modID}:TailsmanProtection": {
     "NAME": "灵符·保命护身",
-    "DESCRIPTION": "回复 !M! 并且每当你本回合打出一张牌, 回复 !M!."
+    "DESCRIPTION": "消耗 NL 回复 !M! 并且每当你本回合打出一张牌, 回复 !M!."
   },
   "${modID}:TheHeroWithAThousandFaces": {
     "NAME": "一人千役",
-    "DESCRIPTION": "抽到手上时, 获得 !M! [G] 并随机弃 1 张非攻击牌. NL 当进入弃牌堆时, 抽 !M! 张牌."
+    "DESCRIPTION": "抽到手上时, 获得 !M! [E] 并随机弃 1 张非攻击牌. NL 当进入弃牌堆时, 抽 !M! 张牌."
   },
   "${modID}:ThePowerOfCuteness": {
     "NAME": "可爱就是正义",
@@ -262,6 +263,6 @@
   },
   "${modID}:VoxHarmoniqueOpusCosmique": {
     "NAME": "调性合颂",
-    "DESCRIPTION": "消耗 NL 从抽牌堆选择3张牌, 它们费用永久-1并且放到抽牌堆顶. "
+    "DESCRIPTION": "消耗 NL 从抽/弃牌堆选择3张牌, 它们费用永久-1并且放到抽牌堆顶. "
   }
 }

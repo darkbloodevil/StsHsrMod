@@ -35,6 +35,7 @@ public class StringSingsSlowSwirls extends BaseCard {
         if (!this.upgraded) {
             upgradeName();
             this.isInnate=true;
+            this.rawDescription=cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
         super.upgrade();

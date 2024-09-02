@@ -33,6 +33,7 @@ public class CaressingMoonlight extends BaseAttack implements ToughnessReduction
     public CaressingMoonlight() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
+        toughness_reduction=6;
     }
 
     @Override

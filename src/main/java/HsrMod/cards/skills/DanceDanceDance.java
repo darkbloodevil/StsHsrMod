@@ -40,6 +40,7 @@ public class DanceDanceDance extends BaseCard {
         if (!this.upgraded) {
             upgradeName();
             this.exhaust=false;
+            this.rawDescription=cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
         super.upgrade();

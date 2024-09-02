@@ -32,5 +32,15 @@ public class FyreflyTypeIVCompleteCombustion extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new FireFlyTypeIVCompleteCombustionAction(this.upgraded));
     }
+    @Override
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+//            this.upgradesDescription=true;
+            this.rawDescription=cardStrings.UPGRADE_DESCRIPTION;
+            initializeDescription();
+        }
+        super.upgrade();
+    }
 
 }

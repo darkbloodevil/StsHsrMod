@@ -39,6 +39,9 @@ public class VoxHarmoniqueOpusCosmiqueAction extends AbstractGameAction {
             for (AbstractCard c : this.p.drawPile.group) {
                 tmp.addToRandomSpot(c);
             }
+            for (AbstractCard c : this.p.discardPile.group) {
+                tmp.addToRandomSpot(c);
+            }
             if (tmp.isEmpty()){
                 isDone = true;
                 return;
@@ -62,7 +65,12 @@ public class VoxHarmoniqueOpusCosmiqueAction extends AbstractGameAction {
                 }
 
                 AbstractDungeon.player.drawPile.addToTop(copy_card);
-                AbstractDungeon.player.drawPile.removeCard(c);
+                if (AbstractDungeon.player.drawPile.contains(c)){
+                    AbstractDungeon.player.drawPile.removeCard(c);
+                }else if (AbstractDungeon.player.discardPile.contains(c)){
+                    AbstractDungeon.player.discardPile.removeCard(c);
+                }
+
             }
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
 

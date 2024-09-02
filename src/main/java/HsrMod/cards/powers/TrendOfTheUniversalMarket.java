@@ -32,12 +32,12 @@ public class TrendOfTheUniversalMarket extends BaseCard {
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPG_Magic);
             initializeDescription();
         }
+        super.upgrade();
     }
 
     @Override

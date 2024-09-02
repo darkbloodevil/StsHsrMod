@@ -1,5 +1,6 @@
 package HsrMod.powers;
 
+import HsrMod.action.HsrDamageAction;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.DamageUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -34,7 +35,7 @@ public class GirlPower extends BasePower implements ToughnessReductionInterface 
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner && this.owner.currentBlock > 0) {
             this.flash();
-            this.addToTop(new DamageAction(info.owner, DamageUtil.deal_followUp_info((AbstractPlayer) this.owner, this.damage_amount, this.toughness_reduction), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
+            this.addToTop(new HsrDamageAction(info.owner, DamageUtil.deal_followUp_info((AbstractPlayer) this.owner, this.damage_amount, this.toughness_reduction), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
         }
 
         return damageAmount;

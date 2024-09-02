@@ -37,7 +37,7 @@ public class RIPHomeRun extends BaseAttack {
             CardTarget.ALL_ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    public static final int DAMAGE = 10;
+    public static final int DAMAGE = 9;
     public static final int UPG_DAMAGE = 4;
 
 
@@ -46,14 +46,19 @@ public class RIPHomeRun extends BaseAttack {
         setDamage(DAMAGE, UPG_DAMAGE);
         toughness_reduction = 6;
     }
+    public RIPHomeRun(int damage) {
+        super(ID, info);
+        setDamage(damage);
+        toughness_reduction = 6;
+    }
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             initializeDescription();
         }
+        super.upgrade();
     }
 
     @Override
@@ -68,7 +73,7 @@ public class RIPHomeRun extends BaseAttack {
 //        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
 //            addToBot(new DamageAction(m, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
 //        }
-        addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL,toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 
     }
 

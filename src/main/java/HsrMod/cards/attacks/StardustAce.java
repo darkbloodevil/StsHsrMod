@@ -40,8 +40,8 @@ public class StardustAce extends BaseAttack implements MultiDamageInterface {
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 5;
+    private static final int DAMAGE = 9;
+    private static final int UPG_DAMAGE = 4;
 
 
     public StardustAce() {
@@ -52,8 +52,8 @@ public class StardustAce extends BaseAttack implements MultiDamageInterface {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> stanceChoices = new ArrayList<>();
-        stanceChoices.add(new FarewellHit(m.id));
-        stanceChoices.add(new RIPHomeRun());
+        stanceChoices.add(new FarewellHit(m.id,damage));
+        stanceChoices.add(new RIPHomeRun(damage));
 
         if (this.upgraded) {
             for (AbstractCard c : stanceChoices) {

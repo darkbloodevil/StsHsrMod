@@ -16,6 +16,13 @@ public class HsrDamageInfo extends DamageInfo {
     public int base;
     public DamageType type;
 
+    public HsrDamageInfo(DamageInfo info) {
+        super(info.owner, info.base, info.type);
+        this.damageSource=info.owner;
+        this.base=info.base;
+        this.type=info.type;
+    }
+
     public HsrDamageInfo(AbstractCreature damageSource, int base, DamageType type) {
         super(damageSource, base, type);
         this.damageSource=damageSource;

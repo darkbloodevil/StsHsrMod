@@ -3,6 +3,7 @@ package HsrMod.cards.skills;
 import HsrMod.cards.BaseCard;
 import HsrMod.characters.Stelle;
 import HsrMod.interfaces.DurationInterface;
+import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.powers.PromiseNotCommandPower;
 import HsrMod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -14,7 +15,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @date 2024/7/30 16:51
  * @description
  */
-public class PromiseNotCommand extends BaseCard implements DurationInterface {
+public class PromiseNotCommand extends BaseCard implements DurationInterface, ToughnessReductionInterface {
     public static final String ID = makeID(PromiseNotCommand.class.getSimpleName());
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
@@ -36,12 +37,12 @@ public class PromiseNotCommand extends BaseCard implements DurationInterface {
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPG_Magic);
             initializeDescription();
         }
+        super.upgrade();
     }
 
     @Override
@@ -54,5 +55,10 @@ public class PromiseNotCommand extends BaseCard implements DurationInterface {
     @Override
     public int get_duration() {
         return TURNS;
+    }
+
+    @Override
+    public int get_toughness_reduction() {
+        return PromiseNotCommandPower.toughness_reduction;
     }
 }

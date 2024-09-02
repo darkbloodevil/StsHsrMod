@@ -45,11 +45,12 @@ public class TailSpiritualDomination extends BaseCard {
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             this.exhaust = false;
+            this.rawDescription=cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
+        super.upgrade();
     }
 }

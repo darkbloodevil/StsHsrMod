@@ -22,7 +22,7 @@ public class VoxHarmoniqueOpusCosmique extends BaseCard {
             3 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
 
-    private static final int UPG_COST = 1;
+    private static final int UPG_COST = 2;
 
     public VoxHarmoniqueOpusCosmique() {
         super(ID, info);
@@ -37,11 +37,11 @@ public class VoxHarmoniqueOpusCosmique extends BaseCard {
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             upgradeBaseCost(UPG_COST);
             initializeDescription();
         }
+        super.upgrade();
     }
 }

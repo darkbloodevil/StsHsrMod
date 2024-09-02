@@ -129,6 +129,8 @@ public class Stelle extends CustomPlayer {
         retVal.add(Strike_Red.ID);
         retVal.add(Strike_Red.ID);
         retVal.add(Strike_Red.ID);
+        retVal.add(Strike_Red.ID);
+        retVal.add(Defend_Blue.ID);
         retVal.add(Defend_Blue.ID);
         retVal.add(Defend_Blue.ID);
         retVal.add(Defend_Blue.ID);

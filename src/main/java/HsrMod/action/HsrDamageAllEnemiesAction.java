@@ -25,7 +25,7 @@ public class HsrDamageAllEnemiesAction extends AbstractGameAction {
     @Override
     public void update() {
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            addToBot(new DamageAction(monster,info.clone(),effect));
+            addToBot(new HsrDamageAction(monster,info,effect));
         }
         isDone=true;
     }

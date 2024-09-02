@@ -40,6 +40,22 @@ public class HonkaiStarRailRelic extends BaseRelic {
         }
     }
 
+    /**
+     * 保证如果敌人没有韧性条就一定会加上韧性条
+     */
+    @Override
+    public void atTurnStart() {
+        super.atTurnStart();
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            // 如果没有韧性条 那就加入韧性条
+            if (!monster.hasPower(ToughnessPower.POWER_ID)) {
+                int toughness = ToughnessUtil.get_toughness(monster);
+                addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new ToughnessPower(monster, AbstractDungeon.player, toughness),
+                        toughness));
+            }
+        }
+    }
+
     @Override
     public void onSpawnMonster(AbstractMonster no_use) {
         super.onSpawnMonster(no_use);

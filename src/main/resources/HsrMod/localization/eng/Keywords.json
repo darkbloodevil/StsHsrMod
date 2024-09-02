@@ -25,6 +25,7 @@
   {
     "PROPER_NAME": "Toughness Reduction",
     "NAMES": [
+      "TR",
       "Toughness Reduction",
       "Toughness_Reduction",
       "Reduction"
@@ -68,7 +69,7 @@
     "NAMES": [
       "SAM"
     ],
-    "DESCRIPTION": "A group of 0 cost attack cards which are powerful when the enemies is in #yWeakness #yBreak."
+    "DESCRIPTION": "A group of 0 cost attack cards. They have #yretain effect and default toughness reduction is 10. They have extra effect and deals #ySuper #yBreak DMG when the enemies is in #yWeakness #yBreak."
   },
   {
     "PROPER_NAME": "Lightning-Lord",
@@ -83,6 +84,6 @@
       "Super Break",
       "Super_Break"
     ],
-    "DESCRIPTION": "Deal damage based on toughness reduction when enemies is in #yWeakness #yBreak."
+    "DESCRIPTION": "Deal damage based on toughness reduction when enemies is in #yWeakness #yBreak. Default reduction 4."
   }
 ]

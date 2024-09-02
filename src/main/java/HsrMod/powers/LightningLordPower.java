@@ -1,5 +1,6 @@
 package HsrMod.powers;
 
+import HsrMod.action.HsrDamageAction;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.DamageUtil;
@@ -74,7 +75,7 @@ public class LightningLordPower extends BasePower implements ToughnessReductionI
             for (int i = 0; i < this.amount; i++) {
                 AbstractMonster monster = AbstractDungeon.getMonsters().getRandomMonster(true);
                 // 连续攻击 所以是top
-                this.addToTop(new DamageAction(monster,
+                this.addToTop(new HsrDamageAction(monster,
                         DamageUtil.deal_followUp_info(AbstractDungeon.player, damage, toughness_reduction),
                         AbstractGameAction.AttackEffect.LIGHTNING));
             }

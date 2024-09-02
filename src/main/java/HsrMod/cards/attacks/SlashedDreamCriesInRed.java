@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -55,7 +56,7 @@ public class SlashedDreamCriesInRed extends BaseAttack implements StartupCard, T
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
         if (!canUse) {
-            return false;
+            return canUse;
         } else if (p.hasPower(SlashedDreamPower.POWER_ID)) {
             if (p.getPower(SlashedDreamPower.POWER_ID).amount >= 9) {
                 this.cantUseMessage = cardStrings.UPGRADE_DESCRIPTION;
@@ -64,18 +65,18 @@ public class SlashedDreamCriesInRed extends BaseAttack implements StartupCard, T
             this.cantUseMessage = cardStrings.UPGRADE_DESCRIPTION;
             return false;
         } else {
-            return canUse;
+            return false;
         }
     }
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             initializeDescription();
-            this.upgradeDamage(10);
+            this.upgradeDamage(20);
         }
+        super.upgrade();
     }
 
     @Override
@@ -96,6 +97,18 @@ public class SlashedDreamCriesInRed extends BaseAttack implements StartupCard, T
         addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlashedDreamPower(AbstractDungeon.player, 0)));
         return false;
     }
+
+    /**
+     * 以防万一因为什么原因加入到手上后，未拥有集真赤
+     */
+    public void triggerOnEndOfPlayerTurn() {
+        super.triggerOnEndOfPlayerTurn();
+        if (!AbstractDungeon.player.hasPower(SlashedDreamPower.POWER_ID)){
+            addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlashedDreamPower(AbstractDungeon.player, 0)));
+
+        }
+    }
+
 
     @Override
     public int get_toughness_reduction() {

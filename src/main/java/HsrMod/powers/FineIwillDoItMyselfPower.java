@@ -27,7 +27,7 @@ public class FineIwillDoItMyselfPower extends BasePower {
     private static final boolean TURN_BASED = false;
     private ArrayList<String> under_half;
     int damage_amount;
-    int toughness_reduction;
+    int toughness_reduction=4;
     AbstractGameAction trigger_action;
 
     public FineIwillDoItMyselfPower(AbstractCreature owner, AbstractCreature source, int amount) {

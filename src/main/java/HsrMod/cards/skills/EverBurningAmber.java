@@ -54,11 +54,11 @@ public class EverBurningAmber extends BaseCard {
 
     @Override
     public void upgrade() {
-        super.upgrade();
         if (!this.upgraded) {
             upgradeName();
             this.upgradeMagicNumber(UPG_Magic);
             initializeDescription();
         }
+        super.upgrade();
     }
 }
