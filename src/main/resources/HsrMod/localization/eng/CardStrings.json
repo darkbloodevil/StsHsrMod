@@ -91,7 +91,7 @@
   },
   "${modID}:TwilightTrill": {
     "NAME": "Twilight Trill",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL ${modID}:TR !reduction! NL Cause lightning ${modID}:Dot damage !M! duration !duration!."
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL ${modID}:TR !reduction! NL Cause lightning ${modID}:Dot damage !M! ."
   },
   "${modID}:ZoneSuppression": {
     "NAME": "Zone Suppression",
@@ -108,6 +108,11 @@
   "${modID}:BleakBreedsBliss": {
     "NAME": "Bleak Breeds Bliss",
     "DESCRIPTION": "When health is under half, heal the amount of unblocked damage when attacked. Duration !M! ."
+  },
+  "${modID}:CornerstoneDeluxe": {
+    "NAME": "Cornerstone Deluxe",
+    "DESCRIPTION": "Whenever you attack, gain !M! block.",
+    "UPGRADE_DESCRIPTION": "Gain !B! block. Whenever you attack, gain !M! block."
   },
   "${modID}:Dreamdiver": {
     "NAME": "Dreamdiver",
@@ -168,6 +173,10 @@
   "${modID}:DifficultyPaying": {
     "NAME": "Difficulty Paying?",
     "DESCRIPTION": "Exhaust NL The target get 50% more ${modID}:Follow-Up damage. Every 3 times you attack the enemy, draw a card."
+  },
+  "${modID}:EnduringBulwark": {
+    "NAME": "Enduring Bulwark",
+    "DESCRIPTION": "Exhaust NL Gain !B! block . NL Keep block for !M! turn."
   },
   "${modID}:EverBurningAmber": {
     "NAME": "Ever Burning Amber",
@@ -254,11 +263,12 @@
   },
   "${modID}:ThePowerOfCuteness": {
     "NAME": "The Power Of Cuteness",
-    "DESCRIPTION": "Gain !B! block and ${modID}:counter !D! when you have block."
+    "DESCRIPTION": "Gain !B! block and ${modID}:counter !D! when you have block. The block will keep for !M! turns."
   },
   "${modID}:TheShield": {
     "NAME": "The Shield",
-    "DESCRIPTION": "At the start of turn enemies gain !B! block. When enemies' block is broken, you gain !M! block."
+    "DESCRIPTION": "At the start of turn enemies gain !M! block. When enemies' block is broken, you gain !M! block.",
+    "UPGRADE_DESCRIPTION": "Gain !B! block. At the start of turn enemies gain !M! block. When enemies' block is broken, you gain !M! block."
   },
   "${modID}:VoxHarmoniqueOpusCosmique": {
     "NAME": "Vox Harmonique Opus Cosmique",

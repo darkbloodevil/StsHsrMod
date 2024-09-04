@@ -45,6 +45,7 @@ public class FyreflyTypeIVDeathstarOverload extends SAMCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeDamage(UPG_DAMAGE);
             upgradeMagicNumber(UPG_Magic);
             initializeDescription();
         }

@@ -41,6 +41,7 @@ public class ItsMagicIaddSomeMagic extends BaseAttack implements ToughnessReduct
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeDamage(UPG_DAMAGE);
             upgradeMagicNumber(UPG_Magic);
             initializeDescription();
         }
@@ -50,7 +51,7 @@ public class ItsMagicIaddSomeMagic extends BaseAttack implements ToughnessReduct
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         FineIwillDoItMyselfPower fidimp=new FineIwillDoItMyselfPower(p,p,magicNumber);
-        addToBot(new ApplyPowerAction(p,p,fidimp));
+        addToTop(new ApplyPowerAction(p,p,fidimp));
         addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL,toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
     }
 

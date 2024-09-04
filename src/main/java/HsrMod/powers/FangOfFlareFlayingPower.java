@@ -2,6 +2,7 @@ package HsrMod.powers;
 
 import HsrMod.HsrMod;
 import HsrMod.action.HsrDamageAllEnemiesAction;
+import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.AtDepletingToughness;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.DamageUtil;
@@ -23,32 +24,51 @@ public class FangOfFlareFlayingPower extends BasePower implements ToughnessReduc
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
     int damage;
-    public static final int trigger_threshold=8;
-    int toughness_reduction=4;
+    public static final int trigger_threshold = 8;
+    int toughness_reduction = 4;
 
     public FangOfFlareFlayingPower(AbstractCreature owner, int damage) {
         super(POWER_ID, TYPE, TURN_BASED, owner, owner, 0);
-        this.damage=damage;
+        this.damage = damage;
     }
 
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0],damage);
+        this.description = String.format(DESCRIPTIONS[0], damage);
     }
 
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(0);
-        this.damage+=stackAmount;
+        this.damage += stackAmount;
     }
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         super.onAttack(info, damageAmount, target);
-        this.amount++;
-        while (amount>=trigger_threshold){
-            this.amount-=trigger_threshold;
-            addToBot(new HsrDamageAllEnemiesAction(DamageUtil.deal_followUp_info(AbstractDungeon.player,damage,toughness_reduction)));
+        HsrDamageInfo h_info=HsrDamageInfo.to_hsr_info(info);
+
+        if (!h_info.is_aoe &&h_info.type== DamageInfo.DamageType.NORMAL){
+            this.amount++;
+            while (amount >= trigger_threshold) {
+                this.amount -= trigger_threshold;
+                addToBot(new HsrDamageAllEnemiesAction(DamageUtil.deal_followUp_info(AbstractDungeon.player, damage, toughness_reduction)));
+            }
+        }
+
+    }
+
+    /**
+     * 对群的攻击每一下都叠一下
+     * @param use_length
+     */
+    @Override
+    public void onDamageAllEnemies(int[] use_length) {
+        super.onDamageAllEnemies(use_length);
+        this.amount += use_length.length;
+        while (amount >= trigger_threshold) {
+            this.amount -= trigger_threshold;
+            addToBot(new HsrDamageAllEnemiesAction(DamageUtil.deal_followUp_info(AbstractDungeon.player, this.damage, toughness_reduction)));
         }
     }
 

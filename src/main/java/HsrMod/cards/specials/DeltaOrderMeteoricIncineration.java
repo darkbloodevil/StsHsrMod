@@ -50,6 +50,7 @@ public class DeltaOrderMeteoricIncineration extends SAMCard implements DurationI
 
         if (!this.upgraded) {
             upgradeName();
+            upgradeDamage(UPG_DAMAGE);
             upgradeMagicNumber(UPG_Magic);
             initializeDescription();
         }

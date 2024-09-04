@@ -40,7 +40,7 @@ public class SlashedDreamCriesInRed extends BaseAttack implements StartupCard, T
         super(ID, info);
         this.baseDamage = 50;
         this.isMultiDamage = true;
-        this.retain = true;
+        this.selfRetain = true;
         toughness_reduction = 10;
     }
 

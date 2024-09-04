@@ -28,7 +28,6 @@ public class SamsaraLocked extends BaseCard {
 
     public SamsaraLocked() {
         super(ID, info);
-        this.exhaust = true;
         this.magicNumber = 1;
         this.baseMagicNumber = 1;
     }

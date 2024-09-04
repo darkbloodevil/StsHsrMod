@@ -20,7 +20,7 @@ public class DotVulnerablePower extends BasePower {
     public static final String POWER_ID = makeID(DotVulnerablePower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = PowerType.DEBUFF;
     private static final boolean TURN_BASED = true;
-    public static float scaler=2f;
+    public static float scaler=1.5f;
 
     public DotVulnerablePower(AbstractCreature owner, AbstractCreature source, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, source, amount);

@@ -3,6 +3,7 @@ package HsrMod.cards.specials;
 import HsrMod.cards.attacks.BaseAttack;
 import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
+import HsrMod.powers.OvertonePower;
 import HsrMod.util.CardStats;
 import HsrMod.util.ToughnessUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -23,22 +24,27 @@ public abstract class SAMCard extends BaseAttack {
     int toughness_reduction = 10;
 
 
-
     public SAMCard(String ID, CardStats info) {
         super(ID, info);
-        this.retain = true;
+        this.selfRetain = true;
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         if (ToughnessUtil.target_on_break(m)) {
-            on_break_trigger(p,m);
+            on_break_trigger(p, m);
         }
     }
 
-    public void on_break_trigger(AbstractPlayer p,AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player, toughness_reduction, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+    public void on_break_trigger(AbstractPlayer p, AbstractMonster m) {
+
+        // 有弦外音就x1.5的超击破
+        if (AbstractDungeon.player.hasPower(OvertonePower.POWER_ID)) {
+            addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player, (int) (1.5 * toughness_reduction), DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        } else {
+            addToBot(new DamageAction(m, new DamageInfo(AbstractDungeon.player, toughness_reduction, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        }
     }
 
     @Override

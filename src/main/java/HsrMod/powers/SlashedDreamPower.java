@@ -30,7 +30,7 @@ public class SlashedDreamPower extends BasePower {
     }
     @Override
     public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if (power.type == AbstractPower.PowerType.DEBUFF && source == this.owner && target != this.owner) {
+        if (power.type == AbstractPower.PowerType.DEBUFF && source == this.owner && target != this.owner && !power.ID.equals("Shackled")) {
             flash();
             addToBot(new ApplyPowerAction(owner, owner, new SlashedDreamPower(this.owner, 1)));
         }

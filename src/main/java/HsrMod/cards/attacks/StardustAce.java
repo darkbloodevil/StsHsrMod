@@ -36,7 +36,7 @@ public class StardustAce extends BaseAttack implements MultiDamageInterface {
     private static final CardStats info = new CardStats(
             Stelle.Meta.CARD_COLOR, //The card color. If you're making your own character, it'll look something like this. Otherwise, it'll be CardColor.RED or similar for a basegame character color.
             CardType.ATTACK, //The type. ATTACK/SKILL/POWER/CURSE/STATUS
-            CardRarity.COMMON, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
+            CardRarity.BASIC, //Rarity. BASIC is for starting cards, then there's COMMON/UNCOMMON/RARE, and then SPECIAL and CURSE. SPECIAL is for cards you only get from events. Curse is for curses, except for special curses like Curse of the Bell and Necronomicurse.
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
@@ -66,12 +66,14 @@ public class StardustAce extends BaseAttack implements MultiDamageInterface {
     @Override
     public int[] get_multi_damage() {
         int[] damages = new int[2];
-        damages[0] = FarewellHit.DAMAGE;
-        damages[1] = RIPHomeRun.DAMAGE;
-        if (upgraded) {
-            damages[0]+=FarewellHit.UPG_DAMAGE;
-            damages[1]+=RIPHomeRun.UPG_DAMAGE;
-        }
+        damages[0] = this.damage*2;
+        damages[1] = this.damage;
+//        damages[0] = FarewellHit.DAMAGE;
+//        damages[1] = RIPHomeRun.DAMAGE;
+//        if (upgraded) {
+//            damages[0]+=FarewellHit.UPG_DAMAGE;
+//            damages[1]+=RIPHomeRun.UPG_DAMAGE;
+//        }
 
         return damages;
     }

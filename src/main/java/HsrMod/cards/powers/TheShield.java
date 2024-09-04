@@ -11,6 +11,7 @@ import HsrMod.characters.Stelle;
 import HsrMod.powers.TheShieldPower;
 import HsrMod.util.CardStats;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -31,13 +32,25 @@ public class TheShield extends BaseCard {
 
     public TheShield() {
         super(ID, info);
-        this.baseMagicNumber=12;
-        this.magicNumber=baseMagicNumber;
-        this.setBlock(magicNumber,4);
+        this.baseMagicNumber = 12;
+        this.magicNumber = baseMagicNumber;
+        this.setBlock(6);
     }
 
+    //    @Override
+//    public void upgrade() {
+//        if (!this.upgraded) {
+//            upgradeName();
+//            upgradeBlock(6);
+//            initializeDescription();
+//        }
+//        super.upgrade();
+//    }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p,p,new TheShieldPower(p,p,magicNumber)));
+        if (this.upgraded){
+            addToBot(new GainBlockAction(p, block));
+        }
+        addToBot(new ApplyPowerAction(p, p, new TheShieldPower(p, p, magicNumber)));
     }
 }

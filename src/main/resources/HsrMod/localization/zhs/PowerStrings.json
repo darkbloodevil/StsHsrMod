@@ -1,20 +1,18 @@
 {
-
   "${modID}:PowerID": {
     "NAME": "Ultimate Power",
     "DESCRIPTIONS": [
       "You are Very Cool and Strong."
     ]
   },
-
   "${modID}:AwaitingSystemResponsePower": {
-    "NAME": "Awaiting System Response",
+    "NAME": "等待系统响应中...",
     "DESCRIPTIONS": [
       "当攻击时, 为目标附加一个 #yDEBUFF, 从下列随机选择 #y虚弱/#y易伤/本回合失去2 #y力量 ."
     ]
   },
   "${modID}:BackupDancerPower": {
-    "NAME": "Backup Dancer",
+    "NAME": "伴舞",
     "DESCRIPTIONS": [
       "当目标在弱点击破状态, 每点削韧值转化为1点超击破 DMG."
     ]
@@ -26,43 +24,49 @@
     ]
   },
   "${modID}:BlissOfOtherworldsEmbracePower": {
-    "NAME": "Bliss Of Otherworld's Embrace",
+    "NAME": "沉迷于彼界的臂湾",
     "DESCRIPTIONS": [
       "每回合开始时获得一张 %s ."
     ]
   },
   "${modID}:BreakPower": {
-    "NAME": "Weak break",
+    "NAME": "弱点击破状态",
     "DESCRIPTIONS": [
       "攻击吧!"
     ]
   },
   "${modID}:BurdenPower": {
-    "NAME": "Burden",
+    "NAME": "承负",
     "DESCRIPTIONS": [
       "每两次攻击回1能. 持续 %d 回合."
     ]
   },
+  "${modID}:CornerstoneDeluxePower": {
+    "NAME": "繁荣基石",
+    "DESCRIPTIONS": [
+      "每次攻击, 获得 %d 点护甲."
+    ]
+  },
   "${modID}:DivineProvisionPower": {
-    "NAME": "Divine Provision",
+    "NAME": "禳命",
     "DESCRIPTIONS": [
       "每打一张牌, 回复 %d ."
     ]
   },
   "${modID}:DotVulnerablePower": {
-    "NAME": "Dot Vulnerable",
+    "NAME": "Dot 易伤",
     "DESCRIPTIONS": [
-      "${modID}:Dot 伤害增加 %.2f"
+      "${modID}:dot 伤害增加 %.2f"
     ]
   },
   "${modID}:DreamdiverPower": {
-    "NAME": "Dreamdiver",
+    "NAME": "梦游鱼",
     "DESCRIPTIONS": [
       "回合开始时, 抽完牌后, 从弃牌堆选择1张牌放到抽牌堆顶."
     ]
   },
   "${modID}:FangOfFlareFlayingPower": {
-    "NAME": "Fang Of Flare Flaying",
+    "NAME": "剔烁之牙",
     "DESCRIPTIONS": [
       "每攻击8次, 造成 %d ${modID}:追加 伤害."
     ]
@@ -70,23 +74,23 @@
   "${modID}:FineIwillDoItMyselfPower": {
     "NAME": "Fine I Will Do It Myself",
     "DESCRIPTIONS": [
-      "Deal %d ${modID}:Follow-Up damage and ${modID}:Toughness_Reduction %d. when any enemy's health is under half by this damage."
+      "当任意敌人因为该伤害而血量低于一半时, 造成 %d ${modID}:追加 伤害并 ${modID}:削韧 %d ."
     ]
   },
   "${modID}:FireDotPower": {
     "NAME": "Fire Dot",
     "DESCRIPTIONS": [
-      "回合开始时, 造成 %d 点火属性 ${modID}:Dot 伤害."
+      "回合开始时, 造成 %d 点火属性 ${modID}:dot 伤害."
     ]
   },
   "${modID}:GirlPower": {
-    "NAME": "Girl Power",
+    "NAME": "少女的特权",
     "DESCRIPTIONS": [
-      "当你有护甲时, 反击 %d ."
+      "当你有 格挡 时, 反击 %d ."
     ]
   },
   "${modID}:KarmaPower": {
-    "NAME": "Karma",
+    "NAME": "恶报",
     "DESCRIPTIONS": [
       "抽 %d 张卡每当你削韧 %d 点."
     ]
@@ -94,11 +98,11 @@
   "${modID}:LightningDotPower": {
     "NAME": "Lightning Dot",
     "DESCRIPTIONS": [
-      "回合开始时, 造成 %d 点雷属性 ${modID}:Dot 伤害."
+      "回合开始时, 造成 %d 点雷属性 ${modID}:dot 伤害."
     ]
   },
   "${modID}:LightningLordPower": {
-    "NAME": "Lightning-Lord",
+    "NAME": "神君",
     "DESCRIPTIONS": [
       "${modID}:神君 将在 %d 回合内发动攻击. ${modID}:神君 现在造成 %d x %d 点伤害."
     ]
@@ -112,7 +116,7 @@
   "${modID}:OvertonePower": {
     "NAME": "弦外音",
     "DESCRIPTIONS": [
-      "弱点击破效率提高 50%."
+      "削韧提高 50%."
     ]
   },
   "${modID}:PrayerOfAbyssFlowerPower": {
@@ -122,19 +126,19 @@
     ]
   },
   "${modID}:PromiseNotCommandPower": {
-    "NAME": "Promise Not Command",
+    "NAME": "是约定不是命令",
     "DESCRIPTIONS": [
       "${modID}:反击 %d."
     ]
   },
   "${modID}:ProofOfDebtPower": {
-    "NAME": "Proof Of Debt",
+    "NAME": "负债证明",
     "DESCRIPTIONS": [
       "${modID}:追加攻击 额外造成50%伤害. 每被攻击三次抽一张卡."
     ]
   },
   "${modID}:QuidProQuoPower": {
-    "NAME": "[等价交换]",
+    "NAME": "【等价交换】",
     "DESCRIPTIONS": [
       "当能量低于一半时, 每当打出非零费卡时抽 %d 张卡."
     ]
@@ -152,9 +156,9 @@
     ]
   },
   "${modID}:TheShieldPower": {
-    "NAME": "The Shield",
+    "NAME": "【盾】",
     "DESCRIPTIONS": [
-      "当回合开始, 给予敌人 %d 护甲. 当击穿护甲, 获得 %d 点护甲."
+      "当回合开始, 给予敌人 %d 格挡 . 当击穿 格挡 , 获得 %d 点 格挡 ."
     ]
   },
   "${modID}:ToughnessPower": {
@@ -164,31 +168,27 @@
     ]
   },
   "${modID}:ToughnessProtectPower": {
-    "NAME": "Toughness Protect",
+    "NAME": "韧性保护",
     "DESCRIPTIONS": [
       "不可削韧"
     ]
   },
   "${modID}:TrendOfTheUniversalMarketPower": {
-    "NAME": "Trend Of The Universal Market",
+    "NAME": "【宇宙市场趋势】",
     "DESCRIPTIONS": [
-      "当被攻击时, 施加 %d 火 ${modID}:Dot ."
+      "当被攻击时, 施加 %d 火 ${modID}:dot (持续1回合)."
     ]
   },
-
   "${modID}:VictoryRushPower": {
-    "NAME": "Victory Rush",
+    "NAME": "乘胜追击",
     "DESCRIPTIONS": [
-      "当敌人进入 ${modID}:弱点击破 状态, 造成 %d ${modID}:追加 伤害 ${modID}:削韧 %d."
+      "当有敌人进入 ${modID}:弱点击破 状态, 对所有敌人造成 %d ${modID}:追加 伤害 ${modID}:削韧 %d."
     ]
   },
-
   "${modID}:WindDotPower": {
     "NAME": "Wind Dot",
     "DESCRIPTIONS": [
-      "回合开始时, 造成 %d 点风属性 ${modID}:Dot 伤害."
+      "回合开始时, 造成 %d 点风属性 ${modID}:dot 伤害."
     ]
   }
-
-
 }

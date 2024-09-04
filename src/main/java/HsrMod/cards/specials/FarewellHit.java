@@ -56,14 +56,14 @@ public class FarewellHit extends BaseAttack {
         toughness_reduction = 10;
     }
 
-    @Override
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            initializeDescription();
-        }
-        super.upgrade();
-    }
+//    @Override
+//    public void upgrade() {
+//        if (!this.upgraded) {
+//            upgradeName();
+//            initializeDescription();
+//        }
+//        super.upgrade();
+//    }
 
     @Override
     public void onChoseThisOption() {

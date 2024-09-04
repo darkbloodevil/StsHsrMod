@@ -7,17 +7,25 @@
     ]
   },
   "${modID}:RubertEmpireMechanicalCogwheel": {
-    "NAME": "Rubert Empire Mechanical Cogwheel",
+    "NAME": "鲁伯特帝国齿轮",
     "FLAVOR": "I followed a tutorial!",
     "DESCRIPTIONS": [
-      "Whenever you enter a room, gain #y%d Gold. Whenever you have more than #r%d Gold, loss all gold"
+      "每当你进入一个房间，获得 #y%d 金. 当你的金币超过 #r%d 时, 失去所有金币"
     ]
   },
   "${modID}:HonkaiStarRailRelic": {
-    "NAME": "Honkai Star Rail",
-    "FLAVOR": "Honkai Star Rail",
+    "NAME": "星穹铁道",
+    "FLAVOR": "踏上旅途！",
     "DESCRIPTIONS": [
-      "Give every monster %s bar"
+      "给与敌人韧性条。来自世界外的力量使得这个遗物无法被丢弃。"
+    ]
+  },
+  "${modID}:Ticket": {
+    "NAME": "星穹列车乘员专票",
+    "FLAVOR": "星穹列车列车乘客的证明。弄丢的话列车长会生气的。",
+    "DESCRIPTIONS": [
+      "别弄丢了帕！",
+      "别再弄丢了帕！"
     ]
   }
 }

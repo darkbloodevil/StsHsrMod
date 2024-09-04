@@ -47,6 +47,7 @@ public class HighPoles extends BaseAttack implements ToughnessReductionInterface
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeDamage(UPG_DAMAGE);
             upgradeMagicNumber(UPG_Magic);
             initializeDescription();
         }

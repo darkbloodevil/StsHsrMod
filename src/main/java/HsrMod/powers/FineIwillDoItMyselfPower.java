@@ -1,5 +1,6 @@
 package HsrMod.powers;
 
+import HsrMod.HsrMod;
 import HsrMod.action.HsrDamageAllEnemiesAction;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.util.DamageUtil;
@@ -27,7 +28,7 @@ public class FineIwillDoItMyselfPower extends BasePower {
     private static final boolean TURN_BASED = false;
     private ArrayList<String> under_half;
     int damage_amount;
-    int toughness_reduction=4;
+    int toughness_reduction = 4;
     AbstractGameAction trigger_action;
 
     public FineIwillDoItMyselfPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -51,6 +52,12 @@ public class FineIwillDoItMyselfPower extends BasePower {
         };
     }
 
+//    @Override
+//    public void onInitialApplication() {
+//        super.onInitialApplication();
+//
+//    }
+
     @Override
     public void updateDescription() {
         this.description = String.format(DESCRIPTIONS[0], damage_amount, toughness_reduction);
@@ -58,23 +65,33 @@ public class FineIwillDoItMyselfPower extends BasePower {
 
     @Override
     public void onSpecificTrigger() {
-        boolean triggered = false;
+        int kurukuru=0;
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            if ((double) monster.currentHealth / monster.maxHealth < 0.5 && !under_half.contains(monster.id)) {
+            if ((double) monster.currentHealth / monster.maxHealth <= 0.5 && !under_half.contains(monster.id)) {
                 under_half.add(monster.id);
-                triggered = true;
-                addToTop(new HsrDamageAllEnemiesAction(DamageUtil.deal_followUp_info(AbstractDungeon.player, damage_amount, toughness_reduction)));
-                ;
+                kurukuru++;
             }
         }
-        if (!triggered) {
+        for (int i = 0; i < kurukuru; i++) {
+            addToTop(new HsrDamageAllEnemiesAction(DamageUtil.deal_followUp_info(AbstractDungeon.player, damage_amount, toughness_reduction)));
+        }
+        if (kurukuru<=0) {
+            HsrMod.logger.info(ID+" is removed");
             addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }
     }
 
     @Override
+    public void onDamageAllEnemies(int[] damage) {
+        super.onDamageAllEnemies(damage);
+        this.trigger_action.isDone=false;
+        addToBot(this.trigger_action);
+    }
+
+    @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         super.onAttack(info, damageAmount, target);
+        this.trigger_action.isDone=false;
         addToBot(this.trigger_action);
     }
 

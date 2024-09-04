@@ -23,6 +23,7 @@ public class KarmaPower extends BasePower implements AtDepletingToughness {
     public KarmaPower(AbstractCreature owner, int magic) {
         super(POWER_ID, TYPE, TURN_BASED, owner, owner, 0);
         this.magic=magic;
+        this.updateDescription();
     }
 
     @Override
@@ -34,11 +35,12 @@ public class KarmaPower extends BasePower implements AtDepletingToughness {
     public void stackPower(int stackAmount) {
         super.stackPower(0);
         this.magic+=stackAmount;
+        this.updateDescription();
     }
 
     @Override
     public void at_depleting_toughness(AbstractCreature target, int toughness_reduction) {
-        this.amount-=toughness_reduction;
+        this.amount+=Math.abs(toughness_reduction);
         HsrMod.logger.info("=====Karma: "+amount+"\ntoughness_reduction: "+toughness_reduction);
         this.flash();
         while (amount>trigger_threshold){

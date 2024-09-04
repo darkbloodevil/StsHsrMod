@@ -45,6 +45,7 @@ public class OrderAerialBombardment extends SAMCard {
     public void upgrade() {
         if (!upgraded){
             upgradeName();
+            upgradeDamage(UPG_DAMAGE);
             upgradeMagicNumber(UPG_Magic);
             initializeDescription();
         }

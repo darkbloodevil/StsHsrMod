@@ -52,14 +52,14 @@ public class RIPHomeRun extends BaseAttack {
         toughness_reduction = 6;
     }
 
-    @Override
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            initializeDescription();
-        }
-        super.upgrade();
-    }
+//    @Override
+//    public void upgrade() {
+//        if (!this.upgraded) {
+//            upgradeName();
+//            initializeDescription();
+//        }
+//        super.upgrade();
+//    }
 
     @Override
     public void onChoseThisOption() {

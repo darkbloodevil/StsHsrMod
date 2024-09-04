@@ -2,6 +2,7 @@ package HsrMod.action;
 
 import HsrMod.HsrMod;
 import HsrMod.core.HsrDamageInfo;
+import HsrMod.util.DamageUtil;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -26,12 +27,7 @@ public class HsrDamageAction extends DamageAction {
 
     public HsrDamageAction(AbstractCreature target, DamageInfo info, AttackEffect effect) {
         super(target, info, effect);
-        if (info instanceof HsrDamageInfo) {
-            HsrMod.logger.info("is hsr info");
-            this.info = (HsrDamageInfo) info;
-        } else {
-            this.info = new HsrDamageInfo(info);
-        }
+        this.info=HsrDamageInfo.to_hsr_info(info);
         setValues(target, info);
     }
 
@@ -68,35 +64,24 @@ public class HsrDamageAction extends DamageAction {
             AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, this.attackEffect, this.muteSfx));
         }
         tickDuration();
-        if (this.isDone) {
-            if (this.attackEffect == AbstractGameAction.AttackEffect.POISON) {
-                this.target.tint.color.set(Color.CHARTREUSE.cpy());
-                this.target.tint.changeColor(Color.WHITE.cpy());
-            } else if (this.attackEffect == AbstractGameAction.AttackEffect.FIRE) {
-                this.target.tint.color.set(Color.RED);
-                this.target.tint.changeColor(Color.WHITE.cpy());
-            }
-            HsrMod.logger.info("====HsrDamageAction===info.base"+info.base);
-            HsrMod.logger.info("====is_follow_up==="+info.is_follow_up);
-            // 追加攻击手动实现易伤和虚弱
-            if (info.is_follow_up){
-                if (target.hasPower(VulnerablePower.POWER_ID)){
-                    info.base=(int) target.getPower(VulnerablePower.POWER_ID).atDamageReceive(info.base,info.type);
-                }
-                if (AbstractDungeon.player.hasPower(WeakPower.POWER_ID)){
-                    info.base=(int) AbstractDungeon.player.getPower(WeakPower.POWER_ID).atDamageGive(info.base,info.type);
-                }
-                HsrMod.logger.info("====altered==="+info.base);
-            }
+        isDone=true;
+        if (this.attackEffect == AttackEffect.POISON) {
+            this.target.tint.color.set(Color.CHARTREUSE.cpy());
+            this.target.tint.changeColor(Color.WHITE.cpy());
+        } else if (this.attackEffect == AttackEffect.FIRE) {
+            this.target.tint.color.set(Color.RED);
+            this.target.tint.changeColor(Color.WHITE.cpy());
+        }
+        // 处理追加攻击的情况
+        DamageUtil.alter_followUp(info, target);
 
-            this.target.damage(new DamageInfo(this.info.damageSource,this.info.base,this.info.type));
+        this.target.damage(new HsrDamageInfo(this.info.damageSource,this.info.base,this.info.type,info.toughness_reduction,info.is_follow_up));
 
-            if ((AbstractDungeon.getCurrRoom()).monsters.areMonstersBasicallyDead()) {
-                AbstractDungeon.actionManager.clearPostCombatActions();
-            }
-            if (!this.skipWait && !Settings.FAST_MODE) {
-                addToTop((AbstractGameAction) new WaitAction(0.1F));
-            }
+        if ((AbstractDungeon.getCurrRoom()).monsters.areMonstersBasicallyDead()) {
+            AbstractDungeon.actionManager.clearPostCombatActions();
+        }
+        if (!this.skipWait && !Settings.FAST_MODE) {
+            addToTop((AbstractGameAction) new WaitAction(0.1F));
         }
     }
 }

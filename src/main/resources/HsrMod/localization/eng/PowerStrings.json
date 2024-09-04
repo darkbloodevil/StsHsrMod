@@ -5,8 +5,6 @@
       "You are Very Cool and Strong."
     ]
   },
-
-
   "${modID}:AwaitingSystemResponsePower": {
     "NAME": "Awaiting System Response",
     "DESCRIPTIONS": [
@@ -41,6 +39,12 @@
     "NAME": "Burden",
     "DESCRIPTIONS": [
       "Gain 1 energy every 2 attacks. Last for %d turns."
+    ]
+  },
+  "${modID}:CornerstoneDeluxePower": {
+    "NAME": "Cornerstone Deluxe",
+    "DESCRIPTIONS": [
+      "Gain %d block every time you attack."
     ]
   },
   "${modID}:DivineProvisionPower": {
@@ -175,19 +179,16 @@
       "When attacked, apply %d fire ${modID}:Dot damage."
     ]
   },
-
   "${modID}:VictoryRushPower": {
     "NAME": "Victory Rush",
     "DESCRIPTIONS": [
       "When an enemy is inflicted with ${modID}:Weakness_Break, deal %d ${modID}:Follow-Up damage and ${modID}:Toughness_Reduction %d."
     ]
   },
-
   "${modID}:WindDotPower": {
     "NAME": "Wind Dot",
     "DESCRIPTIONS": [
       "Deal %d Wind ${modID}:Dot damage at the start of turn."
     ]
   }
-
 }

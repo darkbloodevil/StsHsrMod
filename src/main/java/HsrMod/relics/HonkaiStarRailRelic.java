@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -30,7 +31,7 @@ public class HonkaiStarRailRelic extends BaseRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return String.format(DESCRIPTIONS[0], makeID("Toughness"));
+        return DESCRIPTIONS[0];
     }
 
     @Override
@@ -76,17 +77,21 @@ public class HonkaiStarRailRelic extends BaseRelic {
      * @param info
      * @return
      */
-    private int get_toughness_reduction(DamageInfo info) {
-        if (info instanceof HsrDamageInfo) {
-            HsrDamageInfo h_info = (HsrDamageInfo) info;
-            // 有弦外音就x1.5
-            if (AbstractDungeon.player.hasPower(OvertonePower.POWER_ID)) {
-                return (int) (h_info.toughness_reduction * 1.5);
-            } else {
-                return h_info.toughness_reduction;
-            }
+    public int get_toughness_reduction(DamageInfo info) {
+        HsrDamageInfo h_info=HsrDamageInfo.to_hsr_info(info);
+
+        // 有弦外音就x1.5
+        if (AbstractDungeon.player.hasPower(OvertonePower.POWER_ID)) {
+            return (int) (h_info.toughness_reduction * 1.5);
+        } else {
+            return h_info.toughness_reduction;
         }
-        return 4;
+//        return 4;
+    }
+
+    public void onLoseRelic() {
+        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((Settings.WIDTH / 2), (Settings.HEIGHT / 2), this);
+        flash();
     }
 
     @Override
@@ -119,9 +124,9 @@ public class HonkaiStarRailRelic extends BaseRelic {
     @Override
     public void onBlockBroken(AbstractCreature m) {
         super.onBlockBroken(m);
-        if (AbstractDungeon.player.hasPower(TheShieldPower.POWER_ID)){
-            int amount=AbstractDungeon.player.getPower(TheShieldPower.POWER_ID).amount;
-            addToBot(new GainBlockAction(AbstractDungeon.player,amount));
+        if (AbstractDungeon.player.hasPower(TheShieldPower.POWER_ID)) {
+            int amount = AbstractDungeon.player.getPower(TheShieldPower.POWER_ID).amount;
+            addToBot(new GainBlockAction(AbstractDungeon.player, amount));
         }
     }
 }

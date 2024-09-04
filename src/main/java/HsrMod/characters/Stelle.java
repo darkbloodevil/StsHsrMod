@@ -3,11 +3,11 @@ package HsrMod.characters;
 import HsrMod.cards.attacks.StardustAce;
 import HsrMod.cards.skills.EverBurningAmber;
 import HsrMod.relics.HonkaiStarRailRelic;
+import HsrMod.relics.Ticket;
 import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import basemod.animations.AbstractAnimation;
-import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.math.MathUtils;
@@ -15,19 +15,21 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
-import com.megacrit.cardcrawl.cards.green.Neutralize;
 import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
-import com.megacrit.cardcrawl.relics.BurningBlood;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 
 import static HsrMod.HsrMod.characterPath;
 import static HsrMod.HsrMod.makeID;
@@ -43,8 +45,14 @@ public class Stelle extends CustomPlayer {
 
     //Strings
     private static final String ID = makeID(Stelle.class.getSimpleName()); //This should match whatever you have in the CharacterStrings.json file
-    private static String[] getNames() { return CardCrawlGame.languagePack.getCharacterString(ID).NAMES; }
-    private static String[] getText() { return CardCrawlGame.languagePack.getCharacterString(ID).TEXT; }
+
+    private static String[] getNames() {
+        return CardCrawlGame.languagePack.getCharacterString(ID).NAMES;
+    }
+
+    private static String[] getText() {
+        return CardCrawlGame.languagePack.getCharacterString(ID).TEXT;
+    }
 
     //This static class is necessary to avoid certain quirks of Java classloading when registering the character.
     public static class Meta {
@@ -52,9 +60,11 @@ public class Stelle extends CustomPlayer {
         //Library color is basically the same as card color, but you need both because that's how the game was made.
         @SpireEnum
         public static PlayerClass STELLE_CHARACTER;
-        @SpireEnum(name = "CHARACTER_GRAY_COLOR") // These two MUST match. Change it to something unique for your character.
+        @SpireEnum(name = "CHARACTER_GRAY_COLOR")
+        // These two MUST match. Change it to something unique for your character.
         public static AbstractCard.CardColor CARD_COLOR;
-        @SpireEnum(name = "CHARACTER_GRAY_COLOR") @SuppressWarnings("unused")
+        @SpireEnum(name = "CHARACTER_GRAY_COLOR")
+        @SuppressWarnings("unused")
         public static CardLibrary.LibraryType LIBRARY_COLOR;
 
         //Character select images
@@ -73,7 +83,7 @@ public class Stelle extends CustomPlayer {
         private static final String SMALL_ORB = characterPath("cardback/small_orb.png");
 
         //This is used to color *some* images, but NOT the actual cards. For that, edit the images in the cardback folder!
-        private static final Color cardColor = new Color(128f/255f, 128f/255f, 128f/255f, 1f);
+        private static final Color cardColor = new Color(128f / 255f, 128f / 255f, 128f / 255f, 1f);
 
         //Methods that will be used in the main mod file
         public static void registerColor() {
@@ -129,7 +139,6 @@ public class Stelle extends CustomPlayer {
         retVal.add(Strike_Red.ID);
         retVal.add(Strike_Red.ID);
         retVal.add(Strike_Red.ID);
-        retVal.add(Strike_Red.ID);
         retVal.add(Defend_Blue.ID);
         retVal.add(Defend_Blue.ID);
         retVal.add(Defend_Blue.ID);
@@ -145,6 +154,7 @@ public class Stelle extends CustomPlayer {
     public ArrayList<String> getStartingRelics() {
         ArrayList<String> retVal = new ArrayList<>();
         //IDs of starting relics. You can have multiple, but one is recommended.
+        retVal.add(Ticket.ID);
         retVal.add(HonkaiStarRailRelic.ID);
 
         return retVal;
@@ -154,7 +164,7 @@ public class Stelle extends CustomPlayer {
     public AbstractCard getStartCardForEvent() {
         //This card is used for the Gremlin card matching game.
         //It should be a non-strike non-defend starter card, but it doesn't have to be.
-        return new Strike_Red();
+        return new StardustAce();
     }
 
     /*- Below this is methods that you should *probably* adjust, but don't have to. -*/
@@ -167,7 +177,7 @@ public class Stelle extends CustomPlayer {
     @Override
     public AbstractGameAction.AttackEffect[] getSpireHeartSlashEffect() {
         //These attacks effects will be used when you attacks the heart.
-        return new AbstractGameAction.AttackEffect[] {
+        return new AbstractGameAction.AttackEffect[]{
                 AbstractGameAction.AttackEffect.SLASH_VERTICAL,
                 AbstractGameAction.AttackEffect.SLASH_HEAVY,
                 AbstractGameAction.AttackEffect.BLUNT_HEAVY
@@ -177,6 +187,7 @@ public class Stelle extends CustomPlayer {
     private final Color cardRenderColor = Color.LIGHT_GRAY.cpy(); //Used for some vfx on moving cards (sometimes) (maybe)
     private final Color cardTrailColor = Color.LIGHT_GRAY.cpy(); //Used for card trail vfx during gameplay.
     private final Color slashAttackColor = Color.LIGHT_GRAY.cpy(); //Used for a screen tint effect when you attacks the heart.
+
     @Override
     public Color getCardRenderColor() {
         return cardRenderColor;
@@ -207,6 +218,7 @@ public class Stelle extends CustomPlayer {
         CardCrawlGame.sound.playA("ATTACK_DAGGER_2", MathUtils.random(-0.2F, 0.2F));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
     }
+
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
         //Similar to doCharSelectScreenSelectEffect, but used for the Custom mode screen. No shaking.
@@ -218,19 +230,44 @@ public class Stelle extends CustomPlayer {
     public String getLocalizedCharacterName() {
         return getNames()[0];
     }
+
     @Override
     public String getTitle(PlayerClass playerClass) {
         return getNames()[1];
     }
+
     @Override
     public String getSpireHeartText() {
         return getText()[1];
     }
+
     @Override
     public String getVampireText() {
         return getText()[2]; //Generally, the only difference in this text is how the vampires refer to the player.
     }
 
+
+    public boolean loseRelic(String targetID) {
+        AbstractRelic toRemove = null;
+        if (!this.hasRelic(targetID)) {
+            return false;
+        } else {
+
+            for (AbstractRelic r : this.relics) {
+                if (r.relicId.equals(targetID)) {
+                    r.onUnequip();
+                    toRemove = r;
+                }
+            }
+        }
+        boolean result = super.loseRelic(targetID);
+        if (toRemove instanceof Ticket) {
+            ((Ticket) toRemove).onLoseRelic();
+        } else if (toRemove instanceof HonkaiStarRailRelic) {
+            ((HonkaiStarRailRelic) toRemove).onLoseRelic();
+        }
+        return result;
+    }
     /*- You shouldn't need to edit any of the following methods. -*/
 
     //This is used to display the character's information on the character selection screen.
@@ -250,5 +287,21 @@ public class Stelle extends CustomPlayer {
     public AbstractPlayer newInstance() {
         //Makes a new instance of your character class.
         return new Stelle();
+    }
+
+    /**
+     * https://github.com/Alchyr/BasicMod/wiki/Adding-a-character
+     * @return
+     */
+    @Override
+    public List<CutscenePanel> getCutscenePanels() {
+        ArrayList<CutscenePanel> panels = new ArrayList<>();
+
+//        glow_fade = false;
+
+        panels.add(new CutscenePanel(characterPath("ending/EndingSlice_1.png"), "ATTACK_DAGGER_2"));
+        panels.add(new CutscenePanel(characterPath("ending/EndingSlice_2.png")));
+        panels.add(new CutscenePanel(characterPath("ending/EndingSlice_3.png")));
+        return panels;
     }
 }

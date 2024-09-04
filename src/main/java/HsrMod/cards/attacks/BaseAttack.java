@@ -77,12 +77,12 @@ public abstract class BaseAttack extends BaseCard implements ToughnessReductionI
         /*    */
     }
 
-    public void render(SpriteBatch sb) {
-        /* 89 */
-        super.render(sb);
-        /* 90 */
-        renderCardSign(sb);
-        /*    */
-    }
+//    public void render(SpriteBatch sb) {
+//        /* 89 */
+//        super.render(sb);
+//        /* 90 */
+//        renderCardSign(sb);
+//        /*    */
+//    }
 
 }

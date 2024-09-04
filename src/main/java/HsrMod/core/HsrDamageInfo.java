@@ -15,6 +15,22 @@ public class HsrDamageInfo extends DamageInfo {
     public AbstractCreature damageSource;
     public int base;
     public DamageType type;
+    public boolean is_aoe=false;
+
+    /**
+     * 把DamageInfo转为HsrDamageInfo
+     * @param info DamageInfo
+     * @return HsrDamageInfo
+     */
+    public static HsrDamageInfo to_hsr_info(DamageInfo info){
+        HsrDamageInfo h_info;
+        if (info instanceof HsrDamageInfo) {
+            h_info = (HsrDamageInfo) info;
+        } else {
+            h_info = new HsrDamageInfo(info);
+        }
+        return h_info;
+    }
 
     public HsrDamageInfo(DamageInfo info) {
         super(info.owner, info.base, info.type);
@@ -46,6 +62,16 @@ public class HsrDamageInfo extends DamageInfo {
         this.toughness_reduction = toughness_reduction;
         this.is_follow_up = is_follow_up;
     }
+    public HsrDamageInfo(AbstractCreature damageSource, int base, DamageType type, int toughness_reduction,boolean is_follow_up,boolean is_aoe) {
+        super(damageSource, base, type);
+        this.damageSource=damageSource;
+        this.base=base;
+        this.type=type;
+        this.toughness_reduction = toughness_reduction;
+        this.is_follow_up = is_follow_up;
+        this.is_aoe=is_aoe;
+    }
+
     public HsrDamageInfo clone(){
         return new HsrDamageInfo(damageSource,base,type,toughness_reduction,is_follow_up);
     }

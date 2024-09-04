@@ -25,7 +25,7 @@ public class ButterflyFlurry extends BaseAttack {
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 16;
     private static final float UPG_DAMAGE_RATIO = 0.4f;
 
 

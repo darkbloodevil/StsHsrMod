@@ -26,17 +26,18 @@ public class LoveHealAndChoose extends BaseCard {
             CardTarget.SELF, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             1 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-
+    int UPG_BLOCK=3;
     public LoveHealAndChoose() {
         super(ID, info);
         this.magicNumber = 1;
         this.baseMagicNumber = magicNumber;
-        this.setBlock(6, 3);
+        this.setBlock(6, UPG_BLOCK);
     }
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
+            upgradeBlock(UPG_BLOCK);
             this.upgradeMagicNumber(1);
             initializeDescription();
         }

@@ -25,7 +25,7 @@ public class FyreflyTypeIVCompleteCombustion extends BaseCard {
     public FyreflyTypeIVCompleteCombustion() {
         super(ID, info);
         this.exhaust=true;
-        this.retain=true;
+        this.selfRetain=true;
     }
 
     @Override

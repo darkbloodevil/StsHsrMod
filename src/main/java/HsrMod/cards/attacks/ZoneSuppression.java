@@ -37,7 +37,7 @@ public class ZoneSuppression extends BaseAttack {
         setDamage(DAMAGE, UPG_DAMAGE); //Sets the card's damage and how much it changes when upgraded.
         this.baseMagicNumber = 1;
         this.magicNumber = baseMagicNumber;
-        this.retain = true;
+        this.selfRetain = true;
     }
 
     @Override
@@ -45,6 +45,7 @@ public class ZoneSuppression extends BaseAttack {
         if (!this.upgraded) {
             upgradeName();
             upgradeMagicNumber(UPG_Magic);
+            upgradeDamage(UPG_DAMAGE);
             initializeDescription();
         }
         super.upgrade();

@@ -47,7 +47,7 @@ public class MeteorStorm extends BaseAttack {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.upgradeMagicNumber(1);
+            this.upgradeDamage(1);
             this.initializeDescription();
         }
         super.upgrade();

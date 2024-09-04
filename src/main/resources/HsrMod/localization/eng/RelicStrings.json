@@ -19,5 +19,13 @@
     "DESCRIPTIONS": [
       "Give every monster #y%s bar."
     ]
+  },
+  "${modID}:Ticket": {
+    "NAME": "Ticket",
+    "FLAVOR": "Ticket",
+    "DESCRIPTIONS": [
+      "Don't lose it！",
+      "Don't lose it again!"
+    ]
   }
 }
