@@ -27,5 +27,12 @@
       "Don't lose it！",
       "Don't lose it again!"
     ]
+  },
+  "${modID}:PaymentBonusRelic": {
+    "NAME": "Payment Bonus",
+    "FLAVOR": "-648",
+    "DESCRIPTIONS": [
+      "In every battle, the first card of some cost will play twice."
+    ]
   }
 }

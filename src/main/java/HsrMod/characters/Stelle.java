@@ -1,6 +1,8 @@
 package HsrMod.characters;
 
 import HsrMod.cards.attacks.StardustAce;
+import HsrMod.cards.attacks.Strike_stelle;
+import HsrMod.cards.skills.Defend_stelle;
 import HsrMod.cards.skills.EverBurningAmber;
 import HsrMod.relics.HonkaiStarRailRelic;
 import HsrMod.relics.Ticket;
@@ -14,8 +16,6 @@ import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
-import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.EnergyManager;
@@ -135,15 +135,15 @@ public class Stelle extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         //List of IDs of cards for your starting deck.
         //If you want multiple of the same card, you have to add it multiple times.
-        retVal.add(Strike_Red.ID);
-        retVal.add(Strike_Red.ID);
-        retVal.add(Strike_Red.ID);
-        retVal.add(Strike_Red.ID);
-        retVal.add(Defend_Blue.ID);
-        retVal.add(Defend_Blue.ID);
-        retVal.add(Defend_Blue.ID);
-        retVal.add(Defend_Blue.ID);
-        retVal.add(Defend_Blue.ID);
+        retVal.add(Strike_stelle.ID);
+        retVal.add(Strike_stelle.ID);
+        retVal.add(Strike_stelle.ID);
+        retVal.add(Strike_stelle.ID);
+        retVal.add(Defend_stelle.ID);
+        retVal.add(Defend_stelle.ID);
+        retVal.add(Defend_stelle.ID);
+        retVal.add(Defend_stelle.ID);
+        retVal.add(Defend_stelle.ID);
         retVal.add(StardustAce.ID);
         retVal.add(EverBurningAmber.ID);
 

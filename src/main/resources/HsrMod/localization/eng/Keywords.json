@@ -86,4 +86,13 @@
     ],
     "DESCRIPTION": "Deal damage based on toughness reduction when enemies is in #yWeakness #yBreak. Default reduction 4."
   }
+,
+  {
+    "PROPER_NAME": "Flying Aureus",
+    "NAMES": [
+      "Flying Aureus",
+      "Flying_Aureus"
+    ],
+    "DESCRIPTION": "When attack, add 1 charge. When has 12 charge, deal damage 6 times and reduction 2."
+  }
 ]

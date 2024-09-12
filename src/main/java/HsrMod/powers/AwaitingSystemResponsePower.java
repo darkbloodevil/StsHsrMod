@@ -1,11 +1,13 @@
 package HsrMod.powers;
 
+import HsrMod.core.HsrDamageInfo;
 import HsrMod.util.RandomUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.*;
 
 import static HsrMod.HsrMod.makeID;
@@ -27,19 +29,39 @@ public class AwaitingSystemResponsePower extends BasePower {
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
         super.onAttack(info, damageAmount, target);
-        if (target!=null&&target!=this.owner&&info.type== DamageInfo.DamageType.NORMAL){
-            int random=RandomUtil.random_int(3);
-            if (random==0){
+        HsrDamageInfo h_info =HsrDamageInfo.to_hsr_info(info) ;
+        if (target != null && target != this.owner && info.type == DamageInfo.DamageType.NORMAL && !h_info.is_aoe) {
+            int random = RandomUtil.random_int(3);
+            if (random == 0) {
                 addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new StrengthPower(target, -2), -2, true, AbstractGameAction.AttackEffect.NONE));
                 if (!target.hasPower("Artifact")) {
                     this.addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new GainStrengthPower(target, 2), 2, true, AbstractGameAction.AttackEffect.NONE));
                 }
-            } else if (random==1){
+            } else if (random == 1) {
                 addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new VulnerablePower(target, 1, false), 1));
-            }else {
-               addToBot(new ApplyPowerAction(target,  AbstractDungeon.player, new WeakPower(target, 1, false), 1));
-
+            } else {
+                addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new WeakPower(target, 1, false), 1));
             }
+        }
+    }
+
+    @Override
+    public void onDamageAllEnemies(int[] damage) {
+        super.onDamageAllEnemies(damage);
+        int random = RandomUtil.random_int(3);
+
+        for (AbstractMonster target : AbstractDungeon.getMonsters().monsters) {
+            if (random == 0) {
+                addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new StrengthPower(target, -2), -2, true, AbstractGameAction.AttackEffect.NONE));
+                if (!target.hasPower("Artifact")) {
+                    this.addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new GainStrengthPower(target, 2), 2, true, AbstractGameAction.AttackEffect.NONE));
+                }
+            } else if (random == 1) {
+                addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new VulnerablePower(target, 1, false), 1));
+            } else {
+                addToBot(new ApplyPowerAction(target, AbstractDungeon.player, new WeakPower(target, 1, false), 1));
+            }
+
         }
     }
 

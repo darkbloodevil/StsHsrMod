@@ -51,7 +51,7 @@
   },
   "${modID}:GalvnicChords": {
     "NAME": "Galvnic Chords",
-    "DESCRIPTION": "Deal !D! damage. NL If the target is inflicted with ${modID}:Dot, draw 1 card and gain 1 [E]."
+    "DESCRIPTION": "Deal !D! damage. NL If the target is inflicted with ${modID}:Dot, draw 1 card and gain [E]."
   },
   "${modID}:HighPoles": {
     "NAME": "High Poles",
@@ -71,11 +71,12 @@
   },
   "${modID}:ShapeOfTaixuDawnHerald": {
     "NAME": "Shape Of Taixu: Dawn Herald",
-    "DESCRIPTION": "Deal !D! damage. NL ${modID}:TR !reduction! NL If the target is in ${modID}:Weakness_Break, draw 1 card and gain 1 [E]."
+    "DESCRIPTION": "Deal !D! damage. NL ${modID}:TR !reduction! NL If the target is in ${modID}:Weakness_Break, draw 1 card and gain [E]."
   },
   "${modID}:SlashedDreamCriesInRed": {
     "NAME": "Slashed Dream Cries In Red",
-    "DESCRIPTION": "Retain. NL You can't play this card until you have 9 ${modID}:Slashed_Dreams . NL Deal !D! damage to all enemies. NL ${modID}:TR !reduction!"
+    "DESCRIPTION": "You can't play this card until you have 9 ${modID}:Slashed_Dreams . NL Deal !D! damage in total to all enemies. NL ${modID}:TR !reduction!",
+    "UPGRADE_DESCRIPTION": "Retain. NL You can't play this card until you have 9 ${modID}:Slashed_Dreams . NL Deal !D! damage in total to all enemies. NL ${modID}:TR !reduction!"
   },
   "${modID}:StardustAce": {
     "NAME": "Stardust Ace",
@@ -118,9 +119,13 @@
     "NAME": "Dreamdiver",
     "DESCRIPTION": "At the start of your turn after you draw cards, pick up a card in your discard pile and put it on the top of your draw pile."
   },
+  "${modID}:GentleButCruel": {
+    "NAME": "Gentle But Cruel",
+    "DESCRIPTION": "When attack single enemy for the first time in this turn, deal !M! ${modID}:Follow-Up damage and apply !M! lightning ${modID}:Dot to target. NL Recharge: Caressing Moonlight, Twilight Trill or Gentle But Cruel"
+  },
   "${modID}:FangOfFlareFlaying": {
     "NAME": "Fang Of Flare Flaying",
-    "DESCRIPTION": "Deal !M! ${modID}:Follow-Up damage when hit enemies 8 times."
+    "DESCRIPTION": "Deal !M! ${modID}:Follow-Up damage to all enemies, draw 1 card, gain 1 energy and lose 1 HP when hit enemies 8 times."
   },
   "${modID}:KarmicPerpetuation": {
     "NAME": "Karmic Perpetuation",
@@ -153,13 +158,13 @@
   },
   "${modID}:BlissOfOtherworldsEmbrace": {
     "NAME": "Bliss Of Otherworld's Embrace",
-    "DESCRIPTION": "Exhaust NL At the beginning of next X turns, gain a Loom Of Fate‘s Caprice.",
-    "UPGRADE_DESCRIPTION": "Exhaust NL At the beginning of next X turns, gain a Loom Of Fate’s Caprice+."
+    "DESCRIPTION": "Exhaust NL At the beginning of next X turns, gain a Loom Of Fate’s Caprice+.",
+    "UPGRADE_DESCRIPTION": "At the beginning of next X turns, gain a Loom Of Fate’s Caprice+."
   },
   "${modID}:CherryOnTop": {
     "NAME": "Cherry On Top",
-    "DESCRIPTION": "Randomly choose X times: deal !D! damage/ draw 2 cards / gain 2 [E] and randomly discard 1",
-    "UPGRADE_DESCRIPTION": "Randomly choose X+1 times: deal !D! damage/ draw 2 cards / gain 2 [E] and randomly discard 1"
+    "DESCRIPTION": "Randomly choose X times: deal !D! damage/ draw 2 cards / gain [E] [E] and randomly discard 1",
+    "UPGRADE_DESCRIPTION": "Randomly choose X+1 times: deal !D! damage/ draw 2 cards / gain [E] [E] and randomly discard 1"
   },
   "${modID}:CombatRedeployment": {
     "NAME": "Combat Redeployment",
@@ -185,6 +190,10 @@
   "${modID}:FiendImpeachmentOfEvil": {
     "NAME": "Fiend Impeachment Of Evil",
     "DESCRIPTION": "Enemies get Weak and loss 2 strength this turn."
+  },
+  "${modID}:Flashforge": {
+    "NAME": "Flashforge",
+    "DESCRIPTION": "At the start of your next turn, attack a random enemy and deals !M! damage. NL If your block was broken, immediately deal twice the original damage to target and draw 2 cards."
   },
   "${modID}:FyreflyTypeIVCompleteCombustion": {
     "NAME": "Fyrefly Type-IV: Complete Combustion",
@@ -219,9 +228,14 @@
     "NAME": "Order: Flare Propulsion",
     "DESCRIPTION": "${modID}:SAM . Deal !D! damage NL Extra effect: draw !M! cards ."
   },
+  "${modID}:HereComesTheMechanicalFever": {
+    "NAME":"Here Comes The Mechanical Fever",
+    "DESCRIPTION": "Extend the duration of ${modID}:Dot by !M! in all enemies.",
+    "UPGRADE_DESCRIPTION": "Extend the duration of ${modID}:Dot and increase the damage by !M! in in all enemies."
+  },
   "${modID}:LoomOfFatesCaprice": {
     "NAME": "Loom Of Fate's Caprice",
-    "DESCRIPTION": "For every ${modID}:dot the target has, draw 1 card and gain 1 [E]."
+    "DESCRIPTION": "For every ${modID}:dot the target has, draw 1 card and gain [E]."
   },
   "${modID}:LoveHealAndChoose": {
     "NAME": "Love, Heal And Choose",
@@ -242,7 +256,11 @@
   },
   "${modID}:SamsaraLocked": {
     "NAME": "Samsara Locked",
-    "DESCRIPTION": "Apply burden to enemy for !M! turns, every 2 times you hit the enemy, gain 1 [E]."
+    "DESCRIPTION": "Apply burden to enemy for !M! turns, every 2 times you hit the enemy, gain [E]."
+  },
+  "${modID}:SizzlinTango": {
+    "NAME": "Sizzlin Tango",
+    "DESCRIPTION": "Choose one enemy。 You can only choose it as your target, and the other enemies can't damage you until the next turn. NL If you kill the target or ${modID}:Weakness_Break, gain !M! energy and draw !M! cards. NL Your next attack cost 0 ."
   },
   "${modID}:SnowfieldFirstAid": {
     "NAME": "Snowfield First Aid",
@@ -250,12 +268,29 @@
   },
   "${modID}:TailSpiritualDomination": {
     "NAME": "Tail Spiritual Domination",
-    "DESCRIPTION": "Exhaust NL Gain 1 [E] and 2 strength.",
-    "UPGRADE_DESCRIPTION": "Gain 1 [E] and 2 strength."
+    "DESCRIPTION": "Exhaust NL Gain [E] and 2 strength.",
+    "UPGRADE_DESCRIPTION": "Gain [E] and 2 strength."
   },
   "${modID}:TailsmanProtection": {
     "NAME": "Tailsman Protection",
     "DESCRIPTION": "Heal !M! and when you play a card this turn, heal !M!."
+  },
+  "${modID}:Terrasplit": {
+    "NAME": "Terrasplit",
+    "DESCRIPTION": "At the start of combat, gain !M! ${modID}:Flying_Aureus. NL Lose 1 energy and auto exhaust when drawn."
+  },
+  "${modID}:TheConductorsRewards": {
+    "NAME": "The Conductors Rewards",
+    "DESCRIPTION": "Exhaust . NL Choose: gain 1 energy or draw 2 cards.",
+    "UPGRADE_DESCRIPTION": "Exhaust . NL Choose: gain [E] or draw 2 cards NL Add a The Conductors Rewards to draw pile with upgrade times -1."
+  },
+  "${modID}:TheConductorsDraw": {
+    "NAME": "The Conductors Draw",
+    "DESCRIPTION": "Draw 2 cards."
+  },
+  "${modID}:TheConductorsEnergy": {
+    "NAME": "The Conductors Energy",
+    "DESCRIPTION": "Gain [E] ."
   },
   "${modID}:TheHeroWithAThousandFaces": {
     "NAME": "The Hero With A Thousand Faces",

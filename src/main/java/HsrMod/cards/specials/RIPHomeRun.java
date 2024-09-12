@@ -45,11 +45,13 @@ public class RIPHomeRun extends BaseAttack {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
         toughness_reduction = 6;
+        isMultiDamage=true;
     }
     public RIPHomeRun(int damage) {
         super(ID, info);
         setDamage(damage);
         toughness_reduction = 6;
+        isMultiDamage=true;
     }
 
 //    @Override

@@ -68,7 +68,7 @@
   "${modID}:FangOfFlareFlayingPower": {
     "NAME": "剔烁之牙",
     "DESCRIPTIONS": [
-      "每攻击8次, 造成 %d ${modID}:追加 伤害."
+      "每攻击8次, 对所有敌人造成 %d ${modID}:追加 伤害, 抽%d张牌, 回复%d 能量 并流失 %d 点生命."
     ]
   },
   "${modID}:FineIwillDoItMyselfPower": {
@@ -81,6 +81,24 @@
     "NAME": "Fire Dot",
     "DESCRIPTIONS": [
       "回合开始时, 造成 %d 点火属性 ${modID}:dot 伤害."
+    ]
+  },
+  "${modID}:FlashforgePower": {
+    "NAME": "闪铄",
+    "DESCRIPTIONS": [
+      "${modID}:反击 %d ${modID}:削韧 %d. 如果 格挡 被击穿, 立刻造成两倍的反击并抽2张牌. "
+    ]
+  },
+  "${modID}:FlyingAureusPower": {
+    "NAME": "飞黄",
+    "DESCRIPTIONS": [
+      "每次攻击充能1. 回合结束时, 如果充能超过 %d, 对上次攻击的目标造成 %d x %d 点 ${modID}:追加 攻击伤害 , ${modID}:削韧 %d. "
+    ]
+  },
+  "${modID}:GentleButCruelPower": {
+    "NAME": "Gentle But Cruel",
+    "DESCRIPTIONS": [
+      "每回合的第一次攻击会额外 ${modID}:追加 %d 点伤害 ${modID}:削韧 %d 并施加 %d 雷属性 ${modID}:dot . 打出带有 #y卡芙卡 的卡牌会刷新触发次数."
     ]
   },
   "${modID}:GirlPower": {
@@ -104,7 +122,7 @@
   "${modID}:LightningLordPower": {
     "NAME": "神君",
     "DESCRIPTIONS": [
-      "${modID}:神君 将在 %d 回合内发动攻击. ${modID}:神君 现在造成 %d x %d 点伤害."
+      "${modID}:神君 将在 %d 回合内发动攻击. 每一层造成一段伤害, 层数超过6时伤害翻倍. ${modID}:神君 现在造成 %d x %d 点伤害. "
     ]
   },
   "${modID}:MatrixOfPresciencePower": {
@@ -148,6 +166,22 @@
     "DESCRIPTIONS": [
       "当给敌人施加 #yDEBUFF 时增加1点"
     ]
+  },
+  "${modID}:StandoffPower": {
+    "NAME": "绝命对峙",
+    "DESCRIPTIONS": [
+      "只有持有绝命对峙状态的角色才可互相攻击. 当 击杀或 ${modID}:弱点击破 对峙状态的目标时, 回复 %d 点 能量 并且抽 %d 张卡."
+    ]
+  },
+  "${modID}:TauntedPower": {
+    "NAME": "被嘲讽",
+    "DESCRIPTIONS": [
+      "被嘲讽"
+    ]
+  },
+  "${modID}:TauntPower": {
+    "NAME": "嘲讽",
+    "DESCRIPTIONS": ["嘲讽"]
   },
   "${modID}:ThanatoplumRebloomPower": {
     "NAME": "残梅绽",

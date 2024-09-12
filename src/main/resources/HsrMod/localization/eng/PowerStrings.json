@@ -68,7 +68,7 @@
   "${modID}:FangOfFlareFlayingPower": {
     "NAME": "Fang Of Flare Flaying",
     "DESCRIPTIONS": [
-      "Deal %d ${modID}:Follow-Up damage after attack 8 times."
+      "Deal %d ${modID}:Follow-Up damage to all enemies, draw %d cards, gain %d energies and lose %d hp after attack 8 times."
     ]
   },
   "${modID}:FineIwillDoItMyselfPower": {
@@ -81,6 +81,24 @@
     "NAME": "Fire Dot",
     "DESCRIPTIONS": [
       "Deal %d Fire ${modID}:Dot damage at the start of turn."
+    ]
+  },
+  "${modID}:FlashforgePower": {
+    "NAME": "Flashforge",
+    "DESCRIPTIONS": [
+      "${modID}:Counter %d and ${modID}:Reduction %d. If block been broken, deal twice damage immediately and draw 2 cards. "
+    ]
+  },
+  "${modID}:FlyingAureusPower": {
+    "NAME": "Flying Aureus",
+    "DESCRIPTIONS": [
+      "When attack, charge 1. At the end of turn, if charges more than %d, deal %d x %d ${modID}:Follow-Up damage to the enemy you last attack, ${modID}:Reduction %d. "
+    ]
+  },
+  "${modID}:GentleButCruelPower": {
+    "NAME": "Gentle But Cruel",
+    "DESCRIPTIONS": [
+      "The first attack in each turn cause a ${modID}:Follow-Up attack, deal %d damage ${modID}:Reduction %d and apply %d lightning ${modID}:Dot . Play cards with #yKafka will recharge."
     ]
   },
   "${modID}:GirlPower": {
@@ -148,6 +166,22 @@
     "DESCRIPTIONS": [
       "Increase by 1 when apply a #yDEBUFF to enemy"
     ]
+  },
+  "${modID}:StandoffPower": {
+    "NAME": "Standoff",
+    "DESCRIPTIONS": [
+      "Can't attack those without standoff and they can't attack you as well. When kill/ ${modID}:Weakness_Break those with standoff, gain %d energy and draw %d cards."
+    ]
+  },
+  "${modID}:TauntedPower": {
+    "NAME": "Taunted",
+    "DESCRIPTIONS": [
+      "Taunted"
+    ]
+  },
+  "${modID}:TauntPower": {
+    "NAME": "Taunt",
+    "DESCRIPTIONS": ["Taunt"]
   },
   "${modID}:ThanatoplumRebloomPower": {
     "NAME": "Thanatoplum Rebloom",

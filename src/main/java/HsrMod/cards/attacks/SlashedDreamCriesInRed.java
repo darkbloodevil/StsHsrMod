@@ -38,9 +38,8 @@ public class SlashedDreamCriesInRed extends BaseAttack implements StartupCard, T
 
     public SlashedDreamCriesInRed() {
         super(ID, info);
-        this.baseDamage = 50;
+        this.baseDamage = 80;
         this.isMultiDamage = true;
-        this.selfRetain = true;
         toughness_reduction = 10;
     }
 
@@ -74,7 +73,9 @@ public class SlashedDreamCriesInRed extends BaseAttack implements StartupCard, T
         if (!this.upgraded) {
             upgradeName();
             initializeDescription();
-            this.upgradeDamage(20);
+            this.upgradeDamage(10);
+            this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
+            this.selfRetain = true;
         }
         super.upgrade();
     }
@@ -86,7 +87,7 @@ public class SlashedDreamCriesInRed extends BaseAttack implements StartupCard, T
         } else {
             this.addToBot(new VFXAction(new GrandFinalEffect(), 1.0F));
         }
-        addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage / Math.max(1, AbstractDungeon.getMonsters().monsters.size()), DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
 
 //        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
         this.addToBot(new ApplyPowerAction(p, p, new SlashedDreamPower(p, -9), -9));
@@ -103,7 +104,7 @@ public class SlashedDreamCriesInRed extends BaseAttack implements StartupCard, T
      */
     public void triggerOnEndOfPlayerTurn() {
         super.triggerOnEndOfPlayerTurn();
-        if (!AbstractDungeon.player.hasPower(SlashedDreamPower.POWER_ID)){
+        if (!AbstractDungeon.player.hasPower(SlashedDreamPower.POWER_ID)) {
             addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlashedDreamPower(AbstractDungeon.player, 0)));
 
         }

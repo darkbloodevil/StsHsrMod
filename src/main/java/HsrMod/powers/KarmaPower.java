@@ -43,7 +43,7 @@ public class KarmaPower extends BasePower implements AtDepletingToughness {
         this.amount+=Math.abs(toughness_reduction);
         HsrMod.logger.info("=====Karma: "+amount+"\ntoughness_reduction: "+toughness_reduction);
         this.flash();
-        while (amount>trigger_threshold){
+        while (amount>=trigger_threshold){
             this.amount-=trigger_threshold;
             addToBot(new DrawCardAction(magic));
             this.flash();

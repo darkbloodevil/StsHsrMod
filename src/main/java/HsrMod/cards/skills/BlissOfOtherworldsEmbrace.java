@@ -29,13 +29,14 @@ public class BlissOfOtherworldsEmbrace extends BaseCard {
         super(ID, info);
         this.cardsToPreview = new LoomOfFatesCaprice();
         this.exhaust = true;
+        this.cardsToPreview.upgrade();
     }
 
     @Override
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            this.cardsToPreview.upgrade();
+            this.exhaust = false;
             this.rawDescription=cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
@@ -44,7 +45,7 @@ public class BlissOfOtherworldsEmbrace extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BlissOfOtherworldsEmbraceAction(p, this.damage, this.freeToPlayOnce, this.energyOnUse, this.upgraded));
+        addToBot(new BlissOfOtherworldsEmbraceAction(p, this.damage, this.freeToPlayOnce, this.energyOnUse, true));
 
     }
 }

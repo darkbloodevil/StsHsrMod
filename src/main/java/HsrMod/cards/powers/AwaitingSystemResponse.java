@@ -43,6 +43,6 @@ public class AwaitingSystemResponse extends BaseCard {
     @Override
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
 
-        addToTop(new ApplyPowerAction(abstractPlayer, abstractPlayer, new AwaitingSystemResponsePower(abstractPlayer, abstractPlayer, 1)));
+        addToBot(new ApplyPowerAction(abstractPlayer, abstractPlayer, new AwaitingSystemResponsePower(abstractPlayer, abstractPlayer, 1)));
     }
 }

@@ -27,7 +27,7 @@ public class FangOfFlareFlaying extends BaseCard {
 
     public FangOfFlareFlaying() {
         super(ID, info);
-        this.magicNumber = 10;
+        this.magicNumber = 8;
         this.baseMagicNumber = this.magicNumber;
 
     }

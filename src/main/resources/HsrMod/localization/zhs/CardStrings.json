@@ -23,8 +23,7 @@
   },
   "${modID}:CaressingMoonlight": {
     "NAME": "月光摩挲连绵",
-    "DESCRIPTION": "造成 !D! 点伤害. NL ${modID}:削韧 !reduction! . NL 触发目标身上所有 ${modID}:dot .",
-    "EXTENDED_DESCRIPTION": ["Dot"]
+    "DESCRIPTION": "造成 !D! 点伤害. NL ${modID}:削韧 !reduction! . NL 触发目标身上所有 ${modID}:dot ."
   },
   "${modID}:ChampagneEtiquette": {
     "NAME": "香槟仪礼",
@@ -76,7 +75,8 @@
   },
   "${modID}:SlashedDreamCriesInRed": {
     "NAME": "残梦尽染, 一刀缭断",
-    "DESCRIPTION": "保留. NL 你不能打出该卡直到拥有 9 点 ${modID}:集真赤 . NL 对所有敌人造成 !D! 点伤害.  NL ${modID}:削韧 !reduction!"
+    "DESCRIPTION": "你不能打出该卡直到拥有 9 点 ${modID}:集真赤 . NL 对所有敌人总共造成 !D! 点伤害.  NL ${modID}:削韧 !reduction!",
+    "UPGRADE_DESCRIPTION": "保留. NL 你不能打出该卡直到拥有 9 点 ${modID}:集真赤 . NL 对所有敌人总共造成 !D! 点伤害.  NL ${modID}:削韧 !reduction!"
   },
   "${modID}:StardustAce": {
     "NAME": "星尘王牌",
@@ -119,9 +119,13 @@
     "NAME": "梦游鱼",
     "DESCRIPTION": "每当回合开始，抽牌后，可选择一张弃牌堆的牌放到牌库顶."
   },
+  "${modID}:GentleButCruel": {
+    "NAME": "温柔亦同残酷",
+    "DESCRIPTION": "每回合第一次对单攻击, 造成 !M! 点 ${modID}:追加 伤害和 附加!M! 点雷 ${modID}:dot . NL 重新充能: 打出含有卡芙卡的牌."
+  },
   "${modID}:FangOfFlareFlaying": {
     "NAME": "剔烁之牙",
-    "DESCRIPTION": "每攻击8次造成 !M! ${modID}:追加 伤害."
+    "DESCRIPTION": "每攻击8次对所有敌人造成 !M! ${modID}:追加 伤害并且抽1张牌、获得1点能量、流失1点生命."
   },
   "${modID}:KarmicPerpetuation": {
     "NAME": "十王圣断, 业报恒常",
@@ -154,8 +158,8 @@
   },
   "${modID}:BlissOfOtherworldsEmbrace": {
     "NAME": "沉迷于彼界的臂湾",
-    "DESCRIPTION": "消耗 NL 在接下来X个回合开始时, 获得一张 无端命运的机杼.",
-    "UPGRADE_DESCRIPTION": "消耗 NL 在接下来X个回合开始时, 获得一张 无端命运的机杼+."
+    "DESCRIPTION": "消耗 NL 在接下来X个回合开始时, 获得一张 *无端命运的机杼+.",
+    "UPGRADE_DESCRIPTION": "在接下来X个回合开始时, 获得一张 *无端命运的机杼+."
   },
   "${modID}:CherryOnTop": {
     "NAME": "杠上开花",
@@ -185,6 +189,10 @@
   "${modID}:FiendImpeachmentOfEvil": {
     "NAME": "凶煞•劾压鬼物",
     "DESCRIPTION": "对所有敌人施加虚弱并且本回合 力量 -2."
+  },
+  "${modID}:Flashforge": {
+    "NAME": "闪铄",
+    "DESCRIPTION": "在下一个回合开始时, 随机对一个敌人造成 !M! 点伤害. NL 如果你的 格挡 被击破, 那么立刻对伤害来源造成两倍伤害并抽2. "
   },
   "${modID}:FyreflyTypeIVCompleteCombustion": {
     "NAME": "火萤Ⅳ型-完全燃烧",
@@ -219,6 +227,11 @@
     "NAME": "指令-闪燃推进",
     "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 抽 !M! 张卡 ."
   },
+  "${modID}:HereComesTheMechanicalFever": {
+    "NAME":"机械热潮登场！",
+    "DESCRIPTION": "延长所有敌人的 ${modID}:dot !M! 回合.",
+    "UPGRADE_DESCRIPTION": "延长所有敌人的 ${modID}:dot !M! 回合并且伤害增加 !M! ."
+  },
   "${modID}:LoomOfFatesCaprice": {
     "NAME": "无端命运的机杼",
     "DESCRIPTION": "目标每有一个 ${modID}:dot , 抽1张卡并且回复 [E] ."
@@ -244,6 +257,10 @@
     "NAME": "生灭系缚",
     "DESCRIPTION": "对敌人施加 !M! 轮的承负, 效果为你每攻击敌人两次, 回复 [E] ."
   },
+  "${modID}:SizzlinTango": {
+    "NAME": "识砾舞者的探戈",
+    "DESCRIPTION": "选择一个敌人. 你不可选中其他敌人并且其他敌人无法对你造成伤害. NL 如果你击杀目标或者击破弱点, 回复 !M! 点 能量 并且抽 !M! 张卡. NL 你下一张攻击牌不耗费能量 ."
+  },
   "${modID}:SnowfieldFirstAid": {
     "NAME": "雪原急救方案",
     "DESCRIPTION": "获得 !B!  格挡 并且 格挡 保留 !M! 轮. 移除自身的 负面状态 ."
@@ -256,6 +273,23 @@
   "${modID}:TailsmanProtection": {
     "NAME": "灵符·保命护身",
     "DESCRIPTION": "消耗 NL 回复 !M! 并且每当你本回合打出一张牌, 回复 !M!."
+  },
+  "${modID}:Terrasplit": {
+    "NAME": "凿破大荒",
+    "DESCRIPTION": "回合开始时, 获得 ${modID}:飞黄 !M! . NL 抽到手时失去1能量并且自动消耗."
+  },
+  "${modID}:TheConductorsRewards": {
+    "NAME": "列车长的馈赠",
+    "DESCRIPTION": "消耗 . NL 选择: 回复 [E] 或抽2张牌.",
+    "UPGRADE_DESCRIPTION": "消耗 . NL 选择: 回复 [E] 或2两张牌. NL 添加一张升级次数-1的列车长的馈赠到抽牌堆."
+  },
+  "${modID}:TheConductorsDraw": {
+    "NAME": "列车长的馈赠：抽牌",
+    "DESCRIPTION": "抽2张牌."
+  },
+  "${modID}:TheConductorsEnergy": {
+    "NAME": "列车长的馈赠：回能",
+    "DESCRIPTION": "回复 [E] ."
   },
   "${modID}:TheHeroWithAThousandFaces": {
     "NAME": "一人千役",

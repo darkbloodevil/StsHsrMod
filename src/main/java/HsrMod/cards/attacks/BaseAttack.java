@@ -2,13 +2,17 @@ package HsrMod.cards.attacks;
 
 import HsrMod.cards.BaseCard;
 import HsrMod.interfaces.ToughnessReductionInterface;
+import HsrMod.powers.TauntPower;
+import HsrMod.powers.TauntedPower;
 import HsrMod.util.CardStats;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 
 /**
@@ -77,7 +81,22 @@ public abstract class BaseAttack extends BaseCard implements ToughnessReductionI
         /*    */
     }
 
-//    public void render(SpriteBatch sb) {
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if(p.hasPower(TauntedPower.POWER_ID)){
+            if (m==null||this.target==CardTarget.ALL_ENEMY||this.target==CardTarget.ALL){
+                return super.canUse(p, m);
+            }
+            if (!m.hasPower(TauntPower.POWER_ID)){
+                if (this.target!=CardTarget.ALL_ENEMY&&this.target!=CardTarget.ALL){
+                    return false;
+                }
+            }
+        }
+        return super.canUse(p, m);
+    }
+
+    //    public void render(SpriteBatch sb) {
 //        /* 89 */
 //        super.render(sb);
 //        /* 90 */

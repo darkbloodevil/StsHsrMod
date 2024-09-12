@@ -38,6 +38,7 @@ public class ZoneSuppression extends BaseAttack {
         this.baseMagicNumber = 1;
         this.magicNumber = baseMagicNumber;
         this.selfRetain = true;
+        isMultiDamage=true;
     }
 
     @Override

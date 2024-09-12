@@ -1,12 +1,12 @@
 package HsrMod.powers;
 
-import HsrMod.HsrMod;
 import HsrMod.action.HsrDamageAllEnemiesAction;
 import HsrMod.core.HsrDamageInfo;
-import HsrMod.interfaces.AtDepletingToughness;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.DamageUtil;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,21 +26,27 @@ public class FangOfFlareFlayingPower extends BasePower implements ToughnessReduc
     int damage;
     public static final int trigger_threshold = 8;
     int toughness_reduction = 4;
-
+    int hp_lost,draws, energies;
     public FangOfFlareFlayingPower(AbstractCreature owner, int damage) {
         super(POWER_ID, TYPE, TURN_BASED, owner, owner, 0);
         this.damage = damage;
+        this.hp_lost=1;
+        this.draws=1;
+        this.energies =1;
     }
 
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0], damage);
+        this.description = String.format(DESCRIPTIONS[0], damage,draws,energies,hp_lost);
     }
 
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(0);
         this.damage += stackAmount;
+        this.hp_lost+=1;
+        this.draws+=1;
+        this.energies +=1;
     }
 
     @Override
@@ -53,6 +59,9 @@ public class FangOfFlareFlayingPower extends BasePower implements ToughnessReduc
             while (amount >= trigger_threshold) {
                 this.amount -= trigger_threshold;
                 addToBot(new HsrDamageAllEnemiesAction(DamageUtil.deal_followUp_info(AbstractDungeon.player, damage, toughness_reduction)));
+                addToBot(new GainEnergyAction(energies));
+                addToBot(new DrawCardAction(draws));
+                addToBot(new LoseHPAction(this.owner,this.owner,hp_lost));
             }
         }
 
@@ -69,6 +78,9 @@ public class FangOfFlareFlayingPower extends BasePower implements ToughnessReduc
         while (amount >= trigger_threshold) {
             this.amount -= trigger_threshold;
             addToBot(new HsrDamageAllEnemiesAction(DamageUtil.deal_followUp_info(AbstractDungeon.player, this.damage, toughness_reduction)));
+            addToBot(new GainEnergyAction(energies));
+            addToBot(new DrawCardAction(draws));
+            addToBot(new LoseHPAction(this.owner,this.owner,hp_lost));
         }
     }
 

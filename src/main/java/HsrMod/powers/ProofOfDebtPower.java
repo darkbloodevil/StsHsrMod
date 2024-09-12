@@ -68,7 +68,7 @@ public class ProofOfDebtPower extends BasePower {
     @Override
     public int onAttackedToChangeDamage(DamageInfo info, int damageAmount) {
         if (info instanceof HsrDamageInfo) {
-            HsrDamageInfo h_info = (HsrDamageInfo) info;
+            HsrDamageInfo h_info = HsrDamageInfo.to_hsr_info(info);
             if (h_info.is_follow_up) {
                 return super.onAttackedToChangeDamage(info, (int) (damageAmount * 1.5));
             }
