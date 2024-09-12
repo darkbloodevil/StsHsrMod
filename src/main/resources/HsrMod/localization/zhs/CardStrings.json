@@ -9,9 +9,13 @@
       "Blizzard is a good example for this."
     ]
   },
-  "${modID}:SuperStrike": {
-    "NAME": "SuperStrike",
-    "DESCRIPTION": "Deal !D! damage."
+  "${modID}:Strike_stelle": {
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害."
+  },
+  "${modID}:Defend_stelle": {
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点 格挡 ."
   },
   "${modID}:ApplyDotCard": {
     "NAME": "ApplyDotCard",

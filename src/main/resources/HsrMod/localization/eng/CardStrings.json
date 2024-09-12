@@ -9,9 +9,13 @@
       "Blizzard is a good example for this."
     ]
   },
-  "${modID}:SuperStrike": {
-    "NAME": "SuperStrike",
+  "${modID}:Strike_stelle": {
+    "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
+  },
+  "${modID}:Defend_stelle": {
+    "NAME": "Defend",
+    "DESCRIPTION": "Gain !B! block."
   },
   "${modID}:ApplyDotCard": {
     "NAME": "ApplyDotCard",
