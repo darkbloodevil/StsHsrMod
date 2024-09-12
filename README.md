@@ -35,6 +35,9 @@
 2. 更多的遗物
 3. 新的怪物
 
+依赖：
+Stslib, BaseMod, ModTheSpire
+
 
 Eng
 
@@ -47,6 +50,9 @@ New mechanisms:
 1. Toughness: Attack will reduction the toughness of the enemy. When the enemy's toughness is down to 0, get stunned.  
 2. Dot: Similar to poison, deal damage at the start turn.
 3. Follow-Up Attack.  
+
+Dependencies:
+Stslib, BaseMod, ModTheSpire
 
 It's my first time to make a mod and I am not native English speaker. If any issues, please contact me by evilwithdarkblood@gmail.com .
 This mod is open source in github. https://github.com/darkbloodevil/StsHsrMod .

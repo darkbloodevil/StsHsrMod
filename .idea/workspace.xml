@@ -4,18 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="修复bug；新增基础牌、结束场景、云璃、飞霄、波提欧、列车长、卡芙卡被动">
+    <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="正式更新">
       <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/HereComesTheMechanicalFever.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/Strike_stelle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/attack/Strike_stelle_p.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/Strike_stelle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/Defend_stelle.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/skill/Defend_stelle_p.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/defend_stelle.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/cards/raw/defend_stelle.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/CardStrings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/CardStrings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -298,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726111478873</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="正式更新">
+      <option name="closed" value="true" />
+      <created>1726154329441</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1726154329441</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -344,7 +344,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="推送" />
     <MESSAGE value="mod" />
     <MESSAGE value="加入韧性条和鲁伯特帝国机械齿轮" />
     <MESSAGE value="韧性条完善" />
@@ -369,6 +368,7 @@
     <MESSAGE value="加入韧性条；显示调整；数值调整" />
     <MESSAGE value="修改角色图；加入砂金杰帕德；修复bug" />
     <MESSAGE value="修复bug；新增基础牌、结束场景、云璃、飞霄、波提欧、列车长、卡芙卡被动" />
-    <option name="LAST_COMMIT_MESSAGE" value="修复bug；新增基础牌、结束场景、云璃、飞霄、波提欧、列车长、卡芙卡被动" />
+    <MESSAGE value="正式更新" />
+    <option name="LAST_COMMIT_MESSAGE" value="正式更新" />
   </component>
 </project>
