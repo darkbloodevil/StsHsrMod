@@ -2,7 +2,6 @@ package HsrMod.powers;
 
 import HsrMod.action.BreakAction;
 import HsrMod.action.BreakTransformAction;
-import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -51,7 +50,7 @@ public class BreakPower extends BasePower {
         if (!is_player) {
             // 如果没有走完完整一轮，再晕一次
             if (!is_broken_for_a_turn){
-                StunMonsterPower stun_power=new StunMonsterPower((AbstractMonster)this.owner, this.amount);
+                StunMonsterPower stun_power=new StunMonsterPower((AbstractMonster)this.owner, source,this.amount);
                 stun_power.type= AbstractPower.PowerType.BUFF;
                 AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(this.owner, this.source, stun_power, this.amount));
                 return;

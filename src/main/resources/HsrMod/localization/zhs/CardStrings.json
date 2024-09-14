@@ -11,11 +11,11 @@
   },
   "${modID}:Strike_stelle": {
     "NAME": "打击",
-    "DESCRIPTION": "造成 !D! 点伤害."
+    "DESCRIPTION": "造成 !D! 点伤害。"
   },
   "${modID}:Defend_stelle": {
     "NAME": "防御",
-    "DESCRIPTION": "获得 !B! 点 格挡 ."
+    "DESCRIPTION": "获得 !B! 点 格挡。"
   },
   "${modID}:ApplyDotCard": {
     "NAME": "ApplyDotCard",
@@ -23,293 +23,293 @@
   },
   "${modID}:ButterflyFlurry": {
     "NAME": "乱蝶",
-    "DESCRIPTION": "消耗 NL 造成 !D! 点伤害. ${modID}:削韧 !reduction! . NL 如果击杀, 获得 !M! 点 临时力量 并且回手. NL 可以多次升级."
+    "DESCRIPTION": "消耗 NL 造成 !D! 点伤害。 ${modID}:削韧 !reduction! 。 NL 如果击杀，获得 !M! 点 临时力量 并且回手。 NL 可以多次升级。"
   },
   "${modID}:CaressingMoonlight": {
     "NAME": "月光摩挲连绵",
-    "DESCRIPTION": "造成 !D! 点伤害. NL ${modID}:削韧 !reduction! . NL 触发目标身上所有 ${modID}:dot ."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${modID}:削韧 !reduction! 。 NL 触发目标身上所有 ${modID}:dot 。"
   },
   "${modID}:ChampagneEtiquette": {
     "NAME": "香槟仪礼",
-    "DESCRIPTION": "造成 !D! 点伤害. NL 获得 !B! 点 格挡 . NL 你下一张攻击牌消耗 0."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !B! 点 格挡 。 NL 你下一张攻击牌消耗 0。"
   },
   "${modID}:DecadenceFalseTwilight": {
-    "NAME": "失坠落, 伪神的黄昏",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL 施加持续 !duration! 轮的易伤和 ${modID}:dot 增伤. NL 施加 !M! 风 ${modID}:dot ."
+    "NAME": "失坠, 伪神的黄昏",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 施加持续 !duration! 轮的易伤和 ${modID}:dot 增伤。 NL 施加 !M! 风 ${modID}:dot 。"
   },
   "${modID}:DivineCastigation": {
     "NAME": "天罚贯身",
-    "DESCRIPTION": "造成 !D! 点伤害. NL ${modID}:削韧 !reduction! ."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${modID}:削韧 !reduction! 。"
   },
   "${modID}:DracoreLibre": {
     "NAME": "龙力自在",
-    "DESCRIPTION": "造成 !D! 点伤害. NL 弃牌 1 : 攻击2次. NL 弃牌 2: 抽2张卡. NL 弃牌 3: 对群攻击."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 弃牌 1 : 攻击2次； NL 弃牌 2: 抽2张卡； NL 弃牌 3: 对群攻击。"
   },
   "${modID}:FlorephemeralDreamflux": {
     "NAME": "昙华生灭, 天河泄梦",
-    "DESCRIPTION": "造成 !D! 点伤害. NL ${modID}:削韧 !reduction! . NL 随机消耗2张牌."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${modID}:削韧 !reduction! 。 NL 随机消耗2张牌。"
   },
   "${modID}:Frostbite": {
     "NAME": "低温妨害",
-    "DESCRIPTION": "造成 !D! 点伤害. NL 随机移除目标身上的一个 力量 /人工制品/多层护甲/荆棘."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 随机移除目标身上的一个 力量 /人工制品/多层护甲/荆棘。"
   },
   "${modID}:GalvanicChords": {
     "NAME": "燃情和弦",
-    "DESCRIPTION": "造成 !D! 点伤害. NL 如果目标身上有 ${modID}:dot , 抽1卡并回 [E] ."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 如果目标身上有 ${modID}:dot ， 抽1卡并回 [E] 。"
   },
   "${modID}:HighPoles": {
     "NAME": "缘竿",
-    "DESCRIPTION": "造成 !D! 点伤害. NL 施加火 ${modID}:dot 伤害 !M! 持续 !duration! ."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 施加火 ${modID}:dot 伤害 !M! 持续 !duration! 。"
   },
   "${modID}:ItsMagicIaddSomeMagic": {
     "NAME": "是魔法, 我加了魔法",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL 当敌人被该攻击打到50%血以下，造成 !M! ${modID}:追加 攻击伤害."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 当敌人被该攻击打到50%血以下，造成 !M! ${modID}:追加 攻击伤害。"
   },
   "${modID}:MeteorStorm": {
     "NAME": "群星流落",
-    "DESCRIPTION": "对随机敌人造成 !D! 点伤害 !M! 次. NL 根据攻击到的敌人数目获得 1 点 临时力量 . NL ${modID}:削韧 !reduction!"
+    "DESCRIPTION": "对随机敌人造成 !D! 点伤害 !M! 次。 NL 根据攻击到的敌人数目获得 1 点 临时力量 。 NL ${modID}:削韧 !reduction!"
   },
   "${modID}:PranaExtirpated": {
     "NAME": "斩勘神形",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL ${modID}:神君 叠2层."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${modID}:神君 叠2层。"
   },
   "${modID}:ShapeOfTaixuDawnHerald": {
     "NAME": "太虚形蕴·烛夜",
-    "DESCRIPTION": "造成 !D! 点伤害. NL ${modID}:削韧 !reduction! NL 如果目标处于 ${modID}:弱点击破 , 抽1张牌并且回复 [E] ."
+    "DESCRIPTION": "造成 !D! 点伤害。 NL ${modID}:削韧 !reduction! NL 如果目标处于 ${modID}:弱点击破 ，抽1张牌并且回复 [E] 。"
   },
   "${modID}:SlashedDreamCriesInRed": {
     "NAME": "残梦尽染, 一刀缭断",
-    "DESCRIPTION": "你不能打出该卡直到拥有 9 点 ${modID}:集真赤 . NL 对所有敌人总共造成 !D! 点伤害.  NL ${modID}:削韧 !reduction!",
-    "UPGRADE_DESCRIPTION": "保留. NL 你不能打出该卡直到拥有 9 点 ${modID}:集真赤 . NL 对所有敌人总共造成 !D! 点伤害.  NL ${modID}:削韧 !reduction!"
+    "DESCRIPTION": "你不能打出该卡直到拥有 9 点 ${modID}:集真赤 ， NL 对所有敌人总共造成 !D! 点伤害。 NL ${modID}:削韧 !reduction!",
+    "UPGRADE_DESCRIPTION": "保留。 NL 你不能打出该卡直到拥有 9 点 ${modID}:集真赤 。 NL 对所有敌人总共造成 !D! 点伤害。 NL ${modID}:削韧 !reduction!"
   },
   "${modID}:StardustAce": {
     "NAME": "星尘王牌",
-    "DESCRIPTION": "对单 !D1! 伤或对群 !D2! 伤."
+    "DESCRIPTION": "对单 !D1! 伤或对群 !D2! 伤。"
   },
   "${modID}:FarewellHit": {
     "NAME": "全胜·再见安打",
-    "DESCRIPTION": "造成 !D! 点伤害. NL ${modID}:削韧 !reduction! ."
+    "DESCRIPTION": "造成 !D! 点伤害（对群伤害的两倍）。 NL ${modID}:削韧 !reduction! 。"
   },
   "${modID}:RIPHomeRun": {
     "NAME": "全胜·安息全垒打",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL ${modID}:削韧 !reduction! ."
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${modID}:削韧 !reduction! 。"
   },
   "${modID}:TwilightTrill": {
     "NAME": "悲剧尽头的颤音",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害. NL ${modID}:削韧 !reduction! . NL 施加雷电 ${modID}:dot 伤害 !M! . "
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL ${modID}:削韧 !reduction! 。 NL 施加雷电 ${modID}:dot 伤害 !M! 。 "
   },
   "${modID}:ZoneSuppression": {
     "NAME": "领域压制",
-    "DESCRIPTION": "保留 NL 对所有敌人造成 !D! 点伤害. NL 施加 !M! 点易伤."
+    "DESCRIPTION": "保留 NL 对所有敌人造成 !D! 点伤害。 NL 施加 !M! 点易伤。"
   },
   "${modID}:AllOutFootlightParade": {
     "NAME": "喧嚣的舞灯巡游",
-    "DESCRIPTION": "当攻击敌人处于 ${modID}:弱点击破 状态, ${modID}:削韧 会被转化为 ${modID}:超击破 伤害."
+    "DESCRIPTION": "当攻击敌人处于 ${modID}:弱点击破 状态， ${modID}:削韧 会被转化为 ${modID}:超击破 伤害。"
   },
   "${modID}:AwaitingSystemResponse": {
     "NAME": "等待系统响应中...",
-    "DESCRIPTION": "攻击时, 从 虚弱/易伤/本回合-2 力量  中随机对目标施加一个."
+    "DESCRIPTION": "攻击时，从 虚弱/易伤/本回合-2 力量 中随机对目标施加一个。"
   },
   "${modID}:BleakBreedsBliss": {
     "NAME": "天律大衍, 历劫归一",
-    "DESCRIPTION": "血量低于一半时, 受攻击后回复收到的伤害量. 持续 !M! ."
+    "DESCRIPTION": "血量低于一半时，受攻击后回复收到的伤害量。 持续 !M! 回合。"
   },
   "${modID}:CornerstoneDeluxe": {
     "NAME": "繁荣基石",
-    "DESCRIPTION": "每次造成伤害获得 !M! 点 格挡 .",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 . 每次造成伤害获得 !M! 点 格挡 ."
+    "DESCRIPTION": "每次造成伤害获得 !M! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。 每次造成伤害获得 !M! 点 格挡 。"
   },
   "${modID}:Dreamdiver": {
     "NAME": "梦游鱼",
-    "DESCRIPTION": "每当回合开始，抽牌后，可选择一张弃牌堆的牌放到牌库顶."
+    "DESCRIPTION": "每当回合开始，抽牌后，可选择一张弃牌堆的牌放到牌库顶。"
   },
   "${modID}:GentleButCruel": {
     "NAME": "温柔亦同残酷",
-    "DESCRIPTION": "每回合第一次对单攻击, 造成 !M! 点 ${modID}:追加 伤害和 附加!M! 点雷 ${modID}:dot . NL 重新充能: 打出含有卡芙卡的牌."
+    "DESCRIPTION": "每回合第一次对单攻击， 造成 !M! 点 ${modID}:追加 伤害和 附加!M! 点雷 ${modID}:dot 。 NL 重新充能: 打出含有卡芙卡的牌。"
   },
   "${modID}:FangOfFlareFlaying": {
     "NAME": "剔烁之牙",
-    "DESCRIPTION": "每攻击8次对所有敌人造成 !M! ${modID}:追加 伤害并且抽1张牌、获得1点能量、流失1点生命."
+    "DESCRIPTION": "每攻击8次对所有敌人造成 !M! ${modID}:追加 伤害并且抽1张牌、获得1点能量、流失1点生命。"
   },
   "${modID}:KarmicPerpetuation": {
     "NAME": "十王圣断, 业报恒常",
-    "DESCRIPTION": "每当你削韧8点抽 !M! 张卡."
+    "DESCRIPTION": "每当你削韧8点抽 !M! 张卡。"
   },
   "${modID}:KnownByStarsShownByHearts": {
     "NAME": "太微行棋, 灵台示影",
-    "DESCRIPTION": "承受伤害不超过5点。持续!M!."
+    "DESCRIPTION": "承受伤害不超过5点。持续 !M! 。"
   },
   "${modID}:QuidProQuo": {
     "NAME": "[等价交换]",
-    "DESCRIPTION": "当你 能量 低于50%, 每次打出非0费卡, 抽 !M! 张卡."
+    "DESCRIPTION": "当你 能量 低于50%，每次打出非0费卡, 抽 !M! 张卡。"
   },
   "${modID}:StringSingsSlowSwirls": {
     "NAME": "慢捻摸复挑",
-    "DESCRIPTION": "${modID}:削韧 提升 50%.",
-    "UPGRADE_DESCRIPTION": "固有. NL ${modID}:削韧 提升 50%."
+    "DESCRIPTION": "${modID}:削韧 提升 50%。",
+    "UPGRADE_DESCRIPTION": "固有。 NL ${modID}:削韧 提升 50%。"
   },
   "${modID}:TrendOfTheUniversalMarket": {
     "NAME": "[宇宙市场趋势]",
-    "DESCRIPTION": "当被攻击后, 施加 !M! 点火 ${modID}:dot (持续1回合)."
+    "DESCRIPTION": "当被攻击后，施加 !M! 点火 ${modID}:dot (持续1回合)。"
   },
   "${modID}:VictoryRush": {
     "NAME": "乘胜追击",
-    "DESCRIPTION": "当敌方进入 ${modID}:弱点击破 状态时, 对所有敌人造成 !M! ${modID}:追加 伤害并且 ${modID}:削韧 !reduction! ."
+    "DESCRIPTION": "当敌方进入 ${modID}:弱点击破 状态时，对所有敌人造成 !M! ${modID}:追加 伤害并且 ${modID}:削韧 !reduction! 。"
   },
   "${modID}:AmidstTheRejoicingClouds": {
     "NAME": "庆云光覆仪祷",
-    "DESCRIPTION": "消耗 NL 选择手中一张牌, 本回合0费并且本次战斗中伤害增加 !M! ."
+    "DESCRIPTION": "消耗 NL 选择手中一张牌，本回合0费并且本次战斗中伤害增加 !M! 。"
   },
   "${modID}:BlissOfOtherworldsEmbrace": {
     "NAME": "沉迷于彼界的臂湾",
-    "DESCRIPTION": "消耗 NL 在接下来X个回合开始时, 获得一张 *无端命运的机杼+.",
-    "UPGRADE_DESCRIPTION": "在接下来X个回合开始时, 获得一张 *无端命运的机杼+."
+    "DESCRIPTION": "消耗 NL 在接下来X个回合开始时，获得一张 *无端命运的机杼+ 。",
+    "UPGRADE_DESCRIPTION": "在接下来X个回合开始时，获得一张 *无端命运的机杼+ 。"
   },
   "${modID}:CherryOnTop": {
     "NAME": "杠上开花",
-    "DESCRIPTION": "随机触发下述效果之一X次: 造成 !D! 点伤害/ 抽 2 张牌 / 获得 [E] [E] 并随机弃1张牌",
-    "UPGRADE_DESCRIPTION": "随机触发下述效果之一X+1次: 造成 !D! 点伤害/ 抽 2 张牌 / 获得 [E] [E] 并随机弃1张牌"
+    "DESCRIPTION": "随机触发下述效果之一X次: 造成 !D! 点伤害/ 抽 2 张牌 / 获得 [E] [E] 并随机弃1张牌。",
+    "UPGRADE_DESCRIPTION": "随机触发下述效果之一X+1次: 造成 !D! 点伤害/ 抽 2 张牌 / 获得 [E] [E] 并随机弃1张牌。"
   },
   "${modID}:CombatRedeployment": {
     "NAME": "作战再部署",
-    "DESCRIPTION": "消耗 NL 选择一张抽牌堆/弃牌堆的卡加入手牌. 该牌本回合0费."
+    "DESCRIPTION": "消耗 NL 选择一张抽牌堆/弃牌堆的卡加入手牌。该牌本回合0费。"
   },
   "${modID}:DanceDanceDance": {
     "NAME": "[舞! 舞! 舞!]",
-    "DESCRIPTION": "消耗 NL 选择弃牌堆里最多4张卡，并把他们放到抽牌堆顶.",
-    "UPGRADE_DESCRIPTION": "选择弃牌堆里最多4张卡，并把他们放到抽牌堆顶."
+    "DESCRIPTION": "消耗 NL 选择弃牌堆里最多4张卡，并把他们放到抽牌堆顶。",
+    "UPGRADE_DESCRIPTION": "选择弃牌堆里最多4张卡，并把他们放到抽牌堆顶。"
   },
   "${modID}:DifficultyPaying": {
     "NAME": "支付困难?",
-    "DESCRIPTION": "消耗 NL 目标额外受到50%的 ${modID}:追加 伤害. 每攻击目标3次, 抽1张牌."
+    "DESCRIPTION": "消耗 NL 目标额外受到50%的 ${modID}:追加 伤害。每攻击目标3次，抽1张牌。"
   },
   "${modID}:EnduringBulwark": {
     "NAME": "永屹之壁",
-    "DESCRIPTION": "消耗 NL 获得 !B! 格挡 . NL 格挡 持续 !M! 回合."
+    "DESCRIPTION": "消耗 NL 获得 !B! 格挡 。 NL 格挡 持续 !M! 回合。"
   },"${modID}:EverBurningAmber": {
     "NAME": "炽燃不灭的琥珀",
-    "DESCRIPTION": "获得 !B!  格挡 . NL 对所有敌人施加 !M! 虚弱."
+    "DESCRIPTION": "获得 !B!  格挡 。 NL 对所有敌人施加 !M! 虚弱。"
   },
   "${modID}:FiendImpeachmentOfEvil": {
     "NAME": "凶煞•劾压鬼物",
-    "DESCRIPTION": "对所有敌人施加虚弱并且本回合 力量 -2."
+    "DESCRIPTION": "对所有敌人施加虚弱并且本回合 力量 -2。"
   },
   "${modID}:Flashforge": {
     "NAME": "闪铄",
-    "DESCRIPTION": "在下一个回合开始时, 随机对一个敌人造成 !M! 点伤害. NL 如果你的 格挡 被击破, 那么立刻对伤害来源造成两倍伤害并抽2. "
+    "DESCRIPTION": "在下一个回合开始时，随机对一个敌人造成 !M! 点伤害。 NL 如果你的 格挡 被击破, 那么立刻对伤害来源造成两倍伤害并抽2。"
   },
   "${modID}:FyreflyTypeIVCompleteCombustion": {
     "NAME": "火萤Ⅳ型-完全燃烧",
-    "DESCRIPTION": "消耗 . 保留 NL 随机添加 4 张 ${modID}:萨姆 到你牌库. 可以选择一张加入立刻手牌.",
-    "UPGRADE_DESCRIPTION": "消耗 . 保留 NL 随机添加 4 张升级后 ${modID}:萨姆 到你牌库. 可以选择一张加入立刻手牌.."
+    "DESCRIPTION": "消耗 ， 保留 NL 随机添加 4 张 ${modID}:萨姆 到你牌库。可以选择一张加入立刻手牌。",
+    "UPGRADE_DESCRIPTION": "消耗 ， 保留 NL 随机添加 4 张升级后 ${modID}:萨姆 到你牌库。可以选择一张加入立刻手牌。"
   },
   "${modID}:ChrysalidPyronexus": {
     "NAME": "茧式源火中枢",
-    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 获得 !B!  格挡 并且 格挡 保留1回合."
+    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 获得 !B! 格挡 并且 格挡 保留1回合。"
   },
   "${modID}:DeltaOrderMeteoricIncineration": {
     "NAME": "Δ指令-焦土陨击",
-    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 施加火 ${modID}:dot 伤害 !M! ."
+    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 施加火 ${modID}:dot 伤害 !M! 。"
   },
   "${modID}:DHGDRSupernovaOverload": {
     "NAME": "DHGDR-超新星过载",
-    "DESCRIPTION": "${modID}:萨姆 NL 对所有敌人造成 !D! 点伤害. NL 抽 1 张卡."
+    "DESCRIPTION": "${modID}:萨姆 NL 对所有敌人造成 !D! 点伤害。 NL 抽 1 张卡。"
   },
   "${modID}:FyreflyTypeIVDeathstarOverload": {
     "NAME": "火萤Ⅳ型-死星过载",
-    "DESCRIPTION": "${modID}:萨姆 NL 消耗 . 造成 !D! 点伤害 NL 额外效果: NL 抽 2 张卡, 回复 !M! ."
+    "DESCRIPTION": "${modID}:萨姆 ， 消耗 。 NL 造成 !D! 点伤害 NL 额外效果: NL 抽 2 张卡，回复 !M! 。"
   },
   "${modID}:FyreflyTypeIVPyrogenicDecimation": {
     "NAME": "火萤Ⅳ型-底火斩击",
-    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害. 削韧 !reduction! NL 额外效果: NL 抽 1 张卡 ."
+    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害。 削韧 !reduction! NL 额外效果: NL 抽 1 张卡 。"
   },
   "${modID}:OrderAerialBombardment": {
     "NAME": "指令-天火轰击",
-    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 获得 !M! [E] ."
+    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 获得 !M! [E] 。"
   },
   "${modID}:OrderFlarePropulsion": {
     "NAME": "指令-闪燃推进",
-    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 抽 !M! 张卡 ."
+    "DESCRIPTION": "${modID}:萨姆 NL 造成 !D! 点伤害 NL 额外效果: NL 抽 !M! 张卡 。"
   },
   "${modID}:HereComesTheMechanicalFever": {
     "NAME":"机械热潮登场！",
-    "DESCRIPTION": "延长所有敌人的 ${modID}:dot !M! 回合.",
-    "UPGRADE_DESCRIPTION": "延长所有敌人的 ${modID}:dot !M! 回合并且伤害增加 !M! ."
+    "DESCRIPTION": "延长所有敌人的 ${modID}:dot !M! 回合。",
+    "UPGRADE_DESCRIPTION": "延长所有敌人的 ${modID}:dot !M! 回合并且伤害增加 !M! 。"
   },
   "${modID}:LoomOfFatesCaprice": {
     "NAME": "无端命运的机杼",
-    "DESCRIPTION": "目标每有一个 ${modID}:dot , 抽1张卡并且回复 [E] ."
+    "DESCRIPTION": "目标每有一个 ${modID}:dot ，抽1张卡并且回复 [E] 。"
   },
   "${modID}:LoveHealAndChoose": {
-    "NAME": "爱, 救护与抉择",
-    "DESCRIPTION": "获得 !B! 点 格挡 并且从抽牌堆和弃牌堆中随机 消耗 !M! 张 诅咒 或 状态 卡."
+    "NAME": "爱，救护与抉择",
+    "DESCRIPTION": "获得 !B! 点 格挡 并且从抽牌堆和弃牌堆中随机 消耗 !M! 张 诅咒 或 状态 卡。"
   },
   "${modID}:PetalsToStreamReposeInDream": {
-    "NAME": "摇花缎水, 沾衣不摘",
-    "DESCRIPTION": "消耗 NL 延长敌人的 ${modID}:弱点击破 一回合.",
-    "UPGRADE_DESCRIPTION": "延长敌人的 ${modID}:弱点击破 一回合."
+    "NAME": "摇花缎水，沾衣不摘",
+    "DESCRIPTION": "消耗 NL 延长敌人的 ${modID}:弱点击破 一回合。",
+    "UPGRADE_DESCRIPTION": "延长敌人的 ${modID}:弱点击破 一回合。"
   },
   "${modID}:PrayerOfAbyssFlower": {
     "NAME": "白花的祈望",
-    "DESCRIPTION": "受到伤害时, 回复伤害量的血量 (< !M!) 3次."
+    "DESCRIPTION": "受到伤害时, 回复伤害量的血量 (< !M!) 3次。"
   },
   "${modID}:PromiseNotCommand": {
     "NAME": "是约定不是命令",
-    "DESCRIPTION": "${modID}:反击 !M!. NL 持续 !duration! NL ${modID}:削韧 !reduction!"
+    "DESCRIPTION": "${modID}:反击 !M!。 NL 持续 !duration! NL ${modID}:削韧 !reduction!"
   },
   "${modID}:SamsaraLocked": {
     "NAME": "生灭系缚",
-    "DESCRIPTION": "对敌人施加 !M! 轮的承负, 效果为你每攻击敌人两次, 回复 [E] ."
+    "DESCRIPTION": "对敌人施加 !M! 轮的承负，效果为你每攻击敌人两次, 回复 [E] 。"
   },
   "${modID}:SizzlinTango": {
     "NAME": "识砾舞者的探戈",
-    "DESCRIPTION": "选择一个敌人. 你不可选中其他敌人并且其他敌人无法对你造成伤害. NL 如果你击杀目标或者击破弱点, 回复 !M! 点 能量 并且抽 !M! 张卡. NL 你下一张攻击牌不耗费能量 ."
+    "DESCRIPTION": "消耗 NL 选择一个敌人。你不可选中其他敌人并且其他敌人无法对你造成伤害。持续一回合。 NL 如果你击杀目标或者击破弱点，回复 !M! 点 能量 并且抽 !M! 张卡。 NL 你下一张攻击牌不耗费 能量 。"
   },
   "${modID}:SnowfieldFirstAid": {
     "NAME": "雪原急救方案",
-    "DESCRIPTION": "获得 !B!  格挡 并且 格挡 保留 !M! 轮. 移除自身的 负面状态 ."
+    "DESCRIPTION": "获得 !B! 格挡 并且 格挡 保留 !M! 轮。移除自身的 负面状态 。"
   },
   "${modID}:TailSpiritualDomination": {
     "NAME": "尾巴·遣神役鬼",
-    "DESCRIPTION": "消耗 NL 获得 [E] 和 2 力量 .",
-    "UPGRADE_DESCRIPTION": "获得 [E] 和 2 力量 ."
+    "DESCRIPTION": "消耗 NL 获得 [E] 和 2 力量 。",
+    "UPGRADE_DESCRIPTION": "获得 [E] 和 2 力量 。"
   },
   "${modID}:TailsmanProtection": {
     "NAME": "灵符·保命护身",
-    "DESCRIPTION": "消耗 NL 回复 !M! 并且每当你本回合打出一张牌, 回复 !M!."
+    "DESCRIPTION": "消耗 NL 回复 !M! 并且你每打出一张牌，回复 !M!, 持续1回合，"
   },
   "${modID}:Terrasplit": {
     "NAME": "凿破大荒",
-    "DESCRIPTION": "回合开始时, 获得 ${modID}:飞黄 !M! . NL 抽到手时失去1能量并且自动消耗."
+    "DESCRIPTION": "回合开始时，获得 ${modID}:飞黄 !M! 。 NL 抽到手时失去1能量并且自动消耗。"
   },
   "${modID}:TheConductorsRewards": {
     "NAME": "列车长的馈赠",
-    "DESCRIPTION": "消耗 . NL 选择: 回复 [E] 或抽2张牌.",
-    "UPGRADE_DESCRIPTION": "消耗 . NL 选择: 回复 [E] 或2两张牌. NL 添加一张升级次数-1的列车长的馈赠到抽牌堆."
+    "DESCRIPTION": "消耗 NL 选择: 回复 [E] 或抽2张牌。",
+    "UPGRADE_DESCRIPTION": "消耗 NL 选择: 回复 [E] 或2两张牌。 NL 添加一张升级次数-1的列车长的馈赠到抽牌堆。"
   },
   "${modID}:TheConductorsDraw": {
     "NAME": "列车长的馈赠：抽牌",
-    "DESCRIPTION": "抽2张牌."
+    "DESCRIPTION": "抽2张牌"
   },
   "${modID}:TheConductorsEnergy": {
     "NAME": "列车长的馈赠：回能",
-    "DESCRIPTION": "回复 [E] ."
+    "DESCRIPTION": "回复 [E] "
   },
   "${modID}:TheHeroWithAThousandFaces": {
     "NAME": "一人千役",
-    "DESCRIPTION": "抽到手上时, 获得 !M! [E] 并随机弃 1 张非攻击牌. NL 当进入弃牌堆时, 抽 !M! 张牌."
+    "DESCRIPTION": "抽到手上时，获得 !M! [E] 并随机弃 1 张非攻击牌。 NL 当进入弃牌堆时，抽 !M! 张牌。"
   },
   "${modID}:ThePowerOfCuteness": {
     "NAME": "可爱就是正义",
-    "DESCRIPTION": "获得 !B! 点 格挡 并且当有 格挡 时, ${modID}:反击 !D! .  格挡 持续 !M! 回合."
+    "DESCRIPTION": "获得 !B! 点 格挡 并且当有 格挡 时, ${modID}:反击 !D! 。 格挡 持续 !M! 回合。"
   },
   "${modID}:TheShield": {
     "NAME": "【盾】",
-    "DESCRIPTION": "每回合开始, 敌人获得 !M! 点 格挡 . 当敌人 格挡 被击破, 你获得 !M! 点 格挡 .",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 . 每回合开始, 敌人获得 !M! 点 格挡 . 当敌人 格挡 被击破, 你获得 !M! 点 格挡 ."
+    "DESCRIPTION": "每回合开始，敌人获得 !M! 点 格挡 。 当敌人 格挡 被击破, 你获得 !M! 点 格挡 。",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点 格挡 。每回合开始，敌人获得 !M! 点 格挡 。当敌人 格挡 被击破，你获得 !M! 点 格挡 。"
   },
   "${modID}:VoxHarmoniqueOpusCosmique": {
     "NAME": "调性合颂",
-    "DESCRIPTION": "消耗 NL 从抽/弃牌堆选择3张牌, 它们费用永久-1并且放到抽牌堆顶. "
+    "DESCRIPTION": "消耗 NL 从抽/弃牌堆选择3张牌，它们费用永久-1并且放到抽牌堆顶。"
   }
 }

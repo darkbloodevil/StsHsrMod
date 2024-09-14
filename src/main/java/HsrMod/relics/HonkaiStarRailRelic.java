@@ -86,7 +86,6 @@ public class HonkaiStarRailRelic extends BaseRelic {
         } else {
             return h_info.toughness_reduction;
         }
-//        return 4;
     }
 
     public void onLoseRelic() {
@@ -96,7 +95,7 @@ public class HonkaiStarRailRelic extends BaseRelic {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        flash();
+//        flash();
         if (info.type != DamageInfo.DamageType.NORMAL) {
             isDone = true;
             return;

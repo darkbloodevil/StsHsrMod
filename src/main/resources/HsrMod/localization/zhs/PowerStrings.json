@@ -224,5 +224,11 @@
     "DESCRIPTIONS": [
       "回合开始时, 造成 %d 点风属性 ${modID}:dot 伤害."
     ]
+  },
+  "${modID}:StunMonsterPower": {
+    "NAME": "眩晕",
+    "DESCRIPTIONS": [
+      "击晕敌人 %d 回合。"
+    ]
   }
 }

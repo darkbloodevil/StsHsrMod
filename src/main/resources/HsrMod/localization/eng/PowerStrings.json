@@ -224,5 +224,11 @@
     "DESCRIPTIONS": [
       "Deal %d Wind ${modID}:Dot damage at the start of turn."
     ]
+  },
+  "${modID}:StunMonsterPower": {
+    "NAME": "Stun",
+    "DESCRIPTIONS": [
+      "Stun enemy for %d turns."
+    ]
   }
 }

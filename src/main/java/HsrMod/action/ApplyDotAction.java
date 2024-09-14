@@ -9,10 +9,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import com.megacrit.cardcrawl.vfx.combat.PowerDebuffEffect;
 
@@ -107,7 +104,7 @@ public class ApplyDotAction extends AbstractGameAction {
                 if (p.ID.equals(this.powerToApply.ID)) {
                     DotPower old_dot = (DotPower) p;
                     DotPower new_dot = (DotPower) powerToApply;
-                    if (old_dot.damage_amount == new_dot.damage_amount) {
+                    if (old_dot.amount2 == new_dot.amount2) {
                         p.stackPower(this.amount);
                         p.flash();
                         if (this.amount > 0) {

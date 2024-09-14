@@ -52,6 +52,7 @@ public class GalvanicChords extends BaseAttack implements ToughnessReductionInte
                         isDone = true;
                     }
                 });
+                break;
             }
         }
     }

@@ -28,7 +28,7 @@ public class Ticket extends BaseRelic {
     public void onLoseRelic(){
         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((Settings.WIDTH / 2), (Settings.HEIGHT / 2), this);
         flash();
-        AbstractDungeon.player.decreaseMaxHealth((int) (AbstractDungeon.player.maxHealth*0.1));
+        AbstractDungeon.player.decreaseMaxHealth((int) (AbstractDungeon.player.maxHealth*0.2));
         AbstractDungeon.player.loseGold(AbstractDungeon.player.gold);
         has_lost=true;
         this.description=getUpdatedDescription();

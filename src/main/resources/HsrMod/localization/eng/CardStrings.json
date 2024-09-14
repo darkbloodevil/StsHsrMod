@@ -264,7 +264,7 @@
   },
   "${modID}:SizzlinTango": {
     "NAME": "Sizzlin Tango",
-    "DESCRIPTION": "Choose one enemy。 You can only choose it as your target, and the other enemies can't damage you until the next turn. NL If you kill the target or ${modID}:Weakness_Break, gain !M! energy and draw !M! cards. NL Your next attack cost 0 ."
+    "DESCRIPTION": "Exhaust NL Choose one enemy。 You can only choose it as your target, and the other enemies can't damage you until the next turn. NL If you kill the target or ${modID}:Weakness_Break, gain !M! energy and draw !M! cards. NL Your next attack cost 0 ."
   },
   "${modID}:SnowfieldFirstAid": {
     "NAME": "Snowfield First Aid",

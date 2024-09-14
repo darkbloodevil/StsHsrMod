@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 /**
@@ -17,11 +16,10 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 public class DotPower extends BasePower {
     private static final AbstractPower.PowerType TYPE = PowerType.DEBUFF;
     private static final boolean TURN_BASED = true;
-    public int damage_amount;
 
     public DotPower(String POWER_ID, AbstractCreature owner, AbstractCreature source, int amount, int damage_amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, source, amount);
-        this.damage_amount = damage_amount;
+        this.amount2 = damage_amount;
     }
 
     @Override
@@ -37,9 +35,9 @@ public class DotPower extends BasePower {
     }
 
     public void stackDamage(int stackAmount) {
-        HsrMod.logger.info(String.format("===stackDamage before %d  amount %d===", damage_amount, stackAmount));
-        this.damage_amount += stackAmount;
-        HsrMod.logger.info(String.format("===stackDamage after %d  amount %d===", damage_amount, stackAmount));
+        HsrMod.logger.info(String.format("===stackDamage before %d  amount %d===", amount2, stackAmount));
+        this.amount2 += stackAmount;
+        HsrMod.logger.info(String.format("===stackDamage after %d  amount %d===", amount2, stackAmount));
     }
 
     public void dot_damage(String from) {
@@ -48,14 +46,14 @@ public class DotPower extends BasePower {
 
             if (this.owner.hasPower(DotVulnerablePower.POWER_ID)) {
                 // 上了易伤
-                this.addToBot(new DotLoseHpAction(this.owner, this.source, (int) (this.damage_amount * DotVulnerablePower.scaler), AbstractGameAction.AttackEffect.POISON));
+                this.addToBot(new DotLoseHpAction(this.owner, this.source, (int) (this.amount2 * DotVulnerablePower.scaler), AbstractGameAction.AttackEffect.POISON));
             } else {
-                this.addToBot(new DotLoseHpAction(this.owner, this.source, this.damage_amount, AbstractGameAction.AttackEffect.POISON));
+                this.addToBot(new DotLoseHpAction(this.owner, this.source, this.amount2, AbstractGameAction.AttackEffect.POISON));
 
             }
 
             HsrMod.logger.info(String.format("==========%s is now triggered from %s=========", ID, from));
-            HsrMod.logger.info(String.format("===dot amount %d===", damage_amount));
+            HsrMod.logger.info(String.format("===dot amount %d===", amount2));
 
         }
     }

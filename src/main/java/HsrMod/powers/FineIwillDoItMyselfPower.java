@@ -26,7 +26,7 @@ public class FineIwillDoItMyselfPower extends BasePower {
     public static final String POWER_ID = makeID(FineIwillDoItMyselfPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
-    private ArrayList<String> under_half;
+    private ArrayList<AbstractMonster> under_half;
     int damage_amount;
     int toughness_reduction = 4;
     AbstractGameAction trigger_action;
@@ -37,7 +37,7 @@ public class FineIwillDoItMyselfPower extends BasePower {
         under_half = new ArrayList<>();
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
             if ((double) monster.currentHealth / monster.maxHealth < 0.5) {
-                under_half.add(monster.id);
+                under_half.add(monster);
             }
         }
         this.trigger_action = new AbstractGameAction() {
@@ -67,8 +67,8 @@ public class FineIwillDoItMyselfPower extends BasePower {
     public void onSpecificTrigger() {
         int kurukuru=0;
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            if ((double) monster.currentHealth / monster.maxHealth <= 0.5 && !under_half.contains(monster.id)) {
-                under_half.add(monster.id);
+            if ((double) monster.currentHealth / monster.maxHealth <= 0.5 && !under_half.contains(monster)) {
+                under_half.add(monster);
                 kurukuru++;
             }
         }

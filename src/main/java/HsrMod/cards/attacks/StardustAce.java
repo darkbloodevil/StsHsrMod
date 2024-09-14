@@ -52,7 +52,7 @@ public class StardustAce extends BaseAttack implements MultiDamageInterface {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> stanceChoices = new ArrayList<>();
-        stanceChoices.add(new FarewellHit(m.id,damage));
+        stanceChoices.add(new FarewellHit(m,damage));
         stanceChoices.add(new RIPHomeRun(damage));
 
         if (this.upgraded) {

@@ -47,7 +47,7 @@ public class BleakBreedsBlissPower  extends BasePower {
         super.onLoseHp(damageAmount);
         if (damageAmount>0){
             if ((double) AbstractDungeon.player.currentHealth / AbstractDungeon.player.maxHealth <= 0.5){
-                addToBot(new HealAction(AbstractDungeon.player, AbstractDungeon.player, (int) damageAmount));
+                addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, (int) damageAmount));
             }
         }
 

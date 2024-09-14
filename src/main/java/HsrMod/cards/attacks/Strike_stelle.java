@@ -36,6 +36,8 @@ public class Strike_stelle extends BaseAttack{
     public Strike_stelle() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
+        this.tags.add(CardTags.STARTER_STRIKE);
+        this.tags.add(CardTags.STRIKE);
     }
 
     @Override

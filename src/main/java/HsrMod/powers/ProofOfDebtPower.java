@@ -4,7 +4,6 @@ import HsrMod.HsrMod;
 import HsrMod.action.BreakAction;
 import HsrMod.action.BreakTransformAction;
 import HsrMod.core.HsrDamageInfo;
-import com.evacipated.cardcrawl.mod.stslib.powers.StunMonsterPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;

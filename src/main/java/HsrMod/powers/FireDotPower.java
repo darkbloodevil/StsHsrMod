@@ -16,6 +16,6 @@ public class FireDotPower extends DotPower{
     }
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0],this.damage_amount);
+        this.description = String.format(DESCRIPTIONS[0],this.amount2);
     }
 }

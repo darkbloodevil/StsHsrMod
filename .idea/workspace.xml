@@ -5,9 +5,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="正式更新">
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/HereComesTheMechanicalFever.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/interfaces/SpecialToughnessInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/patchs/StunMonsterPatch.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/StunMonsterPower.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/StunMonsterPower.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/action/ApplyDotAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/ApplyDotAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/action/BreakAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/BreakAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/DecadenceFalseTwilight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/DecadenceFalseTwilight.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/GalvanicChords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/GalvanicChords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/StardustAce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/StardustAce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/Strike_stelle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/Strike_stelle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/Defend_stelle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/Defend_stelle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/FarewellHit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/FarewellHit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BleakBreedsBlissPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BleakBreedsBlissPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BreakPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BreakPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/DotPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/DotPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FineIwillDoItMyselfPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FineIwillDoItMyselfPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FireDotPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FireDotPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/LightningDotPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/LightningDotPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/PrayerOfAbyssFlowerPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/PrayerOfAbyssFlowerPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/ProofOfDebtPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/ProofOfDebtPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/WindDotPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/WindDotPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/relics/HonkaiStarRailRelic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/relics/HonkaiStarRailRelic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/relics/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/relics/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/util/ToughnessUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/util/ToughnessUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/CardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/PowerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/CardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/PowerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/RelicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/RelicStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +46,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaFXApplication" />
-        <option value="Interface" />
         <option value="Kotlin Class" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -44,41 +72,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Maven.StsMod [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.StsMod [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.StsMod [verify].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.hsrmod [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.hsrmod [package].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.hsrmod [test].executor&quot;: &quot;Run&quot;,
-    &quot;Maven.hsrmod [verify].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Javaprojects/StsHsrMod/src/main/resources/HsrMod/images/character/animation&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Javaprojects/StsMod/src/main/java/org/example/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.36999148&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Maven.StsMod [clean].executor": "Run",
+    "Maven.StsMod [package].executor": "Run",
+    "Maven.StsMod [verify].executor": "Run",
+    "Maven.hsrmod [clean].executor": "Run",
+    "Maven.hsrmod [package].executor": "Run",
+    "Maven.hsrmod [test].executor": "Run",
+    "Maven.hsrmod [verify].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Javaprojects/StsHsrMod/src/main/resources/HsrMod",
+    "onboarding.tips.debug.path": "D:/Javaprojects/StsMod/src/main/java/org/example/Main.java",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.36999148",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod" />
       <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod\images\character\animation" />
       <recent name="D:\Javaprojects\StsMod\src\main\resources\StsMod\images\cards\attack" />
       <recent name="D:\Javaprojects\StsMod\src\main\java\StsMod\relics" />
       <recent name="D:\Javaprojects\StsMod\src\main\java\StsMod\powers" />
-      <recent name="D:\Javaprojects\StsMod\src\main\java\StsMod\potions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod\images\powers" />
+      <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod\images" />
       <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod\images\cards\attack" />
       <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod\images\cards\power" />
       <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod\images\cards\skill" />
-      <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod\images\character" />
-      <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\StsMod\images\cards\attack" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -298,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726154329441</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="正式更新">
+      <option name="closed" value="true" />
+      <created>1726164576747</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1726164576747</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

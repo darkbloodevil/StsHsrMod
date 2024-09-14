@@ -40,12 +40,12 @@ public class PrayerOfAbyssFlowerPower extends BasePower {
     public int onLoseHp(int damageAmount) {
         super.onLoseHp(damageAmount);
         if (damageAmount > 0) {
-            addToBot(new HealAction(AbstractDungeon.player, AbstractDungeon.player, Math.min(damageAmount,magic)));
+            addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, Math.min(damageAmount,magic)));
 
             amount--;
             flash();
             if (amount<=0){
-                addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+                addToTop(new RemoveSpecificPowerAction(owner, owner, this));
             }
 
         }

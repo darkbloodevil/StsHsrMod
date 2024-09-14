@@ -34,26 +34,26 @@ public class FarewellHit extends BaseAttack {
     public static final int DAMAGE = 18;
     public static final int UPG_DAMAGE = 8;
 
-    String target;
+    AbstractMonster target;
 
     public FarewellHit() {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
-        target = "";
-        toughness_reduction = 10;
+        target = null;
+        toughness_reduction = 8;
     }
-    public FarewellHit(String m_id,int damage) {
+    public FarewellHit(AbstractMonster m,int damage) {
         super(ID, info);
         setDamage(damage*2);
-        target = m_id;
-        toughness_reduction = 10;
+        target = m;
+        toughness_reduction = 8;
     }
 
-    public FarewellHit(String m_id) {
+    public FarewellHit(AbstractMonster m) {
         super(ID, info);
         setDamage(DAMAGE, UPG_DAMAGE);
-        target = m_id;
-        toughness_reduction = 10;
+        target = m;
+        toughness_reduction = 8;
     }
 
 //    @Override
@@ -68,24 +68,37 @@ public class FarewellHit extends BaseAttack {
     @Override
     public void onChoseThisOption() {
         super.onChoseThisOption();
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            if (m.id.equals(target)&&!m.isDead) {
-                addToBot(new DamageAction(m, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                return;
-            }
+        if(target!=null){
+            addToBot(new DamageAction(target, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
+        }else {
+            addToBot(new DamageAction(AbstractDungeon.getMonsters().getRandomMonster(), new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
         }
-        addToBot(new DamageAction(AbstractDungeon.getMonsters().getRandomMonster(), new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
+//        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+//            if (m.id.equals(target)&&!m.isDead) {
+//                addToBot(new DamageAction(m, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+//                return;
+//            }
+//        }
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster no_use) {
-        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
-            if (m.id.equals(target)&&!m.isDead) {
-                addToBot(new DamageAction(m, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-                return;
-            }
+        if(target!=null){
+            addToBot(new DamageAction(target, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
+        }else {
+            addToBot(new DamageAction(AbstractDungeon.getMonsters().getRandomMonster(), new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+
         }
-        addToBot(new DamageAction(AbstractDungeon.getMonsters().getRandomMonster(), new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+//        for (AbstractMonster m : AbstractDungeon.getMonsters().monsters) {
+//            if (m.id.equals(target)&&!m.isDead) {
+//                addToBot(new DamageAction(m, new HsrDamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+//                return;
+//            }
+//        }
     }
 
     @Override
