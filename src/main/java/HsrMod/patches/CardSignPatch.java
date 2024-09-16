@@ -1,13 +1,5 @@
-package HsrMod.patchs;
+package HsrMod.patches;
 
-
-import HsrMod.cards.attacks.BaseAttack;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 
 /**
  * from anonMod

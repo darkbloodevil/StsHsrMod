@@ -40,7 +40,7 @@
       "dot",
       "dots"
     ],
-    "DESCRIPTION": "Deal damage at the start of the target's turn. Dot with same type and same amount will extend duration."
+    "DESCRIPTION": "Deal damage at the start of the target's turn. Dot with same type and same amount will extend duration. Last for 2 turns by default."
   },
   {
     "PROPER_NAME": "Follow-Up Attack",

@@ -15,37 +15,37 @@
   },
   "DracoreLibreAction": {
     "TEXT": [
-      "选择至多3张牌弃置."
+      "选择至多3张牌弃置. 龙力自在"
     ]
   },
   "DreamdiverAction": {
     "TEXT": [
-      "选择 %d 张卡."
+      "选择 %d 张卡. 梦游鱼"
     ]
   },
   "AmidstTheRejoicingCloudsAction": {
     "TEXT": [
-      "选择 1 张攻击卡."
+      "选择 1 张攻击卡. 庆云光覆仪祷"
     ]
   },
   "CombatRedeploymentAction": {
     "TEXT": [
-      "选择 1 张卡."
+      "选择 1 张卡. 作战再部署"
     ]
   },
   "DanceDanceDanceAction": {
     "TEXT": [
-      "选择 %d 张卡."
+      "选择 %d 张卡. 舞!舞!舞!"
     ]
   },
   "FireFlyTypeIVCompleteCombustionAction": {
     "TEXT": [
-      "选择 1 张卡."
+      "选择 1 张卡. 火萤Ⅳ型-完全燃烧"
     ]
   },
   "VoxHarmoniqueOpusCosmiqueAction": {
     "TEXT": [
-      "选择 %d 张卡."
+      "选择 %d 张卡. 调性合颂"
     ]
   }
 }

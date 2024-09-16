@@ -1,5 +1,6 @@
 package HsrMod.powers;
 
+import HsrMod.HsrMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -28,8 +29,8 @@ public class StunMonsterPower extends BasePower {
     private AbstractMonster.Intent moveIntent;
     private EnemyMoveInfo move;
 
-    public StunMonsterPower(AbstractMonster owner,AbstractCreature source) {
-        this(owner, source,1);
+    public StunMonsterPower(AbstractMonster owner, AbstractCreature source) {
+        this(owner, source, 1);
     }
 
     public StunMonsterPower(AbstractMonster owner, AbstractCreature source, int amount) {
@@ -64,7 +65,7 @@ public class StunMonsterPower extends BasePower {
                     try {
                         Field f = AbstractMonster.class.getDeclaredField("move");
                         f.setAccessible(true);
-                        StunMonsterPower.this.move = (EnemyMoveInfo)f.get(StunMonsterPower.this.owner);
+                        StunMonsterPower.this.move = (EnemyMoveInfo) f.get(StunMonsterPower.this.owner);
                         EnemyMoveInfo stunMove = new EnemyMoveInfo(StunMonsterPower.this.moveByte, AbstractMonster.Intent.STUN, -1, 0, false);
                         f.set(StunMonsterPower.this.owner, stunMove);
                         ((AbstractMonster) StunMonsterPower.this.owner).createIntent();
@@ -81,17 +82,19 @@ public class StunMonsterPower extends BasePower {
 
     public void onRemove() {
         if (this.owner instanceof AbstractMonster) {
-            AbstractMonster m = (AbstractMonster)this.owner;
-            if (this.move != null) {
+            AbstractMonster m = (AbstractMonster) this.owner;
+            if (m.intent!=AbstractMonster.Intent.STUN){
+                m.setMove(m.nextMove, m.intent);
+            }else if (this.move != null) {
                 m.setMove(this.moveByte, this.moveIntent, this.move.baseDamage, this.move.multiplier, this.move.isMultiDamage);
             } else {
                 m.setMove(this.moveByte, this.moveIntent);
             }
 
+
             m.createIntent();
             m.applyPowers();
         }
-
     }
 
     /**
@@ -100,6 +103,13 @@ public class StunMonsterPower extends BasePower {
     @Override
     public void onDeath() {
         super.onDeath();
-        addToBot(new RemoveSpecificPowerAction(owner,owner,this));
+        HsrMod.logger.info(owner.id + " has dead. remove stun");
+        this.type=PowerType.DEBUFF;
+//        this.onRemove();
+        addToBot(new RemoveSpecificPowerAction(owner, owner, this));
+//        StunMonsterPower removeMe=(StunMonsterPower)owner.getPower(StunMonsterPower.POWER_ID);
+//        removeMe.onRemove();
+//        owner.powers.remove(removeMe);
+//        AbstractDungeon.onModifyPower();
     }
 }

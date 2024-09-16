@@ -1,4 +1,4 @@
-package HsrMod.patchs;
+package HsrMod.patches;
 
 /**
  * @author darkbloodevil
@@ -8,23 +8,17 @@ package HsrMod.patchs;
 /*    */
 
 import HsrMod.HsrMod;
-import HsrMod.cards.attacks.BaseAttack;
 import HsrMod.powers.ToughnessPower;
 import HsrMod.util.ToughnessUtil;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
-import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.dungeons.Exordium;
-import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
 
 @SpirePatch(clz = AbstractCreature.class, method = "renderHealth", paramtypez = {SpriteBatch.class})
 public class ToughnessBarPatch {

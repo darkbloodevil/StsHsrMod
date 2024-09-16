@@ -4,7 +4,6 @@ import HsrMod.action.HsrDamageAction;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.DamageUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,12 +21,11 @@ public class GirlPower extends BasePower implements ToughnessReductionInterface 
     public static final String POWER_ID = makeID(GirlPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
-    public int damage_amount;
     public int toughness_reduction = 4;
 
     public GirlPower(AbstractCreature owner, AbstractCreature source, int amount, int damage_amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, source, amount);
-        this.damage_amount = damage_amount;
+        this.amount2 = damage_amount;
         this.amount = amount;
     }
 
@@ -35,7 +33,7 @@ public class GirlPower extends BasePower implements ToughnessReductionInterface 
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != null && info.owner != this.owner && this.owner.currentBlock > 0) {
             this.flash();
-            this.addToTop(new HsrDamageAction(info.owner, DamageUtil.deal_followUp_info((AbstractPlayer) this.owner, this.damage_amount, this.toughness_reduction), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
+            this.addToTop(new HsrDamageAction(info.owner, DamageUtil.deal_followUp_info((AbstractPlayer) this.owner, this.amount2, this.toughness_reduction), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL, true));
         }
 
         return damageAmount;
@@ -43,7 +41,7 @@ public class GirlPower extends BasePower implements ToughnessReductionInterface 
 
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0], damage_amount);
+        this.description = String.format(DESCRIPTIONS[0], amount2);
     }
 
     @Override

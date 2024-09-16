@@ -30,7 +30,7 @@
 
     <name>HsrMod</name>
     <version>0.0.2</version>
-    <description>a sts mod.</description>
+    <description>Honkai: Star Rail mod.</description>
 
     <dependencies>
         <dependency>
@@ -157,6 +157,8 @@
                                 <!--This puts a copy of your mod's jar file into the SlayTheSpire mods folder so it will be loaded.-->
                                 <!--On mac, it will be copied to another location. See further below.-->
                                 <copy file="target/${project.artifactId}.jar" tofile="${steam.path}/common/SlayTheSpire/mods/${project.artifactId}.jar"/>
+                                <copy file="target/${project.artifactId}.jar" tofile="${steam.path}/common/SlayTheSpire/honkaistarrail/content/${project.artifactId}.jar"/>
+
                             </target>
                         </configuration>
                         <goals>

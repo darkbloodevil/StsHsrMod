@@ -19,16 +19,15 @@ public class PrayerOfAbyssFlowerPower extends BasePower {
     public static final String POWER_ID = makeID(DivineProvisionPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
-    int magic;
 
-    public PrayerOfAbyssFlowerPower(AbstractCreature owner, AbstractCreature source, int magic) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, source, 3);
-        this.magic=magic;
+    public PrayerOfAbyssFlowerPower(AbstractCreature owner, AbstractCreature source,int amount, int magic) {
+        super(POWER_ID, TYPE, TURN_BASED, owner, source, amount);
+        this.amount2=magic;
     }
 
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0],magic);
+        this.description = String.format(DESCRIPTIONS[0],amount2);
     }
 
     @Override
@@ -40,7 +39,7 @@ public class PrayerOfAbyssFlowerPower extends BasePower {
     public int onLoseHp(int damageAmount) {
         super.onLoseHp(damageAmount);
         if (damageAmount > 0) {
-            addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, Math.min(damageAmount,magic)));
+            addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, Math.min(damageAmount,amount2)));
 
             amount--;
             flash();

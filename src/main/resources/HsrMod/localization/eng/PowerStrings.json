@@ -38,7 +38,7 @@
   "${modID}:BurdenPower": {
     "NAME": "Burden",
     "DESCRIPTIONS": [
-      "Gain 1 energy every 2 attacks. Last for %d turns."
+      "Gain 1 energy every 2 attacks. Last for %d turns. Gain energy after %d more hit(s)."
     ]
   },
   "${modID}:CornerstoneDeluxePower": {
@@ -68,37 +68,37 @@
   "${modID}:FangOfFlareFlayingPower": {
     "NAME": "Fang Of Flare Flaying",
     "DESCRIPTIONS": [
-      "Deal %d ${modID}:Follow-Up damage to all enemies, draw %d cards, gain %d energies and lose %d hp after attack 8 times."
+      "Deal %d #yFollow-Up damage to all enemies, draw %d cards, gain %d energies and lose %d hp after attack 8 times."
     ]
   },
   "${modID}:FineIwillDoItMyselfPower": {
     "NAME": "Fine I Will Do It Myself",
     "DESCRIPTIONS": [
-      "Deal %d ${modID}:Follow-Up damage and ${modID}:Toughness_Reduction %d. when any enemy's health is under half by this damage."
+      "Deal %d #yFollow-Up damage and #yToughness #yReduction %d. when any enemy's health is under half by this damage."
     ]
   },
   "${modID}:FireDotPower": {
     "NAME": "Fire Dot",
     "DESCRIPTIONS": [
-      "Deal %d Fire ${modID}:Dot damage at the start of turn."
+      "Deal %d Fire #yDot damage at the start of turn."
     ]
   },
   "${modID}:FlashforgePower": {
     "NAME": "Flashforge",
     "DESCRIPTIONS": [
-      "${modID}:Counter %d and ${modID}:Reduction %d. If block been broken, deal twice damage immediately and draw 2 cards. "
+      "#yCounter %d and #yReduction %d. If block been broken, deal twice damage immediately and draw 2 cards. "
     ]
   },
   "${modID}:FlyingAureusPower": {
     "NAME": "Flying Aureus",
     "DESCRIPTIONS": [
-      "When attack, charge 1. At the end of turn, if charges more than %d, deal %d x %d ${modID}:Follow-Up damage to the enemy you last attack, ${modID}:Reduction %d. "
+      "When attack, charge 1. At the end of turn, if charges more than %d, deal %d x %d #yFollow-Up damage to the enemy you last attack, #yReduction %d. Charged %d ."
     ]
   },
   "${modID}:GentleButCruelPower": {
     "NAME": "Gentle But Cruel",
     "DESCRIPTIONS": [
-      "The first attack in each turn cause a ${modID}:Follow-Up attack, deal %d damage ${modID}:Reduction %d and apply %d lightning ${modID}:Dot . Play cards with #yKafka will recharge."
+      "The first attack in each turn cause a #yFollow-Up attack, deal %d damage #yReduction %d and apply %d lightning #yDot . Play cards with #yKafka will recharge."
     ]
   },
   "${modID}:GirlPower": {
@@ -110,19 +110,19 @@
   "${modID}:KarmaPower": {
     "NAME": "Karma",
     "DESCRIPTIONS": [
-      "Draw %d card when depleted %d toughness."
+      "Draw %d card when depleted %d toughness. Need depleted %d more."
     ]
   },
   "${modID}:LightningDotPower": {
     "NAME": "Lightning Dot",
     "DESCRIPTIONS": [
-      "Deal %d Lightning ${modID}:Dot damage at the start of turn."
+      "Deal %d Lightning #yDot damage at the start of turn."
     ]
   },
   "${modID}:LightningLordPower": {
     "NAME": "Lightning-Lord",
     "DESCRIPTIONS": [
-      "${modID}:Lightning-Lord will attack in %d turn. Lightning-Lord can deals %d x %d damage."
+      "#yLightning-Lord will attack in %d turn. Lightning-Lord can deals %d x %d damage."
     ]
   },
   "${modID}:MatrixOfPresciencePower": {
@@ -146,13 +146,13 @@
   "${modID}:PromiseNotCommandPower": {
     "NAME": "Promise Not Command",
     "DESCRIPTIONS": [
-      "${modID}:Counter %d."
+      "#yCounter %d."
     ]
   },
   "${modID}:ProofOfDebtPower": {
     "NAME": "Proof Of Debt",
     "DESCRIPTIONS": [
-      "Take 50% more ${modID}:Follow-Up damage. Attacked every 3 times, draw a card."
+      "Take 50% more #yFollow-Up damage. Attacked every 3 times, draw a card."
     ]
   },
   "${modID}:QuidProQuoPower": {
@@ -170,7 +170,7 @@
   "${modID}:StandoffPower": {
     "NAME": "Standoff",
     "DESCRIPTIONS": [
-      "Can't attack those without standoff and they can't attack you as well. When kill/ ${modID}:Weakness_Break those with standoff, gain %d energy and draw %d cards."
+      "Can't attack those without standoff and they can't attack you as well. When kill/ #yWeakness Break those with standoff, gain %d energy and draw %d cards."
     ]
   },
   "${modID}:TauntedPower": {
@@ -210,19 +210,19 @@
   "${modID}:TrendOfTheUniversalMarketPower": {
     "NAME": "Trend Of The Universal Market",
     "DESCRIPTIONS": [
-      "When attacked, apply %d fire ${modID}:Dot damage."
+      "When attacked, apply %d fire #yDot damage (last for 1 turn)."
     ]
   },
   "${modID}:VictoryRushPower": {
     "NAME": "Victory Rush",
     "DESCRIPTIONS": [
-      "When an enemy is inflicted with ${modID}:Weakness_Break, deal %d ${modID}:Follow-Up damage and ${modID}:Toughness_Reduction %d."
+      "When an enemy is inflicted with #yWeakness #yBreak, deal %d #yFollow-Up damage and #yToughness #yReduction %d."
     ]
   },
   "${modID}:WindDotPower": {
     "NAME": "Wind Dot",
     "DESCRIPTIONS": [
-      "Deal %d Wind ${modID}:Dot damage at the start of turn."
+      "Deal %d Wind #yDot damage at the start of turn."
     ]
   },
   "${modID}:StunMonsterPower": {

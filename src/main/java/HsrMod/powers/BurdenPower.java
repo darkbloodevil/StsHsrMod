@@ -19,22 +19,20 @@ public class BurdenPower extends BasePower {
     public static final String POWER_ID = makeID(BurdenPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = true;
-    int turns;
 
     public BurdenPower(AbstractCreature owner, AbstractCreature source, int turns) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, source, 2);
-        this.turns = turns;
+        super(POWER_ID, TYPE, TURN_BASED, owner, source, turns);
+        this.amount2 = 2;
     }
 
     @Override
     public void stackPower(int stackAmount) {
-        super.stackPower(0);
-        this.turns+=stackAmount;
+        super.stackPower(amount);
     }
 
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0],turns);
+        this.description = String.format(DESCRIPTIONS[0],amount,amount2);
     }
 
     @Override
@@ -42,10 +40,10 @@ public class BurdenPower extends BasePower {
         if (info.type != DamageInfo.DamageType.NORMAL)
             return super.onAttacked(info, damageAmount);
 
-        this.amount--;
+        this.amount2--;
 
-        if (this.amount <= 0) {
-            this.amount = 2;
+        if (this.amount2 <= 0) {
+            this.amount2 = 2;
             addToBot(new GainEnergyAction(1));
         }
         return super.onAttacked(info, damageAmount);
@@ -54,8 +52,8 @@ public class BurdenPower extends BasePower {
     @Override
     public void atStartOfTurn() {
         super.atStartOfTurn();
-        this.turns--;
-        if (turns == 0) {
+        this.amount--;
+        if (amount == 0) {
             addToBot(new RemoveSpecificPowerAction(owner, owner, this));
         }
     }

@@ -14,7 +14,7 @@
   "${modID}:BackupDancerPower": {
     "NAME": "伴舞",
     "DESCRIPTIONS": [
-      "当目标在弱点击破状态, 每点削韧值转化为1点超击破 DMG."
+      "当目标在弱点击破状态, 每点削韧值转化为1点 #y超击破 伤害."
     ]
   },
   "${modID}:BleakBreedsBlissPower": {
@@ -38,7 +38,7 @@
   "${modID}:BurdenPower": {
     "NAME": "承负",
     "DESCRIPTIONS": [
-      "每两次攻击回1能. 持续 %d 回合."
+      "每两次攻击回1能。持续 %d 回合。再攻击 %d 次触发回能。"
     ]
   },
   "${modID}:CornerstoneDeluxePower": {
@@ -68,37 +68,37 @@
   "${modID}:FangOfFlareFlayingPower": {
     "NAME": "剔烁之牙",
     "DESCRIPTIONS": [
-      "每攻击8次, 对所有敌人造成 %d ${modID}:追加 伤害, 抽%d张牌, 回复%d 能量 并流失 %d 点生命."
+      "每攻击8次, 对所有敌人造成 %d 追加 伤害, 抽%d张牌, 回复%d 能量 并流失 %d 点生命."
     ]
   },
   "${modID}:FineIwillDoItMyselfPower": {
     "NAME": "Fine I Will Do It Myself",
     "DESCRIPTIONS": [
-      "当任意敌人因为该伤害而血量低于一半时, 造成 %d ${modID}:追加 伤害并 ${modID}:削韧 %d ."
+      "当任意敌人因为该伤害而血量低于一半时, 造成 %d #y追加 伤害并 #y削韧 %d ."
     ]
   },
   "${modID}:FireDotPower": {
     "NAME": "Fire Dot",
     "DESCRIPTIONS": [
-      "回合开始时, 造成 %d 点火属性 ${modID}:dot 伤害."
+      "回合开始时, 造成 %d 点火属性 #ydot 伤害."
     ]
   },
   "${modID}:FlashforgePower": {
     "NAME": "闪铄",
     "DESCRIPTIONS": [
-      "${modID}:反击 %d ${modID}:削韧 %d. 如果 格挡 被击穿, 立刻造成两倍的反击并抽2张牌. "
+      "${modID}:反击 %d #y削韧 %d. 如果 格挡 被击穿, 立刻造成两倍的反击并抽2张牌. "
     ]
   },
   "${modID}:FlyingAureusPower": {
     "NAME": "飞黄",
     "DESCRIPTIONS": [
-      "每次攻击充能1. 回合结束时, 如果充能超过 %d, 对上次攻击的目标造成 %d x %d 点 ${modID}:追加 攻击伤害 , ${modID}:削韧 %d. "
+      "每次攻击充能1. 回合结束时, 如果充能超过 %d, 对上次攻击的目标造成 %d x %d 点 #y追加 攻击伤害 , #y削韧 %d. 已充能 %d"
     ]
   },
   "${modID}:GentleButCruelPower": {
     "NAME": "Gentle But Cruel",
     "DESCRIPTIONS": [
-      "每回合的第一次攻击会额外 ${modID}:追加 %d 点伤害 ${modID}:削韧 %d 并施加 %d 雷属性 ${modID}:dot . 打出带有 #y卡芙卡 的卡牌会刷新触发次数."
+      "每回合的第一次攻击会额外 #y追加 %d 点伤害 #y削韧 %d 并施加 %d 雷属性 #ydot . 打出带有 #y卡芙卡 的卡牌会刷新触发次数."
     ]
   },
   "${modID}:GirlPower": {
@@ -110,19 +110,19 @@
   "${modID}:KarmaPower": {
     "NAME": "恶报",
     "DESCRIPTIONS": [
-      "抽 %d 张卡每当你削韧 %d 点."
+      "抽 %d 张卡每当你削韧 %d 点. 还需要削韧 %d ."
     ]
   },
   "${modID}:LightningDotPower": {
     "NAME": "Lightning Dot",
     "DESCRIPTIONS": [
-      "回合开始时, 造成 %d 点雷属性 ${modID}:dot 伤害."
+      "回合开始时, 造成 %d 点雷属性 #ydot 伤害."
     ]
   },
   "${modID}:LightningLordPower": {
     "NAME": "神君",
     "DESCRIPTIONS": [
-      "${modID}:神君 将在 %d 回合内发动攻击. 每一层造成一段伤害, 层数超过6时伤害翻倍. ${modID}:神君 现在造成 %d x %d 点伤害. "
+      "#y神君 将在 %d 回合内发动攻击. 每一层造成一段伤害, 层数超过6时伤害翻倍. #y神君 现在造成 %d x %d 点伤害. "
     ]
   },
   "${modID}:MatrixOfPresciencePower": {
@@ -146,13 +146,13 @@
   "${modID}:PromiseNotCommandPower": {
     "NAME": "是约定不是命令",
     "DESCRIPTIONS": [
-      "${modID}:反击 %d."
+      "#y反击 %d."
     ]
   },
   "${modID}:ProofOfDebtPower": {
     "NAME": "负债证明",
     "DESCRIPTIONS": [
-      "${modID}:追加攻击 额外造成50%伤害. 每被攻击三次抽一张卡."
+      "#y追加攻击 额外造成50%伤害. 每被攻击三次抽一张卡."
     ]
   },
   "${modID}:QuidProQuoPower": {
@@ -170,7 +170,7 @@
   "${modID}:StandoffPower": {
     "NAME": "绝命对峙",
     "DESCRIPTIONS": [
-      "只有持有绝命对峙状态的角色才可互相攻击. 当 击杀或 ${modID}:弱点击破 对峙状态的目标时, 回复 %d 点 能量 并且抽 %d 张卡."
+      "只有持有绝命对峙状态的角色才可互相攻击. 当 击杀或 #y弱点击破 对峙状态的目标时, 回复 %d 点 能量 并且抽 %d 张卡."
     ]
   },
   "${modID}:TauntedPower": {
@@ -210,19 +210,19 @@
   "${modID}:TrendOfTheUniversalMarketPower": {
     "NAME": "【宇宙市场趋势】",
     "DESCRIPTIONS": [
-      "当被攻击时, 施加 %d 火 ${modID}:dot (持续1回合)."
+      "当被攻击时, 施加 %d 火 #ydot (持续1回合)."
     ]
   },
   "${modID}:VictoryRushPower": {
     "NAME": "乘胜追击",
     "DESCRIPTIONS": [
-      "当有敌人进入 ${modID}:弱点击破 状态, 对所有敌人造成 %d ${modID}:追加 伤害 ${modID}:削韧 %d."
+      "当有敌人进入 #y弱点击破 状态, 对所有敌人造成 %d #y追加 伤害 #y削韧 %d."
     ]
   },
   "${modID}:WindDotPower": {
     "NAME": "Wind Dot",
     "DESCRIPTIONS": [
-      "回合开始时, 造成 %d 点风属性 ${modID}:dot 伤害."
+      "回合开始时, 造成 %d 点风属性 #ydot 伤害."
     ]
   },
   "${modID}:StunMonsterPower": {

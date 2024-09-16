@@ -2,8 +2,8 @@
   "modid": "hsrmod",
   "name": "HsrMod",
   "author_list": ["darkbloodevil"],
-  "description": "Honkai: Star Rail mod。",
-  "version": "0.0.1",
+  "description": "Honkai: Star Rail mod.",
+  "version": "0.0.3",
   "sts_version": "12-18-2022",
   "mts_version": "3.30.3",
   "dependencies": ["basemod"]

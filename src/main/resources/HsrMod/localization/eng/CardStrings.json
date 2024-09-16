@@ -35,7 +35,7 @@
   },
   "${modID}:DecadenceFalseTwilight": {
     "NAME": "Decadence, False Twilight",
-    "DESCRIPTION": "Deal !D! damage to all enemies. NL Apply vulnerable and increase ${modID}:dot damage by 50% for !duration! turns. NL Apply !M! wind dot ."
+    "DESCRIPTION": "Deal !D! damage. NL Apply vulnerable and increase ${modID}:dot damage by 50% for !duration! turns. NL Apply !M! wind dot ."
   },
   "${modID}:DivineCastigation": {
     "NAME": "Divine Castigation",
@@ -252,7 +252,7 @@
   },
   "${modID}:PrayerOfAbyssFlower": {
     "NAME": "Prayer Of Abyss Flower",
-    "DESCRIPTION": "When receive damage, heal by the amount of damage (< !M!) for 3 times."
+    "DESCRIPTION": "When receive damage, heal by the amount of damage (< 7) for !M! times."
   },
   "${modID}:PromiseNotCommand": {
     "NAME": "Promise, Not Command",

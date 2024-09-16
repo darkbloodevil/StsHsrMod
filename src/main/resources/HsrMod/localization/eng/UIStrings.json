@@ -15,37 +15,37 @@
   },
   "DracoreLibreAction": {
     "TEXT": [
-      "Choose at most 3 cards to discard."
+      "Choose at most 3 cards to discard. Dracore Libre"
     ]
   },
   "DreamdiverAction": {
     "TEXT": [
-      "Choose %d card(s)."
+      "Choose %d card(s). Dreamdiver"
     ]
   },
   "AmidstTheRejoicingCloudsAction": {
     "TEXT": [
-      "Choose a attack card."
+      "Choose a attack card. Amidst The Rejoicing Clouds"
     ]
   },
   "CombatRedeploymentAction": {
     "TEXT": [
-      "Choose a card."
+      "Choose a card. Combat Redeployment"
     ]
   },
   "DanceDanceDanceAction": {
     "TEXT": [
-      "Choose %d card(s)."
+      "Choose %d card(s). Dance Dance Dance"
     ]
   },
   "FireFlyTypeIVCompleteCombustionAction": {
     "TEXT": [
-      "Choose a card."
+      "Choose a card. Fyrefly Type-IV: Complete Combustion"
     ]
   },
   "VoxHarmoniqueOpusCosmiqueAction": {
     "TEXT": [
-      "Choose %d card(s)."
+      "Choose %d card(s). Vox Harmonique Opus Cosmique"
     ]
   }
 }

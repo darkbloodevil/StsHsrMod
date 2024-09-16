@@ -2,6 +2,7 @@ package HsrMod.powers;
 
 import HsrMod.action.BreakAction;
 import HsrMod.action.BreakTransformAction;
+import HsrMod.util.ToughnessUtil;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -48,6 +49,13 @@ public class BreakPower extends BasePower {
     @Override
     public void atEndOfTurn(boolean is_player) {
         if (!is_player) {
+            // 如果owner没有stun状态，则不进入弱点保护，直接刷新韧性条
+            if(!owner.hasPower(StunMonsterPower.POWER_ID)){
+                addToTop(new BreakTransformAction((AbstractMonster) owner, source, new ToughnessPower(owner, source, ToughnessUtil.get_toughness((AbstractMonster) owner))));
+                addToBot(new RemoveSpecificPowerAction((AbstractMonster) owner, owner, this));
+                return;
+            }
+
             // 如果没有走完完整一轮，再晕一次
             if (!is_broken_for_a_turn){
                 StunMonsterPower stun_power=new StunMonsterPower((AbstractMonster)this.owner, source,this.amount);

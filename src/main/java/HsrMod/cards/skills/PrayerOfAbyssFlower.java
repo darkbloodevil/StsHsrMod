@@ -28,22 +28,23 @@ public class PrayerOfAbyssFlower  extends BaseCard {
 
     public PrayerOfAbyssFlower() {
         super(ID, info);
-        this.magicNumber = 5;
-        this.baseMagicNumber = magicNumber;
+//        this.magicNumber = 2;
+//        this.baseMagicNumber = magicNumber;
+        this.setMagic(2,1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new PrayerOfAbyssFlowerPower(p, p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new PrayerOfAbyssFlowerPower(p, p, magicNumber,7)));
     }
 
-    @Override
-    public void upgrade() {
-        if (!this.upgraded) {
-            upgradeName();
-            this.upgradeMagicNumber(1);
-            initializeDescription();
-        }
-        super.upgrade();
-    }
+//    @Override
+//    public void upgrade() {
+//        if (!this.upgraded) {
+//            upgradeName();
+//            this.upgradeMagicNumber(1);
+//            initializeDescription();
+//        }
+//        super.upgrade();
+//    }
 }

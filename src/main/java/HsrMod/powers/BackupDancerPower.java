@@ -16,7 +16,7 @@ public class BackupDancerPower extends BasePower{
     private static final boolean TURN_BASED = false;
 
     public BackupDancerPower(AbstractCreature owner, AbstractCreature source, int amount) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, source, amount);
+        super(POWER_ID, TYPE, TURN_BASED, owner, source, 0);
     }
 
 

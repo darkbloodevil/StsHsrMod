@@ -35,7 +35,7 @@
   },
   "${modID}:DecadenceFalseTwilight": {
     "NAME": "失坠, 伪神的黄昏",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害。 NL 施加持续 !duration! 轮的易伤和 ${modID}:dot 增伤。 NL 施加 !M! 风 ${modID}:dot 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 施加持续 !duration! 轮的易伤和 ${modID}:dot 增伤。 NL 施加 !M! 风 ${modID}:dot 。"
   },
   "${modID}:DivineCastigation": {
     "NAME": "天罚贯身",
@@ -251,7 +251,7 @@
   },
   "${modID}:PrayerOfAbyssFlower": {
     "NAME": "白花的祈望",
-    "DESCRIPTION": "受到伤害时, 回复伤害量的血量 (< !M!) 3次。"
+    "DESCRIPTION": "受到伤害时, 回复伤害量的血量 (< 7) !M!次。"
   },
   "${modID}:PromiseNotCommand": {
     "NAME": "是约定不是命令",

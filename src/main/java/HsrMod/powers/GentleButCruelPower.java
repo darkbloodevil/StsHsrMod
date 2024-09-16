@@ -8,12 +8,10 @@ import HsrMod.cards.powers.GentleButCruel;
 import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.DamageUtil;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static HsrMod.HsrMod.makeID;
@@ -27,16 +25,16 @@ public class GentleButCruelPower extends BasePower implements ToughnessReduction
     public static final String POWER_ID = makeID(GentleButCruelPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = true;
-    boolean triggered = false;
 
     public GentleButCruelPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, owner, amount);
+        amount2 = 1;
     }
 
     @Override
     public void atStartOfTurn() {
         super.atStartOfTurn();
-        triggered = false;
+        amount2 = 1;
     }
 
     @Override
@@ -47,10 +45,10 @@ public class GentleButCruelPower extends BasePower implements ToughnessReduction
 
         if (info.type != DamageInfo.DamageType.NORMAL) return;
 
-        if (!triggered) {
+        if (amount2 ==1) {
             addToBot(new HsrDamageAction(target, DamageUtil.deal_followUp_info(AbstractDungeon.player, amount, get_toughness_reduction())));
             addToBot(new ApplyDotAction(target, owner, new LightningDotPower(target, owner, 2, amount)));
-            triggered = true;
+            amount2 = 0;
         }
     }
 
@@ -58,7 +56,7 @@ public class GentleButCruelPower extends BasePower implements ToughnessReduction
     public void onAfterCardPlayed(AbstractCard usedCard) {
         super.onAfterCardPlayed(usedCard);
         if (usedCard instanceof GentleButCruel || usedCard instanceof CaressingMoonlight || usedCard instanceof TwilightTrill) {
-            triggered = false;
+            amount2 = 1;
         }
     }
 

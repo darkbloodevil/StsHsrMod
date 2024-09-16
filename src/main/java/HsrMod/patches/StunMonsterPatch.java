@@ -1,4 +1,4 @@
-package HsrMod.patchs;
+package HsrMod.patches;
 
 
 import HsrMod.powers.StunMonsterPower;

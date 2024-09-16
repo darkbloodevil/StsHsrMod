@@ -5,11 +5,9 @@ import HsrMod.core.HsrDamageInfo;
 import HsrMod.interfaces.ToughnessReductionInterface;
 import HsrMod.util.DamageUtil;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static HsrMod.HsrMod.makeID;
@@ -23,7 +21,6 @@ public class FlyingAureusPower  extends BasePower implements ToughnessReductionI
     public static final String POWER_ID = makeID(FlyingAureusPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
-    int damage_amount=0;
     int threshold=12;
     int attack_times=6;
     AbstractCreature target;
@@ -31,7 +28,7 @@ public class FlyingAureusPower  extends BasePower implements ToughnessReductionI
 
     public FlyingAureusPower(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, owner, 0);
-        this.damage_amount=amount;
+        this.amount2 =amount;
     }
 
     /**
@@ -41,12 +38,12 @@ public class FlyingAureusPower  extends BasePower implements ToughnessReductionI
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(0);
-        this.damage_amount+=stackAmount;
+        this.amount2 +=stackAmount;
     }
 
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0],threshold,damage_amount,attack_times,get_toughness_reduction());
+        this.description = String.format(DESCRIPTIONS[0],threshold, amount2,attack_times,get_toughness_reduction(),amount);
     }
 
     @Override
@@ -90,7 +87,7 @@ public class FlyingAureusPower  extends BasePower implements ToughnessReductionI
             this.amount-=threshold;
             for (int i = 0; i < attack_times; i++) {
                 if (!target.isDead){
-                    addToBot(new HsrDamageAction(target, DamageUtil.deal_followUp_info(AbstractDungeon.player,damage_amount,get_toughness_reduction())));
+                    addToBot(new HsrDamageAction(target, DamageUtil.deal_followUp_info(AbstractDungeon.player, amount2,get_toughness_reduction())));
                     // 这部分追加攻击不能叠层
                     addToBot(new AbstractGameAction() {
                         @Override

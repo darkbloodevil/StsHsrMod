@@ -23,7 +23,7 @@ public class AwaitingSystemResponsePower extends BasePower {
     private static final boolean TURN_BASED = false;
 
     public AwaitingSystemResponsePower(AbstractCreature owner, AbstractCreature source, int amount) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, source, amount);
+        super(POWER_ID, TYPE, TURN_BASED, owner, source, 0);
     }
 
     @Override

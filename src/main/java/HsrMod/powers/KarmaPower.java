@@ -17,24 +17,23 @@ public class KarmaPower extends BasePower implements AtDepletingToughness {
     public static final String POWER_ID = makeID(KarmaPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
-    int magic;
     public static final int trigger_threshold=8;
 
     public KarmaPower(AbstractCreature owner, int magic) {
         super(POWER_ID, TYPE, TURN_BASED, owner, owner, 0);
-        this.magic=magic;
+        this.amount2 =magic;
         this.updateDescription();
     }
 
     @Override
     public void updateDescription() {
-        this.description = String.format(DESCRIPTIONS[0],magic,trigger_threshold);
+        this.description = String.format(DESCRIPTIONS[0], amount2,trigger_threshold,amount);
     }
 
     @Override
     public void stackPower(int stackAmount) {
         super.stackPower(0);
-        this.magic+=stackAmount;
+        this.amount2 +=stackAmount;
         this.updateDescription();
     }
 
@@ -45,7 +44,7 @@ public class KarmaPower extends BasePower implements AtDepletingToughness {
         this.flash();
         while (amount>=trigger_threshold){
             this.amount-=trigger_threshold;
-            addToBot(new DrawCardAction(magic));
+            addToBot(new DrawCardAction(amount2));
             this.flash();
         }
     }

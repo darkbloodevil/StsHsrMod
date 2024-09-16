@@ -4,37 +4,38 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="正式更新">
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/interfaces/SpecialToughnessInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/patchs/StunMonsterPatch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/StunMonsterPower.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/images/powers/StunMonsterPower.png" afterDir="false" />
+    <list default="true" id="232f73ef-73c8-4c0e-a461-a520e8b462f1" name="Changes" comment="修改部分额能力显示；修改卡牌描述；修复击晕转阶段的boss的相关问题；修复景元问题；削韧黑天鹅；调整罗刹">
+      <change afterPath="$PROJECT_DIR$/src/main/java/HsrMod/patches/ChangeStateActionPatch.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/action/ApplyDotAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/ApplyDotAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/action/BreakAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/action/BreakAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/DecadenceFalseTwilight.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/DecadenceFalseTwilight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/GalvanicChords.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/GalvanicChords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/StardustAce.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/StardustAce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/Strike_stelle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/Strike_stelle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/Defend_stelle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/Defend_stelle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/FarewellHit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/specials/FarewellHit.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BleakBreedsBlissPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BleakBreedsBlissPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/PranaExtirpated.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/attacks/PranaExtirpated.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/PrayerOfAbyssFlower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/cards/skills/PrayerOfAbyssFlower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/patchs/CardSignPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/patches/CardSignPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/patchs/StunMonsterPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/patches/StunMonsterPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/patchs/ToughnessBarPatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/patches/ToughnessBarPatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/AwaitingSystemResponsePower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/AwaitingSystemResponsePower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BackupDancerPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BackupDancerPower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BreakPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BreakPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/DotPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/DotPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FineIwillDoItMyselfPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FineIwillDoItMyselfPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FireDotPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FireDotPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/LightningDotPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/LightningDotPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BurdenPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/BurdenPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/DivineProvisionPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/DivineProvisionPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FlyingAureusPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/FlyingAureusPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/GentleButCruelPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/GentleButCruelPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/GirlPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/GirlPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/KarmaPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/KarmaPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/LightningLordPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/LightningLordPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/OvertonePower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/OvertonePower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/PrayerOfAbyssFlowerPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/PrayerOfAbyssFlowerPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/ProofOfDebtPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/ProofOfDebtPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/WindDotPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/WindDotPower.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/relics/HonkaiStarRailRelic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/relics/HonkaiStarRailRelic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/relics/Ticket.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/relics/Ticket.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/PromiseNotCommandPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/PromiseNotCommandPower.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/powers/StunMonsterPower.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/powers/StunMonsterPower.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/HsrMod/util/ToughnessUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/HsrMod/util/ToughnessUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/CardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/Keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/Keywords.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/PowerStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/UIStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/eng/UIStrings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/CardStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/CardStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/Keywords.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/Keywords.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/PowerStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/PowerStrings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/RelicStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/RelicStrings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/UIStrings.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/HsrMod/localization/zhs/UIStrings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/ModTheSpire.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -72,27 +73,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Maven.StsMod [clean].executor": "Run",
-    "Maven.StsMod [package].executor": "Run",
-    "Maven.StsMod [verify].executor": "Run",
-    "Maven.hsrmod [clean].executor": "Run",
-    "Maven.hsrmod [package].executor": "Run",
-    "Maven.hsrmod [test].executor": "Run",
-    "Maven.hsrmod [verify].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/Javaprojects/StsHsrMod/src/main/resources/HsrMod",
-    "onboarding.tips.debug.path": "D:/Javaprojects/StsMod/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.36999148",
-    "settings.editor.selected.configurable": "preferences.fileTypes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Maven.StsMod [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.StsMod [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.StsMod [verify].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.hsrmod [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.hsrmod [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.hsrmod [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.hsrmod [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Javaprojects/StsHsrMod/src/main/resources/HsrMod&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;D:/Javaprojects/StsMod/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.36999148&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Javaprojects\StsHsrMod\src\main\resources\HsrMod" />
@@ -334,7 +335,15 @@
       <option name="project" value="LOCAL" />
       <updated>1726164576747</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="牢鹅削弱；修复bug；dot显示修改；解决眩晕无法转阶段的问题；">
+      <option name="closed" value="true" />
+      <created>1726292301781</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1726292301781</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -380,8 +389,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="mod" />
-    <MESSAGE value="加入韧性条和鲁伯特帝国机械齿轮" />
     <MESSAGE value="韧性条完善" />
     <MESSAGE value="加入残梅绽、弦外音和超击破" />
     <MESSAGE value="杀戮尖塔mod 加入了韧性条、dot、残梅绽、超击破、弦外音" />
@@ -405,6 +412,8 @@
     <MESSAGE value="修改角色图；加入砂金杰帕德；修复bug" />
     <MESSAGE value="修复bug；新增基础牌、结束场景、云璃、飞霄、波提欧、列车长、卡芙卡被动" />
     <MESSAGE value="正式更新" />
-    <option name="LAST_COMMIT_MESSAGE" value="正式更新" />
+    <MESSAGE value="牢鹅削弱；修复bug；dot显示修改；解决眩晕无法转阶段的问题；" />
+    <MESSAGE value="修改部分额能力显示；修改卡牌描述；修复击晕转阶段的boss的相关问题；修复景元问题；削韧黑天鹅；调整罗刹" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改部分额能力显示；修改卡牌描述；修复击晕转阶段的boss的相关问题；修复景元问题；削韧黑天鹅；调整罗刹" />
   </component>
 </project>

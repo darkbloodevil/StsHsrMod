@@ -54,7 +54,7 @@ public class PranaExtirpated extends BaseAttack implements StartupCard {
     @Override
     public boolean atBattleStartPreDraw() {
         if (!AbstractDungeon.player.hasPower(LightningLordPower.POWER_ID)) {
-            addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LightningLordPower(AbstractDungeon.player,3),114514));
+            addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LightningLordPower(AbstractDungeon.player,3),0));
         }
         return false;
     }
