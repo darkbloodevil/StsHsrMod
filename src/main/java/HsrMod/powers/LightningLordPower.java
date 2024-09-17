@@ -35,6 +35,10 @@ public class LightningLordPower extends BasePower implements ToughnessReductionI
         super(POWER_ID, TYPE, TURN_BASED, owner, owner, amount);
         this.amount2 = 3;
     }
+    public LightningLordPower(AbstractCreature owner, int amount, int amount2) {
+        super(POWER_ID, TYPE, TURN_BASED, owner, owner, amount);
+        this.amount2 = amount2;
+    }
 
     @Override
     public void updateDescription() {

@@ -40,7 +40,7 @@ public class StardustAce extends BaseAttack implements MultiDamageInterface {
             CardTarget.ENEMY, //The target. Single target is ENEMY, all enemies is ALL_ENEMY. Look at cards similar to what you want to see what to use.
             2 //The card's base cost. -1 is X cost, -2 is no cost for unplayable cards like curses, or Reflex.
     );
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 4;
 
 
@@ -76,6 +76,15 @@ public class StardustAce extends BaseAttack implements MultiDamageInterface {
 //        }
 
         return damages;
+    }
+    @Override
+    public void upgrade() {
+        if (!this.upgraded) {
+            upgradeName();
+            upgradeDamage(UPG_DAMAGE);
+            initializeDescription();
+        }
+        super.upgrade();
     }
 }
 

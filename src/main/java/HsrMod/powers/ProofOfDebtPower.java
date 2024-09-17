@@ -24,9 +24,9 @@ public class ProofOfDebtPower extends BasePower {
     public static final String POWER_ID = makeID(ProofOfDebtPower.class.getSimpleName());
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
-
+    int magic=4;
     public ProofOfDebtPower(AbstractCreature owner, AbstractCreature source) {
-        super(POWER_ID, TYPE, TURN_BASED, owner, source, 3);
+        super(POWER_ID, TYPE, TURN_BASED, owner, source, 4);
     }
 
     public ProofOfDebtPower(AbstractCreature owner, AbstractCreature source, int amount) {
@@ -51,7 +51,7 @@ public class ProofOfDebtPower extends BasePower {
         this.amount--;
 
         if (this.amount <= 0) {
-            this.amount = 3;
+            this.amount = magic;
             addToBot(new DrawCardAction(1));
         }
         return super.onAttacked(info, damageAmount);

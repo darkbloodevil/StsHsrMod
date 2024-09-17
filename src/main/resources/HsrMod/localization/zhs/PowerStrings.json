@@ -18,7 +18,7 @@
     ]
   },
   "${modID}:BleakBreedsBlissPower": {
-    "NAME": "Bleak Breeds Bliss",
+    "NAME": "避厄",
     "DESCRIPTIONS": [
       "当血量低于50%, 被攻击时回复未被格挡的伤害."
     ]
@@ -72,13 +72,13 @@
     ]
   },
   "${modID}:FineIwillDoItMyselfPower": {
-    "NAME": "Fine I Will Do It Myself",
+    "NAME": "还是我来吧",
     "DESCRIPTIONS": [
       "当任意敌人因为该伤害而血量低于一半时, 造成 %d #y追加 伤害并 #y削韧 %d ."
     ]
   },
   "${modID}:FireDotPower": {
-    "NAME": "Fire Dot",
+    "NAME": "火 Dot",
     "DESCRIPTIONS": [
       "回合开始时, 造成 %d 点火属性 #ydot 伤害."
     ]
@@ -96,7 +96,7 @@
     ]
   },
   "${modID}:GentleButCruelPower": {
-    "NAME": "Gentle But Cruel",
+    "NAME": "温柔亦同残酷",
     "DESCRIPTIONS": [
       "每回合的第一次攻击会额外 #y追加 %d 点伤害 #y削韧 %d 并施加 %d 雷属性 #ydot . 打出带有 #y卡芙卡 的卡牌会刷新触发次数."
     ]
@@ -114,7 +114,7 @@
     ]
   },
   "${modID}:LightningDotPower": {
-    "NAME": "Lightning Dot",
+    "NAME": "雷 Dot",
     "DESCRIPTIONS": [
       "回合开始时, 造成 %d 点雷属性 #ydot 伤害."
     ]
@@ -126,7 +126,7 @@
     ]
   },
   "${modID}:MatrixOfPresciencePower": {
-    "NAME": "Matrix Of Prescience",
+    "NAME": "穷观阵",
     "DESCRIPTIONS": [
       "受到伤害不超过5."
     ]
@@ -152,7 +152,7 @@
   "${modID}:ProofOfDebtPower": {
     "NAME": "负债证明",
     "DESCRIPTIONS": [
-      "#y追加攻击 额外造成50%伤害. 每被攻击三次抽一张卡."
+      "#y追加攻击 额外造成50%伤害. 每被攻击4次抽一张卡."
     ]
   },
   "${modID}:QuidProQuoPower": {
@@ -220,7 +220,7 @@
     ]
   },
   "${modID}:WindDotPower": {
-    "NAME": "Wind Dot",
+    "NAME": "风 Dot",
     "DESCRIPTIONS": [
       "回合开始时, 造成 %d 点风属性 #ydot 伤害."
     ]

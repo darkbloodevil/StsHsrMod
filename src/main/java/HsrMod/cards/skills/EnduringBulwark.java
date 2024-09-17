@@ -31,7 +31,7 @@ public class EnduringBulwark  extends BaseCard {
         this.exhaust=true;
         this.magicNumber=1;
         this.baseMagicNumber=1;
-        this.setBlock(22,UPG_BLOCK);
+        this.setBlock(20,UPG_BLOCK);
         this.setMagic(magicNumber,1);
     }
 

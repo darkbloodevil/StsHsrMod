@@ -2,6 +2,7 @@ package HsrMod;
 
 import HsrMod.cards.BaseCard;
 import HsrMod.cards.attacks.CaressingMoonlight;
+import HsrMod.cards.curses.CurseOfPoverty;
 import HsrMod.cards.powers.AllOutFootlightParade;
 import HsrMod.cards.specials.FyreflyTypeIVDeathstarOverload;
 import HsrMod.cards.skills.DifficultyPaying;
@@ -271,6 +272,10 @@ public class HsrMod implements
                 .cards(); //Adds the cards
         new AutoAdd(modID) //Loads files from this mod
                 .packageFilter(FyreflyTypeIVDeathstarOverload.class) //In the same package as this class
+                .setDefaultSeen(true) //And marks them as seen in the compendium
+                .cards(); //Adds the cards
+        new AutoAdd(modID) //Loads files from this mod
+                .packageFilter(CurseOfPoverty.class) //In the same package as this class
                 .setDefaultSeen(true) //And marks them as seen in the compendium
                 .cards(); //Adds the cards
     }

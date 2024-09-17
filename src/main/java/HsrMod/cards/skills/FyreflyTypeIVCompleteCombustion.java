@@ -4,6 +4,9 @@ import HsrMod.action.FireFlyTypeIVCompleteCombustionAction;
 import HsrMod.cards.BaseCard;
 import HsrMod.characters.Stelle;
 import HsrMod.util.CardStats;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -26,10 +29,12 @@ public class FyreflyTypeIVCompleteCombustion extends BaseCard {
         super(ID, info);
         this.exhaust=true;
         this.selfRetain=true;
+        this.setMagic(7);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new LoseHPAction(p,p,magicNumber, AbstractGameAction.AttackEffect.FIRE));
         addToBot(new FireFlyTypeIVCompleteCombustionAction(this.upgraded));
     }
     @Override

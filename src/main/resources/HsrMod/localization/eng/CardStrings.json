@@ -181,7 +181,7 @@
   },
   "${modID}:DifficultyPaying": {
     "NAME": "Difficulty Paying?",
-    "DESCRIPTION": "Exhaust NL The target get 50% more ${modID}:Follow-Up damage. Every 3 times you attack the enemy, draw a card."
+    "DESCRIPTION": "Exhaust NL The target get 50% more ${modID}:Follow-Up damage. Every 4 times you attack the enemy, draw a card."
   },
   "${modID}:EnduringBulwark": {
     "NAME": "Enduring Bulwark",
@@ -201,8 +201,8 @@
   },
   "${modID}:FyreflyTypeIVCompleteCombustion": {
     "NAME": "Fyrefly Type-IV: Complete Combustion",
-    "DESCRIPTION": "Exhaust Retain NL Randomly add 4 ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately.",
-    "UPGRADE_DESCRIPTION": "Exhaust Retain NL Randomly add 4 upgraded ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately."
+    "DESCRIPTION": "Exhaust Retain NL Lose !M! hp. NL Randomly add 4 ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately.",
+    "UPGRADE_DESCRIPTION": "Exhaust Retain NL Lose !M! hp. NL Randomly add 4 upgraded ${modID}:SAM cards to your deck. You can choose one of them to add to your hand immediately."
   },
   "${modID}:ChrysalidPyronexus": {
     "NAME": "Chrysalid Pyronexus",
@@ -239,7 +239,7 @@
   },
   "${modID}:LoomOfFatesCaprice": {
     "NAME": "Loom Of Fate's Caprice",
-    "DESCRIPTION": "For every ${modID}:dot the target has, draw 1 card and gain [E]."
+    "DESCRIPTION": "Exhaust NL For every ${modID}:dot the target has, draw 1 card and gain [E]."
   },
   "${modID}:LoveHealAndChoose": {
     "NAME": "Love, Heal And Choose",
@@ -302,7 +302,7 @@
   },
   "${modID}:ThePowerOfCuteness": {
     "NAME": "The Power Of Cuteness",
-    "DESCRIPTION": "Gain !B! block and ${modID}:counter !D! when you have block. The block will keep for !M! turns."
+    "DESCRIPTION": "Gain !B! block and ${modID}:counter !M! when you have block for 1 turn. The block will keep for 1 turn."
   },
   "${modID}:TheShield": {
     "NAME": "The Shield",
@@ -312,5 +312,9 @@
   "${modID}:VoxHarmoniqueOpusCosmique": {
     "NAME": "Vox Harmonique Opus Cosmique",
     "DESCRIPTION": "Exhaust NL Choose 3 cards in your draw/discard pile, decrease their costs by 1 and put them in the top of the draw pile. "
+  },
+  "${modID}:CurseOfPoverty": {
+    "NAME": "Curse Of Poverty",
+    "DESCRIPTION": "When this card is in your hand, lose !M! gold every time you play a card."
   }
 }

@@ -46,9 +46,9 @@ public class PranaExtirpated extends BaseAttack implements StartupCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new HsrDamageAllEnemiesAction(new HsrDamageInfo(p, damage, DamageInfo.DamageType.NORMAL, toughness_reduction), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        if (AbstractDungeon.player.hasPower(LightningLordPower.POWER_ID)) {
-            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LightningLordPower(AbstractDungeon.player, magicNumber)));
-        }
+        // 神君叠层
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LightningLordPower(AbstractDungeon.player, 3,magicNumber),magicNumber));
+
     }
 
     @Override

@@ -21,8 +21,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
  * @description
  */
 public abstract class SAMCard extends BaseAttack {
-    int toughness_reduction = 10;
+    int toughness_reduction = 8;
 
+    int DAMAGE = 5;
+    int UPG_DAMAGE = 2;
 
     public SAMCard(String ID, CardStats info) {
         super(ID, info);

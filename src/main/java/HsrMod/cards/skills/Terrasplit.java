@@ -36,22 +36,28 @@ public class Terrasplit extends BaseCard implements StartupCard {
 
     public Terrasplit() {
         super(ID, info);
-        this.setMagic(3,4);
+        this.setMagic(3,1);
         this.exhaust=true;
     }
 
     @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        return false;
+    }
+
+    @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new LoseEnergyAction(1));
     }
     public void triggerWhenDrawn() {
         addToBot(new LoseEnergyAction(1));
+        // 没有飞黄 就赋予飞黄
+        if (!AbstractDungeon.player.hasPower(FlyingAureusPower.POWER_ID)){
+            addToBot(new ApplyPowerAction(AbstractDungeon.player,AbstractDungeon.player,new FlyingAureusPower(AbstractDungeon.player,magicNumber)));
+        }
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
-                if (AbstractDungeon.player.hasPower(FlyingAureusPower.POWER_ID)){
-                    AbstractDungeon.player.getPower(FlyingAureusPower.POWER_ID).onSpecificTrigger();
-                }
+                AbstractDungeon.player.getPower(FlyingAureusPower.POWER_ID).onSpecificTrigger();
                 isDone=true;
             }
         });

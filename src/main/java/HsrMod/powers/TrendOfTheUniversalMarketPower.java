@@ -19,7 +19,7 @@ import static HsrMod.HsrMod.makeID;
 /**
  * @author darkbloodevil
  * @date 2024/8/11 14:15
- * @description
+ * @description 测试一下
  */
 public class TrendOfTheUniversalMarketPower extends BasePower {
     public static final String POWER_ID = makeID(TrendOfTheUniversalMarketPower.class.getSimpleName());

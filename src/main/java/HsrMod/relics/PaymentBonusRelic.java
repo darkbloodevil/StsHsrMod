@@ -1,9 +1,11 @@
 package HsrMod.relics;
 
+import HsrMod.cards.curses.CurseOfPoverty;
 import HsrMod.characters.Stelle;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
@@ -26,6 +28,7 @@ public class PaymentBonusRelic extends BaseRelic {
     private static final RelicTier RARITY = RelicTier.BOSS; //The relic's rarity.
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
     ArrayList<Integer> triggered_cost_list=new ArrayList<>();
+
 
     public PaymentBonusRelic() {
         super(ID, PaymentBonusRelic.class.getSimpleName(), Stelle.Meta.CARD_COLOR, RARITY, SOUND);
@@ -77,5 +80,13 @@ public class PaymentBonusRelic extends BaseRelic {
     public void onVictory() {
         super.onVictory();
         triggered_cost_list=new ArrayList<>();
+    }
+
+    @Override
+    public void onEquip() {
+        CardGroup group = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        CurseOfPoverty curseOfTheBell = new CurseOfPoverty();
+        group.addToBottom(curseOfTheBell.makeCopy());
+        AbstractDungeon.gridSelectScreen.openConfirmationGrid(group, this.DESCRIPTIONS[1]);
     }
 }

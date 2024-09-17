@@ -152,7 +152,7 @@
   "${modID}:ProofOfDebtPower": {
     "NAME": "Proof Of Debt",
     "DESCRIPTIONS": [
-      "Take 50% more #yFollow-Up damage. Attacked every 3 times, draw a card."
+      "Take 50% more #yFollow-Up damage. Attacked every 4 times, draw a card."
     ]
   },
   "${modID}:QuidProQuoPower": {

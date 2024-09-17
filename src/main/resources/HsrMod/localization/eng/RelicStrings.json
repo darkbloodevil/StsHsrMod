@@ -32,7 +32,8 @@
     "NAME": "Payment Bonus",
     "FLAVOR": "-648",
     "DESCRIPTIONS": [
-      "In every battle, the first card of some cost will play twice."
+      "When you gain this relic, add a Curse Of Poverty to your deck. In every battle, the first card of some cost (0,1,2,...,X) will play twice. ",
+      "And what, must we give it return ?"
     ]
   }
 }

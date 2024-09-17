@@ -28,16 +28,15 @@ public class ThePowerOfCuteness extends BaseCard {
 
     public ThePowerOfCuteness() {
         super(ID, info);
-        this.baseMagicNumber=1;
-        this.magicNumber=baseMagicNumber;
         this.setBlock(10,4);
+        this.setMagic(3,2);
         this.setDamage(3,2);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p,this.block));
-        addToBot(new ApplyPowerAction(p, p, new BlurPower(p, magicNumber)));
-        addToBot(new ApplyPowerAction(p, p, new GirlPower(p, p,magicNumber,damage)));
+        addToBot(new ApplyPowerAction(p, p, new BlurPower(p, 1)));
+        addToBot(new ApplyPowerAction(p, p, new GirlPower(p, p,1,magicNumber)));
     }
 }

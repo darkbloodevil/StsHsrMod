@@ -37,6 +37,7 @@ public class RubertEmpireMechanicalCogwheel extends BaseRelic {
             flash();
             if(AbstractDungeon.player.gold>MAX_GOLD){
                 usedUp();
+                this.counter = -2;
                 AbstractDungeon.player.loseGold(AbstractDungeon.player.gold);
             }
         }

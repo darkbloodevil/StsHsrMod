@@ -31,7 +31,7 @@ public class LoveHealAndChoose extends BaseCard {
         super(ID, info);
         this.magicNumber = 1;
         this.baseMagicNumber = magicNumber;
-        this.setBlock(6, UPG_BLOCK);
+        this.setBlock(5, UPG_BLOCK);
     }
     @Override
     public void upgrade() {
