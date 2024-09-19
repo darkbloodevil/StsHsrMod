@@ -1,6 +1,7 @@
 package HsrMod.relics;
 
 import HsrMod.HsrMod;
+import HsrMod.action.BreakAction;
 import HsrMod.action.DepleteToughnessAction;
 import HsrMod.characters.Stelle;
 import HsrMod.core.HsrDamageInfo;
@@ -53,6 +54,13 @@ public class HonkaiStarRailRelic extends BaseRelic {
                 int toughness = ToughnessUtil.get_toughness(monster);
                 addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new ToughnessPower(monster, AbstractDungeon.player, toughness),
                         toughness));
+            }else {
+                // 代为处理在monster回合触发的break（防止意图问题）
+                ToughnessPower tp= (ToughnessPower) monster.getPower(ToughnessPower.POWER_ID);
+                if (tp.break_at_start){
+                    tp.break_at_start=false;
+                    addToTop(new BreakAction((AbstractMonster) tp.owner, AbstractDungeon.player));
+                }
             }
         }
     }

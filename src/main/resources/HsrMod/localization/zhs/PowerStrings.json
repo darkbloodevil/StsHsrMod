@@ -68,7 +68,7 @@
   "${modID}:FangOfFlareFlayingPower": {
     "NAME": "剔烁之牙",
     "DESCRIPTIONS": [
-      "每攻击8次, 对所有敌人造成 %d 追加 伤害, 抽%d张牌, 回复%d 能量 并流失 %d 点生命."
+      "每造成伤害8次, 对所有敌人造成 %d 追加 伤害, 抽%d张牌, 回复%d 能量 并流失 %d 点生命."
     ]
   },
   "${modID}:FineIwillDoItMyselfPower": {

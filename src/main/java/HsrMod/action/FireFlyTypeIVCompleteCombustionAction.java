@@ -69,7 +69,7 @@ public class FireFlyTypeIVCompleteCombustionAction extends AbstractGameAction {
                         AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F));
                     }
                     for (AbstractCard card : generatedCards) {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card.makeStatEquivalentCopy(), true, true));
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToDrawPileEffect(card.makeStatEquivalentCopy(), true, false));
                     }
                 }
                 AbstractDungeon.cardRewardScreen.discoveryCard = null;

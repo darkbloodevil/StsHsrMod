@@ -25,4 +25,8 @@ public class DreamdiverPower extends BasePower{
         addToBot(new DreamdiverAction());
         super.atStartOfTurnPostDraw();
     }
+    @Override
+    public void updateDescription() {
+        this.description = DESCRIPTIONS[0];
+    }
 }

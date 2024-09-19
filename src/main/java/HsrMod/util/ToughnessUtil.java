@@ -13,35 +13,37 @@ public class ToughnessUtil {
             SpecialToughnessInterface sti = (SpecialToughnessInterface) monster;
             toughness = sti.get_toughness();
         } else if (monster.type == AbstractMonster.EnemyType.BOSS) {
-            toughness = 30;
+            toughness = 32;
             switch (AbstractDungeon.id) {
                 case "Exordium": {
                     break;
                 }
                 case "TheCity": {
-                    toughness = 32;
+                    toughness = 36;
                     break;
                 }case "TheBeyond": {
-                    toughness = 34;
+                    toughness = 40;
                     break;
                 }case "TheEnding": {
-                    toughness = 36;
+                    toughness = 45;
                     break;
                 }
             }
         } else if (monster.type == AbstractMonster.EnemyType.ELITE) {
             if (monster.maxHealth >= 150)
+                toughness = 28+(monster.maxHealth-150)/25;
+            else if (monster.maxHealth >= 120)
                 toughness = 26;
-            else if (monster.maxHealth >= 100)
+            else if (monster.maxHealth >= 90)
                 toughness = 24;
-            else if (monster.maxHealth >= 50)
+            else if (monster.maxHealth >= 60)
                 toughness = 22;
             else
                 toughness = 20;
         } else {
-            if (monster.maxHealth >= 160) {
-                toughness = 16;
-            } else if (monster.maxHealth >= 80) {
+            if (monster.maxHealth >= 100) {
+                toughness = 16+(monster.maxHealth-100)/25;
+            } else if (monster.maxHealth >= 60) {
                 toughness = 14;
             } else if (monster.maxHealth >= 40) {
                 toughness = 12;

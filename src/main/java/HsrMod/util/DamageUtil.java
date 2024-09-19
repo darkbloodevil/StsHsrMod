@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
@@ -46,5 +47,18 @@ public class DamageUtil {
         return info;
     }
 
+    /**
+     * 获取存活的怪物
+     * @return
+     */
+    public static MonsterGroup get_monsters_alive(){
+        MonsterGroup mg=new MonsterGroup(new AbstractMonster[0]);
+        for(AbstractMonster m:AbstractDungeon.getMonsters().monsters){
+            if (!m.halfDead && !m.isDying && !m.isEscaping){
+                mg.add(m);
+            }
+        }
+        return mg;
+    }
 
 }

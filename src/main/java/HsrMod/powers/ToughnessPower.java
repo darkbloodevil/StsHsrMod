@@ -15,6 +15,8 @@ public class ToughnessPower extends BasePower {
     private static final AbstractPower.PowerType TYPE = AbstractPower.PowerType.BUFF;
     private static final boolean TURN_BASED = false;
     private boolean is_toughness_protect = false;
+    boolean monster_turn=false;
+    public boolean break_at_start;
 
     //The only thing TURN_BASED controls is the color of the number on the power icon.
     //Turn based powers are white, non-turn based powers are red or green depending on if their amount is positive or negative.
@@ -52,7 +54,12 @@ public class ToughnessPower extends BasePower {
                 if (this.amount <= 0) {
                     this.amount = 0;
                     this.fontScale = 8.0F;
-                    addToTop(new BreakAction((AbstractMonster) this.owner, this.source));
+                    if (this.monster_turn){
+                        // 转由遗物来处理break效果
+                        this.break_at_start=true;
+                    }else {
+                        addToTop(new BreakAction((AbstractMonster) this.owner, this.source));
+                    }
                     // 弱点击破时生效
                     for (AbstractPower power : AbstractDungeon.player.powers) {
                         if (power instanceof AtWeaknessBreak) {
@@ -69,4 +76,21 @@ public class ToughnessPower extends BasePower {
         }
 
     }
+
+    @Override
+    public void atStartOfTurn() {
+        super.atStartOfTurn();
+        this.monster_turn=true;
+    }
+
+
+
+    @Override
+    public void atEndOfTurn(boolean isPlayer) {
+        super.atEndOfTurn(isPlayer);
+        if (!isPlayer){
+            this.monster_turn=false;
+        }
+    }
+
 }

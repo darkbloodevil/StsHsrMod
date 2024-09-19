@@ -23,7 +23,7 @@
   },
   "${modID}:ButterflyFlurry": {
     "NAME": "乱蝶",
-    "DESCRIPTION": "消耗 NL 造成 !D! 点伤害。NL ${modID}:削韧 !reduction! 。 NL 如果击杀，获得 !M! 点 临时力量 并且回手。 NL 可以多次升级。"
+    "DESCRIPTION": "消耗 NL 造成 !D! 点伤害。 NL ${modID}:削韧 !reduction! 。 NL 如果击杀，获得 !M! 点 临时力量 并且回手。 NL 可以多次升级。"
   },
   "${modID}:CaressingMoonlight": {
     "NAME": "月光摩挲连绵",
@@ -129,7 +129,7 @@
   },
   "${modID}:FangOfFlareFlaying": {
     "NAME": "剔烁之牙",
-    "DESCRIPTION": "每攻击8次，对所有敌人造成 !M! ${modID}:追加 伤害并且抽1张牌、获得 [E] 、流失1点生命。"
+    "DESCRIPTION": "每造成伤害8次，对所有敌人造成 !M! ${modID}:追加 伤害并且抽1张牌、获得 [E] 、流失1点生命。"
   },
   "${modID}:KarmicPerpetuation": {
     "NAME": "十王圣断, 业报恒常",
